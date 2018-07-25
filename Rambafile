@@ -1,0 +1,33 @@
+### Headers settings
+company: Dmytro Platov
+
+### Xcode project settings
+project_name: Swift-data-processor
+xcodeproj_path: Swift-data-processor.xcodeproj
+prefix: SDP
+
+### Code generation settings section
+# The main project target name
+project_target: Swift-data-processor
+
+# The file path for new modules
+project_file_path: Swift-data-processor
+
+# The Xcode group path to new modules
+project_group_path: Swift-data-processor
+
+### Tests generation settings section
+# The tests target name
+test_target: Swift-data-processorTests
+
+# The file path for new tests
+test_file_path: Swift-data-processorTests
+
+# The Xcode group path to new tests
+test_group_path: Swift-data-processorTests
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
