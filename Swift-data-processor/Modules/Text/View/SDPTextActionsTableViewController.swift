@@ -66,6 +66,7 @@ class SDPTextActionsTableViewController: UITableViewController, SDPTextActionsVi
         enabled = true
         
         tableView.reloadSections(IndexSet(integer:0), with: .fade)
+        tableView.isUserInteractionEnabled = true
     }
     
     func disable() {
@@ -76,6 +77,7 @@ class SDPTextActionsTableViewController: UITableViewController, SDPTextActionsVi
         enabled = false
         
         tableView.reloadSections(IndexSet(integer:0), with: .fade)
+        tableView.isUserInteractionEnabled = false
     }
     
 }
