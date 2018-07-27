@@ -20,9 +20,9 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
         view.setupInitialState()
     }
     
-    func viewWillAppear(){
+    func viewWillBePresented(){
         view.prepareForScreen()
-        checkActions()
+        view.refreshInputActionsState()
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,13 +38,11 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     func copy(){
         interactor.copy()
         view.refreshInputActionsState()
-        checkActions()
     }
     
     func paste(){
         interactor.paste()
         view.refreshInputActionsState()
-        checkActions()
     }
     
     func qr(){
@@ -53,24 +51,17 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     }
     
     func selectAction(_ action: String) {
-        weak var wself = self
         
-        interactor.requestText { (text) in
-            if let text = text {
-                wself?.router.perform(action: action, forText: text)
-            }
-        }
-
+        interactor.addTextToclipboard()
+        router.showScreen(forAction: action)
     }
+    
     //MARK: intenal methods
-    func checkActions() {
-        interactor.requestText { (text) in
-            
-            if (text?.count ?? 0) > 0{
-                actionView?.enable()
-            }else{
-                actionView?.disable()
-            }
+    func checkActions(text:String?) {
+        if (text?.count ?? 0) > 0 {
+            actionView?.enable()
+        }else{
+            actionView?.disable()
         }
     }
     
@@ -80,12 +71,13 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
         actionView?.set(tableViewDataSource: dataSource)
     }
     
-    func textIsReady() {
+    func textAddedToClipboard() {
         router.returnToRootController()
     }
     
     func set(text: String?) {
         view.set(text:text)
+        checkActions(text: text)
     }
     
     // MARK: UITextView
@@ -95,8 +87,8 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     
     func textViewDidChange(_ textView: UITextView) {
         interactor.set(text: textView.text)
+        checkActions(text: textView.text)
         view.refreshInputActionsState()
-        checkActions()
     }
     
     func textViewDidChangeSelection(_ textView: UITextView) {

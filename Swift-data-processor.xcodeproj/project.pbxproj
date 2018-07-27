@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008D6EA08CAA50ABB1AC5922 /* SDPQRGeneratorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF7FEAF857ADF97C77F6DF /* SDPQRGeneratorPresenterTests.swift */; };
 		3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */; };
 		3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18B20FCBB630082F395 /* SDPTextPresenter.swift */; };
 		3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18D20FCBB630082F395 /* SDPTextViewController.swift */; };
@@ -20,6 +21,19 @@
 		3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19820FCBB630082F395 /* SDPTextRouterInput.swift */; };
 		3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19920FCBB630082F395 /* SDPTextRouter.swift */; };
 		32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32127F242106DE37000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift */; };
+		321635D02108CE8A00793E7D /* Actions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321635CF2108CE8A00793E7D /* Actions.storyboard */; };
+		321635E42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift */; };
+		321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift */; };
+		321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D72108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift */; };
+		321635E72108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D82108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift */; };
+		321635E82108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D92108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift */; };
+		321635E92108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635DB2108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift */; };
+		321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635DC2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift */; };
+		321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635DE2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift */; };
+		321635EC2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635DF2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift */; };
+		321635ED2108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E02108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift */; };
+		321635EE2108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E22108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift */; };
+		321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E32108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift */; };
 		325A5A2D2100D2B300DD7222 /* TDPClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */; };
 		325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */; };
 		325A5A412100DFEA00DD7222 /* SDPQRScannerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */; };
@@ -41,6 +55,9 @@
 		3274556921084C640096AE75 /* TDPClipboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556821084C640096AE75 /* TDPClipboardActions.swift */; };
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
+		328FBF22210998AD00D728A5 /* String+UnicodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */; };
+		328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF232109E59C00D728A5 /* String+QRImage.swift */; };
+		328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF27210A0BF900D728A5 /* UIImage+Scale.swift */; };
 		328FCD5E202F441100EA8098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FCD5D202F441100EA8098 /* AppDelegate.swift */; };
 		328FCD65202F441100EA8098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328FCD63202F441100EA8098 /* Main.storyboard */; };
 		328FCD67202F441100EA8098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328FCD66202F441100EA8098 /* Assets.xcassets */; };
@@ -54,13 +71,22 @@
 		32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF52982106126D008FB025 /* UIView+BorderColor.swift */; };
 		32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9FAB12106F86000CB0FE0 /* TDPViewExternalConfigurator.swift */; };
 		32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */; };
+		64096C1F7AE376FC8A189693 /* SDPSDPQRGeneratorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */; };
+		67438643638C95CBC8033E30 /* SDPSDPQRGeneratorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */; };
 		6D90876843ADDBBE68F46FCD /* Pods_ThunderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88B28388E595A26D2BC1D92 /* Pods_ThunderUITests.framework */; };
 		8FC12C5C1CF7860AC12785E7 /* Pods_SwiftDPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC03BC43888E1ECFAC4A25B0 /* Pods_SwiftDPUITests.framework */; };
+		9F4B9A20D232EC2810535F12 /* SDPSDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356B7C1913F49D60CE5A5A6 /* SDPSDPQRGeneratorInteractorTests.swift */; };
+		A1A09B7043F3C94B2E534A75 /* SDPSDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806809E36C054785DC41809E /* SDPSDPQRGeneratorConfiguratorTests.swift */; };
+		B114430802C7257273B91970 /* SDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */; };
+		BE05BF60A90164B5381B4EA1 /* SDPQRGeneratorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */; };
+		CB86D0CBFE0251B5DC5AB6DA /* SDPQRGeneratorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFCB248D96803E61EEA30A /* SDPQRGeneratorViewTests.swift */; };
 		D6CA59BA09366CA68EFDB280 /* Pods_Swift_data_processorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */; };
 		D70504251A17788E5B658556 /* Pods_ThunderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FEE66A21D53E03692AC32E /* Pods_ThunderTests.framework */; };
 		EF92367083985B0776B457AF /* Pods_Swift_data_processor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */; };
+		F1DD666298379E7AAA15F9E1 /* SDPSDPQRGeneratorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E4E6330ABC537148E52AD /* SDPSDPQRGeneratorViewTests.swift */; };
 		F1E2C2A2F30F3E31CD5A69D8 /* Pods_SwiftDPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A4040C03E0E8F2B7BACDCE /* Pods_SwiftDPTests.framework */; };
 		F9FC024969F32897CBAE547D /* Pods_Swift_data_processorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AC68E0906D02D345976CE8 /* Pods_Swift_data_processorTests.framework */; };
+		FD220247FFE3390791694A2C /* SDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +109,7 @@
 /* Begin PBXFileReference section */
 		05F7BC62ADD6C1E5262D5540 /* Pods-SwiftDP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDP/Pods-SwiftDP.debug.xcconfig"; sourceTree = "<group>"; };
 		06139395FD3663205E65BC66 /* Pods-Swift-data-processorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorUITests/Pods-Swift-data-processorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorConfiguratorTests.swift; sourceTree = "<group>"; };
 		0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2023355AC86F5AA8F4E7FFAD /* Pods-Thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder/Pods-Thunder.release.xcconfig"; sourceTree = "<group>"; };
 		2401087B048E252D8155EE70 /* Pods_SwiftDP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +128,19 @@
 		3203E19920FCBB630082F395 /* SDPTextRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextRouter.swift; sourceTree = "<group>"; };
 		32127F242106DE37000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerViewBackButtonExternalConfigurator.swift; sourceTree = "<group>"; };
 		32127F262106E9D8000EE1C6 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		321635CF2108CE8A00793E7D /* Actions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Actions.storyboard; sourceTree = "<group>"; };
+		321635D42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorModuleInput.swift; sourceTree = "<group>"; };
+		321635D52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorPresenter.swift; sourceTree = "<group>"; };
+		321635D72108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorViewController.swift; sourceTree = "<group>"; };
+		321635D82108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorViewOutput.swift; sourceTree = "<group>"; };
+		321635D92108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorViewInput.swift; sourceTree = "<group>"; };
+		321635DB2108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorConfigurator.swift; sourceTree = "<group>"; };
+		321635DC2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInitializer.swift; sourceTree = "<group>"; };
+		321635DE2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInteractorOutput.swift; sourceTree = "<group>"; };
+		321635DF2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInteractorInput.swift; sourceTree = "<group>"; };
+		321635E02108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInteractor.swift; sourceTree = "<group>"; };
+		321635E22108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouterInput.swift; sourceTree = "<group>"; };
+		321635E32108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouter.swift; sourceTree = "<group>"; };
 		325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardStore.swift; sourceTree = "<group>"; };
 		325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerPresenter.swift; sourceTree = "<group>"; };
 		325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerModuleInput.swift; sourceTree = "<group>"; };
@@ -122,6 +162,9 @@
 		3274556821084C640096AE75 /* TDPClipboardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardActions.swift; sourceTree = "<group>"; };
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
+		328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeEncoding.swift"; sourceTree = "<group>"; };
+		328FBF232109E59C00D728A5 /* String+QRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+QRImage.swift"; sourceTree = "<group>"; };
+		328FBF27210A0BF900D728A5 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		328FCD5A202F441100EA8098 /* Swift-data-processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-data-processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		328FCD5D202F441100EA8098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		328FCD64202F441100EA8098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,24 +186,33 @@
 		3FF6F4C9089DA48EAED96F15 /* Pods-Swift-data-processor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor.release.xcconfig"; sourceTree = "<group>"; };
 		46FEE66A21D53E03692AC32E /* Pods_ThunderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThunderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B09F4033753AE3C237F96A6 /* Pods_Thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorInteractorTests.swift; sourceTree = "<group>"; };
+		5356B7C1913F49D60CE5A5A6 /* SDPSDPQRGeneratorInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInteractorTests.swift; sourceTree = "<group>"; };
 		60D3BE16E7F78D81AB581412 /* Pods-Swift-data-processorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorTests/Pods-Swift-data-processorTests.release.xcconfig"; sourceTree = "<group>"; };
 		671A7E3F607CD86CD5D03584 /* Pods-Thunder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder/Pods-Thunder.debug.xcconfig"; sourceTree = "<group>"; };
 		699035CAC7BE29106CE4563D /* Pods-ThunderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderTests/Pods-ThunderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79FD89B910C0DBEF8750E72C /* Pods-SwiftDP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDP.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDP/Pods-SwiftDP.release.xcconfig"; sourceTree = "<group>"; };
+		806809E36C054785DC41809E /* SDPSDPQRGeneratorConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorConfiguratorTests.swift; sourceTree = "<group>"; };
 		8A74F7AEAFA5EB437A16B71F /* Pods-Swift-data-processorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorUITests/Pods-Swift-data-processorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		90AC68E0906D02D345976CE8 /* Pods_Swift_data_processorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		917E4E6330ABC537148E52AD /* SDPSDPQRGeneratorViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorViewTests.swift; sourceTree = "<group>"; };
 		93E0363407A9C9226E0E3C23 /* Pods-Swift-data-processor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor.debug.xcconfig"; sourceTree = "<group>"; };
 		94373D5B925A251FAC56C9C2 /* Pods-ThunderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderTests/Pods-ThunderTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5DCCDEB5B369EC49E8AF34 /* Pods-SwiftDPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPUITests/Pods-SwiftDPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A88B28388E595A26D2BC1D92 /* Pods_ThunderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThunderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC03BC43888E1ECFAC4A25B0 /* Pods_SwiftDPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
 		AE5C1E705EEF2D38A63C798D /* Pods-ThunderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderUITests/Pods-ThunderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE6FDDD8971A04388F0DA936 /* Pods-SwiftDPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D52B20D0091C7D2AC29477 /* Pods-SwiftDPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouterTests.swift; sourceTree = "<group>"; };
 		C8A4040C03E0E8F2B7BACDCE /* Pods_SwiftDPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBFCB248D96803E61EEA30A /* SDPQRGeneratorViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorViewTests.swift; sourceTree = "<group>"; };
 		E2CC25C880C11B640F127876 /* Pods-ThunderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderUITests/Pods-ThunderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorRouterTests.swift; sourceTree = "<group>"; };
 		F14C4CC3CA500F0856C37F99 /* Pods-Swift-data-processorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorTests/Pods-Swift-data-processorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAFF7FEAF857ADF97C77F6DF /* SDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +247,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B43AE240EEEFC1B944865A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3203E18820FCBB630082F395 /* Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +322,73 @@
 				32127F242106DE37000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift */,
 			);
 			path = "External configurator";
+			sourceTree = "<group>";
+		};
+		321635D12108CEB900793E7D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				321635D22108CF4D00793E7D /* SDPQRGenerator */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		321635D22108CF4D00793E7D /* SDPQRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				321635D32108CF4D00793E7D /* Presenter */,
+				321635D62108CF4D00793E7D /* View */,
+				321635DA2108CF4D00793E7D /* Configurator */,
+				321635DD2108CF4D00793E7D /* Interactor */,
+				321635E12108CF4D00793E7D /* Router */,
+			);
+			path = SDPQRGenerator;
+			sourceTree = "<group>";
+		};
+		321635D32108CF4D00793E7D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				321635D42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift */,
+				321635D52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		321635D62108CF4D00793E7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				321635D72108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift */,
+				321635D82108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift */,
+				321635D92108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		321635DA2108CF4D00793E7D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				321635DB2108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift */,
+				321635DC2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		321635DD2108CF4D00793E7D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				321635DE2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift */,
+				321635DF2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift */,
+				321635E02108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		321635E12108CF4D00793E7D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				321635E22108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift */,
+				321635E32108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		325A5A2E2100DFEA00DD7222 /* QRScanner */ = {
@@ -375,6 +502,8 @@
 			children = (
 				32B63CF3210746AF00BDE139 /* Info.plist */,
 				32B63CF4210746AF00BDE139 /* testTests.swift */,
+				9CB5D1D77B09258AE37817E2 /* QRGenerator */,
+				96CD2AD999A097AE2C208A06 /* SDPQRGenerator */,
 			);
 			path = "Swift-data-processorTests";
 			sourceTree = "<group>";
@@ -394,6 +523,7 @@
 				328FCD68202F441100EA8098 /* LaunchScreen.storyboard */,
 				328FCD63202F441100EA8098 /* Main.storyboard */,
 				3274556C21084E490096AE75 /* Accessory.storyboard */,
+				321635CF2108CE8A00793E7D /* Actions.storyboard */,
 				3274556F21084EB60096AE75 /* UIStoryboard+App.swift */,
 			);
 			path = Storyboards;
@@ -433,6 +563,9 @@
 				32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */,
 				32CF52982106126D008FB025 /* UIView+BorderColor.swift */,
 				32B63CE9210745C600BDE139 /* UIColor+Hex.swift */,
+				328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */,
+				328FBF27210A0BF900D728A5 /* UIImage+Scale.swift */,
+				328FBF232109E59C00D728A5 /* String+QRImage.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -450,10 +583,83 @@
 		32B63D002107485700BDE139 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				321635D12108CEB900793E7D /* Actions */,
 				325A5A2E2100DFEA00DD7222 /* QRScanner */,
 				3203E18820FCBB630082F395 /* Text */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		63837857E27843351116948F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		703C8FECFBE4B31172CA8236 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		778661F0705B2DBF593D691C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				917E4E6330ABC537148E52AD /* SDPSDPQRGeneratorViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AFEF5063A8E45CFF10525CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFBFCB248D96803E61EEA30A /* SDPQRGeneratorViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82D9FA2D4F321E385F698403 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		839EE405521C3D7AED194129 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		96CD2AD999A097AE2C208A06 /* SDPQRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E47BF721B16677C3B18FB4FB /* Configurator */,
+				778661F0705B2DBF593D691C /* View */,
+				EBF21336C9AC4ACF86C6056D /* Interactor */,
+				703C8FECFBE4B31172CA8236 /* Presenter */,
+				17B43AE240EEEFC1B944865A /* Router */,
+			);
+			path = SDPQRGenerator;
+			sourceTree = "<group>";
+		};
+		9CB5D1D77B09258AE37817E2 /* QRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				82D9FA2D4F321E385F698403 /* Configurator */,
+				7AFEF5063A8E45CFF10525CA /* View */,
+				63837857E27843351116948F /* Interactor */,
+				C735C9CE428496A5A478376C /* Presenter */,
+				839EE405521C3D7AED194129 /* Router */,
+			);
+			path = QRGenerator;
 			sourceTree = "<group>";
 		};
 		9EDC3C62AF1F5FD1FA36FE55 /* Pods */ = {
@@ -481,6 +687,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C735C9CE428496A5A478376C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF7FEAF857ADF97C77F6DF /* SDPQRGeneratorPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D86BCE8748460A4B5AF4F21F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +709,22 @@
 				0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E47BF721B16677C3B18FB4FB /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				806809E36C054785DC41809E /* SDPSDPQRGeneratorConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		EBF21336C9AC4ACF86C6056D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5356B7C1913F49D60CE5A5A6 /* SDPSDPQRGeneratorInteractorTests.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +846,7 @@
 				328FCD6A202F441100EA8098 /* LaunchScreen.storyboard in Resources */,
 				328FCD67202F441100EA8098 /* Assets.xcassets in Resources */,
 				3274556E21084E490096AE75 /* Accessory.storyboard in Resources */,
+				321635D02108CE8A00793E7D /* Actions.storyboard in Resources */,
 				328FCD65202F441100EA8098 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,19 +953,29 @@
 				32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */,
 				325A5A472100DFEA00DD7222 /* SDPQRScannerInteractorOutput.swift in Sources */,
 				325A5A2D2100D2B300DD7222 /* TDPClipboardStore.swift in Sources */,
+				321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */,
 				3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */,
 				325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */,
 				3274556321084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift in Sources */,
 				3203E19F20FCBB640082F395 /* SDPTextModuleInitializer.swift in Sources */,
+				321635E42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift in Sources */,
 				325A5A422100DFEA00DD7222 /* SDPQRScannerViewController.swift in Sources */,
+				328FBF22210998AD00D728A5 /* String+UnicodeEncoding.swift in Sources */,
+				321635E82108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift in Sources */,
 				325A5A442100DFEA00DD7222 /* SDPQRScannerViewInput.swift in Sources */,
 				3203E1A020FCBB640082F395 /* SDPTextConfigurator.swift in Sources */,
 				328FCD5E202F441100EA8098 /* AppDelegate.swift in Sources */,
+				321635EE2108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift in Sources */,
+				321635ED2108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift in Sources */,
 				325A5A432100DFEA00DD7222 /* SDPQRScannerViewOutput.swift in Sources */,
 				32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */,
 				3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */,
 				325A5A452100DFEA00DD7222 /* SDPQRScannerConfigurator.swift in Sources */,
+				321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */,
+				321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */,
 				3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */,
+				321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */,
+				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
 				3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */,
 				32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */,
@@ -747,13 +988,18 @@
 				325A5A462100DFEA00DD7222 /* SDPQRScannerInitializer.swift in Sources */,
 				325A5A492100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift in Sources */,
 				32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */,
+				321635EC2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift in Sources */,
 				3203E19D20FCBB640082F395 /* SDPTextViewOutput.swift in Sources */,
 				3274556921084C640096AE75 /* TDPClipboardActions.swift in Sources */,
+				321635E72108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift in Sources */,
 				325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */,
 				325A5A482100DFEA00DD7222 /* SDPQRScannerInteractor.swift in Sources */,
 				3274556721084C400096AE75 /* TDPReduxStores.swift in Sources */,
+				321635E92108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift in Sources */,
 				3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */,
+				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
+				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
 				32B63CE82107455B00BDE139 /* TDPApplicationThemeConfigurator.swift in Sources */,
 				3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */,
 			);
@@ -764,6 +1010,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				32B63CF8210746AF00BDE139 /* testTests.swift in Sources */,
+				B114430802C7257273B91970 /* SDPQRGeneratorConfiguratorTests.swift in Sources */,
+				CB86D0CBFE0251B5DC5AB6DA /* SDPQRGeneratorViewTests.swift in Sources */,
+				FD220247FFE3390791694A2C /* SDPQRGeneratorInteractorTests.swift in Sources */,
+				008D6EA08CAA50ABB1AC5922 /* SDPQRGeneratorPresenterTests.swift in Sources */,
+				BE05BF60A90164B5381B4EA1 /* SDPQRGeneratorRouterTests.swift in Sources */,
+				A1A09B7043F3C94B2E534A75 /* SDPSDPQRGeneratorConfiguratorTests.swift in Sources */,
+				F1DD666298379E7AAA15F9E1 /* SDPSDPQRGeneratorViewTests.swift in Sources */,
+				9F4B9A20D232EC2810535F12 /* SDPSDPQRGeneratorInteractorTests.swift in Sources */,
+				64096C1F7AE376FC8A189693 /* SDPSDPQRGeneratorPresenterTests.swift in Sources */,
+				67438643638C95CBC8033E30 /* SDPSDPQRGeneratorRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,7 +1191,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "$(SRCROOT)/Swift-data-processor/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dplatov.data-processor";
@@ -952,7 +1208,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "$(SRCROOT)/Swift-data-processor/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dplatov.data-processor";

@@ -8,18 +8,28 @@
 import AVFoundation
 
 class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewOutput, SDPQRScannerInteractorOutput, AVCaptureMetadataOutputObjectsDelegate {
-
+    
     weak var view: SDPQRScannerViewInput!
     var interactor: SDPQRScannerInteractorInput!
     var router: SDPQRScannerRouterInput!
     
     var text: String? = nil
+    var isForceSupportingUnicode = true {
+        didSet{
+            UserDefaults.standard.set(!isForceSupportingUnicode, forKey: "isNotSupportingUnicode")
+            UserDefaults.standard.synchronize()
+        }
+    }
 
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: QRScannerViewOutput
+    func set(unicodeSupportTo unicodeSupport: Bool) {
+        isForceSupportingUnicode = unicodeSupport
+    }
+    
     func viewIsReady() {
         
         #if targetEnvironment(simulator)
@@ -28,7 +38,8 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
         return
         #endif
         
-        view.setupInitialState()
+        isForceSupportingUnicode = !UserDefaults.standard.bool(forKey: "isNotSupportingUnicode")
+        view.setupInitialState(unicodeSupport: isForceSupportingUnicode)
         setupCameraCapturing()
     }
     
@@ -37,15 +48,21 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
         
         if let object = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
             if object.type == AVMetadataObject.ObjectType.qr, let string = object.stringValue {
+
+                var resultString = string
                 
-                guard (text != string || text == nil) else {
+                if isForceSupportingUnicode, let decodedString = string.unicodeDecodedString {
+                    resultString = decodedString
+                }
+                
+                guard (text != resultString || text == nil) else {
                     return
                 }
                 
-                text = string
+                text = resultString
                 
                 DispatchQueue.main.async {
-                    let action = SDPSetTextAction(string:string)
+                    let action = SDPSetTextAction(string:resultString)
                     SDPReduxStores.shared.clipboard.dispatch(action)
                 }
                 

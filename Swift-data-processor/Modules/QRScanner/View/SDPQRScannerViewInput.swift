@@ -14,7 +14,7 @@ protocol SDPQRScannerViewInput: class {
         Setup initial state of the view
     */
 
-    func setupInitialState()
+    func setupInitialState(unicodeSupport:Bool)
     func setupCamera(delegate: AVCaptureMetadataOutputObjectsDelegate)
     func stopCamera()
     func startCamera()

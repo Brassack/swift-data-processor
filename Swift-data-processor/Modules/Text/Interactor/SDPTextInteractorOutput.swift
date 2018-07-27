@@ -11,6 +11,6 @@ import Foundation
 protocol SDPTextInteractorOutput: class {
     
     func set(text:String?)
-    func textIsReady()
+    func textAddedToClipboard()
     func set(actions:[String], titles: [String: String]?)
 }

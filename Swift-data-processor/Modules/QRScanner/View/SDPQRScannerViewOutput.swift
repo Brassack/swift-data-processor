@@ -8,10 +8,6 @@
 
 protocol SDPQRScannerViewOutput {
 
-    /**
-        @author Dmytro Platov
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
+    func set(unicodeSupportTo: Bool)
 }

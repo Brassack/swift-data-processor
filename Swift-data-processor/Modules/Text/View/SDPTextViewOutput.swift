@@ -11,7 +11,7 @@ import UIKit
 protocol SDPTextViewOutput: UITextViewDelegate {
     
     func viewIsReady()
-    func viewWillAppear()
+    func viewWillBePresented()
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     func copy()
     func paste()

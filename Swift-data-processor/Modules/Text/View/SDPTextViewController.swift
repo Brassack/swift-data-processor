@@ -25,7 +25,7 @@ class SDPTextViewController: UIViewController, SDPTextViewInput {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        output.viewWillAppear()
+        output.viewWillBePresented()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,8 +33,6 @@ class SDPTextViewController: UIViewController, SDPTextViewInput {
     }
     
     // MARK: TextViewInput
-
-    
     func setupInitialState() {
         
         let button = UIButton(type: .system)
@@ -53,6 +51,7 @@ class SDPTextViewController: UIViewController, SDPTextViewInput {
     
     func prepareForScreen() {
         refreshInputActionsState()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func set(text: String?) {

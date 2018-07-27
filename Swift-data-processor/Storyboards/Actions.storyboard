@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sdpqrgenerator View Controller-->
+        <scene sceneID="n4e-RO-pA9">
+            <objects>
+                <viewController storyboardIdentifier="SDPQRGeneratorViewController" title="QR GENERATOR" id="HsH-Af-NeW" customClass="SDPQRGeneratorViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PM7-bS-c4B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmZ-0v-H6e">
+                                <rect key="frame" x="128.5" y="323" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-Mx-rth">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zP0-Mx-rth" secondAttribute="height" id="wI7-g2-0uo"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yJy-vX-jO1" appends="YES" id="0O2-fC-I7n"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGQ-wX-pyZ">
+                                <rect key="frame" x="172" y="576" width="30" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DWf-By-3eu"/>
+                                    <constraint firstAttribute="width" secondItem="qGQ-wX-pyZ" secondAttribute="height" multiplier="16:23" id="Hdl-lt-xhs"/>
+                                </constraints>
+                                <state key="normal" image="share-icon"/>
+                                <connections>
+                                    <action selector="share:" destination="HsH-Af-NeW" eventType="touchUpInside" id="3yY-vQ-mza"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zP0-Mx-rth" firstAttribute="centerY" secondItem="PM7-bS-c4B" secondAttribute="centerY" id="BJ1-Ft-dXx"/>
+                            <constraint firstItem="bzb-jk-VHD" firstAttribute="bottom" secondItem="qGQ-wX-pyZ" secondAttribute="bottom" constant="48" id="QHc-3g-ojr"/>
+                            <constraint firstItem="zP0-Mx-rth" firstAttribute="centerX" secondItem="PM7-bS-c4B" secondAttribute="centerX" id="XBq-zm-n0F"/>
+                            <constraint firstItem="qGQ-wX-pyZ" firstAttribute="centerX" secondItem="zP0-Mx-rth" secondAttribute="centerX" id="Y4u-tl-oEY"/>
+                            <constraint firstItem="zP0-Mx-rth" firstAttribute="width" secondItem="PM7-bS-c4B" secondAttribute="width" multiplier="8:10" id="gDe-kA-htP"/>
+                            <constraint firstItem="AmZ-0v-H6e" firstAttribute="centerY" secondItem="PM7-bS-c4B" secondAttribute="centerY" id="hQa-o9-6rH"/>
+                            <constraint firstItem="AmZ-0v-H6e" firstAttribute="centerX" secondItem="PM7-bS-c4B" secondAttribute="centerX" id="jzn-hm-tO9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bzb-jk-VHD"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="QRImageView" destination="zP0-Mx-rth" id="JNa-de-g3V"/>
+                        <outlet property="shareButton" destination="qGQ-wX-pyZ" id="FDG-b1-ehG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gB2-u1-yrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yJy-vX-jO1">
+                    <connections>
+                        <action selector="share:" destination="HsH-Af-NeW" id="Skb-R4-ml6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <customObject id="T9O-RY-JER" customClass="SDPQRGeneratorModuleInitializer" customModule="Swift_data_processor" customModuleProvider="target">
+                    <connections>
+                        <outlet property="sdpqrgeneratorViewController" destination="HsH-Af-NeW" id="4Gi-3Z-Q8m"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="31" y="160"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="share-icon" width="80" height="115"/>
+    </resources>
+</document>

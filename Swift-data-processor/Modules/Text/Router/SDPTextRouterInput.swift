@@ -10,7 +10,7 @@ import Foundation
 
 protocol SDPTextRouterInput {
 
-    func perform(action:String, forText text:String)
+    func showScreen(forAction action:String)
     func qr()
     func returnToRootController()
 }

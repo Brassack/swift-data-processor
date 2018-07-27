@@ -13,6 +13,7 @@ class SDPTextRouter: SDPTextRouterInput {
     var navigationController : UINavigationController? = nil
     var mainStoryboard: UIStoryboard!
     var accesoryStoryboard: UIStoryboard!
+    var actionsStoryboard: UIStoryboard!
     
     // MARK: DPTextRouterInput
     func qr() {
@@ -25,8 +26,13 @@ class SDPTextRouter: SDPTextRouterInput {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func perform(action:String, forText text:String){
-        print("\(action) for text \(text)")
+    func showScreen(forAction action:String){
+        
+        if action == "qr" {
+            
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func returnToRootController() {

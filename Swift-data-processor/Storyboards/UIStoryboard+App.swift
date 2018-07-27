@@ -16,4 +16,9 @@ extension UIStoryboard {
     class var main: UIStoryboard {get{
         return UIStoryboard(name: "Main", bundle: nil)
     }}
+    
+    class var actions: UIStoryboard {get{
+        return UIStoryboard(name: "Actions", bundle: nil)
+    }}
+    
 }

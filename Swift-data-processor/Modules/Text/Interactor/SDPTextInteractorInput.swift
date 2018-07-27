@@ -12,10 +12,13 @@ import Foundation
 protocol SDPTextInteractorInput {
 
     func requestActions()
+    
     func set(text:String?)
     func set(range:NSRange?)
+    
     func copy()
     func paste()
-    func requestText(action: (String?) -> Void)
+    
+    func addTextToclipboard()
     func subscribeToClipboard()
 }

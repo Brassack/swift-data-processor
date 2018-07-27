@@ -14,6 +14,7 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
 
     var output: SDPQRScannerViewOutput!
     var externalConfigurator: SDPViewExternalConfigurator?
+    @IBOutlet weak var unicodeSwith: UISwitch!
     
     // MARK: Camera
     var session:AVCaptureSession?
@@ -22,6 +23,11 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
     // MARK: Outlets
     @IBOutlet weak var cameraCaptureView: UIView!
 
+    // MARK: actions
+    
+    @IBAction func unicodeSwithValueChanged(_ sender: UISwitch) {
+        output.set(unicodeSupportTo: sender.isOn)
+    }
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -102,8 +108,9 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
         }
     }
     
-    func setupInitialState() {
+    func setupInitialState(unicodeSupport:Bool) {
         externalConfigurator?.configure(view: self)
+        unicodeSwith.isOn = unicodeSupport
     }
 
 }
