@@ -10,7 +10,7 @@ import UIKit
 
 class SDPTextRouter: SDPTextRouterInput {
     
-    var navigationController : UINavigationController? = nil
+    weak var navigationController : UINavigationController?
     var mainStoryboard: UIStoryboard!
     var accesoryStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!

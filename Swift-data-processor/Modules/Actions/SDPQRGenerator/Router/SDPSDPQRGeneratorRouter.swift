@@ -8,14 +8,14 @@
 import UIKit
 
 class SDPQRGeneratorRouter: SDPQRGeneratorRouterInput {
-    var controllerToPresenting: UIViewController!
+    weak var controllerToPresenting: UIViewController?
 
     func share(image: UIImage) {
          
          let imageToShare = [image]
          let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-         activityViewController.popoverPresentationController?.sourceView = controllerToPresenting.view
+        activityViewController.popoverPresentationController?.sourceView = controllerToPresenting?.view
         
-        controllerToPresenting.present(activityViewController, animated: true, completion: nil)
+        controllerToPresenting?.present(activityViewController, animated: true, completion: nil)
     }
 }
