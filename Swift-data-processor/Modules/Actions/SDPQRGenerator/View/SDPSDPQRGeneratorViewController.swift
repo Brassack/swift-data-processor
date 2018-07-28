@@ -13,7 +13,7 @@ class SDPQRGeneratorViewController: UIViewController, SDPQRGeneratorViewInput {
     var output: SDPQRGeneratorViewOutput!
 
     @IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var QRImageView: UIImageView!
+    @IBOutlet weak var qrImageView: UIImageView!
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class SDPQRGeneratorViewController: UIViewController, SDPQRGeneratorViewInput {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        output.viewWillBePresented(qrSize: QRImageView.bounds.size)
+        output.viewWillBePresented(qrSize: qrImageView.bounds.size)
     }
 
     @IBAction func share(_ sender: Any) {
@@ -37,10 +37,10 @@ class SDPQRGeneratorViewController: UIViewController, SDPQRGeneratorViewInput {
     func show(qrImage: UIImage) {
         
         shareButton.isEnabled = true
-        QRImageView.isUserInteractionEnabled = true
+        qrImageView.isUserInteractionEnabled = true
         
-        QRImageView.isHidden = false
-        QRImageView.image = qrImage
+        qrImageView.isHidden = false
+        qrImageView.image = qrImage
     }
     
     func prepareFoorScreen() {

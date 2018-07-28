@@ -391,7 +391,7 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		325A5A2E2100DFEA00DD7222 /* QRScanner */ = {
+		325A5A2E2100DFEA00DD7222 /* SDPQRScanner */ = {
 			isa = PBXGroup;
 			children = (
 				32127F232106DE37000EE1C6 /* External configurator */,
@@ -401,7 +401,7 @@
 				325A5A392100DFEA00DD7222 /* Interactor */,
 				325A5A3D2100DFEA00DD7222 /* Router */,
 			);
-			path = QRScanner;
+			path = SDPQRScanner;
 			sourceTree = "<group>";
 		};
 		325A5A2F2100DFEA00DD7222 /* Presenter */ = {
@@ -584,7 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				321635D12108CEB900793E7D /* Actions */,
-				325A5A2E2100DFEA00DD7222 /* QRScanner */,
+				325A5A2E2100DFEA00DD7222 /* SDPQRScanner */,
 				3203E18820FCBB630082F395 /* Text */,
 			);
 			path = Modules;

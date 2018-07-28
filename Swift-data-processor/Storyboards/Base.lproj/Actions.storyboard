@@ -61,7 +61,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="QRImageView" destination="zP0-Mx-rth" id="JNa-de-g3V"/>
+                        <outlet property="qrImageView" destination="zP0-Mx-rth" id="WFP-3K-Oxu"/>
                         <outlet property="shareButton" destination="qGQ-wX-pyZ" id="FDG-b1-ehG"/>
                     </connections>
                 </viewController>
