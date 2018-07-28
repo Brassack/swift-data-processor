@@ -21,4 +21,5 @@ protocol SDPTextInteractorInput {
     
     func addTextToclipboard()
     func subscribeToClipboard()
+    func unsubscribeFromClipboard()
 }

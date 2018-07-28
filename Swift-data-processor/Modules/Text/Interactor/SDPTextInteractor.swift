@@ -48,6 +48,10 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
         SDPReduxStores.shared.clipboard.subscribe(self)
     }
     
+    func unsubscribeFromClipboard() {
+        SDPReduxStores.shared.clipboard.unsubscribe(self)
+    }
+    
     func copy() {
         
         guard let text = data.text else {

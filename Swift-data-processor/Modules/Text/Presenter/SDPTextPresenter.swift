@@ -21,6 +21,7 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     }
     
     func viewWillBePresented(){
+        interactor.unsubscribeFromClipboard()
         view.prepareForScreen()
         view.refreshInputActionsState()
     }
