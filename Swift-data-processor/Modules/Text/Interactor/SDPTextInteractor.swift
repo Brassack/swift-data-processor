@@ -103,14 +103,10 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
         }else if let range = data.range {
             
             var pasteText = data.text ?? ""
-            
-            if range.location >= pasteText.count {
-                pasteText = "\(pasteText)\(string)"
-            }else{
-                let indexStartOfText = pasteText.index(pasteText.startIndex, offsetBy: range.location)
-                let indexEndOfText = pasteText.index(indexStartOfText, offsetBy: range.length)
-                pasteText.replaceSubrange(indexStartOfText..<indexEndOfText, with: string)
-            }
+
+            let indexStartOfText = pasteText.index(pasteText.startIndex, offsetBy: range.location)
+            let indexEndOfText = pasteText.index(indexStartOfText, offsetBy: range.length)
+            pasteText.replaceSubrange(indexStartOfText..<indexEndOfText, with: string)
             
             data.text = pasteText
             output.set(text: pasteText)
