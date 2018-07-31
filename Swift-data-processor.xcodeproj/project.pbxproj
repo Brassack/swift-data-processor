@@ -33,6 +33,10 @@
 		321635ED2108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E02108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift */; };
 		321635EE2108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E22108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift */; };
 		321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635E32108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift */; };
+		324CD2C521102AE900A978C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26421102AE900A978C1 /* LICENSE */; };
+		324CD2CA21102AE900A978C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26D21102AE900A978C1 /* README.md */; };
+		324CD2E721102B2F00A978C1 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324CD2BC21102AE900A978C1 /* CatCrypto.framework */; };
+		324CD2E821102B2F00A978C1 /* CatCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 324CD2BC21102AE900A978C1 /* CatCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325A5A2D2100D2B300DD7222 /* TDPClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */; };
 		325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */; };
 		325A5A412100DFEA00DD7222 /* SDPQRScannerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */; };
@@ -90,6 +94,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		324CD2BB21102AE900A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C330B4961FDE93AB005AEECC;
+			remoteInfo = "CatCrypto-iOS";
+		};
+		324CD2BD21102AE900A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3E273731FE4259D0026655E;
+			remoteInfo = "CatCrypto-macOS";
+		};
+		324CD2BF21102AE900A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945E851FE3CBAE009A203D;
+			remoteInfo = "CatCrypto-tvOS";
+		};
+		324CD2C121102AE900A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945EAD1FE3CE48009A203D;
+			remoteInfo = "CatCrypto-watchOS";
+		};
+		324CD2C321102AE900A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C328B7921FF4DC4900943D75;
+			remoteInfo = "CatCrypto-iOSTests";
+		};
+		324CD2E921102B2F00A978C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
+			remoteInfo = "CatCrypto-iOS";
+		};
 		328FCD71202F441200EA8098 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 328FCD52202F441100EA8098 /* Project object */;
@@ -105,6 +151,20 @@
 			remoteInfo = test;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		324CD2EB21102B2F00A978C1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				324CD2E821102B2F00A978C1 /* CatCrypto.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05F7BC62ADD6C1E5262D5540 /* Pods-SwiftDP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDP/Pods-SwiftDP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +200,9 @@
 		321635E02108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorInteractor.swift; sourceTree = "<group>"; };
 		321635E22108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouterInput.swift; sourceTree = "<group>"; };
 		321635E32108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouter.swift; sourceTree = "<group>"; };
+		324CD26421102AE900A978C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
+		324CD26D21102AE900A978C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardStore.swift; sourceTree = "<group>"; };
 		325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerPresenter.swift; sourceTree = "<group>"; };
 		325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerModuleInput.swift; sourceTree = "<group>"; };
@@ -220,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324CD2E721102B2F00A978C1 /* CatCrypto.framework in Frameworks */,
 				EF92367083985B0776B457AF /* Pods_Swift_data_processor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +455,36 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		324CD26221102AE900A978C1 /* Third-party */ = {
+			isa = PBXGroup;
+			children = (
+				324CD26321102AE900A978C1 /* CatCrypto */,
+			);
+			path = "Third-party";
+			sourceTree = "<group>";
+		};
+		324CD26321102AE900A978C1 /* CatCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				324CD26421102AE900A978C1 /* LICENSE */,
+				324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */,
+				324CD26D21102AE900A978C1 /* README.md */,
+			);
+			path = CatCrypto;
+			sourceTree = "<group>";
+		};
+		324CD26621102AE900A978C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				324CD2BC21102AE900A978C1 /* CatCrypto.framework */,
+				324CD2BE21102AE900A978C1 /* CatCrypto.framework */,
+				324CD2C021102AE900A978C1 /* CatCrypto.framework */,
+				324CD2C221102AE900A978C1 /* CatCrypto.framework */,
+				324CD2C421102AE900A978C1 /* CatCrypto-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		325A5A2E2100DFEA00DD7222 /* SDPQRScanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +576,7 @@
 				32B63CFE210747E500BDE139 /* Helper */,
 				32B63CFC210747B500BDE139 /* Model */,
 				32B63CFB2107479C00BDE139 /* Resources */,
+				324CD26221102AE900A978C1 /* Third-party */,
 				32B63CF92107472F00BDE139 /* Supporting files */,
 				328FCD5D202F441100EA8098 /* AppDelegate.swift */,
 			);
@@ -739,10 +834,12 @@
 				328FCD57202F441100EA8098 /* Frameworks */,
 				328FCD58202F441100EA8098 /* Resources */,
 				5C154F702CF9E4E590A07238 /* [CP] Embed Pods Frameworks */,
+				324CD2EB21102B2F00A978C1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				324CD2EA21102B2F00A978C1 /* PBXTargetDependency */,
 			);
 			name = "Swift-data-processor";
 			productName = test;
@@ -828,6 +925,12 @@
 			mainGroup = 328FCD51202F441100EA8098;
 			productRefGroup = 328FCD5B202F441100EA8098 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 324CD26621102AE900A978C1 /* Products */;
+					ProjectRef = 324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				328FCD59202F441100EA8098 /* Swift-data-processor */,
@@ -837,6 +940,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		324CD2BC21102AE900A978C1 /* CatCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto.framework;
+			remoteRef = 324CD2BB21102AE900A978C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		324CD2BE21102AE900A978C1 /* CatCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto.framework;
+			remoteRef = 324CD2BD21102AE900A978C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		324CD2C021102AE900A978C1 /* CatCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto.framework;
+			remoteRef = 324CD2BF21102AE900A978C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		324CD2C221102AE900A978C1 /* CatCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto.framework;
+			remoteRef = 324CD2C121102AE900A978C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		324CD2C421102AE900A978C1 /* CatCrypto-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-iOSTests.xctest";
+			remoteRef = 324CD2C321102AE900A978C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		328FCD58202F441100EA8098 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -845,7 +986,9 @@
 				32B63CF5210746AF00BDE139 /* Info.plist in Resources */,
 				328FCD6A202F441100EA8098 /* LaunchScreen.storyboard in Resources */,
 				328FCD67202F441100EA8098 /* Assets.xcassets in Resources */,
+				324CD2C521102AE900A978C1 /* LICENSE in Resources */,
 				3274556E21084E490096AE75 /* Accessory.storyboard in Resources */,
+				324CD2CA21102AE900A978C1 /* README.md in Resources */,
 				328D54DE210B90D700146D9A /* Actions.storyboard in Resources */,
 				328FCD65202F441100EA8098 /* Main.storyboard in Resources */,
 			);
@@ -1034,6 +1177,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		324CD2EA21102B2F00A978C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CatCrypto-iOS";
+			targetProxy = 324CD2E921102B2F00A978C1 /* PBXContainerItemProxy */;
+		};
 		328FCD72202F441200EA8098 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 328FCD59202F441100EA8098 /* Swift-data-processor */;
@@ -1197,6 +1345,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93E0363407A9C9226E0E3C23 /* Pods-Swift-data-processor.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2QW27HUU;
@@ -1214,6 +1363,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FF6F4C9089DA48EAED96F15 /* Pods-Swift-data-processor.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TR2QW27HUU;
