@@ -13,6 +13,8 @@ class SDPApplicationThemeConfigurator: NSObject {
         
         UIButton.appearance().tintColor = actionColor
         UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = actionColor
+        UITextField.appearance().textColor = actionColor
+        UITextField.appearance().tintColor = actionColor
         UITabBar.appearance().tintColor = actionColor
         UISwitch.appearance().onTintColor = actionColor
     }

@@ -65,12 +65,12 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-zI-oq8">
-                                <rect key="frame" x="164.5" y="321" width="46" height="46"/>
+                                <rect key="frame" x="167.5" y="324" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="bnt-Hp-n8C"/>
+                                    <constraint firstAttribute="width" constant="40" id="bnt-Hp-n8C"/>
                                     <constraint firstAttribute="width" secondItem="iDg-zI-oq8" secondAttribute="height" id="h2O-Af-I17"/>
                                 </constraints>
-                                <state key="normal" image="text-qr-icon"/>
+                                <state key="normal" image="qr-icon"/>
                                 <connections>
                                     <action selector="qrPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iE0-1m-AUK"/>
                                 </connections>
@@ -396,7 +396,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="qr-icon" width="56" height="56"/>
         <image name="second" width="30" height="30"/>
-        <image name="text-qr-icon" width="200" height="200"/>
     </resources>
 </document>

@@ -32,6 +32,10 @@ class SDPTextRouter: SDPTextRouterInput {
             
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
             navigationController?.pushViewController(vc, animated: true)
+        }else if action == "hash" {
+            
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
