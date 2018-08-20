@@ -11,7 +11,6 @@ import AVFoundation
 
 class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPViewExternalConfiguratorProtocol {
     
-
     var output: SDPQRScannerViewOutput!
     var externalConfigurator: SDPViewExternalConfigurator?
     @IBOutlet weak var unicodeSwith: UISwitch!

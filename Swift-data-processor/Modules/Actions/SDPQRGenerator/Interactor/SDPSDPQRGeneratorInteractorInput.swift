@@ -9,5 +9,8 @@
 import Foundation
 
 protocol SDPQRGeneratorInteractorInput {
+    
+    var stores:SDPReduxStores {get set}
+    
     func requestClipboardData()
 }

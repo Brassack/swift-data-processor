@@ -8,4 +8,5 @@
 
 protocol SDPHashesModuleInput: class {
 
+    var interactor: SDPHashesInteractorInput! {get set}
 }

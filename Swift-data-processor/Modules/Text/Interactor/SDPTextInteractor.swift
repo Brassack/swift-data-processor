@@ -11,18 +11,20 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
 
     weak var output: SDPTextInteractorOutput!
     var data = (text:String?, range:NSRange?)(nil, nil)
+    var stores = SDPReduxStores.shared
+
     
     func newState(state: SDPTextClipboard) {
         guard let text = state.text else {
             return
         }
         
-        SDPReduxStores.shared.clipboard.unsubscribe(self)
+        stores.clipboard.unsubscribe(self)
         output.textAddedToClipboard()
         data.text = text
         output.set(text: text)
         let action = SDPSetTextAction(string:nil)
-        SDPReduxStores.shared.clipboard.dispatch(action)
+        stores.clipboard.dispatch(action)
     }
     
     func requestActions(){
@@ -33,7 +35,7 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
     
     func addTextToclipboard() {
         let action = SDPSetTextAction(string:data.text)
-        SDPReduxStores.shared.clipboard.dispatch(action)
+        stores.clipboard.dispatch(action)
     }
     
     func set(text: String?) {
@@ -45,11 +47,11 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
     }
 
     func subscribeToClipboard() {
-        SDPReduxStores.shared.clipboard.subscribe(self)
+        stores.clipboard.subscribe(self)
     }
     
     func unsubscribeFromClipboard() {
-        SDPReduxStores.shared.clipboard.unsubscribe(self)
+        stores.clipboard.unsubscribe(self)
     }
     
     func copy() {

@@ -8,4 +8,5 @@
 
 protocol SDPQRGeneratorModuleInput: class {
 
+    var interactor: SDPQRGeneratorInteractorInput! {get set}
 }

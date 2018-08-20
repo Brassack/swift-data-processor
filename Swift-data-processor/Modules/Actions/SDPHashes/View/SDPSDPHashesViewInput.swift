@@ -9,6 +9,8 @@
 import UIKit
 protocol SDPHashesViewInput: class {
 
+    var output: SDPHashesViewOutput! {get set}
+    
     func setupInitialState()
     func setTableDataSource(_ dataSource: UITableViewDataSource)
     func prepareForScreen()

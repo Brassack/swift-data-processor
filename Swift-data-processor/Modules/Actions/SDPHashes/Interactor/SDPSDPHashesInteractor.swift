@@ -13,7 +13,7 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     var hashesDataFactory: SDPHashesTableViewDataFactory?
     var text: String?
     private var hashParameters: (iterations: Int, salt: String?) = (iterations: 1, salt: nil)
-
+    var stores = SDPReduxStores.shared
     
     // MARK: StoreSubscriber
     func newState(state: SDPTextClipboard) {
@@ -23,10 +23,10 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
         }
         
         self.text = text
-        SDPReduxStores.shared.clipboard.unsubscribe(self)
+        stores.clipboard.unsubscribe(self)
         updateData()
         let action = SDPSetTextAction(string:nil)
-        SDPReduxStores.shared.clipboard.dispatch(action)
+        stores.clipboard.dispatch(action)
     }
     
     // MARK: SDPHashesInteractorInput
@@ -59,7 +59,7 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
         
         hashParameters = parameters
         if self.text == nil {
-            SDPReduxStores.shared.clipboard.subscribe(self)
+            stores.clipboard.subscribe(self)
         }else{
             updateData()
         }

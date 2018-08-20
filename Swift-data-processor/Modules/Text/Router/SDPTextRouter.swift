@@ -23,6 +23,10 @@ class SDPTextRouter: SDPTextRouterInput {
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()
         }
         
+        ((vc as? SDPQRScannerViewInput)?.output
+            as? SDPQRScannerModuleInput)?
+            .interactor.stores = SDPReduxStores.shared
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -31,10 +35,20 @@ class SDPTextRouter: SDPTextRouterInput {
         if action == "qr" {
             
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
+            
+            ((vc as? SDPQRGeneratorViewInput)?.output
+                as? SDPHashesModuleInput)?
+                .interactor.stores = SDPReduxStores.shared
+            
             navigationController?.pushViewController(vc, animated: true)
         }else if action == "hash" {
             
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
+            
+            ((vc as? SDPHashesViewInput)?.output
+                as? SDPHashesModuleInput)?
+                .interactor.stores = SDPReduxStores.shared
+
             navigationController?.pushViewController(vc, animated: true)
         }
     }

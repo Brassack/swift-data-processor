@@ -10,4 +10,6 @@ import Foundation
 
 protocol SDPQRScannerInteractorInput {
 
+    var stores: SDPReduxStores {get set}
+    func textReady(_ text: String)
 }

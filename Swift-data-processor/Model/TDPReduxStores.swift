@@ -10,9 +10,10 @@ import Foundation
 import ReSwift
 
 class SDPReduxStores {
+
     static let shared = SDPReduxStores()
     
-    let clipboard = SDPClipboardStore(
+    var clipboard = SDPClipboardStore(
         reducer: SDPClipboardStore.clipboardReducer,
         state: nil
     )

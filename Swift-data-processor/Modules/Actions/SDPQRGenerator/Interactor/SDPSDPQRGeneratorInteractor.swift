@@ -10,10 +10,11 @@ import ReSwift
 class SDPQRGeneratorInteractor: SDPQRGeneratorInteractorInput, StoreSubscriber {
 
     weak var output: SDPQRGeneratorInteractorOutput!
+    var stores = SDPReduxStores.shared
 
     // MARK: SDPQRGeneratorInteractorInput
     func requestClipboardData() {
-        SDPReduxStores.shared.clipboard.subscribe(self)
+        stores.clipboard.subscribe(self)
     }
     
     // MARK: StoreSubscriber
@@ -22,9 +23,9 @@ class SDPQRGeneratorInteractor: SDPQRGeneratorInteractorInput, StoreSubscriber {
             return
         }
         
-        SDPReduxStores.shared.clipboard.unsubscribe(self)
+        stores.clipboard.unsubscribe(self)
         output.set(text: text)
         let action = SDPSetTextAction(string:nil)
-        SDPReduxStores.shared.clipboard.dispatch(action)
+        stores.clipboard.dispatch(action)
     }
 }

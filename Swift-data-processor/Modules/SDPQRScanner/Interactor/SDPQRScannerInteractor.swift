@@ -9,5 +9,10 @@
 class SDPQRScannerInteractor: SDPQRScannerInteractorInput {
 
     weak var output: SDPQRScannerInteractorOutput!
+    var stores = SDPReduxStores.shared
 
+    func textReady(_ text: String) {
+        let action = SDPSetTextAction(string:text)
+        stores.clipboard.dispatch(action)
+    }
 }

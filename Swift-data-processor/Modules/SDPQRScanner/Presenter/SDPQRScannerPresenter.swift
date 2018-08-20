@@ -33,8 +33,7 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
     func viewIsReady() {
         
         #if targetEnvironment(simulator)
-        let action = SDPSetTextAction(string:"simulator")
-        SDPReduxStores.shared.clipboard.dispatch(action)
+        interactor.textReady("simulator")
         return
         #endif
         
@@ -61,9 +60,8 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
                 
                 text = resultString
                 
-                DispatchQueue.main.async {
-                    let action = SDPSetTextAction(string:resultString)
-                    SDPReduxStores.shared.clipboard.dispatch(action)
+                DispatchQueue.main.async { [weak self] in
+                    self?.interactor.textReady(resultString)
                 }
                 
             }

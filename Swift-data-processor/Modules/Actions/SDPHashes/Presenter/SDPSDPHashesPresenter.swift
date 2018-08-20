@@ -8,7 +8,7 @@
 import UIKit
 
 class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesInteractorOutput {
-
+    
     weak var view: SDPHashesViewInput!
     var interactor: SDPHashesInteractorInput!
     var router: SDPHashesRouterInput!

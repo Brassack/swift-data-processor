@@ -9,11 +9,8 @@ import AVFoundation
 
 protocol SDPQRScannerViewInput: class {
 
-    /**
-        @author Dmytro Platov
-        Setup initial state of the view
-    */
-
+    var output: SDPQRScannerViewOutput! {get set}
+    
     func setupInitialState(unicodeSupport:Bool)
     func setupCamera(delegate: AVCaptureMetadataOutputObjectsDelegate)
     func stopCamera()

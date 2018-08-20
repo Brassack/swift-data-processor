@@ -10,6 +10,8 @@ import Foundation
 
 protocol SDPHashesInteractorInput {
     
+    var stores:SDPReduxStores {get set}
+    
     func requestData(_:(iterations: Int, salt: String?))
     func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath)
 }
