@@ -28,7 +28,6 @@ class SDPHashesTableViewDataFactory {
     }
     
     func createData(){
-        weak var wself = self
         
         var result = [SDPTableViewDataSourceSection]()
         var infoArray = [SDPSectionInfo]()
@@ -43,14 +42,14 @@ class SDPHashesTableViewDataFactory {
             result.append(SDPHashesTableViewDataFactory.sectionDataToStubResultSectionData(data: info))
         }
         
-        wself?.delegate?.set(stubData: result)
+        delegate?.set(stubData: result)
         
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { [weak self] in
             
-            let wselfContainer = Weak<SDPHashesTableViewDataFactory>(wself)
+            let wselfContainer = Weak<SDPHashesTableViewDataFactory>(self)
             
             for i in 0..<infoArray.count {
-                guard wself != nil else{
+                guard self != nil else{
                     return
                 }
                 
@@ -61,7 +60,7 @@ class SDPHashesTableViewDataFactory {
                 }
                 
                 DispatchQueue.main.async {
-                    wself?.delegate?.set(data: result)
+                    self?.delegate?.set(data: result)
                 }
             }
             

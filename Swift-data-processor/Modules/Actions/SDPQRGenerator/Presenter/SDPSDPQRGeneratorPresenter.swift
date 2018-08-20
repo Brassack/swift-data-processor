@@ -28,17 +28,16 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
                 return
             }
             
-            weak var wself = self
 
-            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] in
                 
-                guard let resultImage = wself?.fit(image: image, toSize: size) else {
+                guard let resultImage = self?.fit(image: image, toSize: size) else {
                     return
                 }
                 
                 DispatchQueue.main.async {
-                    wself?.qrImage = resultImage
-                    wself?.view.show(qrImage: resultImage)
+                    self?.qrImage = resultImage
+                    self?.view.show(qrImage: resultImage)
                 }
             }
         }
@@ -79,28 +78,27 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
     // MARK: SDPQRGeneratorInteractorOutput
     func set(text: String) {
         
-        weak var wself = self
         
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {[weak self] in
             
             guard let baseImage = text.qrImage() else {
                 return
             }
             
-            guard let size = wself?.qrImageSize else {
+            guard let size = self?.qrImageSize else {
                 DispatchQueue.main.async {
-                    wself?.view.show(qrImage: baseImage)
+                    self?.view.show(qrImage: baseImage)
                 }
                 return
             }
             
-            guard let resultImage = wself?.fit(image: baseImage, toSize: size) else{
+            guard let resultImage = self?.fit(image: baseImage, toSize: size) else{
                 return
             }
             
             DispatchQueue.main.async {
-                wself?.qrImage = resultImage
-                wself?.view.show(qrImage: resultImage)
+                self?.qrImage = resultImage
+                self?.view.show(qrImage: resultImage)
             }
         }
     }
