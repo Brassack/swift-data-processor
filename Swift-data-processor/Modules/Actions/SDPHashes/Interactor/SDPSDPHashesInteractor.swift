@@ -7,6 +7,27 @@
 //
 import ReSwift
 
+
+class SDPTextClipboardSubscriberObject: StoreSubscriber {
+    
+    let newStateBlock: (SDPTextClipboard) -> Void
+    let clipboard: SDPClipboardStore
+    
+    init(clipboard: SDPClipboardStore, newStateBlock: @escaping (SDPTextClipboard) -> Void) {
+        self.clipboard = clipboard
+        self.newStateBlock = newStateBlock
+        clipboard.subscribe(self)
+    }
+    
+    deinit {
+        clipboard.unsubscribe(self)
+    }
+    
+    func newState(state: SDPTextClipboard) {
+        newStateBlock(state)
+    }
+}
+
 class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
 
     weak var output: SDPHashesInteractorOutput!
@@ -14,6 +35,8 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     var text: String?
     private var hashParameters: (iterations: Int, salt: String?) = (iterations: 1, salt: nil)
     var stores = SDPReduxStores.shared
+    private var saltClipboardSubscriber:SDPTextClipboardSubscriberObject?
+    private var storesForSaltClipboard:SDPReduxStores?
     
     // MARK: StoreSubscriber
     func newState(state: SDPTextClipboard) {
@@ -30,6 +53,41 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     }
     
     // MARK: SDPHashesInteractorInput
+    func unsubscribeFromSaltClipboard() {
+        saltClipboardSubscriber = nil
+        storesForSaltClipboard = nil
+    }
+    
+    func requestStoresForSaltClipboard() {
+        if let storesForSaltClipboard = storesForSaltClipboard {
+            output.storesForSaltClipboardIsReady(stores: storesForSaltClipboard)
+        }
+        
+        storesForSaltClipboard = SDPReduxStores()
+        storesForSaltClipboard?.clipboard = SDPClipboardStore(
+            reducer: SDPClipboardStore.clipboardReducer,
+            state: nil
+        )
+        
+        guard let storesForSaltClipboard = storesForSaltClipboard else {
+            return
+        }
+        
+        saltClipboardSubscriber = SDPTextClipboardSubscriberObject(clipboard: storesForSaltClipboard.clipboard, newStateBlock: { [weak self] (state)  in
+            
+            guard let text = state.text else {
+                return
+            }
+            
+            self?.output.setScanned(salt: text)
+            
+            self?.storesForSaltClipboard = nil
+            self?.saltClipboardSubscriber = nil
+        })
+        
+        output.storesForSaltClipboardIsReady(stores: storesForSaltClipboard)
+    }
+    
     func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath) {
         
         guard data.count > indexPath.section else {

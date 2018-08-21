@@ -11,6 +11,7 @@ protocol SDPQRScannerViewInput: class {
 
     var output: SDPQRScannerViewOutput! {get set}
     
+    func prepareForScreen()
     func setupInitialState(unicodeSupport:Bool)
     func setupCamera(delegate: AVCaptureMetadataOutputObjectsDelegate)
     func stopCamera()

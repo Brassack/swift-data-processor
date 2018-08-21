@@ -79,7 +79,7 @@
 		3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */; };
 		3274556321084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */; };
 		3274556521084C1A0096AE75 /* TDPTextClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556421084C1A0096AE75 /* TDPTextClipboard.swift */; };
-		3274556721084C400096AE75 /* TDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* TDPReduxStores.swift */; };
+		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
 		3274556921084C640096AE75 /* TDPClipboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556821084C640096AE75 /* TDPClipboardActions.swift */; };
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
@@ -273,7 +273,7 @@
 		3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTableDataSourceObject.swift; sourceTree = "<group>"; };
 		3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		3274556421084C1A0096AE75 /* TDPTextClipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTextClipboard.swift; sourceTree = "<group>"; };
-		3274556621084C400096AE75 /* TDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPReduxStores.swift; sourceTree = "<group>"; };
+		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
 		3274556821084C640096AE75 /* TDPClipboardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardActions.swift; sourceTree = "<group>"; };
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
@@ -802,7 +802,7 @@
 			children = (
 				322AB23A211491C000E96892 /* Cryptography */,
 				324CD2F021103F2600A978C1 /* Table View */,
-				3274556621084C400096AE75 /* TDPReduxStores.swift */,
+				3274556621084C400096AE75 /* SDPReduxStores.swift */,
 				32B63CFD210747C300BDE139 /* Clipboard */,
 			);
 			path = Model;
@@ -1366,7 +1366,7 @@
 				321635E72108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift in Sources */,
 				325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */,
 				325A5A482100DFEA00DD7222 /* SDPQRScannerInteractor.swift in Sources */,
-				3274556721084C400096AE75 /* TDPReduxStores.swift in Sources */,
+				3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */,
 				321635E92108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift in Sources */,
 				324CD31321104D4D00A978C1 /* SDPSDPHashesInteractorInput.swift in Sources */,
 				322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */,

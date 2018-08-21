@@ -8,7 +8,7 @@
 import UIKit
 
 class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesInteractorOutput {
-    
+
     weak var view: SDPHashesViewInput!
     var interactor: SDPHashesInteractorInput!
     var router: SDPHashesRouterInput!
@@ -18,6 +18,9 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     private var tableView: UITableView?
     private var tableDataSource: SDPOrdinaryTableViewDataSource?
 
+    func set(navigationController: UINavigationController?) {
+        router.navigationController = navigationController
+    }
     // MARK: SDPHashesViewOutput
     func copyHash(atIndexPath indexPath: IndexPath) {
         guard let tableDataSource = tableDataSource else {
@@ -44,7 +47,7 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     }
     
     func scanSaltFromQR() {
-        // TODO: Add QR scan
+        interactor.requestStoresForSaltClipboard()
     }
     
     func set(salt: String?) {
@@ -60,9 +63,25 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     
     func viewWillBePresented() {
         view.prepareForScreen()
+        interactor.unsubscribeFromSaltClipboard()
     }
     
     // MARK: SDPHashesInteractorOutput
+    func setScanned(salt: String?) {
+        
+        if let vc = view as? UIViewController {
+            router.returnTo(view: vc)
+        }
+        
+        hashParameters.salt = salt
+        interactor.requestData(hashParameters)
+        view.set(salt: salt)
+    }
+    
+    func storesForSaltClipboardIsReady(stores: SDPReduxStores) {
+        router.scanQR(stores: stores)
+    }
+    
     func hashCopied(at indexPath: IndexPath) {
         view.hashCopied(at: indexPath)
     }

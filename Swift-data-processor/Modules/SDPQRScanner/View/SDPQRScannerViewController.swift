@@ -33,6 +33,11 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output.viewWIllBePresented()
+    }
 
     deinit {
         if let input = session?.inputs.first as? AVCaptureDeviceInput {
@@ -46,6 +51,10 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
         session?.stopRunning()
     }
 
+    // MARK: SDPQRScannerViewInput
+    func prepareForScreen() {
+        
+    }
     // MARK: Camera
     func setupCamera(delegate: AVCaptureMetadataOutputObjectsDelegate) {
         if session != nil {

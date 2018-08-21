@@ -33,13 +33,18 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
     func viewIsReady() {
         
         #if targetEnvironment(simulator)
-        interactor.textReady("simulator")
         return
         #endif
         
         isForceSupportingUnicode = !UserDefaults.standard.bool(forKey: "isNotSupportingUnicode")
         view.setupInitialState(unicodeSupport: isForceSupportingUnicode)
         setupCameraCapturing()
+    }
+    
+    func viewWIllBePresented() {
+        #if targetEnvironment(simulator)
+        interactor.textReady("simulator")
+        #endif
     }
     
     //MARK: AVCaptureMetadataOutputObjectsDelegate

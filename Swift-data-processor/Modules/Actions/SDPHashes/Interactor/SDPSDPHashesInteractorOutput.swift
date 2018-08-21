@@ -10,5 +10,7 @@ import Foundation
 
 protocol SDPHashesInteractorOutput:SDPHashesTableViewDataFactoryDelegate {
 
+    func setScanned(salt:String?)
+    func storesForSaltClipboardIsReady(stores:SDPReduxStores)
     func hashCopied(at indexPath: IndexPath)
 }

@@ -52,6 +52,10 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
     // MARK: UITextFieldDelegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        if textField === saltTextField {
+            return true
+        }
+        
         if string.rangeOfCharacter(from:  CharacterSet.decimalDigits.inverted) != nil {
             textField.shake()
             return false

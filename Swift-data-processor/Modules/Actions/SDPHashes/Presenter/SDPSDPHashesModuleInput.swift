@@ -9,4 +9,5 @@
 protocol SDPHashesModuleInput: class {
 
     var interactor: SDPHashesInteractorInput! {get set}
+    var router: SDPHashesRouterInput! {get set}
 }

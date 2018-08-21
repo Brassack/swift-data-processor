@@ -8,6 +8,7 @@
 
 protocol SDPQRScannerViewOutput {
 
+    func viewWIllBePresented()
     func viewIsReady()
     func set(unicodeSupportTo: Bool)
 }

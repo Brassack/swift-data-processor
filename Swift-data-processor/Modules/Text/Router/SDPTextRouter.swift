@@ -37,17 +37,20 @@ class SDPTextRouter: SDPTextRouterInput {
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
             
             ((vc as? SDPQRGeneratorViewInput)?.output
-                as? SDPHashesModuleInput)?
+                as? SDPQRGeneratorModuleInput)?
                 .interactor.stores = SDPReduxStores.shared
             
             navigationController?.pushViewController(vc, animated: true)
         }else if action == "hash" {
-            
+            //router
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
             
-            ((vc as? SDPHashesViewInput)?.output
-                as? SDPHashesModuleInput)?
-                .interactor.stores = SDPReduxStores.shared
+            if let input = ((vc as? SDPHashesViewInput)?.output
+                as? SDPHashesModuleInput) {
+                
+                input.interactor.stores = SDPReduxStores.shared
+                input.router.navigationController = navigationController
+            }
 
             navigationController?.pushViewController(vc, animated: true)
         }

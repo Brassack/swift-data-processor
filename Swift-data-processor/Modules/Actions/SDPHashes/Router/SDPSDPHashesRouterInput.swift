@@ -6,8 +6,12 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SDPHashesRouterInput {
 
+    var navigationController:UINavigationController? {get set}
+    
+    func scanQR(stores:SDPReduxStores)
+    func returnTo(view: UIViewController)
 }
