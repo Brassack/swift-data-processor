@@ -9,5 +9,4 @@ import Foundation
 
 protocol SDPQRScannerModuleInput: class {
     
-    var interactor: SDPQRScannerInteractorInput! {get set}
 }

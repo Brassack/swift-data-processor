@@ -13,7 +13,7 @@ protocol SDPHashesInteractorInput {
     var stores:SDPReduxStores {get set}
     
     func unsubscribeFromSaltClipboard()
-    func requestStoresForSaltClipboard()
+    func subscribeForSaltClipboard()
     func requestData(_:(iterations: Int, salt: String?))
     func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath)
 }

@@ -19,7 +19,7 @@ protocol SDPTextInteractorInput {
     func copy()
     func paste()
     
-    func addTextToclipboard()
+    func addTextToclipboard(action:String)
     func subscribeToClipboard()
     func unsubscribeFromClipboard()
 }

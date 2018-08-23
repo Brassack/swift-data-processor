@@ -62,7 +62,6 @@
 		324CD31621104D4D00A978C1 /* SDPSDPHashesRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD30621104D4C00A978C1 /* SDPSDPHashesRouterInput.swift */; };
 		324CD3182110542700A978C1 /* SDPHashesTableViewDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD3172110542700A978C1 /* SDPHashesTableViewDataFactory.swift */; };
 		324CD31A21108DEF00A978C1 /* SDPHashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CD31921108DEF00A978C1 /* SDPHashTableViewCell.swift */; };
-		325A5A2D2100D2B300DD7222 /* TDPClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */; };
 		325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */; };
 		325A5A412100DFEA00DD7222 /* SDPQRScannerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */; };
 		325A5A422100DFEA00DD7222 /* SDPQRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A332100DFEA00DD7222 /* SDPQRScannerViewController.swift */; };
@@ -80,11 +79,17 @@
 		3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */; };
 		3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */; };
 		3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB61212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift */; };
+		3273FB90212EEA5500C56B2A /* SDPMapStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB8F212EEA5500C56B2A /* SDPMapStore.swift */; };
+		3273FB92212EF1DD00C56B2A /* SDPQRScannerVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB91212EF1DD00C56B2A /* SDPQRScannerVariables.swift */; };
+		3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB95212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift */; };
+		3273FB98212F147F00C56B2A /* SDPMapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB97212F147F00C56B2A /* SDPMapState.swift */; };
+		3273FB9A212F149B00C56B2A /* SDPMapStateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB99212F149B00C56B2A /* SDPMapStateActions.swift */; };
+		3273FB9D212F14EB00C56B2A /* SDPNavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB9C212F14EB00C56B2A /* SDPNavigationStore.swift */; };
+		3273FB9F212F15A200C56B2A /* SDPNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB9E212F15A200C56B2A /* SDPNavigationState.swift */; };
+		3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */; };
 		3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */; };
 		3274556321084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */; };
-		3274556521084C1A0096AE75 /* TDPTextClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556421084C1A0096AE75 /* TDPTextClipboard.swift */; };
 		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
-		3274556921084C640096AE75 /* TDPClipboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556821084C640096AE75 /* TDPClipboardActions.swift */; };
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
 		328D54DE210B90D700146D9A /* Actions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328D54DC210B90D700146D9A /* Actions.storyboard */; };
@@ -261,7 +266,6 @@
 		324CD30621104D4C00A978C1 /* SDPSDPHashesRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesRouterInput.swift; sourceTree = "<group>"; };
 		324CD3172110542700A978C1 /* SDPHashesTableViewDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactory.swift; sourceTree = "<group>"; };
 		324CD31921108DEF00A978C1 /* SDPHashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashTableViewCell.swift; sourceTree = "<group>"; };
-		325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardStore.swift; sourceTree = "<group>"; };
 		325A5A302100DFEA00DD7222 /* SDPQRScannerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerPresenter.swift; sourceTree = "<group>"; };
 		325A5A312100DFEA00DD7222 /* SDPQRScannerModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerModuleInput.swift; sourceTree = "<group>"; };
 		325A5A332100DFEA00DD7222 /* SDPQRScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerViewController.swift; sourceTree = "<group>"; };
@@ -279,11 +283,17 @@
 		3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalError.swift; sourceTree = "<group>"; };
 		3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalResult.swift; sourceTree = "<group>"; };
 		3273FB61212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+Calculation.swift"; sourceTree = "<group>"; };
+		3273FB8F212EEA5500C56B2A /* SDPMapStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPMapStore.swift; sourceTree = "<group>"; };
+		3273FB91212EF1DD00C56B2A /* SDPQRScannerVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRScannerVariables.swift; sourceTree = "<group>"; };
+		3273FB95212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPMapStoreSubscriberObject.swift; sourceTree = "<group>"; };
+		3273FB97212F147F00C56B2A /* SDPMapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPMapState.swift; sourceTree = "<group>"; };
+		3273FB99212F149B00C56B2A /* SDPMapStateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPMapStateActions.swift; sourceTree = "<group>"; };
+		3273FB9C212F14EB00C56B2A /* SDPNavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationStore.swift; sourceTree = "<group>"; };
+		3273FB9E212F15A200C56B2A /* SDPNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationState.swift; sourceTree = "<group>"; };
+		3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationStateWriteAction.swift; sourceTree = "<group>"; };
 		3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTableDataSourceObject.swift; sourceTree = "<group>"; };
 		3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
-		3274556421084C1A0096AE75 /* TDPTextClipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTextClipboard.swift; sourceTree = "<group>"; };
 		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
-		3274556821084C640096AE75 /* TDPClipboardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPClipboardActions.swift; sourceTree = "<group>"; };
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
 		328D54DD210B90D700146D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Actions.storyboard; sourceTree = "<group>"; };
@@ -670,6 +680,7 @@
 				325A5A362100DFEA00DD7222 /* Configurator */,
 				325A5A392100DFEA00DD7222 /* Interactor */,
 				325A5A3D2100DFEA00DD7222 /* Router */,
+				3273FB91212EF1DD00C56B2A /* SDPQRScannerVariables.swift */,
 			);
 			path = SDPQRScanner;
 			sourceTree = "<group>";
@@ -729,6 +740,37 @@
 				3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */,
 			);
 			path = "CatArgon2+RawHash";
+			sourceTree = "<group>";
+		};
+		3273FB89212EE99400C56B2A /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				3273FB9B212F14BA00C56B2A /* NavigationStore */,
+				3273FB8E212EE9AA00C56B2A /* MapStore */,
+				3274556621084C400096AE75 /* SDPReduxStores.swift */,
+				3273FB95212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		3273FB8E212EE9AA00C56B2A /* MapStore */ = {
+			isa = PBXGroup;
+			children = (
+				3273FB8F212EEA5500C56B2A /* SDPMapStore.swift */,
+				3273FB97212F147F00C56B2A /* SDPMapState.swift */,
+				3273FB99212F149B00C56B2A /* SDPMapStateActions.swift */,
+			);
+			path = MapStore;
+			sourceTree = "<group>";
+		};
+		3273FB9B212F14BA00C56B2A /* NavigationStore */ = {
+			isa = PBXGroup;
+			children = (
+				3273FB9C212F14EB00C56B2A /* SDPNavigationStore.swift */,
+				3273FB9E212F15A200C56B2A /* SDPNavigationState.swift */,
+				3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */,
+			);
+			path = NavigationStore;
 			sourceTree = "<group>";
 		};
 		328FCD51202F441100EA8098 = {
@@ -822,22 +864,11 @@
 		32B63CFC210747B500BDE139 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3273FB89212EE99400C56B2A /* Redux */,
 				322AB23A211491C000E96892 /* Cryptography */,
 				324CD2F021103F2600A978C1 /* Table View */,
-				3274556621084C400096AE75 /* SDPReduxStores.swift */,
-				32B63CFD210747C300BDE139 /* Clipboard */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		32B63CFD210747C300BDE139 /* Clipboard */ = {
-			isa = PBXGroup;
-			children = (
-				325A5A2C2100D2B200DD7222 /* TDPClipboardStore.swift */,
-				3274556421084C1A0096AE75 /* TDPTextClipboard.swift */,
-				3274556821084C640096AE75 /* TDPClipboardActions.swift */,
-			);
-			path = Clipboard;
 			sourceTree = "<group>";
 		};
 		32B63CFE210747E500BDE139 /* Helper */ = {
@@ -1329,13 +1360,14 @@
 				322AB24021149A6C00E96892 /* UIView+Shake.swift in Sources */,
 				3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */,
 				3203E19E20FCBB640082F395 /* SDPTextViewInput.swift in Sources */,
-				3274556521084C1A0096AE75 /* TDPTextClipboard.swift in Sources */,
 				3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */,
+				3273FB98212F147F00C56B2A /* SDPMapState.swift in Sources */,
 				324CD31621104D4D00A978C1 /* SDPSDPHashesRouterInput.swift in Sources */,
+				3273FB9D212F14EB00C56B2A /* SDPNavigationStore.swift in Sources */,
 				32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */,
 				325A5A472100DFEA00DD7222 /* SDPQRScannerInteractorOutput.swift in Sources */,
-				325A5A2D2100D2B300DD7222 /* TDPClipboardStore.swift in Sources */,
 				321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */,
+				3273FB9F212F15A200C56B2A /* SDPNavigationState.swift in Sources */,
 				3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */,
 				322AB235211491B100E96892 /* SDPCrypto.swift in Sources */,
 				322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */,
@@ -1352,15 +1384,18 @@
 				328FCD5E202F441100EA8098 /* AppDelegate.swift in Sources */,
 				321635EE2108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift in Sources */,
 				321635ED2108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift in Sources */,
+				3273FB92212EF1DD00C56B2A /* SDPQRScannerVariables.swift in Sources */,
 				324CD31021104D4D00A978C1 /* SDPSDPHashesInitializer.swift in Sources */,
 				325A5A432100DFEA00DD7222 /* SDPQRScannerViewOutput.swift in Sources */,
 				32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */,
+				3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */,
 				3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */,
 				325A5A452100DFEA00DD7222 /* SDPQRScannerConfigurator.swift in Sources */,
 				321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */,
 				321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */,
 				3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */,
 				321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */,
+				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
 				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
@@ -1375,18 +1410,19 @@
 				325A5A412100DFEA00DD7222 /* SDPQRScannerModuleInput.swift in Sources */,
 				3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */,
 				325A5A462100DFEA00DD7222 /* SDPQRScannerInitializer.swift in Sources */,
+				3273FB90212EEA5500C56B2A /* SDPMapStore.swift in Sources */,
 				325A5A492100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift in Sources */,
 				32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */,
 				3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,
 				321635EC2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift in Sources */,
 				3203E19D20FCBB640082F395 /* SDPTextViewOutput.swift in Sources */,
 				324CD30D21104D4D00A978C1 /* SDPSDPHashesViewOutput.swift in Sources */,
-				3274556921084C640096AE75 /* TDPClipboardActions.swift in Sources */,
 				324CD30E21104D4D00A978C1 /* SDPSDPHashesViewInput.swift in Sources */,
 				324CD31221104D4D00A978C1 /* SDPSDPHashesInteractorOutput.swift in Sources */,
 				322AB2422114B54100E96892 /* SDPHashTableViewCellInput.swift in Sources */,
 				324CD3182110542700A978C1 /* SDPHashesTableViewDataFactory.swift in Sources */,
 				322AB23E2114947400E96892 /* SDPRandom.swift in Sources */,
+				3273FB9A212F149B00C56B2A /* SDPMapStateActions.swift in Sources */,
 				324CD31121104D4D00A978C1 /* SDPSDPHashesConfigurator.swift in Sources */,
 				321635E72108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift in Sources */,
 				325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */,

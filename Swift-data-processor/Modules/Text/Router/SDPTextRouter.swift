@@ -16,6 +16,13 @@ class SDPTextRouter: SDPTextRouterInput {
     var actionsStoryboard: UIStoryboard!
     
     // MARK: DPTextRouterInput
+    func registerNavigationController(forView view: Any?) {
+        if let vc = view as? UIViewController {
+            let action = SDPNavigationStateWriteAction(navigationController: vc.navigationController)
+            SDPReduxStores.shared.navigationStore.dispatch(action)
+        }
+    }
+    
     func qr() {
         let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
         
@@ -23,34 +30,19 @@ class SDPTextRouter: SDPTextRouterInput {
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()
         }
         
-        ((vc as? SDPQRScannerViewInput)?.output
-            as? SDPQRScannerModuleInput)?
-            .interactor.stores = SDPReduxStores.shared
-        
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func showScreen(forAction action:String){
         
-        if action == "qr" {
+        if action == "SDPQRGenerator" {
             
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
             
-            ((vc as? SDPQRGeneratorViewInput)?.output
-                as? SDPQRGeneratorModuleInput)?
-                .interactor.stores = SDPReduxStores.shared
-            
             navigationController?.pushViewController(vc, animated: true)
-        }else if action == "hash" {
+        }else if action == "SDPHashes" {
             //router
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
-            
-            if let input = ((vc as? SDPHashesViewInput)?.output
-                as? SDPHashesModuleInput) {
-                
-                input.interactor.stores = SDPReduxStores.shared
-                input.router.navigationController = navigationController
-            }
 
             navigationController?.pushViewController(vc, animated: true)
         }

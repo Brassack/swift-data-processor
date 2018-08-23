@@ -8,84 +8,55 @@
 import ReSwift
 
 
-class SDPTextClipboardSubscriberObject: StoreSubscriber {
-    
-    let newStateBlock: (SDPTextClipboard) -> Void
-    let clipboard: SDPClipboardStore
-    
-    init(clipboard: SDPClipboardStore, newStateBlock: @escaping (SDPTextClipboard) -> Void) {
-        self.clipboard = clipboard
-        self.newStateBlock = newStateBlock
-        clipboard.subscribe(self)
-    }
-    
-    deinit {
-        clipboard.unsubscribe(self)
-    }
-    
-    func newState(state: SDPTextClipboard) {
-        newStateBlock(state)
-    }
-}
-
 class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
+
+    static let saltKey: String = "SDPHashesSalt"
 
     weak var output: SDPHashesInteractorOutput!
     var hashesDataFactory: SDPHashesTableViewDataFactory?
     var text: String?
     private var hashParameters: (iterations: Int, salt: String?) = (iterations: 1, salt: nil)
     var stores = SDPReduxStores.shared
-    private var saltClipboardSubscriber:SDPTextClipboardSubscriberObject?
-    private var storesForSaltClipboard:SDPReduxStores?
+    private var saltSubscriber: SDPMapStoreSubscriberObject?
     
     // MARK: StoreSubscriber
-    func newState(state: SDPTextClipboard) {
+    func newState(state: SDPMapState) {
         
-        guard let text = state.text else {
+        guard let text = state.map["SDPHashes"] as? String else {
             return
         }
         
         self.text = text
-        stores.clipboard.unsubscribe(self)
+        stores.mapStore.unsubscribe(self)
         updateData()
-        let action = SDPSetTextAction(string:nil)
-        stores.clipboard.dispatch(action)
+        let action = SDPMapStateWriteAction(key: "SDPHashes", value: nil)
+        stores.mapStore.dispatch(action)
     }
     
     // MARK: SDPHashesInteractorInput
     func unsubscribeFromSaltClipboard() {
-        saltClipboardSubscriber = nil
-        storesForSaltClipboard = nil
+        saltSubscriber = nil
     }
     
-    func requestStoresForSaltClipboard() {
-        if let storesForSaltClipboard = storesForSaltClipboard {
-            output.storesForSaltClipboardIsReady(stores: storesForSaltClipboard)
-        }
+    func subscribeForSaltClipboard() {
         
-        storesForSaltClipboard = SDPReduxStores()
-        storesForSaltClipboard?.clipboard = SDPClipboardStore(
-            reducer: SDPClipboardStore.clipboardReducer,
-            state: nil
-        )
+        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPHashesInteractor.saltKey)
+        stores.mapStore.dispatch(action)
         
-        guard let storesForSaltClipboard = storesForSaltClipboard else {
-            return
-        }
-        
-        saltClipboardSubscriber = SDPTextClipboardSubscriberObject(clipboard: storesForSaltClipboard.clipboard, newStateBlock: { [weak self] (state)  in
+        saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPHashesInteractor.saltKey, newStateBlock: { [weak self](maybeText) in
             
-            guard let text = state.text else {
+            guard let text = maybeText as? String else {
                 return
             }
             
             self?.output.setScanned(salt: text)
+            self?.saltSubscriber = nil
             
-            self?.storesForSaltClipboard = nil
-            self?.saltClipboardSubscriber = nil
+            DispatchQueue.main.async {
+                let action = SDPMapStateWriteAction(key: SDPHashesInteractor.saltKey, value: nil)
+                self?.stores.mapStore.dispatch(action)
+            }
         })
-        
-        output.storesForSaltClipboardIsReady(stores: storesForSaltClipboard)
     }
     
     func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath) {
@@ -117,7 +88,7 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
         
         hashParameters = parameters
         if self.text == nil {
-            stores.clipboard.subscribe(self)
+            stores.mapStore.subscribe(self)
         }else{
             updateData()
         }

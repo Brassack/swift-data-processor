@@ -5,30 +5,33 @@
 //  Created by Dmytro Platov on 31/07/2018.
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
-import UIKit
+import ReSwift
 
-class SDPHashesRouter: SDPHashesRouterInput {
-    
+class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
+
     weak var navigationController : UINavigationController?
     var accesoryStoryboard: UIStoryboard!
+    var stores = SDPReduxStores.shared
+    
+    init() {
+        stores.navigationStore.subscribe(self)
+    }
+    
+    func newState(state: SDPNavigationState) {
+        navigationController = state.navigationController
+    }
     
     func returnTo(view: UIViewController) {
         navigationController?.popToViewController(view, animated: true)
     }
     
-    func scanQR(stores: SDPReduxStores) {
+    func scanQR() {
         let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()
         }
-        
-        if let input = ((vc as? SDPQRScannerViewInput)?.output
-            as? SDPQRScannerModuleInput) {
-            
-            input.interactor.stores = stores
-        }
-        
+
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -7,35 +7,25 @@
 //
 import ReSwift
 
-class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
+class SDPTextInteractor: SDPTextInteractorInput {
 
+    static let scannedText = "scannedText"
+    
     weak var output: SDPTextInteractorOutput!
     var data = (text:String?, range:NSRange?)(nil, nil)
     var stores = SDPReduxStores.shared
-
+    var clipboardSubscriber:SDPMapStoreSubscriberObject?
     
-    func newState(state: SDPTextClipboard) {
-        guard let text = state.text else {
-            return
-        }
-        
-        stores.clipboard.unsubscribe(self)
-        output.textAddedToClipboard()
-        data.text = text
-        output.set(text: text)
-        let action = SDPSetTextAction(string:nil)
-        stores.clipboard.dispatch(action)
-    }
     
     func requestActions(){
-        let actions = ["hash", "qr", "encryption", "escaping"]
-        let titles = ["encryption": "Encryptions", "escaping":"XML/URL escaping", "hash":"Hashes", "qr":"To QR"]
+        let actions = ["SDPHashes", "SDPQRGenerator", "encryption", "escaping"]
+        let titles = ["encryption": "Encryptions", "escaping":"XML/URL escaping", "SDPHashes":"Hashes", "SDPQRGenerator":"To QR"]
         output.set(actions: actions, titles: titles)
     }
     
-    func addTextToclipboard() {
-        let action = SDPSetTextAction(string:data.text)
-        stores.clipboard.dispatch(action)
+    func addTextToclipboard(action:String) {
+        let action = SDPMapStateWriteAction(key: action, value: data.text)//SDPSetTextAction(string:data.text)
+        stores.mapStore.dispatch(action)
     }
     
     func set(text: String?) {
@@ -47,11 +37,32 @@ class SDPTextInteractor: SDPTextInteractorInput, StoreSubscriber {
     }
 
     func subscribeToClipboard() {
-        stores.clipboard.subscribe(self)
+        
+        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPTextInteractor.scannedText)
+        stores.mapStore.dispatch(action)
+        
+        clipboardSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPTextInteractor.scannedText, newStateBlock: { [weak self](maybeText) in
+            
+            guard let text = maybeText as? String else {
+                return
+            }
+            
+            self?.output.textAddedToClipboard()
+            self?.data.text = text
+            self?.output.set(text: text)
+            
+            self?.clipboardSubscriber = nil
+            
+            DispatchQueue.main.async {
+                let action = SDPMapStateWriteAction(key: SDPHashesInteractor.saltKey, value: nil)
+                self?.stores.mapStore.dispatch(action)
+            }
+            
+        })
     }
     
     func unsubscribeFromClipboard() {
-        stores.clipboard.unsubscribe(self)
+        clipboardSubscriber = nil
     }
     
     func copy() {

@@ -14,18 +14,18 @@ class SDPQRGeneratorInteractor: SDPQRGeneratorInteractorInput, StoreSubscriber {
 
     // MARK: SDPQRGeneratorInteractorInput
     func requestClipboardData() {
-        stores.clipboard.subscribe(self)
+        stores.mapStore.subscribe(self)
     }
     
     // MARK: StoreSubscriber
-    func newState(state: SDPTextClipboard) {
-        guard let text = state.text else {
+    func newState(state: SDPMapState) {
+        guard let text = state.map["SDPQRGenerator"] as? String else {
             return
         }
         
-        stores.clipboard.unsubscribe(self)
+        stores.mapStore.unsubscribe(self)
         output.set(text: text)
-        let action = SDPSetTextAction(string:nil)
-        stores.clipboard.dispatch(action)
+        let action = SDPMapStateWriteAction(key: "SDPQRGenerator", value: nil)
+        stores.mapStore.dispatch(action)
     }
 }

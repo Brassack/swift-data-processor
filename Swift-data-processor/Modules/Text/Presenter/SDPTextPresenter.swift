@@ -18,6 +18,7 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     // MARK: DPTextViewOutput
     func viewIsReady() {
         view.setupInitialState()
+        router.registerNavigationController(forView: view)
     }
     
     func viewWillBePresented(){
@@ -53,7 +54,7 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     
     func selectAction(_ action: String) {
         
-        interactor.addTextToclipboard()
+        interactor.addTextToclipboard(action: action)
         router.showScreen(forAction: action)
     }
     

@@ -13,8 +13,13 @@ class SDPReduxStores {
 
     static let shared = SDPReduxStores()
     
-    var clipboard = SDPClipboardStore(
-        reducer: SDPClipboardStore.clipboardReducer,
+    var navigationStore = SDPNavigationStore(
+        reducer: SDPNavigationStore.navigationReducer,
+        state: nil
+    )
+    
+    var mapStore = SDPMapStore(
+        reducer: SDPMapStore.mapReducer,
         state: nil
     )
 }

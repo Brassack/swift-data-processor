@@ -9,9 +9,7 @@
 import UIKit
 
 protocol SDPHashesRouterInput {
-
-    var navigationController:UINavigationController? {get set}
     
-    func scanQR(stores:SDPReduxStores)
+    func scanQR()
     func returnTo(view: UIViewController)
 }

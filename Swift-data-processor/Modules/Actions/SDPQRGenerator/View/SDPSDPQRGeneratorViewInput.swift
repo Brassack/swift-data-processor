@@ -8,9 +8,7 @@
 import UIKit
 
 protocol SDPQRGeneratorViewInput: class {
-    
-    var output: SDPQRGeneratorViewOutput! {get set}
-    
+        
     func setupInitialState()
     func prepareFoorScreen()
     func show(qrImage: UIImage)

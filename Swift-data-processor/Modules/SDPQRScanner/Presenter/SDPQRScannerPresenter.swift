@@ -31,10 +31,10 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
     }
     
     func viewIsReady() {
-        
+
         #if targetEnvironment(simulator)
         return
-        #endif
+        #endif        
         
         isForceSupportingUnicode = !UserDefaults.standard.bool(forKey: "isNotSupportingUnicode")
         view.setupInitialState(unicodeSupport: isForceSupportingUnicode)

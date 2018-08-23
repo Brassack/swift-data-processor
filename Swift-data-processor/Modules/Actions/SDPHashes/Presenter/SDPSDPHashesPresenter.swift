@@ -18,9 +18,6 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     private var tableView: UITableView?
     private var tableDataSource: SDPOrdinaryTableViewDataSource?
 
-    func set(navigationController: UINavigationController?) {
-        router.navigationController = navigationController
-    }
     // MARK: SDPHashesViewOutput
     func copyHash(atIndexPath indexPath: IndexPath) {
         guard let tableDataSource = tableDataSource else {
@@ -47,7 +44,8 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     }
     
     func scanSaltFromQR() {
-        interactor.requestStoresForSaltClipboard()
+        interactor.subscribeForSaltClipboard()
+        router.scanQR()
     }
     
     func set(salt: String?) {
@@ -76,10 +74,6 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
         hashParameters.salt = salt
         interactor.requestData(hashParameters)
         view.set(salt: salt)
-    }
-    
-    func storesForSaltClipboardIsReady(stores: SDPReduxStores) {
-        router.scanQR(stores: stores)
     }
     
     func hashCopied(at indexPath: IndexPath) {

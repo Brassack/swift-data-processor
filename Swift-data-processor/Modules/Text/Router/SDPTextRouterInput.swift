@@ -6,10 +6,11 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SDPTextRouterInput {
 
+    func registerNavigationController(forView:Any?)
     func showScreen(forAction action:String)
     func qr()
     func returnToRootController()
