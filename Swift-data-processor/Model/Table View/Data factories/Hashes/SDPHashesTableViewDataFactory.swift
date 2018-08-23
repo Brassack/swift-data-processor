@@ -21,6 +21,9 @@ class SDPHashesTableViewDataFactory {
     var iterations: Int = 1
     var salt: String?
     
+    var argon2HashLength: Int = 32
+    var argon2Memory: Int = 1024
+    var argon2Parallelism: Int = 1
     
     init(text: String, delegate: SDPHashesTableViewDataFactoryDelegate){
         self.text = text
@@ -37,6 +40,11 @@ class SDPHashesTableViewDataFactory {
         
         let mdSectionInfo = SDPHashesTableViewDataFactory.mdSectionInfo()
         infoArray.append(mdSectionInfo)
+        
+        if (salt?.count ?? 0) >= 8 {
+            let argon2SectionInfo = SDPHashesTableViewDataFactory.argon2SectionInfo(iteractions: iterations, hashLength: argon2HashLength, parallelism: argon2Parallelism, memory: argon2Memory)
+            infoArray.append(argon2SectionInfo)
+        }
 
         for info in infoArray {
             result.append(SDPHashesTableViewDataFactory.sectionDataToStubResultSectionData(data: info))
@@ -67,49 +75,7 @@ class SDPHashesTableViewDataFactory {
         }
     }
     
-    class func calculateSectionData(from data: SDPSectionInfo, withWeakFactoryContainer weakFactorycontainer: Weak<SDPHashesTableViewDataFactory>) -> SDPTableViewDataSourceSection? {
-        
-        var rows = [SDPTableViewDataSourceRow]()
-        
-        for row in data.rows {
-            guard let iterations = weakFactorycontainer.object?.iterations else {
-                return nil
-            }
-            
-            var resultRow: SDPTableViewDataSourceRow = (identifier: row.identifier, isFailed: true, title: row.title, subtitle: "Something went wrong")
-            
-            guard var text = weakFactorycontainer.object?.text else{
-                return nil
-            }
-            
-            for i in 0..<iterations {
-                guard let factory = weakFactorycontainer.object else{
-                    return nil
-                }
-                
-                text = (factory.salt == nil) ? text : text + factory.salt!
-                
-                let result = row.function.hash(password: text)
-                if let hash = result.value {
-                    if i == (iterations - 1) {
-                        resultRow.isFailed = false
-                        resultRow.subtitle = hash
-                    }else{
-                        text = hash
-                    }
-
-                }else if let errorDescription = result.error?.errorDescription {
-                    resultRow.subtitle = errorDescription
-                    break
-                }
-            }
-            
-            rows.append(resultRow)
-        }
-        
-        return (identifier: data.identifier, title: data.title, rows: rows)
-    }
-    
+   
     class func sectionDataToStubResultSectionData(data: SDPSectionInfo) -> SDPTableViewDataSourceSection {
         
         var rows = [SDPTableViewDataSourceRow]()

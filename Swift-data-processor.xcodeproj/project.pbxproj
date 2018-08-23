@@ -76,6 +76,10 @@
 		325A5A4A2100DFEA00DD7222 /* SDPQRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A3E2100DFEA00DD7222 /* SDPQRScannerRouter.swift */; };
 		325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A3F2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift */; };
 		3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */; };
+		3273FB57212EC02B00C56B2A /* Data+HexEncodedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */; };
+		3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */; };
+		3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */; };
+		3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB61212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift */; };
 		3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */; };
 		3274556321084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */; };
 		3274556521084C1A0096AE75 /* TDPTextClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556421084C1A0096AE75 /* TDPTextClipboard.swift */; };
@@ -98,6 +102,7 @@
 		32B63CF8210746AF00BDE139 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CF4210746AF00BDE139 /* testTests.swift */; };
 		32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */; };
 		32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF52982106126D008FB025 /* UIView+BorderColor.swift */; };
+		32D53B00212D7119009F7373 /* CatArgon2Crypto+RawHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */; };
 		32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9FAB12106F86000CB0FE0 /* TDPViewExternalConfigurator.swift */; };
 		32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */; };
 		36FC454F66A6CA89C3A23842 /* SDPSDPHashesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */; };
@@ -270,6 +275,10 @@
 		325A5A3E2100DFEA00DD7222 /* SDPQRScannerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerRouter.swift; sourceTree = "<group>"; };
 		325A5A3F2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerRouterInput.swift; sourceTree = "<group>"; };
 		3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionsViewInput.swift; sourceTree = "<group>"; };
+		3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+HexEncodedString.swift"; sourceTree = "<group>"; };
+		3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalError.swift; sourceTree = "<group>"; };
+		3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalResult.swift; sourceTree = "<group>"; };
+		3273FB61212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+Calculation.swift"; sourceTree = "<group>"; };
 		3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTableDataSourceObject.swift; sourceTree = "<group>"; };
 		3274556221084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		3274556421084C1A0096AE75 /* TDPTextClipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTextClipboard.swift; sourceTree = "<group>"; };
@@ -297,6 +306,7 @@
 		32B63CF4210746AF00BDE139 /* testTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
 		32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Dismiss.swift"; sourceTree = "<group>"; };
 		32CF52982106126D008FB025 /* UIView+BorderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BorderColor.swift"; sourceTree = "<group>"; };
+		32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatArgon2Crypto+RawHash.swift"; sourceTree = "<group>"; };
 		32D9FAB12106F86000CB0FE0 /* TDPViewExternalConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPViewExternalConfigurator.swift; sourceTree = "<group>"; };
 		32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionsTableViewController.swift; sourceTree = "<group>"; };
 		3FF6F4C9089DA48EAED96F15 /* Pods-Swift-data-processor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor.release.xcconfig"; sourceTree = "<group>"; };
@@ -523,6 +533,7 @@
 		322AB23A211491C000E96892 /* Cryptography */ = {
 			isa = PBXGroup;
 			children = (
+				3273FB5C212ED14C00C56B2A /* CatArgon2+RawHash */,
 				322AB234211491B100E96892 /* SDPCrypto.swift */,
 				322AB23D2114947400E96892 /* SDPRandom.swift */,
 			);
@@ -540,9 +551,10 @@
 		322AB24A2114BBCF00E96892 /* Hashes */ = {
 			isa = PBXGroup;
 			children = (
-				324CD3172110542700A978C1 /* SDPHashesTableViewDataFactory.swift */,
 				322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */,
+				324CD3172110542700A978C1 /* SDPHashesTableViewDataFactory.swift */,
 				322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */,
+				3273FB61212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift */,
 			);
 			path = Hashes;
 			sourceTree = "<group>";
@@ -709,6 +721,16 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		3273FB5C212ED14C00C56B2A /* CatArgon2+RawHash */ = {
+			isa = PBXGroup;
+			children = (
+				32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */,
+				3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */,
+				3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */,
+			);
+			path = "CatArgon2+RawHash";
+			sourceTree = "<group>";
+		};
 		328FCD51202F441100EA8098 = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +851,7 @@
 				328FBF232109E59C00D728A5 /* String+QRImage.swift */,
 				322AB23F21149A6C00E96892 /* UIView+Shake.swift */,
 				322AB2432114BB0900E96892 /* WeakContainer.swift */,
+				3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1307,6 +1330,7 @@
 				3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */,
 				3203E19E20FCBB640082F395 /* SDPTextViewInput.swift in Sources */,
 				3274556521084C1A0096AE75 /* TDPTextClipboard.swift in Sources */,
+				3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */,
 				324CD31621104D4D00A978C1 /* SDPSDPHashesRouterInput.swift in Sources */,
 				32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */,
 				325A5A472100DFEA00DD7222 /* SDPQRScannerInteractorOutput.swift in Sources */,
@@ -1353,6 +1377,7 @@
 				325A5A462100DFEA00DD7222 /* SDPQRScannerInitializer.swift in Sources */,
 				325A5A492100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift in Sources */,
 				32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */,
+				3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,
 				321635EC2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift in Sources */,
 				3203E19D20FCBB640082F395 /* SDPTextViewOutput.swift in Sources */,
 				324CD30D21104D4D00A978C1 /* SDPSDPHashesViewOutput.swift in Sources */,
@@ -1374,7 +1399,10 @@
 				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
+				3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */,
 				32B63CE82107455B00BDE139 /* TDPApplicationThemeConfigurator.swift in Sources */,
+				3273FB57212EC02B00C56B2A /* Data+HexEncodedString.swift in Sources */,
+				32D53B00212D7119009F7373 /* CatArgon2Crypto+RawHash.swift in Sources */,
 				324CD30C21104D4D00A978C1 /* SDPSDPHashesModuleInput.swift in Sources */,
 				3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */,
 				324CD30B21104D4D00A978C1 /* SDPSDPHashesPresenter.swift in Sources */,

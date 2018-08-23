@@ -11,6 +11,38 @@ import CatCrypto
 
 extension SDPHashesTableViewDataFactory{
     
+    class func argon2SectionInfo(iteractions:Int, hashLength:Int, parallelism:Int, memory:Int) -> SDPSectionInfo {
+        
+        //argon2d
+        var argon2d_context = CatArgon2Context()
+        argon2d_context.iterations = iteractions
+        argon2d_context.mode = .argon2d
+        argon2d_context.hashLength = hashLength
+        argon2d_context.parallelism = parallelism
+        argon2d_context.memory = memory
+        
+        //argon2d
+        var argon2i_context = argon2d_context
+        argon2i_context.mode = .argon2i
+
+        //argon2id
+        var argon2id_context = argon2d_context
+        argon2id_context.mode = .argon2id
+        
+        let argon2Section: SDPSectionInfo = (identifier: "argon2", title: "Argon2", rows:
+            [
+                (identifier: "argon2d", title: "ARGON2D", function: CatArgon2Crypto(context: argon2d_context)),
+                (identifier: "argon2d_encoded", title: "ARGON2D ENCODED", function: CatArgon2Crypto(context: argon2d_context)),
+                (identifier: "argon2i", title: "ARGON2i", function: CatArgon2Crypto(context: argon2i_context)),
+                (identifier: "argon2i_encoded", title: "ARGON2i ENCODED", function: CatArgon2Crypto(context: argon2i_context)),
+                (identifier: "argon2id", title: "ARGON2id", function: CatArgon2Crypto(context: argon2id_context)),
+                (identifier: "argon2id_encoded", title: "ARGON2id ENCODED", function: CatArgon2Crypto(context: argon2id_context))
+
+            ])
+        
+        return argon2Section
+    }
+    
     class func mdSectionInfo() -> SDPSectionInfo {
         var md6_224Context = CatMD6Context()
         md6_224Context.hashLength = .bit224
