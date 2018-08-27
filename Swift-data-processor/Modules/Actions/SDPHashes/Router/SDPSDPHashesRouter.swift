@@ -11,6 +11,7 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
 
     weak var navigationController : UINavigationController?
     var accesoryStoryboard: UIStoryboard!
+    var actionsStoryboard: UIStoryboard!
     var popupReference: Any?
     var stores = SDPReduxStores.shared
     
@@ -21,7 +22,7 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
     func newState(state: SDPNavigationState) {
         navigationController = state.navigationController
     }
-    
+
     func returnTo(view: UIViewController) {
         navigationController?.popToViewController(view, animated: true)
     }
@@ -45,5 +46,20 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
         popupReference = popup
         
         navigationController?.present(popup.viewController, animated: true, completion: nil)
+    }
+    
+    func shareSalt(_ salt: String){
+        
+        guard let nc = navigationController else {
+            return
+        }
+        
+        let qrActivity = SDPQRGeneratingActivity(text: salt, navigationController: navigationController!, storyboard: actionsStoryboard)
+        let activityViewController = UIActivityViewController(activityItems: [salt], applicationActivities: [qrActivity])
+        activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
+        
+//        activityViewController.use
+        // present the view controller
+        nc.present(activityViewController, animated: true, completion: nil)
     }
 }

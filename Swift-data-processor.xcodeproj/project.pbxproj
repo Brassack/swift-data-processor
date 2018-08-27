@@ -92,6 +92,7 @@
 		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
+		327D7CCD21348E2F000EBC64 /* SDPQRGeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */; };
 		328D54DE210B90D700146D9A /* Actions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328D54DC210B90D700146D9A /* Actions.storyboard */; };
 		328FBF22210998AD00D728A5 /* String+UnicodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */; };
 		328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF232109E59C00D728A5 /* String+QRImage.swift */; };
@@ -317,6 +318,7 @@
 		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
+		327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratingActivity.swift; sourceTree = "<group>"; };
 		328D54DD210B90D700146D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Actions.storyboard; sourceTree = "<group>"; };
 		328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeEncoding.swift"; sourceTree = "<group>"; };
 		328FBF232109E59C00D728A5 /* String+QRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+QRImage.swift"; sourceTree = "<group>"; };
@@ -941,6 +943,7 @@
 		32B63CFE210747E500BDE139 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */,
 				32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */,
 				32CF52982106126D008FB025 /* UIView+BorderColor.swift */,
 				32B63CE9210745C600BDE139 /* UIColor+Hex.swift */,
@@ -1587,6 +1590,7 @@
 				3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */,
 				325A5A462100DFEA00DD7222 /* SDPQRScannerInitializer.swift in Sources */,
 				3273FB90212EEA5500C56B2A /* SDPMapStore.swift in Sources */,
+				327D7CCD21348E2F000EBC64 /* SDPQRGeneratingActivity.swift in Sources */,
 				325A5A492100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift in Sources */,
 				32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */,
 				3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,

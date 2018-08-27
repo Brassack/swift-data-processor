@@ -265,7 +265,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="HASHES" id="uyA-d7-7n6">
-                        <barButtonItem key="rightBarButtonItem" title="Argon2" id="CSe-8v-BnN">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Argon2" id="CSe-8v-BnN">
                             <connections>
                                 <action selector="argon2Parameters:" destination="0Nq-fW-ORd" id="KwZ-cj-ftr"/>
                             </connections>

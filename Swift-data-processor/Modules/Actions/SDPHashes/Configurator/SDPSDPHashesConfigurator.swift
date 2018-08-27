@@ -21,6 +21,7 @@ class SDPHashesModuleConfigurator {
 
         let router = SDPHashesRouter()
         router.accesoryStoryboard = UIStoryboard.accesory
+        router.actionsStoryboard = UIStoryboard.actions
 
         let presenter = SDPHashesPresenter()
         presenter.view = viewController

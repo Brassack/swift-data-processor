@@ -25,12 +25,12 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         
-        output.viewIsReady(tableView: tableView)
-        
         iterationsTextField.delegate = output
         saltTextField.delegate = output
         
         output.set(iterationsTextFieldTag: iterationsTextField.tag, saltTextFielTag: saltTextField.tag)
+        
+        output.viewIsReady(tableView: tableView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +55,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         output.shareSalt()
     }
     
-
     // MARK: SDPHashesViewInput
     func showError(forTextField textField: Any?, fallbackValue: String?) {
         guard let textField = textField as? UITextField else {
@@ -83,7 +82,17 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
     }
     
     func set(salt: String?) {
+        
         saltTextField.text = salt
+        refreshSaltActions()
+    }
+    
+    func refreshSaltActions() {
+        
+        let salt = saltTextField.text ?? ""
+        
+        shareButton.isEnabled = salt.count > 0
+        argon2ParameterButton.isEnabled = salt.count > 7
     }
     
     func setupInitialState() {

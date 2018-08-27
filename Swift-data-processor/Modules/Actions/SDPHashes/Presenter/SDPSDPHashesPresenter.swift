@@ -55,7 +55,10 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
     }
     
     func shareSalt() {
-        // TODO: Sharing
+        if let salt = hashParameters.salt {
+            
+            router.shareSalt(salt)
+        }
     }
     
     func scanSaltFromQR() {
@@ -146,6 +149,8 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
             hashParameters.salt = salt
             interactor.requestData(hashParameters)
         }
+        
+        view.refreshSaltActions()
     }
     
     

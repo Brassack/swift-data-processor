@@ -10,6 +10,7 @@ import UIKit
 
 protocol SDPHashesRouterInput {
     
+    func shareSalt(_ salt: String)
     func scanQR()
     func argon2Parameters()
     func returnTo(view: UIViewController)

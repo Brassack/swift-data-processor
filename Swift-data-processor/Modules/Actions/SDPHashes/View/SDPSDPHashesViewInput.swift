@@ -14,6 +14,7 @@ protocol SDPHashesViewInput: class {
     func setTableDataSource(_ dataSource: UITableViewDataSource)
     func prepareForScreen()
     func set(salt: String?)
+    func refreshSaltActions()
     
     func hashCopied(at indexPath: IndexPath)
 }
