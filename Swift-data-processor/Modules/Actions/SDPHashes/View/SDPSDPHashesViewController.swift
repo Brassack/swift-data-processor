@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UITextFieldDelegate {
-
+class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
+    
     @IBOutlet weak var saltTextField: UITextField!
     @IBOutlet weak var iterationsTextField: UITextField!
     @IBOutlet weak var argon2ParameterButton: UIBarButtonItem!
     
     @IBOutlet weak var shareButton: UIButton!
 
-    var output: SDPHashesViewOutput!
+    var output: (SDPHashesViewOutput & UITextFieldDelegate)!
     private var tableViewDataSource: UITableViewDataSource?
 
     
@@ -24,7 +24,13 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        
         output.viewIsReady(tableView: tableView)
+        
+        iterationsTextField.delegate = output
+        saltTextField.delegate = output
+        
+        output.set(iterationsTextFieldTag: iterationsTextField.tag, saltTextFielTag: saltTextField.tag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,49 +55,17 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
         output.shareSalt()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return false
-    }
-    
-    // MARK: UITextFieldDelegate
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if textField === saltTextField {
-            return true
-        }
-        
-        if string.rangeOfCharacter(from:  CharacterSet.decimalDigits.inverted) != nil {
-            textField.shake()
-            return false
-        }
-        
-        let result = ((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string) as String
-        
-        guard let resultInt = Int(result) else {
-            textField.shake()
-            return false
-        }
-        
-        guard resultInt > 0, resultInt < 1000 else {
-            textField.shake()
-            return false
-        }
-        
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField === iterationsTextField {
-            if let text = textField.text, let iterations = Int(text), iterations > 0 {
-                output.set(iterations: iterations)
-            }
-        }else if textField === saltTextField {
-            output.set(salt: textField.text)
-        }
-    }
-    
+
     // MARK: SDPHashesViewInput
+    func showError(forTextField textField: Any?, fallbackValue: String?) {
+        guard let textField = textField as? UITextField else {
+            return
+        }
+        
+        textField.text = fallbackValue
+        textField.shake()
+    }
+    
     func hashCopied(at indexPath: IndexPath) {
         
         guard tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false else {
@@ -120,7 +94,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
         button.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 45)
         button.addTarget(iterationsTextField, action: #selector(iterationsTextField.resignFirstResponder), for: .touchUpInside)
         iterationsTextField.inputAccessoryView = button
-        
         
         let saltDoneButton = UIButton(type: .system)
         saltDoneButton.setTitle("DONE", for: .normal)

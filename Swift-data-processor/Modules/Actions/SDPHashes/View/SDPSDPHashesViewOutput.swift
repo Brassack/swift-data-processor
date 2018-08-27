@@ -12,9 +12,10 @@ protocol SDPHashesViewOutput {
 
     func viewIsReady(tableView: UITableView)
     func viewWillBePresented()
+    func set(iterationsTextFieldTag: Int, saltTextFielTag: Int)
     
-    func set(iterations: Int)
-    func set(salt: String?)
+//    func set(iterations: Int)
+//    func set(salt: String?)
     func generateRandomSalt()
     func shareSalt()
     func scanSaltFromQR()

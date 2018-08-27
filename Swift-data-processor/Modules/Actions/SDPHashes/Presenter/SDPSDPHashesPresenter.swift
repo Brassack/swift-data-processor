@@ -7,11 +7,14 @@
 //
 import UIKit
 
-class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesInteractorOutput {
+class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesInteractorOutput, UITextFieldDelegate {
     
     weak var view: SDPHashesViewInput!
     var interactor: SDPHashesInteractorInput!
     var router: SDPHashesRouterInput!
+    
+    var iterationsTextFieldTag: Int = 1
+    var saltTextFielTag: Int = 2
     
     private var hashParameters: (iterations: Int, salt: String?) = (iterations: 1, salt: nil)
 
@@ -19,6 +22,12 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     private var tableDataSource: SDPOrdinaryTableViewDataSource?
 
     // MARK: SDPHashesViewOutput
+    func set(iterationsTextFieldTag: Int, saltTextFielTag: Int) {
+        
+        self.iterationsTextFieldTag = iterationsTextFieldTag
+        self.saltTextFielTag = saltTextFielTag
+    }
+    
     func setupArgon2Parameters() {
         
         interactor.setupAndSubscripeToArgon2Parameters()
@@ -114,6 +123,31 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
             view.setTableDataSource(tableDataSource)
         }
     }
+
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.tag == iterationsTextFieldTag {
+            
+            if let iterations = Int(textField.text ?? ""), iterations > 0, iterations < 1000 {
+                
+                hashParameters.iterations = iterations
+                interactor.requestData(hashParameters)
+            }else{
+                
+                view.showError(forTextField: textField, fallbackValue: "\(hashParameters.iterations)")
+            }
+        }else if textField.tag == saltTextFielTag, let salt = textField.text {
+            
+            hashParameters.salt = salt
+            interactor.requestData(hashParameters)
+        }
+    }
+    
     
     // MARK: helper
     private func buildTableDataSource(withData data: [SDPTableViewDataSourceSection]) -> SDPOrdinaryTableViewDataSource? {
