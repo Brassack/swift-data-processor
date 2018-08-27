@@ -9,11 +9,11 @@
 
  let argon2DefaultMemory = 1024
  let argon2MinMemory = 8
- let argon2MaxMemory = 1024*1024//2 << 32 - 1
+ let argon2MaxMemory = 4096//2 << 32 - 1
  
  let argon2DefaultParallelism = 1
  let argon2MinParallelism = 1
- let argon2MaxParallelism = 4096//2 << 32 - 1
+ let argon2MaxParallelism = 256//2 << 32 - 1
  
  let argon2DefaultHashLength = 32
  let argon2MinHashLength = 4
