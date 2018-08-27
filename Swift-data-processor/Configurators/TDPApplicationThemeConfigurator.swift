@@ -12,6 +12,7 @@ class SDPApplicationThemeConfigurator: NSObject {
     class func configure(actionColor: UIColor){
         
         UIButton.appearance().tintColor = actionColor
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = actionColor
         UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = actionColor
         UITextField.appearance().textColor = actionColor
         UITextField.appearance().tintColor = actionColor

@@ -256,8 +256,16 @@
                             <outlet property="delegate" destination="0Nq-fW-ORd" id="V1F-sS-8jT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="HASHES" id="uyA-d7-7n6">
+                        <barButtonItem key="rightBarButtonItem" title="Argon2" id="CSe-8v-BnN">
+                            <connections>
+                                <action selector="argon2Parameters:" destination="0Nq-fW-ORd" id="KwZ-cj-ftr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="argon2ParameterButton" destination="CSe-8v-BnN" id="KIQ-3Y-Vxv"/>
                         <outlet property="iterationsTextField" destination="iG6-vp-06u" id="fNU-ft-n6Q"/>
                         <outlet property="saltTextField" destination="jjB-iY-roa" id="od1-Np-cVi"/>
                         <outlet property="shareButton" destination="0Ly-yX-MgO" id="V5T-yG-IR8"/>

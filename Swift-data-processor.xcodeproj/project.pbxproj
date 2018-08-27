@@ -108,15 +108,33 @@
 		32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */; };
 		32CF52992106126D008FB025 /* UIView+BorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF52982106126D008FB025 /* UIView+BorderColor.swift */; };
 		32D53B00212D7119009F7373 /* CatArgon2Crypto+RawHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */; };
+		32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFE52134040A006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift */; };
+		32D9EFF62134040B006E7934 /* SDPSDPArgon2ParametersPopupModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFE62134040A006E7934 /* SDPSDPArgon2ParametersPopupModuleInput.swift */; };
+		32D9EFF72134040B006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFE82134040A006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift */; };
+		32D9EFF82134040B006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFE92134040A006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift */; };
+		32D9EFF92134040B006E7934 /* SDPArgon2ParametersPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFEA2134040A006E7934 /* SDPArgon2ParametersPopupView.swift */; };
+		32D9EFFA2134040B006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFEC2134040A006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift */; };
+		32D9EFFC2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFEF2134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift */; };
+		32D9EFFD2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFF02134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift */; };
+		32D9EFFE2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFF12134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorInput.swift */; };
+		32D9EFFF2134040B006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFF32134040A006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift */; };
+		32D9F0002134040B006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9EFF42134040A006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift */; };
+		32D9F00221340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9F00121340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift */; };
+		32D9F0042134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9F0032134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift */; };
+		32D9F00621341C0D006E7934 /* SDPArgon2Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9F00521341C0D006E7934 /* SDPArgon2Parameters.swift */; };
+		32D9F00821342C12006E7934 /* CarArgon2ConstantExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9F00721342C12006E7934 /* CarArgon2ConstantExternal.swift */; };
 		32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9FAB12106F86000CB0FE0 /* TDPViewExternalConfigurator.swift */; };
 		32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */; };
 		36FC454F66A6CA89C3A23842 /* SDPSDPHashesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */; };
 		38264D15796D4CCA1B4B6E0B /* SDPSDPHashesRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E82B0C36736D31531E7C9 /* SDPSDPHashesRouterTests.swift */; };
+		3A62C0CE9146B72DC87B60E3 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF593ACC1F4AFEB9A246FE9 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift */; };
 		62AEA1C6F36D72B68CA426B5 /* SDPSDPHashesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405EEDAB3F71FC81650D05 /* SDPSDPHashesInteractorTests.swift */; };
 		64096C1F7AE376FC8A189693 /* SDPSDPQRGeneratorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */; };
 		67438643638C95CBC8033E30 /* SDPSDPQRGeneratorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */; };
 		6D90876843ADDBBE68F46FCD /* Pods_ThunderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88B28388E595A26D2BC1D92 /* Pods_ThunderUITests.framework */; };
+		822477FCC8B7B44E30F4EFC7 /* SDPSDPArgon2ParametersPopupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4E04A3E2BD3C557F401EC /* SDPSDPArgon2ParametersPopupPresenterTests.swift */; };
 		8FC12C5C1CF7860AC12785E7 /* Pods_SwiftDPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC03BC43888E1ECFAC4A25B0 /* Pods_SwiftDPUITests.framework */; };
+		935E3E6A2434A9DC555AD851 /* SDPSDPArgon2ParametersPopupInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */; };
 		9F4B9A20D232EC2810535F12 /* SDPSDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356B7C1913F49D60CE5A5A6 /* SDPSDPQRGeneratorInteractorTests.swift */; };
 		A1A09B7043F3C94B2E534A75 /* SDPSDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806809E36C054785DC41809E /* SDPSDPQRGeneratorConfiguratorTests.swift */; };
 		B114430802C7257273B91970 /* SDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */; };
@@ -127,7 +145,9 @@
 		EF92367083985B0776B457AF /* Pods_Swift_data_processor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */; };
 		F1DD666298379E7AAA15F9E1 /* SDPSDPQRGeneratorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E4E6330ABC537148E52AD /* SDPSDPQRGeneratorViewTests.swift */; };
 		F1E2C2A2F30F3E31CD5A69D8 /* Pods_SwiftDPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A4040C03E0E8F2B7BACDCE /* Pods_SwiftDPTests.framework */; };
+		F29EDAC82233806CEDF1741A /* SDPSDPArgon2ParametersPopupViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2FBC471B943F7D3D64E71A /* SDPSDPArgon2ParametersPopupViewTests.swift */; };
 		F9FC024969F32897CBAE547D /* Pods_Swift_data_processorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AC68E0906D02D345976CE8 /* Pods_Swift_data_processorTests.framework */; };
+		FB7F73984F90D338E5B28D6F /* SDPSDPArgon2ParametersPopupRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C92F69A9BD276DEDD17F56 /* SDPSDPArgon2ParametersPopupRouterTests.swift */; };
 		FD220247FFE3390791694A2C /* SDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +233,7 @@
 		2023355AC86F5AA8F4E7FFAD /* Pods-Thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder/Pods-Thunder.release.xcconfig"; sourceTree = "<group>"; };
 		22496F14B7D5ED58C8B768A4 /* SDPSDPHashesConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesConfiguratorTests.swift; sourceTree = "<group>"; };
 		2401087B048E252D8155EE70 /* Pods_SwiftDP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF593ACC1F4AFEB9A246FE9 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupConfiguratorTests.swift; sourceTree = "<group>"; };
 		3188304E9995E31FD16962FF /* Pods-SwiftDPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPUITests/Pods-SwiftDPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInput.swift; sourceTree = "<group>"; };
 		3203E18B20FCBB630082F395 /* SDPTextPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextPresenter.swift; sourceTree = "<group>"; };
@@ -314,11 +335,28 @@
 		32B63CE9210745C600BDE139 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		32B63CF3210746AF00BDE139 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B63CF4210746AF00BDE139 /* testTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
+		32C92F69A9BD276DEDD17F56 /* SDPSDPArgon2ParametersPopupRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupRouterTests.swift; sourceTree = "<group>"; };
 		32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Dismiss.swift"; sourceTree = "<group>"; };
 		32CF52982106126D008FB025 /* UIView+BorderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BorderColor.swift"; sourceTree = "<group>"; };
 		32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatArgon2Crypto+RawHash.swift"; sourceTree = "<group>"; };
+		32D9EFE52134040A006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupPresenter.swift; sourceTree = "<group>"; };
+		32D9EFE62134040A006E7934 /* SDPSDPArgon2ParametersPopupModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupModuleInput.swift; sourceTree = "<group>"; };
+		32D9EFE82134040A006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupViewInput.swift; sourceTree = "<group>"; };
+		32D9EFE92134040A006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupViewOutput.swift; sourceTree = "<group>"; };
+		32D9EFEA2134040A006E7934 /* SDPArgon2ParametersPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPArgon2ParametersPopupView.swift; sourceTree = "<group>"; };
+		32D9EFEC2134040A006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupConfigurator.swift; sourceTree = "<group>"; };
+		32D9EFEF2134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractorOutput.swift; sourceTree = "<group>"; };
+		32D9EFF02134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractor.swift; sourceTree = "<group>"; };
+		32D9EFF12134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractorInput.swift; sourceTree = "<group>"; };
+		32D9EFF32134040A006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupRouterInput.swift; sourceTree = "<group>"; };
+		32D9EFF42134040A006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupRouter.swift; sourceTree = "<group>"; };
+		32D9F00121340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPArgon2ParametersPopupModuleBuilder.swift; sourceTree = "<group>"; };
+		32D9F0032134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPArgon2ParametersPopupVariables.swift; sourceTree = "<group>"; };
+		32D9F00521341C0D006E7934 /* SDPArgon2Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPArgon2Parameters.swift; sourceTree = "<group>"; };
+		32D9F00721342C12006E7934 /* CarArgon2ConstantExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarArgon2ConstantExternal.swift; sourceTree = "<group>"; };
 		32D9FAB12106F86000CB0FE0 /* TDPViewExternalConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPViewExternalConfigurator.swift; sourceTree = "<group>"; };
 		32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionsTableViewController.swift; sourceTree = "<group>"; };
+		332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractorTests.swift; sourceTree = "<group>"; };
 		3FF6F4C9089DA48EAED96F15 /* Pods-Swift-data-processor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor.release.xcconfig"; sourceTree = "<group>"; };
 		46FEE66A21D53E03692AC32E /* Pods_ThunderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThunderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B09F4033753AE3C237F96A6 /* Pods_Thunder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thunder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +374,7 @@
 		934E82B0C36736D31531E7C9 /* SDPSDPHashesRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesRouterTests.swift; sourceTree = "<group>"; };
 		93E0363407A9C9226E0E3C23 /* Pods-Swift-data-processor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor.debug.xcconfig"; sourceTree = "<group>"; };
 		94373D5B925A251FAC56C9C2 /* Pods-ThunderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderTests/Pods-ThunderTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CB4E04A3E2BD3C557F401EC /* SDPSDPArgon2ParametersPopupPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupPresenterTests.swift; sourceTree = "<group>"; };
 		9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5DCCDEB5B369EC49E8AF34 /* Pods-SwiftDPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPUITests/Pods-SwiftDPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A88B28388E595A26D2BC1D92 /* Pods_ThunderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThunderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +388,7 @@
 		CFBFCB248D96803E61EEA30A /* SDPQRGeneratorViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorViewTests.swift; sourceTree = "<group>"; };
 		E2CC25C880C11B640F127876 /* Pods-ThunderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderUITests/Pods-ThunderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorRouterTests.swift; sourceTree = "<group>"; };
+		EE2FBC471B943F7D3D64E71A /* SDPSDPArgon2ParametersPopupViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupViewTests.swift; sourceTree = "<group>"; };
 		F14C4CC3CA500F0856C37F99 /* Pods-Swift-data-processorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorTests/Pods-Swift-data-processorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAFF7FEAF857ADF97C77F6DF /* SDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
 		FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesPresenterTests.swift; sourceTree = "<group>"; };
@@ -395,12 +435,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0EB2ADF597B2A0E6E149E236 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				32C92F69A9BD276DEDD17F56 /* SDPSDPArgon2ParametersPopupRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1503134C30F668FDB58ED59A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2AF593ACC1F4AFEB9A246FE9 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		17B43AE240EEEFC1B944865A /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		1E4EA11CA517008D6E434078 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9CB4E04A3E2BD3C557F401EC /* SDPSDPArgon2ParametersPopupPresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		3203E18820FCBB630082F395 /* Text */ = {
@@ -543,7 +607,7 @@
 		322AB23A211491C000E96892 /* Cryptography */ = {
 			isa = PBXGroup;
 			children = (
-				3273FB5C212ED14C00C56B2A /* CatArgon2+RawHash */,
+				3273FB5C212ED14C00C56B2A /* CatArgon2+Extented */,
 				322AB234211491B100E96892 /* SDPCrypto.swift */,
 				322AB23D2114947400E96892 /* SDPRandom.swift */,
 			);
@@ -613,6 +677,7 @@
 		324CD2F521104D4C00A978C1 /* SDPHashes */ = {
 			isa = PBXGroup;
 			children = (
+				32D9EFD92134037B006E7934 /* Submodules */,
 				324CD2F621104D4C00A978C1 /* Presenter */,
 				324CD2F921104D4C00A978C1 /* View */,
 				324CD2FD21104D4C00A978C1 /* Configurator */,
@@ -732,14 +797,15 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		3273FB5C212ED14C00C56B2A /* CatArgon2+RawHash */ = {
+		3273FB5C212ED14C00C56B2A /* CatArgon2+Extented */ = {
 			isa = PBXGroup;
 			children = (
 				32D53AFF212D7119009F7373 /* CatArgon2Crypto+RawHash.swift */,
 				3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */,
 				3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */,
+				32D9F00721342C12006E7934 /* CarArgon2ConstantExternal.swift */,
 			);
-			path = "CatArgon2+RawHash";
+			path = "CatArgon2+Extented";
 			sourceTree = "<group>";
 		};
 		3273FB89212EE99400C56B2A /* Redux */ = {
@@ -828,6 +894,7 @@
 				9CB5D1D77B09258AE37817E2 /* QRGenerator */,
 				96CD2AD999A097AE2C208A06 /* SDPQRGenerator */,
 				51A0603653233790728684E9 /* SDPHashes */,
+				DBF18608600BA28303C3F624 /* SDPArgon2ParametersPopup */,
 			);
 			path = "Swift-data-processorTests";
 			sourceTree = "<group>";
@@ -907,6 +974,75 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		32D9EFD92134037B006E7934 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFE32134040A006E7934 /* SDPArgon2ParametersPopup */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		32D9EFE32134040A006E7934 /* SDPArgon2ParametersPopup */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFE42134040A006E7934 /* Presenter */,
+				32D9EFE72134040A006E7934 /* View */,
+				32D9EFEB2134040A006E7934 /* Configurator */,
+				32D9EFEE2134040A006E7934 /* Interactor */,
+				32D9EFF22134040A006E7934 /* Router */,
+				32D9F0032134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift */,
+				32D9F00521341C0D006E7934 /* SDPArgon2Parameters.swift */,
+			);
+			path = SDPArgon2ParametersPopup;
+			sourceTree = "<group>";
+		};
+		32D9EFE42134040A006E7934 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFE52134040A006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift */,
+				32D9EFE62134040A006E7934 /* SDPSDPArgon2ParametersPopupModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		32D9EFE72134040A006E7934 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFE82134040A006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift */,
+				32D9EFE92134040A006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift */,
+				32D9EFEA2134040A006E7934 /* SDPArgon2ParametersPopupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32D9EFEB2134040A006E7934 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFEC2134040A006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift */,
+				32D9F00121340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		32D9EFEE2134040A006E7934 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFEF2134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift */,
+				32D9EFF02134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift */,
+				32D9EFF12134040A006E7934 /* SDPSDPArgon2ParametersPopupInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		32D9EFF22134040A006E7934 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				32D9EFF32134040A006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift */,
+				32D9EFF42134040A006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		4CF6D7F7E02108EC37B63EF7 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,6 +1075,14 @@
 			isa = PBXGroup;
 			children = (
 				4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6D264CB4C4525999C5A326DA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -981,6 +1125,14 @@
 				EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8CEFFEB96AF4A479F9C51838 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE2FBC471B943F7D3D64E71A /* SDPSDPArgon2ParametersPopupViewTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96CD2AD999A097AE2C208A06 /* SDPQRGenerator */ = {
@@ -1070,6 +1222,18 @@
 				0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBF18608600BA28303C3F624 /* SDPArgon2ParametersPopup */ = {
+			isa = PBXGroup;
+			children = (
+				1503134C30F668FDB58ED59A /* Configurator */,
+				8CEFFEB96AF4A479F9C51838 /* View */,
+				6D264CB4C4525999C5A326DA /* Interactor */,
+				1E4EA11CA517008D6E434078 /* Presenter */,
+				0EB2ADF597B2A0E6E149E236 /* Router */,
+			);
+			path = SDPArgon2ParametersPopup;
 			sourceTree = "<group>";
 		};
 		E47BF721B16677C3B18FB4FB /* Configurator */ = {
@@ -1358,12 +1522,15 @@
 			files = (
 				324CD2F221103F4500A978C1 /* UITableViewCellConfigurable.swift in Sources */,
 				322AB24021149A6C00E96892 /* UIView+Shake.swift in Sources */,
+				32D9F00621341C0D006E7934 /* SDPArgon2Parameters.swift in Sources */,
 				3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */,
 				3203E19E20FCBB640082F395 /* SDPTextViewInput.swift in Sources */,
 				3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */,
+				32D9EFFD2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift in Sources */,
 				3273FB98212F147F00C56B2A /* SDPMapState.swift in Sources */,
 				324CD31621104D4D00A978C1 /* SDPSDPHashesRouterInput.swift in Sources */,
 				3273FB9D212F14EB00C56B2A /* SDPNavigationStore.swift in Sources */,
+				32D9EFFE2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractorInput.swift in Sources */,
 				32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */,
 				325A5A472100DFEA00DD7222 /* SDPQRScannerInteractorOutput.swift in Sources */,
 				321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */,
@@ -1374,19 +1541,24 @@
 				325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */,
 				3274556321084B910096AE75 /* TDPViewExternalConfiguratorProtocol.swift in Sources */,
 				3203E19F20FCBB640082F395 /* SDPTextModuleInitializer.swift in Sources */,
+				32D9EFF62134040B006E7934 /* SDPSDPArgon2ParametersPopupModuleInput.swift in Sources */,
 				322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */,
 				321635E42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift in Sources */,
 				325A5A422100DFEA00DD7222 /* SDPQRScannerViewController.swift in Sources */,
 				328FBF22210998AD00D728A5 /* String+UnicodeEncoding.swift in Sources */,
+				32D9EFFC2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift in Sources */,
 				321635E82108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift in Sources */,
 				325A5A442100DFEA00DD7222 /* SDPQRScannerViewInput.swift in Sources */,
 				3203E1A020FCBB640082F395 /* SDPTextConfigurator.swift in Sources */,
+				32D9EFFF2134040B006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift in Sources */,
+				32D9F0002134040B006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift in Sources */,
 				328FCD5E202F441100EA8098 /* AppDelegate.swift in Sources */,
 				321635EE2108CF4D00793E7D /* SDPSDPQRGeneratorRouterInput.swift in Sources */,
 				321635ED2108CF4D00793E7D /* SDPSDPQRGeneratorInteractor.swift in Sources */,
 				3273FB92212EF1DD00C56B2A /* SDPQRScannerVariables.swift in Sources */,
 				324CD31021104D4D00A978C1 /* SDPSDPHashesInitializer.swift in Sources */,
 				325A5A432100DFEA00DD7222 /* SDPQRScannerViewOutput.swift in Sources */,
+				32D9EFF72134040B006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift in Sources */,
 				32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */,
 				3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */,
 				3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */,
@@ -1396,11 +1568,15 @@
 				3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */,
 				321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */,
 				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
+				32D9EFFA2134040B006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift in Sources */,
 				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
+				32D9EFF92134040B006E7934 /* SDPArgon2ParametersPopupView.swift in Sources */,
 				324CD30F21104D4D00A978C1 /* SDPSDPHashesViewController.swift in Sources */,
+				32D9F0042134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift in Sources */,
 				3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */,
+				32D9F00221340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift in Sources */,
 				32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */,
 				3203E1A320FCBB640082F395 /* SDPTextInteractor.swift in Sources */,
 				324CD31A21108DEF00A978C1 /* SDPHashTableViewCell.swift in Sources */,
@@ -1431,14 +1607,17 @@
 				321635E92108CF4D00793E7D /* SDPSDPQRGeneratorConfigurator.swift in Sources */,
 				324CD31321104D4D00A978C1 /* SDPSDPHashesInteractorInput.swift in Sources */,
 				322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */,
+				32D9EFF82134040B006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift in Sources */,
 				3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */,
 				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
+				32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
 				3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */,
 				32B63CE82107455B00BDE139 /* TDPApplicationThemeConfigurator.swift in Sources */,
 				3273FB57212EC02B00C56B2A /* Data+HexEncodedString.swift in Sources */,
 				32D53B00212D7119009F7373 /* CatArgon2Crypto+RawHash.swift in Sources */,
+				32D9F00821342C12006E7934 /* CarArgon2ConstantExternal.swift in Sources */,
 				324CD30C21104D4D00A978C1 /* SDPSDPHashesModuleInput.swift in Sources */,
 				3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */,
 				324CD30B21104D4D00A978C1 /* SDPSDPHashesPresenter.swift in Sources */,
@@ -1467,6 +1646,11 @@
 				62AEA1C6F36D72B68CA426B5 /* SDPSDPHashesInteractorTests.swift in Sources */,
 				36FC454F66A6CA89C3A23842 /* SDPSDPHashesPresenterTests.swift in Sources */,
 				38264D15796D4CCA1B4B6E0B /* SDPSDPHashesRouterTests.swift in Sources */,
+				3A62C0CE9146B72DC87B60E3 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift in Sources */,
+				F29EDAC82233806CEDF1741A /* SDPSDPArgon2ParametersPopupViewTests.swift in Sources */,
+				935E3E6A2434A9DC555AD851 /* SDPSDPArgon2ParametersPopupInteractorTests.swift in Sources */,
+				822477FCC8B7B44E30F4EFC7 /* SDPSDPArgon2ParametersPopupPresenterTests.swift in Sources */,
+				FB7F73984F90D338E5B28D6F /* SDPSDPArgon2ParametersPopupRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

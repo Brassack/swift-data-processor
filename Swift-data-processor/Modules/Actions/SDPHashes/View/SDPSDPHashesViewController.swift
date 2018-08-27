@@ -12,6 +12,7 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
 
     @IBOutlet weak var saltTextField: UITextField!
     @IBOutlet weak var iterationsTextField: UITextField!
+    @IBOutlet weak var argon2ParameterButton: UIBarButtonItem!
     
     @IBOutlet weak var shareButton: UIButton!
 
@@ -34,6 +35,10 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput, UIText
     // MARK: User actions
     @IBAction func dice(_ sender: Any) {
         output.generateRandomSalt()
+    }
+    
+    @IBAction func argon2Parameters(_ sender: Any) {
+        output.setupArgon2Parameters()
     }
     
     @IBAction func qr(_ sender: Any) {

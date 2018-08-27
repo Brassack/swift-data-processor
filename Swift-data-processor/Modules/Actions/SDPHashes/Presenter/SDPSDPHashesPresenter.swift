@@ -8,17 +8,23 @@
 import UIKit
 
 class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesInteractorOutput {
-
+    
     weak var view: SDPHashesViewInput!
     var interactor: SDPHashesInteractorInput!
     var router: SDPHashesRouterInput!
     
     private var hashParameters: (iterations: Int, salt: String?) = (iterations: 1, salt: nil)
-    
+
     private var tableView: UITableView?
     private var tableDataSource: SDPOrdinaryTableViewDataSource?
 
     // MARK: SDPHashesViewOutput
+    func setupArgon2Parameters() {
+        
+        interactor.setupAndSubscripeToArgon2Parameters()
+        router.argon2Parameters()
+    }
+    
     func copyHash(atIndexPath indexPath: IndexPath) {
         guard let tableDataSource = tableDataSource else {
             return
@@ -62,9 +68,11 @@ class SDPHashesPresenter: SDPHashesModuleInput, SDPHashesViewOutput, SDPHashesIn
     func viewWillBePresented() {
         view.prepareForScreen()
         interactor.unsubscribeFromSaltClipboard()
+        interactor.setupAndSubscripeToArgon2Parameters()
     }
     
     // MARK: SDPHashesInteractorOutput
+    
     func setScanned(salt: String?) {
         
         if let vc = view as? UIViewController {

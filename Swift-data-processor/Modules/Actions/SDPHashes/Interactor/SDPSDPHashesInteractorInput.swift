@@ -10,8 +10,8 @@ import Foundation
 
 protocol SDPHashesInteractorInput {
     
-    var stores:SDPReduxStores {get set}
-    
+    func setupAndSubscripeToArgon2Parameters()
+    func unsubscribeFromArgon2Clipboard()
     func unsubscribeFromSaltClipboard()
     func subscribeForSaltClipboard()
     func requestData(_:(iterations: Int, salt: String?))

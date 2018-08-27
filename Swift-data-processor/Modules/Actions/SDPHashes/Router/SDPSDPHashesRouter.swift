@@ -11,6 +11,7 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
 
     weak var navigationController : UINavigationController?
     var accesoryStoryboard: UIStoryboard!
+    var popupReference: Any?
     var stores = SDPReduxStores.shared
     
     init() {
@@ -33,5 +34,16 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
         }
 
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func argon2Parameters() {
+        
+        let popup = SDPArgon2ParametersPopupModuleBuilder.buildArgon2ParametersPopup {[weak self] in
+            self?.popupReference = nil
+        }
+        
+        popupReference = popup
+        
+        navigationController?.present(popup.viewController, animated: true, completion: nil)
     }
 }

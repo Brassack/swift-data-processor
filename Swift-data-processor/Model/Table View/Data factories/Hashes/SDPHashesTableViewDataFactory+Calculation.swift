@@ -45,7 +45,6 @@ extension SDPHashesTableViewDataFactory {
             }else if let errorDescription = result.error?.errorDescription {
                 
                 resultRow.subtitle = errorDescription
-                break
             }
             
             rows.append(resultRow)

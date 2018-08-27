@@ -18,6 +18,7 @@ protocol SDPHashesViewOutput {
     func generateRandomSalt()
     func shareSalt()
     func scanSaltFromQR()
+    func setupArgon2Parameters()
     
     func copyHash(atIndexPath indexPath: IndexPath)
 }

@@ -21,9 +21,9 @@ class SDPHashesTableViewDataFactory {
     var iterations: Int = 1
     var salt: String?
     
-    var argon2HashLength: Int = 32
-    var argon2Memory: Int = 1024
-    var argon2Parallelism: Int = 1
+    var argon2HashLength: Int = argon2DefaultHashLength
+    var argon2Memory: Int = argon2DefaultMemory
+    var argon2Parallelism: Int = argon2DefaultParallelism
     
     init(text: String, delegate: SDPHashesTableViewDataFactoryDelegate){
         self.text = text
@@ -51,7 +51,7 @@ class SDPHashesTableViewDataFactory {
         }
         
         delegate?.set(stubData: result)
-        
+            
         DispatchQueue.global(qos: .background).async { [weak self] in
             
             let wselfContainer = Weak<SDPHashesTableViewDataFactory>(self)
