@@ -81,7 +81,12 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
         
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {[weak self] in
             
+            let errorMessage = "Something went wrong"
+            
             guard let baseImage = text.qrImage() else {
+                DispatchQueue.main.async {
+                    self?.view.show(errorMessage: errorMessage)
+                }
                 return
             }
             
@@ -92,7 +97,10 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
                 return
             }
             
-            guard let resultImage = self?.fit(image: baseImage, toSize: size) else{
+            guard let resultImage = self?.fit(image: baseImage, toSize: size) else {
+                DispatchQueue.main.async {
+                    self?.view.show(errorMessage: errorMessage)
+                }
                 return
             }
             

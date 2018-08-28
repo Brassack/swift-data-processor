@@ -10,6 +10,7 @@ import UIKit
 
 protocol SDPTextRouterInput {
 
+    func showTooLongTextFoQRError()
     func registerNavigationController(forView:Any?)
     func showScreen(forAction action:String)
     func qr()

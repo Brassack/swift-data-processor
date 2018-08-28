@@ -12,4 +12,5 @@ protocol SDPQRGeneratorViewInput: class {
     func setupInitialState()
     func prepareFoorScreen()
     func show(qrImage: UIImage)
+    func show(errorMessage: String)
 }

@@ -23,6 +23,14 @@ class SDPTextRouter: SDPTextRouterInput {
         }
     }
     
+    func showTooLongTextFoQRError(){
+        
+        let alert = UIAlertController(title: "Ooops", message: "Too long for QR (max 1024)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
+    
     func qr() {
         let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
         

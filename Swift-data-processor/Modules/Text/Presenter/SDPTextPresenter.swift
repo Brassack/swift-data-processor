@@ -54,8 +54,13 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     
     func selectAction(_ action: String) {
         
-        interactor.addTextToclipboard(action: action)
-        router.showScreen(forAction: action)
+        if action == "SDPQRGenerator" {
+            
+            interactor.requestValidationForQRGenerator()
+        }else{
+            interactor.addTextToclipboard(action: action)
+            router.showScreen(forAction: action)
+        }
     }
     
     //MARK: intenal methods
@@ -68,6 +73,19 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     }
     
     // MARK: DPTextInteractorOutput
+    
+    func textForQR(valid isValid: Bool) {
+        
+        if isValid {
+            let action = "SDPQRGenerator"
+            interactor.addTextToclipboard(action: action)
+            router.showScreen(forAction: action)
+        }else{
+            
+            router.showTooLongTextFoQRError()
+        }
+    }
+    
     func set(actions: [String], titles: [String: String]?){
         let dataSource = SDPSingleSectionTableDataSourceObject<String, String>(elements: actions, values: titles)
         actionView?.set(tableViewDataSource: dataSource)

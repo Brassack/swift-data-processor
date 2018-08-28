@@ -23,6 +23,11 @@ class SDPTextInteractor: SDPTextInteractorInput {
         output.set(actions: actions, titles: titles)
     }
     
+    func requestValidationForQRGenerator(){
+        
+        output.textForQR(valid: (data.text?.count ?? 0) <= 1024) 
+    }
+    
     func addTextToclipboard(action:String) {
         let action = SDPMapStateWriteAction(key: action, value: data.text)//SDPSetTextAction(string:data.text)
         stores.mapStore.dispatch(action)

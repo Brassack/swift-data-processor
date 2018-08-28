@@ -12,6 +12,7 @@ import Foundation
 protocol SDPTextInteractorInput {
 
     func requestActions()
+    func requestValidationForQRGenerator()
     
     func set(text:String?)
     func set(range:NSRange?)

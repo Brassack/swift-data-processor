@@ -20,7 +20,7 @@ extension String{
         let filter = CIFilter(name: "CIQRCodeGenerator")!
         filter.setValue(data, forKey: "inputMessage")
         filter.setValue("Q", forKey: "inputCorrectionLevel")
-        
+    
         guard let encodedImage: CIImage = filter.outputImage else {
             return nil
         }

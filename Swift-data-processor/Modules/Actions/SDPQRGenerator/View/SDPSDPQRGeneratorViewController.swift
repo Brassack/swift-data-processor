@@ -9,11 +9,12 @@
 import UIKit
 
 class SDPQRGeneratorViewController: UIViewController, SDPQRGeneratorViewInput {
-
+    
     var output: SDPQRGeneratorViewOutput!
 
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var qrImageView: UIImageView!
+    @IBOutlet weak var qrStateLabel: UILabel!
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -32,6 +33,10 @@ class SDPQRGeneratorViewController: UIViewController, SDPQRGeneratorViewInput {
     // MARK: SDPQRGeneratorViewInput
     func setupInitialState() {
         
+    }
+    
+    func show(errorMessage: String) {
+        qrStateLabel.text = errorMessage
     }
     
     func show(qrImage: UIImage) {

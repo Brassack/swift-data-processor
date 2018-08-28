@@ -63,6 +63,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="qrImageView" destination="zP0-Mx-rth" id="WFP-3K-Oxu"/>
+                        <outlet property="qrStateLabel" destination="AmZ-0v-H6e" id="ZOv-Yn-uOt"/>
                         <outlet property="shareButton" destination="qGQ-wX-pyZ" id="FDG-b1-ehG"/>
                     </connections>
                 </viewController>
@@ -89,11 +90,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="MNz-Mb-2Mb">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP ON HASH TO COPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbA-k9-UM9">
-                                    <rect key="frame" x="124.5" y="219.5" width="127" height="13.5"/>
+                                    <rect key="frame" x="124.5" y="235.5" width="127" height="13.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -114,11 +115,11 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFf-4x-d2B">
-                                    <rect key="frame" x="0.0" y="80" width="375" height="129.5"/>
+                                    <rect key="frame" x="0.0" y="80" width="375" height="145.5"/>
                                     <color key="backgroundColor" white="0.95282032624096935" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8+ FOR ARGON2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbs-ue-e4M">
-                                    <rect key="frame" x="142.5" y="190.5" width="89.5" height="14"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOR ALL EXEPT ARGON2 ADDED FOR EVERY ITERATION 8+ FOR ARGON2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbs-ue-e4M">
+                                    <rect key="frame" x="8" y="194" width="359" height="26.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -193,6 +194,7 @@
                                 <constraint firstAttribute="bottom" secondItem="WbA-k9-UM9" secondAttribute="bottom" constant="8" id="5ho-pT-2Hp"/>
                                 <constraint firstItem="noK-TV-DjW" firstAttribute="width" secondItem="zqx-xD-oTh" secondAttribute="width" id="7SW-83-mN6"/>
                                 <constraint firstAttribute="trailing" secondItem="qFf-4x-d2B" secondAttribute="trailing" id="9um-cp-rRQ"/>
+                                <constraint firstAttribute="trailing" secondItem="Vbs-ue-e4M" secondAttribute="trailing" constant="8" id="B3o-KV-cWc"/>
                                 <constraint firstItem="jjB-iY-roa" firstAttribute="centerX" secondItem="MNz-Mb-2Mb" secondAttribute="centerX" id="BPg-sW-OQn"/>
                                 <constraint firstItem="cmm-ud-jit" firstAttribute="top" secondItem="MNz-Mb-2Mb" secondAttribute="top" constant="8" id="D7u-ag-rLL"/>
                                 <constraint firstItem="0Ly-yX-MgO" firstAttribute="leading" secondItem="FW2-IZ-FvG" secondAttribute="trailing" constant="20" id="Dhq-cq-4Xx"/>
@@ -208,6 +210,7 @@
                                 <constraint firstItem="0Ly-yX-MgO" firstAttribute="centerY" secondItem="FW2-IZ-FvG" secondAttribute="centerY" id="X3l-ja-ra5"/>
                                 <constraint firstItem="Vbs-ue-e4M" firstAttribute="bottom" secondItem="qFf-4x-d2B" secondAttribute="bottom" constant="-5" id="YpX-OC-jCv"/>
                                 <constraint firstItem="WbA-k9-UM9" firstAttribute="centerX" secondItem="MNz-Mb-2Mb" secondAttribute="centerX" id="Zjr-Ii-XyK"/>
+                                <constraint firstItem="Vbs-ue-e4M" firstAttribute="leading" secondItem="MNz-Mb-2Mb" secondAttribute="leading" constant="8" id="bnl-hW-r2o"/>
                                 <constraint firstItem="1Hn-Yk-AkT" firstAttribute="centerY" secondItem="FW2-IZ-FvG" secondAttribute="centerY" id="cNU-m3-bSR"/>
                                 <constraint firstItem="KaZ-EB-5xn" firstAttribute="top" secondItem="qFf-4x-d2B" secondAttribute="top" constant="10" id="dXX-d4-a3A"/>
                                 <constraint firstItem="Vbs-ue-e4M" firstAttribute="centerX" secondItem="MNz-Mb-2Mb" secondAttribute="centerX" id="dg0-CW-0AQ"/>
@@ -224,7 +227,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="81" id="StK-fA-C71" customClass="SDPHashTableViewCell" customModule="Swift_data_processor" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="269" width="375" height="81"/>
+                                <rect key="frame" x="0.0" y="285" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="StK-fA-C71" id="yKX-Wt-JNo">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>

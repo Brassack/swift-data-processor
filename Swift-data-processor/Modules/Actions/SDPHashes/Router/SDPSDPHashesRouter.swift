@@ -54,7 +54,7 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
             return
         }
         
-        let qrActivity = SDPQRGeneratingActivity(text: salt, navigationController: navigationController!, storyboard: actionsStoryboard)
+        let qrActivity = SDPQRGeneratingActivity(text: salt, navigationController: nc, storyboard: actionsStoryboard)
         let activityViewController = UIActivityViewController(activityItems: [salt], applicationActivities: [qrActivity])
         activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
         
