@@ -93,6 +93,9 @@
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
 		327D7CCD21348E2F000EBC64 /* SDPQRGeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */; };
+		327D7CD921353842000EBC64 /* SDPHashCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CD821353842000EBC64 /* SDPHashCalculator.swift */; };
+		327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */; };
+		327D7CDD2135387E000EBC64 /* SDPArgon2HashCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CDC2135387E000EBC64 /* SDPArgon2HashCalculator.swift */; };
 		328D54DE210B90D700146D9A /* Actions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328D54DC210B90D700146D9A /* Actions.storyboard */; };
 		328FBF22210998AD00D728A5 /* String+UnicodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */; };
 		328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328FBF232109E59C00D728A5 /* String+QRImage.swift */; };
@@ -319,6 +322,9 @@
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
 		327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratingActivity.swift; sourceTree = "<group>"; };
+		327D7CD821353842000EBC64 /* SDPHashCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculator.swift; sourceTree = "<group>"; };
+		327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculatorFactory.swift; sourceTree = "<group>"; };
+		327D7CDC2135387E000EBC64 /* SDPArgon2HashCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPArgon2HashCalculator.swift; sourceTree = "<group>"; };
 		328D54DD210B90D700146D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Actions.storyboard; sourceTree = "<group>"; };
 		328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeEncoding.swift"; sourceTree = "<group>"; };
 		328FBF232109E59C00D728A5 /* String+QRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+QRImage.swift"; sourceTree = "<group>"; };
@@ -627,6 +633,7 @@
 		322AB24A2114BBCF00E96892 /* Hashes */ = {
 			isa = PBXGroup;
 			children = (
+				327D7CD32135382C000EBC64 /* Calculators */,
 				322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */,
 				324CD3172110542700A978C1 /* SDPHashesTableViewDataFactory.swift */,
 				322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */,
@@ -839,6 +846,16 @@
 				3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */,
 			);
 			path = NavigationStore;
+			sourceTree = "<group>";
+		};
+		327D7CD32135382C000EBC64 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				327D7CD821353842000EBC64 /* SDPHashCalculator.swift */,
+				327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */,
+				327D7CDC2135387E000EBC64 /* SDPArgon2HashCalculator.swift */,
+			);
+			path = Calculators;
 			sourceTree = "<group>";
 		};
 		328FCD51202F441100EA8098 = {
@@ -1537,6 +1554,7 @@
 				32D9FAB22106F86000CB0FE0 /* TDPViewExternalConfigurator.swift in Sources */,
 				325A5A472100DFEA00DD7222 /* SDPQRScannerInteractorOutput.swift in Sources */,
 				321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */,
+				327D7CD921353842000EBC64 /* SDPHashCalculator.swift in Sources */,
 				3273FB9F212F15A200C56B2A /* SDPNavigationState.swift in Sources */,
 				3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */,
 				322AB235211491B100E96892 /* SDPCrypto.swift in Sources */,
@@ -1574,6 +1592,7 @@
 				32D9EFFA2134040B006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift in Sources */,
 				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
+				327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
 				32D9EFF92134040B006E7934 /* SDPArgon2ParametersPopupView.swift in Sources */,
 				324CD30F21104D4D00A978C1 /* SDPSDPHashesViewController.swift in Sources */,
@@ -1605,6 +1624,7 @@
 				3273FB9A212F149B00C56B2A /* SDPMapStateActions.swift in Sources */,
 				324CD31121104D4D00A978C1 /* SDPSDPHashesConfigurator.swift in Sources */,
 				321635E72108CF4D00793E7D /* SDPSDPQRGeneratorViewOutput.swift in Sources */,
+				327D7CDD2135387E000EBC64 /* SDPArgon2HashCalculator.swift in Sources */,
 				325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */,
 				325A5A482100DFEA00DD7222 /* SDPQRScannerInteractor.swift in Sources */,
 				3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */,

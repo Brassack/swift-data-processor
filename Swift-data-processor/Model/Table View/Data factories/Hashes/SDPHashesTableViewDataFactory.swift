@@ -10,9 +10,11 @@ import UIKit
 import CatCrypto
 
 
-typealias SDPSectionInfo = (identifier: String,
+typealias SDPHashesRowInfo = (identifier: String, title: String, function: Hashing)
+
+typealias SDPHashesSectionInfo = (identifier: String,
     title: String,
-    rows: [(identifier: String, title: String, function: Hashing)])
+    rows: [SDPHashesRowInfo])
 
 class SDPHashesTableViewDataFactory {
     
@@ -33,7 +35,7 @@ class SDPHashesTableViewDataFactory {
     func createData(){
         
         var result = [SDPTableViewDataSourceSection]()
-        var infoArray = [SDPSectionInfo]()
+        var infoArray = [SDPHashesSectionInfo]()
         
         let shaSectionInfo = SDPHashesTableViewDataFactory.shaSectionInfo()
         infoArray.append(shaSectionInfo)
@@ -76,7 +78,7 @@ class SDPHashesTableViewDataFactory {
     }
     
    
-    class func sectionDataToStubResultSectionData(data: SDPSectionInfo) -> SDPTableViewDataSourceSection {
+    class func sectionDataToStubResultSectionData(data: SDPHashesSectionInfo) -> SDPTableViewDataSourceSection {
         
         var rows = [SDPTableViewDataSourceRow]()
 

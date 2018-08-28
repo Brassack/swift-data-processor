@@ -11,7 +11,7 @@ import CatCrypto
 
 extension SDPHashesTableViewDataFactory{
     
-    class func argon2SectionInfo(iteractions:Int, hashLength:Int, parallelism:Int, memory:Int) -> SDPSectionInfo {
+    class func argon2SectionInfo(iteractions:Int, hashLength:Int, parallelism:Int, memory:Int) -> SDPHashesSectionInfo {
         
         //argon2d
         var argon2d_context = CatArgon2Context()
@@ -29,7 +29,7 @@ extension SDPHashesTableViewDataFactory{
         var argon2id_context = argon2d_context
         argon2id_context.mode = .argon2id
         
-        let argon2Section: SDPSectionInfo = (identifier: "argon2", title: "Argon2", rows:
+        let argon2Section: SDPHashesSectionInfo = (identifier: "argon2", title: "Argon2", rows:
             [
                 (identifier: "argon2d", title: "ARGON2D", function: CatArgon2Crypto(context: argon2d_context)),
                 (identifier: "argon2d_encoded", title: "ARGON2D ENCODED", function: CatArgon2Crypto(context: argon2d_context)),
@@ -43,7 +43,7 @@ extension SDPHashesTableViewDataFactory{
         return argon2Section
     }
     
-    class func mdSectionInfo() -> SDPSectionInfo {
+    class func mdSectionInfo() -> SDPHashesSectionInfo {
         var md6_224Context = CatMD6Context()
         md6_224Context.hashLength = .bit224
         
@@ -56,7 +56,7 @@ extension SDPHashesTableViewDataFactory{
         var md6_512Context = CatMD6Context()
         md6_512Context.hashLength = .bit512
         
-        let mdSection: SDPSectionInfo = (identifier: "md", title: "Message Digest", rows:
+        let mdSection: SDPHashesSectionInfo = (identifier: "md", title: "Message Digest", rows:
             [
                 (identifier: "md2", title: "MD2", function: CatMD2Crypto()),
                 (identifier: "md4", title: "MD4", function: CatMD4Crypto()),
@@ -70,7 +70,7 @@ extension SDPHashesTableViewDataFactory{
         return mdSection
     }
     
-    class func shaSectionInfo() -> SDPSectionInfo {
+    class func shaSectionInfo() -> SDPHashesSectionInfo {
         var sha2_224Context = CatSHA2Context()
         sha2_224Context.hashLength = .bit224
         
@@ -95,7 +95,7 @@ extension SDPHashesTableViewDataFactory{
         var sha3_512Context = CatSHA3Context()
         sha3_512Context.hashLength = .bit512
         
-        let shaSection: SDPSectionInfo = (identifier: "sha", title: "Secure Hash Algorithm", rows:
+        let shaSection: SDPHashesSectionInfo = (identifier: "sha", title: "Secure Hash Algorithm", rows:
             [
                 (identifier: "sha1", title: "SHA1", function: CatSHA1Crypto()),
                 (identifier: "sha2_224", title: "SHA2 224 bits", function: CatSHA2Crypto(context: sha2_224Context)),
