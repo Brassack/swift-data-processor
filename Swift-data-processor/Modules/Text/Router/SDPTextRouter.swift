@@ -53,6 +53,11 @@ class SDPTextRouter: SDPTextRouterInput {
             let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
 
             navigationController?.pushViewController(vc, animated: true)
+        }else if action == "SDPEncryption" {
+            //router
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPEncryptionViewController")
+            
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

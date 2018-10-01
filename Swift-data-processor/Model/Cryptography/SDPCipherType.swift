@@ -16,6 +16,22 @@ enum SDPCipherType {
     case rc2
     case rc4
     
+    func description() -> String {
+        
+        switch self {
+        case .aes:
+            return "AES"
+        case .blowfish:
+            return "Blowfish"
+        case .des3:
+            return "DES3"
+        case .rc2:
+            return "RC2"
+        case .rc4:
+            return "RC4"
+        }
+    }
+    
     func algorithm() -> CCAlgorithm {
         
         switch self {
@@ -29,10 +45,25 @@ enum SDPCipherType {
             return CCAlgorithm(kCCAlgorithmRC2)
         case .rc4:
             return CCAlgorithm(kCCAlgorithmRC4)
-            
+
         }
     }
     
+    func defaultKeySize() -> Int {
+        
+        switch self {
+        case .aes:
+            return kCCKeySizeAES256
+        case .blowfish:
+            return kCCKeySizeMaxBlowfish
+        case .des3:
+            return kCCKeySize3DES
+        case .rc2:
+            return kCCKeySizeMinRC2
+        case .rc4:
+            return kCCKeySizeMinRC4
+        }
+    }
     func keySizeList() -> [Int] {
         
         func enumerate(min: Int, max: Int) -> [Int] {

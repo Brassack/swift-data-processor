@@ -8,6 +8,8 @@
 
 import UIKit
 
+@available(*, deprecated, message: "SDPOrdinaryTableViewDataSource")
+
 class SDPSingleSectionTableDataSourceObject<Element:Hashable, Value>: NSObject {
     
     private let elements: [Element]

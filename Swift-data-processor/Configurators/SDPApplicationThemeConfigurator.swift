@@ -9,8 +9,12 @@
 import UIKit
 
 class SDPApplicationThemeConfigurator: NSObject {
+    static var theme: SDPApplicationTheme = SDPApplicationTheme()
+    
     class func configure(actionColor: UIColor){
         
+        theme.actionColor = actionColor
+        UISegmentedControl.appearance().tintColor = actionColor
         UIButton.appearance().tintColor = actionColor
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = actionColor
         UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = actionColor

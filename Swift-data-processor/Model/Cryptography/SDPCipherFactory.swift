@@ -15,6 +15,13 @@ class SDPCipherFactory {
     
     private init(){}
     
+    class func factory(type: SDPCipherType) -> SDPCipherFactory {
+        
+        let factory = SDPCipherFactory()
+        factory.type = type
+        return factory
+    }
+    
     class func AESFactory() -> SDPCipherFactory {
         return SDPCipherFactory()
     }

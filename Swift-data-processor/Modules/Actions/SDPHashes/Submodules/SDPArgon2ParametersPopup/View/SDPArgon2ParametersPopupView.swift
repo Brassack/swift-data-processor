@@ -56,7 +56,7 @@ class SDPArgon2ParametersPopupView: SDPArgon2ParametersPopupViewInput {
             textField.text = ("\(parameters.hashLength)")
             textField.placeholder = "Hash length"
             textField.delegate = self?.output
-            self?.setupKeyboard(for: textField)
+            textField.addDoneButton()
         }
         
         alert.addTextField { [weak self] (textField) in
@@ -67,7 +67,7 @@ class SDPArgon2ParametersPopupView: SDPArgon2ParametersPopupViewInput {
             textField.text = ("\(parameters.memory)")
             textField.placeholder = "Memory"
             textField.delegate = self?.output
-            self?.setupKeyboard(for: textField)
+            textField.addDoneButton()
         }
         
         alert.addTextField { [weak self] (textField) in
@@ -78,7 +78,7 @@ class SDPArgon2ParametersPopupView: SDPArgon2ParametersPopupViewInput {
             textField.text = ("\(parameters.parallelism)")
             textField.placeholder = "Parralelism"
             textField.delegate = self?.output
-            self?.setupKeyboard(for: textField)
+            textField.addDoneButton()
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (action) in
@@ -92,13 +92,4 @@ class SDPArgon2ParametersPopupView: SDPArgon2ParametersPopupViewInput {
         
     }
     
-    func setupKeyboard(for textfield: UITextField){
-        
-        let button = UIButton(type: .system)
-        button.setTitle("DONE", for: .normal)
-        button.backgroundColor = UIColor.white
-        button.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 45)
-        button.addTarget(textfield, action: #selector(textfield.resignFirstResponder), for: .touchUpInside)
-        textfield.inputAccessoryView = button
-    }
 }

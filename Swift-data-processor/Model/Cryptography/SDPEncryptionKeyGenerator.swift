@@ -29,7 +29,7 @@ class SDPEncryptionKeyGenerator {
         }
     }
     
-    class func makeKey(password: String, salt: String, keySize:Int = kCCKeySizeAES128, rounds: UInt32 = 2048, pseudoRandomAlgorythm: CCPseudoRandomAlgorithm = CCPseudoRandomAlgorithm(kCCPRFHmacAlgSHA1) ) throws -> Data {
+    class func makeKey(password: String, salt: String = "", keySize:Int = kCCKeySizeAES128, rounds: UInt32 = 2048, pseudoRandomAlgorythm: CCPseudoRandomAlgorithm = CCPseudoRandomAlgorithm(kCCPRFHmacAlgSHA1) ) throws -> Data {
         
         let passwordData = Data(password.utf8)
         let saltData = Data(salt.utf8);

@@ -18,8 +18,8 @@ class SDPTextInteractor: SDPTextInteractorInput {
     
     
     func requestActions(){
-        let actions = ["SDPHashes", "SDPQRGenerator", "encryption", "escaping"]
-        let titles = ["encryption": "Encryptions", "escaping":"XML/URL escaping", "SDPHashes":"Hashes", "SDPQRGenerator":"To QR"]
+        let actions = ["SDPHashes", "SDPQRGenerator", "SDPEncryption", "escaping"]
+        let titles = ["SDPEncryption": "Encryption", "escaping":"XML/URL escaping", "SDPHashes":"Hashes", "SDPQRGenerator":"To QR"]
         output.set(actions: actions, titles: titles)
     }
     

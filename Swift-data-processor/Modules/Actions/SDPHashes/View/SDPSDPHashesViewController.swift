@@ -97,19 +97,8 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
     
     func setupInitialState() {
         
-        let button = UIButton(type: .system)
-        button.setTitle("DONE", for: .normal)
-        button.backgroundColor = UIColor.white
-        button.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 45)
-        button.addTarget(iterationsTextField, action: #selector(iterationsTextField.resignFirstResponder), for: .touchUpInside)
-        iterationsTextField.inputAccessoryView = button
-        
-        let saltDoneButton = UIButton(type: .system)
-        saltDoneButton.setTitle("DONE", for: .normal)
-        saltDoneButton.backgroundColor = UIColor.white
-        saltDoneButton.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 45)
-        saltDoneButton.addTarget(saltTextField, action: #selector(saltTextField.resignFirstResponder), for: .touchUpInside)
-        saltTextField.inputAccessoryView = saltDoneButton
+        iterationsTextField.addDoneButton()
+        saltTextField.addDoneButton()
     }
     
     func prepareForScreen() {

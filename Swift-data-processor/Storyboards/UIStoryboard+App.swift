@@ -21,4 +21,8 @@ extension UIStoryboard {
         return UIStoryboard(name: "Actions", bundle: nil)
     }}
     
+    class var components: UIStoryboard {get{
+        return UIStoryboard(name: "Components", bundle: nil)
+    }}
+    
 }
