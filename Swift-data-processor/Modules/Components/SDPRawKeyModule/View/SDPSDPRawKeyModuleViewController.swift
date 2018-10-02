@@ -12,6 +12,7 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput,
     
     var output: SDPRawKeyModuleViewOutput!
     @IBOutlet weak var keyTextView: UITextView!
+    @IBOutlet weak var counterLabel: UILabel!
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -43,7 +44,22 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput,
         keyTextView.addDoneButton()
     }
     
+    func showInvalidKeyError() {
+        
+        keyTextView.shake()
+    }
+    
+    func set(status: String?) {
+        
+       counterLabel.text = status
+    }
+    
     //MARK: UITextFieldDelegate
+    func textViewDidChange(_ textView: UITextView) {
+        
+        output.setTextInProgress(textView.text)
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         
         output.set(key: textView.text)

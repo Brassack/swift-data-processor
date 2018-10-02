@@ -15,4 +15,6 @@ protocol SDPRawKeyModuleViewInput: class {
 
     func setupInitialState()
     func set(key: String?)
+    func showInvalidKeyError()
+    func set(status: String?)
 }

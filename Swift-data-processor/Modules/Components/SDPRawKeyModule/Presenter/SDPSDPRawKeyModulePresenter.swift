@@ -46,15 +46,38 @@ class SDPRawKeyModulePresenter:SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewOu
     
     func set(key: String?) {
         
-        let data = key?.hexDecodedData()
-        interactor.set(key: data)
+        if let key = key, key.count > 0 {
+            
+            if key.isHexEncodedData {
+                
+                let data = key.hexDecodedData()
+                interactor.set(key: data)
+            }else{
+                
+                let keyString = parameters?.rawKey?.hexEncodedString()
+                view.set(key: keyString)
+                view.set(status:"\(keyString?.count ?? 0) of \((parameters?.keySize ?? 0) * 2)")
+                view.showInvalidKeyError()
+            }
+        }else{
+            
+            interactor.set(key: nil)
+        }
+    }
+    
+    func setTextInProgress(_ text: String?) {
+    
+        view.set(status:"\(text?.count ?? 0) of \((parameters?.keySize ?? 0) * 2)")
     }
     
     //MARK: SDPRawKeyModuleInteractorOutput
     func set(parameters: SDPEncryptionParameters) {
         
         self.parameters = parameters
-        view.set(key: parameters.rawKey?.hexEncodedString())
+        
+        let keyString = parameters.rawKey?.hexEncodedString()
+        view.set(key: keyString)
+        view.set(status:"\(keyString?.count ?? 0) of \(parameters.keySize * 2)")
     }
     
     func setQRFinished() {

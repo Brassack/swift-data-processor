@@ -15,4 +15,5 @@ protocol SDPRawKeyModuleViewOutput {
     func generateRandomKey()
     func scanFromQR()
     func set(key: String?)
+    func setTextInProgress(_ text:String?)
 }
