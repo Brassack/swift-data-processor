@@ -39,7 +39,9 @@ class SDPHashCalculator {
             text = (factory.salt == nil) ? text : text + factory.salt!
             
             let result = info.function.hash(password: text)
-            if let hash = result.value {
+//            if let hash = result.stringValue() {
+             let hash = result.hexStringValue()
+
                 if i == (iterations - 1) {
                     resultRow.isFailed = false
                     resultRow.subtitle = hash
@@ -47,10 +49,10 @@ class SDPHashCalculator {
                     text = hash
                 }
                 
-            }else if let errorDescription = result.error?.errorDescription {
-                resultRow.subtitle = errorDescription
-                break
-            }
+//            }else if let errorDescription = result.error?.errorDescription {
+//                resultRow.subtitle = errorDescription
+//                break
+//            }
         }
         
         return resultRow

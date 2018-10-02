@@ -10,6 +10,6 @@ import UIKit
 
 protocol SDPEncryptionRouterInput {
 
-    func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewControllerNavigationDirection)
+    func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewController.NavigationDirection)
     func share(data:Data)
 }

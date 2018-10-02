@@ -18,10 +18,10 @@ extension UIViewController {
             holderView = onView
         }
         
-        addChildViewController(childController)
+        addChild(childController)
         holderView?.addSubview(childController.view)
         constrainViewEqual(holderView: holderView!, view: childController.view)
-        childController.didMove(toParentViewController: self)
+        childController.didMove(toParent: self)
     }
     
     

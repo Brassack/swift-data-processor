@@ -48,7 +48,7 @@ class SDPPasswordBasedKeyPresenter:NSObject, SDPPasswordBasedKeyModuleInput, SDP
         view.set(rawKeyString: parameters.computedRawKey?.hexEncodedString())
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         
         var parameters = self.parameters
         parameters?.password = textField.text

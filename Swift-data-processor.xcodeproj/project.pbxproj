@@ -132,7 +132,6 @@
 		32AB4BBE2142CC010008D83E /* SDPCipherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB4BBD2142CC010008D83E /* SDPCipherFactory.swift */; };
 		32B63CE82107455B00BDE139 /* SDPApplicationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CE72107455B00BDE139 /* SDPApplicationConfigurator.swift */; };
 		32B63CEA210745C600BDE139 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CE9210745C600BDE139 /* UIColor+Hex.swift */; };
-		32B63CF5210746AF00BDE139 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32B63CF3210746AF00BDE139 /* Info.plist */; };
 		32B63CF8210746AF00BDE139 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CF4210746AF00BDE139 /* testTests.swift */; };
 		32BFAD66213551EF00AFC5CC /* SDPEncryptionKeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFAD65213551EF00AFC5CC /* SDPEncryptionKeyGenerator.swift */; };
 		32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */; };
@@ -2267,7 +2266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B63CF5210746AF00BDE139 /* Info.plist in Resources */,
 				328FCD6A202F441100EA8098 /* LaunchScreen.storyboard in Resources */,
 				328FCD67202F441100EA8098 /* Assets.xcassets in Resources */,
 				32DFDF182146DBAF00A20F0F /* Components.storyboard in Resources */,

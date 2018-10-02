@@ -30,7 +30,8 @@ class SDPArgon2HashCalculator: SDPHashCalculator {
         }else{
             
             let r = function.hash(password: text)
-            optionalResult = CatCryptoExternalResult(result: r)
+            optionalResult = CatCryptoExternalResult()
+            optionalResult?.value = r.stringValue()
         }
         
         guard let result = optionalResult else{

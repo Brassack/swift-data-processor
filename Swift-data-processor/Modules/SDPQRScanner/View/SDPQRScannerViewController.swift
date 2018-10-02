@@ -54,6 +54,7 @@ class SDPQRScannerViewController: UIViewController, SDPQRScannerViewInput, SDPVi
     // MARK: SDPQRScannerViewInput
     func prepareForScreen() {
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     // MARK: Camera
     func setupCamera(delegate: AVCaptureMetadataOutputObjectsDelegate) {

@@ -14,7 +14,7 @@ extension SDPHashesTableViewDataFactory{
     class func argon2SectionInfo(iteractions:Int, hashLength:Int, parallelism:Int, memory:Int) -> SDPHashesSectionInfo {
         
         //argon2d
-        var argon2d_context = CatArgon2Context()
+        let argon2d_context = CatArgon2Context()
         argon2d_context.iterations = iteractions
         argon2d_context.mode = .argon2d
         argon2d_context.hashLength = hashLength
@@ -22,12 +22,20 @@ extension SDPHashesTableViewDataFactory{
         argon2d_context.memory = memory
         
         //argon2d
-        var argon2i_context = argon2d_context
+        let argon2i_context = CatArgon2Context()
+        argon2i_context.iterations = iteractions
         argon2i_context.mode = .argon2i
+        argon2i_context.hashLength = hashLength
+        argon2i_context.parallelism = parallelism
+        argon2i_context.memory = memory
 
         //argon2id
-        var argon2id_context = argon2d_context
+        let argon2id_context = CatArgon2Context()
+        argon2id_context.iterations = iteractions
         argon2id_context.mode = .argon2id
+        argon2id_context.hashLength = hashLength
+        argon2id_context.parallelism = parallelism
+        argon2id_context.memory = memory
         
         let argon2Section: SDPHashesSectionInfo = (identifier: "argon2", title: "Argon2", rows:
             [
@@ -44,16 +52,16 @@ extension SDPHashesTableViewDataFactory{
     }
     
     class func mdSectionInfo() -> SDPHashesSectionInfo {
-        var md6_224Context = CatMD6Context()
+        let md6_224Context = CatMD6Context()
         md6_224Context.hashLength = .bit224
         
-        var md6_256Context = CatMD6Context()
+        let md6_256Context = CatMD6Context()
         md6_256Context.hashLength = .bit256
         
-        var md6_384Context = CatMD6Context()
+        let md6_384Context = CatMD6Context()
         md6_384Context.hashLength = .bit384
         
-        var md6_512Context = CatMD6Context()
+        let md6_512Context = CatMD6Context()
         md6_512Context.hashLength = .bit512
         
         let mdSection: SDPHashesSectionInfo = (identifier: "md", title: "Message Digest", rows:
@@ -71,16 +79,16 @@ extension SDPHashesTableViewDataFactory{
     }
     
     class func shaSectionInfo() -> SDPHashesSectionInfo {
-        var sha2_224Context = CatSHA2Context()
+        let sha2_224Context = CatSHA2Context()
         sha2_224Context.hashLength = .bit224
         
-        var sha2_256Context = CatSHA2Context()
+        let sha2_256Context = CatSHA2Context()
         sha2_256Context.hashLength = .bit256
         
-        var sha2_384Context = CatSHA2Context()
+        let sha2_384Context = CatSHA2Context()
         sha2_384Context.hashLength = .bit384
         
-        var sha2_512Context = CatSHA2Context()
+        let sha2_512Context = CatSHA2Context()
         sha2_512Context.hashLength = .bit512
         
         var sha3_224Context = CatSHA3Context()

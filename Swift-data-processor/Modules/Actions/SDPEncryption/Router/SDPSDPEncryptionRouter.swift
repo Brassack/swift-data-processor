@@ -10,7 +10,7 @@ import UIKit
 
 class SDPEncryptionRouter: SDPEncryptionRouterInput {
 
-    func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewControllerNavigationDirection){
+    func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewController.NavigationDirection){
 
         forPageController.setViewControllers([page], direction: direction, animated: true, completion: nil)
     }

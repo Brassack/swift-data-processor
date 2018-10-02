@@ -6,6 +6,7 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 import AVFoundation
+import UIKit
 
 class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewOutput, SDPQRScannerInteractorOutput, AVCaptureMetadataOutputObjectsDelegate {
     
@@ -45,6 +46,7 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
         #if targetEnvironment(simulator)
         interactor.textReady("simulator")
         #endif
+        view.prepareForScreen()
     }
     
     //MARK: AVCaptureMetadataOutputObjectsDelegate
@@ -81,8 +83,8 @@ class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewO
         switch authorizationStatus {
         case .authorized:
             
-            NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive(_:)), name: .UIApplicationDidBecomeActive, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(willResignActive(_:)), name: .UIApplicationWillResignActive, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(willResignActive(_:)), name: UIApplication.willResignActiveNotification, object: nil)
             view.setupCamera(delegate: self)
             
         case .notDetermined:

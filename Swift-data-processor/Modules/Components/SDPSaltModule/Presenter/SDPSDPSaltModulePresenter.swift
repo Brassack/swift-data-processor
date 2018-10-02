@@ -47,7 +47,7 @@ class SDPSaltModulePresenter:NSObject, SDPSaltModuleModuleInput, SDPSaltModuleVi
         router.scanQR()
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         
         interactor.set(salt: textField.text)
     }

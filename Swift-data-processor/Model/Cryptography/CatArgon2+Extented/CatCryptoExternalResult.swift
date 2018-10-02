@@ -16,11 +16,11 @@ public class CatCryptoExternalResult {
     /// Hashed value.
     public var value: String?
     
-    convenience init(result: CatCryptoHashResult) {
+    convenience init(result: CatCryptoResult) {
         self.init()
         if let resultError = result.error {
             error = CatCryptoExternalError(error: resultError)
         }
-        value = result.value
+        value = result.hexStringValue()
     }
 }

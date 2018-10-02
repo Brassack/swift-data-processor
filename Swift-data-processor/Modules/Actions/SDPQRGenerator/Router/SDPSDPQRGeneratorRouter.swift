@@ -13,7 +13,7 @@ class SDPQRGeneratorRouter: SDPQRGeneratorRouterInput {
     func share(image: UIImage) {
         
         var base64Activity:SDPBase64GeneratingActivity? = nil
-        if let data = UIImagePNGRepresentation(image) {
+        if let data = image.pngData() {
             base64Activity = SDPBase64GeneratingActivity(data: data)
         }
         let activities = base64Activity == nil ? [] : [base64Activity!]

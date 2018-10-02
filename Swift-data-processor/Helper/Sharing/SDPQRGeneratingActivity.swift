@@ -25,7 +25,7 @@ class SDPQRGeneratingActivity: UIActivity {
         self.text = text
     }
     
-    override var activityType: UIActivityType? {
+    override var activityType: UIActivity.ActivityType? {
         get{
             return .saveToCameraRoll
         }
@@ -53,7 +53,7 @@ class SDPQRGeneratingActivity: UIActivity {
         }
     }
     
-    override class var activityCategory: UIActivityCategory {
+    override class var activityCategory: UIActivity.Category {
         get{
             return .action
         }

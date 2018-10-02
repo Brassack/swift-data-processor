@@ -19,7 +19,7 @@ class SDPBase64GeneratingActivity: UIActivity {
         encodedString = data.base64EncodedString()
     }
     
-    override var activityType: UIActivityType? {
+    override var activityType: UIActivity.ActivityType? {
         get{
             return .copyToPasteboard
         }
@@ -47,7 +47,7 @@ class SDPBase64GeneratingActivity: UIActivity {
         }
     }
     
-    override class var activityCategory: UIActivityCategory {
+    override class var activityCategory: UIActivity.Category {
         get{
             return .action
         }
@@ -64,10 +64,14 @@ class SDPBase64GeneratingActivity: UIActivity {
     
     override func perform() {
         
-        guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+        guard var rootVC = UIApplication.shared.keyWindow?.rootViewController else {
             
             activityDidFinish(true)
             return
+        }
+        
+        while let presented = rootVC.presentedViewController {
+            rootVC = presented
         }
         
         let qrActivity = SDPQRGeneratingActivity(text: encodedString, qrStoryboard: storyboard)
