@@ -15,6 +15,10 @@ class SDPSharingPresenter {
     
     func qrSharePrepareDataAndPresentInRootController(text: String) {
         
+        guard let rootVC = rootVC() else {
+            return
+        }
+        
         let action = SDPMapStateWriteAction(key: "SDPQRGenerator", value: text)
         stores.mapStore.dispatch(action)
         
@@ -22,12 +26,12 @@ class SDPSharingPresenter {
         let nc = UINavigationController.init(rootViewController: vc)
         vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nc, action: #selector(UIViewController.dismissFromParentAnimated))
         
-        UIApplication.shared.keyWindow?.rootViewController?.present(nc, animated: true, completion: nil)
+        rootVC.present(nc, animated: true, completion: nil)
     }
     
     func share(string: String) {
         
-        guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+        guard let rootVC = rootVC() else {
             return
         }
         
@@ -41,15 +45,29 @@ class SDPSharingPresenter {
     
     func share(data: Data) {
         
-        guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+        guard let rootVC = rootVC() else {
             return
         }
-        
+
         let base64Activity = SDPBase64GeneratingActivity(data: data)
         let activities = base64Activity == nil ? [] : [base64Activity!]
         let activityViewController = UIActivityViewController(activityItems: [data], applicationActivities: activities)
         activityViewController.popoverPresentationController?.sourceView = rootVC.view // so that iPads won't crash
         
         rootVC.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    //MARK: helper
+    func rootVC() -> UIViewController? {
+        
+        guard var rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+            return nil
+        }
+        
+        while let presented = rootVC.presentedViewController {
+            rootVC = presented
+        }
+        
+        return rootVC
     }
 }

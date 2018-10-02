@@ -79,13 +79,21 @@ class SDPQRGeneratingActivity: UIActivity {
             navigationController.pushViewController(vc, animated: true)
         }else{
             
+            guard var rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+                
+                activityDidFinish(false)
+                return
+            }
+            
+            while let presented = rootVC.presentedViewController {
+                rootVC = presented
+            }
+            
             let nc = UINavigationController.init(rootViewController: vc)
             vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nc, action: #selector(UIViewController.dismissFromParentAnimated))
 
-            UIApplication.shared.keyWindow?.rootViewController?.present(nc, animated: true, completion: {
-            })
+            rootVC.present(nc, animated: true, completion: nil)
         }
-        
         
         activityDidFinish(true)
     }
