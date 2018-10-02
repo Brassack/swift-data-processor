@@ -12,9 +12,6 @@ import CommonCrypto
 enum SDPCipherType {
     case aes
     case blowfish
-    case des3
-    case rc2
-    case rc4
     
     func description() -> String {
         
@@ -23,12 +20,6 @@ enum SDPCipherType {
             return "AES"
         case .blowfish:
             return "Blowfish"
-        case .des3:
-            return "DES3"
-        case .rc2:
-            return "RC2"
-        case .rc4:
-            return "RC4"
         }
     }
     
@@ -39,13 +30,6 @@ enum SDPCipherType {
             return CCAlgorithm(kCCAlgorithmAES)
         case .blowfish:
             return CCAlgorithm(kCCAlgorithmBlowfish)
-        case .des3:
-            return CCAlgorithm(kCCAlgorithm3DES)
-        case .rc2:
-            return CCAlgorithm(kCCAlgorithmRC2)
-        case .rc4:
-            return CCAlgorithm(kCCAlgorithmRC4)
-
         }
     }
     
@@ -56,12 +40,6 @@ enum SDPCipherType {
             return kCCKeySizeAES256
         case .blowfish:
             return kCCKeySizeMaxBlowfish
-        case .des3:
-            return kCCKeySize3DES
-        case .rc2:
-            return kCCKeySizeMinRC2
-        case .rc4:
-            return kCCKeySizeMinRC4
         }
     }
     func keySizeList() -> [Int] {
@@ -80,12 +58,6 @@ enum SDPCipherType {
             return [kCCKeySizeAES128, kCCKeySizeAES192, kCCKeySizeAES256]
         case .blowfish:
             return enumerate(min: kCCKeySizeMinBlowfish, max: kCCKeySizeMaxBlowfish)
-        case .des3:
-            return [kCCKeySize3DES]
-        case .rc2:
-            return enumerate(min: kCCKeySizeMinRC2, max: kCCKeySizeMinRC2)
-        case .rc4:
-            return enumerate(min: kCCKeySizeMinRC4, max: kCCKeySizeMinRC4)
         }
     }
 }

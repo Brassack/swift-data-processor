@@ -145,7 +145,7 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == iterationsTextFieldTag {
             
-            if let iterations = Int(textField.text ?? ""), iterations > 0, iterations < 1000 {
+            if let iterations = Int(textField.text ?? ""), iterations > 0, iterations < 100 {
                 
                 hashParameters.iterations = iterations
                 interactor.requestData(hashParameters)

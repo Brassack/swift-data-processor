@@ -17,4 +17,4 @@
  
  let argon2DefaultHashLength = 32
  let argon2MinHashLength = 4
- let argon2MaxHashLength = 2048//Int(CUnsignedInt.max)
+ let argon2MaxHashLength = 1024//Int(CUnsignedInt.max)

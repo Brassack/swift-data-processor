@@ -30,17 +30,6 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
             }
             
             text = currentValue?.valueDescription
-
-            if let currentValue = currentValue {
-
-                if let index = pickerValues?.index(where: {$0.valueDescription == currentValue.valueDescription}) {
-                    
-                    if index != picker?.selectedRow(inComponent: 0) {
-                        
-                        picker?.selectRow(index, inComponent: 0, animated: false)
-                    }
-                }
-            }
         }
     }
     
@@ -71,6 +60,22 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
         inputView = picker
         
         addDoneButton()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        
+        super.becomeFirstResponder()
+        if let currentValue = currentValue {
+            
+            if let index = pickerValues?.index(where: {$0.valueDescription == currentValue.valueDescription}) {
+                
+                if index != picker?.selectedRow(inComponent: 0) {
+                    
+                    picker?.selectRow(index, inComponent: 0, animated: true)
+                }
+            }
+        }
+        return true
     }
     
     //MARK: UIPickerViewDelegate
@@ -131,9 +136,21 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
     }
     
     //MARK: user actions
-    @IBAction func keySizeChaged(_ sender: Any) {
+    @IBAction func keySizeChaged(_ sender: SDPPickerSingleOptionInput) {
+        guard let size = sender.currentValue?.value as? Int else {
+            return
+        }
+        
+        output.set(keySize: size)
     }
-    @IBAction func mechodChanged(_ sender: Any) {
+    
+    @IBAction func mechodChanged(_ sender: SDPPickerSingleOptionInput) {
+        
+        guard let method = sender.currentValue?.value as? SDPCipherType else {
+            return
+        }
+        
+        output.set(method: method)
     }
     
     @IBAction func keySegmentChanged(_ sender: Any) {

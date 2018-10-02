@@ -32,24 +32,6 @@ class SDPCipherFactory {
         return factory
     }
     
-    class func des3Factory() -> SDPCipherFactory {
-        let factory = SDPCipherFactory()
-        factory.type = .des3
-        return factory
-    }
-    
-    class func RC2Factory() -> SDPCipherFactory {
-        let factory = SDPCipherFactory()
-        factory.type = .rc2
-        return factory
-    }
-    
-    class func RC4Factory() -> SDPCipherFactory {
-        let factory = SDPCipherFactory()
-        factory.type = .rc4
-        return factory
-    }
-    
     func produce(key: Data) throws -> SDPCipher {
         
         let cipher = try SDPCipher(key: key)

@@ -166,7 +166,7 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
         view.set(keySizesPickerValues: sizes, defaultValue: SDPPickerValue(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
         var values = [SDPPickerValue]()
         
-        let types: [SDPCipherType] = [.aes, .blowfish, .des3, .rc2, .rc4]
+        let types: [SDPCipherType] = [.aes, .blowfish]
         for method in types {
             
             values.append(SDPPickerValue(valueDescription: "\(method.description())", value: method))
