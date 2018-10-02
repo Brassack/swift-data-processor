@@ -106,7 +106,7 @@
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
 		327C33B221628FDD00F21888 /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */; };
 		327C33B72162A1CD00F21888 /* UITextView+QRSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */; };
-		327C33B92162A1EC00F21888 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField.swift */; };
+		327C33B92162A1EC00F21888 /* UITextField+QRSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */; };
 		327D7CCD21348E2F000EBC64 /* SDPQRGeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */; };
 		327D7CD921353842000EBC64 /* SDPHashCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CD821353842000EBC64 /* SDPHashCalculator.swift */; };
 		327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */; };
@@ -426,7 +426,7 @@
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
 		327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+QRSharing.swift"; sourceTree = "<group>"; };
-		327C33B82162A1EC00F21888 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+QRSharing.swift"; sourceTree = "<group>"; };
 		327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratingActivity.swift; sourceTree = "<group>"; };
 		327D7CD821353842000EBC64 /* SDPHashCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculator.swift; sourceTree = "<group>"; };
 		327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculatorFactory.swift; sourceTree = "<group>"; };
@@ -1008,6 +1008,63 @@
 			path = "UI components";
 			sourceTree = "<group>";
 		};
+		3242D00C216365E700C4BDAC /* Hex encoding */ = {
+			isa = PBXGroup;
+			children = (
+				32B63CE9210745C600BDE139 /* UIColor+Hex.swift */,
+				329C02CA215A78A600ECCD3B /* String+HexDecodedData.swift */,
+				3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */,
+			);
+			path = "Hex encoding";
+			sourceTree = "<group>";
+		};
+		3242D00D2163661200C4BDAC /* Text input */ = {
+			isa = PBXGroup;
+			children = (
+				321AB6412152AC6D00C59D12 /* UITextField+DoneButton.swift */,
+				327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */,
+				327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */,
+				327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */,
+			);
+			path = "Text input";
+			sourceTree = "<group>";
+		};
+		3242D00E2163665A00C4BDAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32CF52982106126D008FB025 /* UIView+BorderColor.swift */,
+				322AB23F21149A6C00E96892 /* UIView+Shake.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3242D00F2163666D00C4BDAC /* String */ = {
+			isa = PBXGroup;
+			children = (
+				328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */,
+				328FBF232109E59C00D728A5 /* String+QRImage.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		3242D0102163668000C4BDAC /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */,
+				3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		3242D0112163669B00C4BDAC /* View controller */ = {
+			isa = PBXGroup;
+			children = (
+				32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */,
+				3292223F21517D1D009F4A0D /* UIViewController+ChildViewController.swift */,
+			);
+			path = "View controller";
+			sourceTree = "<group>";
+		};
 		324CD26221102AE900A978C1 /* Third-party */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,24 +1407,15 @@
 		32B63CFE210747E500BDE139 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3242D0112163669B00C4BDAC /* View controller */,
+				3242D0102163668000C4BDAC /* Sharing */,
+				3242D00F2163666D00C4BDAC /* String */,
+				3242D00E2163665A00C4BDAC /* View */,
+				3242D00D2163661200C4BDAC /* Text input */,
+				3242D00C216365E700C4BDAC /* Hex encoding */,
 				3242D009216364B000C4BDAC /* UI components */,
-				327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */,
-				32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */,
-				32CF52982106126D008FB025 /* UIView+BorderColor.swift */,
-				32B63CE9210745C600BDE139 /* UIColor+Hex.swift */,
-				328FBF21210998AD00D728A5 /* String+UnicodeEncoding.swift */,
 				328FBF27210A0BF900D728A5 /* UIImage+Scale.swift */,
-				328FBF232109E59C00D728A5 /* String+QRImage.swift */,
-				322AB23F21149A6C00E96892 /* UIView+Shake.swift */,
 				322AB2432114BB0900E96892 /* WeakContainer.swift */,
-				3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */,
-				3292223F21517D1D009F4A0D /* UIViewController+ChildViewController.swift */,
-				321AB6412152AC6D00C59D12 /* UITextField+DoneButton.swift */,
-				329C02CA215A78A600ECCD3B /* String+HexDecodedData.swift */,
-				327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */,
-				327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */,
-				327C33B82162A1EC00F21888 /* UITextField.swift */,
-				3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2417,7 +2465,7 @@
 				32D9EFF82134040B006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift in Sources */,
 				3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */,
 				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
-				327C33B92162A1EC00F21888 /* UITextField.swift in Sources */,
+				327C33B92162A1EC00F21888 /* UITextField+QRSharing.swift in Sources */,
 				32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
