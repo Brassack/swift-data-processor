@@ -12,6 +12,7 @@ protocol SDPEncryptionViewOutput {
     
     func viewIsReady()
     func viewWillBePresented()
+    func shareResult()
     func set(method: SDPCipherType)
     func set(keySize: Int)
     func pageViewIsready(_ pageViewController: UIPageViewController)

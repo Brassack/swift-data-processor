@@ -73,6 +73,8 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
     }
     
     @IBAction func share(_ sender: Any) {
+        
+        output.shareResult()
     }
     
     // MARK: SDPEncryptionViewInput

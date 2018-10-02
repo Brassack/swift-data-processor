@@ -11,12 +11,12 @@ import UIKit
 class SDPEncryptionRouter: SDPEncryptionRouterInput {
 
     func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewControllerNavigationDirection){
-        /*
-         [self.pageViewController setViewControllers:@[[self pageViewControllerForIndex:0]]
-         direction:UIPageViewControllerNavigationDirectionForward
-         animated:YES
-         completion:nil];
-         */
+
         forPageController.setViewControllers([page], direction: direction, animated: true, completion: nil)
+    }
+    
+    func share(data: Data) {
+        
+        SDPSharingPresenter().share(data: data)
     }
 }

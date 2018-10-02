@@ -52,14 +52,6 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
 
     func share(hash: String){
         
-        guard let nc = navigationController else {
-            return
-        }
-        
-        let qrActivity = SDPQRGeneratingActivity(text: hash, qrStoryboard: actionsStoryboard)
-        let activityViewController = UIActivityViewController(activityItems: [hash], applicationActivities: [qrActivity])
-        activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
-        
-        nc.present(activityViewController, animated: true, completion: nil)
+        SDPSharingPresenter().share(string: hash)
     }
 }

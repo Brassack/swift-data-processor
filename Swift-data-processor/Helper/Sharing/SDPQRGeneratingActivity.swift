@@ -15,8 +15,12 @@ class SDPQRGeneratingActivity: UIActivity {
     var text: String
     var stores = SDPReduxStores.shared
     
-    init(text: String, qrStoryboard storyboard: UIStoryboard) {
-        
+    init?(text: String, qrStoryboard storyboard: UIStoryboard) {
+    
+        guard text.count < 1024 else {
+            return nil
+        }
+    
         self.storyboard = storyboard
         self.text = text
     }

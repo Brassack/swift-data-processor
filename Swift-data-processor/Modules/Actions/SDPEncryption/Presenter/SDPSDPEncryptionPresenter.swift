@@ -176,6 +176,15 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
 
     }
     
+    func shareResult() {
+        
+        guard let result = result else {
+            return
+        }
+        
+        router.share(data: result)
+    }
+    
     func viewWillBePresented() {
         view.prepareForScreen()
     }

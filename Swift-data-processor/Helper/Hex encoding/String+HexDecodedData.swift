@@ -10,6 +10,15 @@ import Foundation
 
 extension String {
     
+    var isHexEncodedData: Bool {
+        get{
+            let exp = "^(0x|0X)?[a-fA-F0-9]+$"
+            let predicate = NSPredicate(format:"SELF MATCHES %@", exp)
+
+            return predicate.evaluate(with:self)
+        }
+    }
+    
     func hexDecodedData() -> Data? {
         
         var data = Data(capacity: count / 2)

@@ -52,8 +52,11 @@
 		322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2432114BB0900E96892 /* WeakContainer.swift */; };
 		322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */; };
 		322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */; };
-		3242D0042163441800C4BDAC /* SDPQRSharingPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */; };
+		3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */; };
 		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
+		3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
+		3242D03321636FE100C4BDAC /* UITextField+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */; };
+		3242D035216389D800C4BDAC /* SDPBase64GeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D034216389D800C4BDAC /* SDPBase64GeneratingActivity.swift */; };
 		324CD2C521102AE900A978C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26421102AE900A978C1 /* LICENSE */; };
 		324CD2CA21102AE900A978C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26D21102AE900A978C1 /* README.md */; };
 		324CD2E721102B2F00A978C1 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324CD2BC21102AE900A978C1 /* CatCrypto.framework */; };
@@ -105,8 +108,8 @@
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
 		327C33B221628FDD00F21888 /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */; };
-		327C33B72162A1CD00F21888 /* UITextView+QRSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */; };
-		327C33B92162A1EC00F21888 /* UITextField+QRSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */; };
+		327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */; };
+		327C33B92162A1EC00F21888 /* UITextField+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */; };
 		327D7CCD21348E2F000EBC64 /* SDPQRGeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */; };
 		327D7CD921353842000EBC64 /* SDPHashCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CD821353842000EBC64 /* SDPHashCalculator.swift */; };
 		327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */; };
@@ -373,8 +376,11 @@
 		322AB2432114BB0900E96892 /* WeakContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakContainer.swift; sourceTree = "<group>"; };
 		322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactoryDelegate.swift; sourceTree = "<group>"; };
 		322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+SectionInfo.swift"; sourceTree = "<group>"; };
-		3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRSharingPresentor.swift; sourceTree = "<group>"; };
+		3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPSharingPresenter.swift; sourceTree = "<group>"; };
 		3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPickerSingleOptionInput.swift; sourceTree = "<group>"; };
+		3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+AssociatedOptions.swift"; sourceTree = "<group>"; };
+		3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+AssociatedOptions.swift"; sourceTree = "<group>"; };
+		3242D034216389D800C4BDAC /* SDPBase64GeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPBase64GeneratingActivity.swift; sourceTree = "<group>"; };
 		324CD26421102AE900A978C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
 		324CD26D21102AE900A978C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -425,8 +431,8 @@
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
 		327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
-		327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+QRSharing.swift"; sourceTree = "<group>"; };
-		327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+QRSharing.swift"; sourceTree = "<group>"; };
+		327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SharingMenu.swift"; sourceTree = "<group>"; };
+		327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SharingMenu.swift"; sourceTree = "<group>"; };
 		327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratingActivity.swift; sourceTree = "<group>"; };
 		327D7CD821353842000EBC64 /* SDPHashCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculator.swift; sourceTree = "<group>"; };
 		327D7CDA21353863000EBC64 /* SDPHashCalculatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashCalculatorFactory.swift; sourceTree = "<group>"; };
@@ -1023,8 +1029,10 @@
 			children = (
 				321AB6412152AC6D00C59D12 /* UITextField+DoneButton.swift */,
 				327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */,
-				327C33B62162A1CD00F21888 /* UITextView+QRSharing.swift */,
-				327C33B82162A1EC00F21888 /* UITextField+QRSharing.swift */,
+				327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */,
+				327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */,
+				3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */,
+				3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */,
 			);
 			path = "Text input";
 			sourceTree = "<group>";
@@ -1051,7 +1059,8 @@
 			isa = PBXGroup;
 			children = (
 				327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */,
-				3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */,
+				3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */,
+				3242D034216389D800C4BDAC /* SDPBase64GeneratingActivity.swift */,
 			);
 			path = Sharing;
 			sourceTree = "<group>";
@@ -2414,12 +2423,13 @@
 				325A5A452100DFEA00DD7222 /* SDPQRScannerConfigurator.swift in Sources */,
 				321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */,
 				321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */,
-				327C33B72162A1CD00F21888 /* UITextView+QRSharing.swift in Sources */,
+				327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */,
 				3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */,
 				321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */,
 				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
 				32D9EFFA2134040B006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift in Sources */,
 				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
+				3242D03321636FE100C4BDAC /* UITextField+AssociatedOptions.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
@@ -2465,7 +2475,7 @@
 				32D9EFF82134040B006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift in Sources */,
 				3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */,
 				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
-				327C33B92162A1EC00F21888 /* UITextField+QRSharing.swift in Sources */,
+				327C33B92162A1EC00F21888 /* UITextField+SharingMenu.swift in Sources */,
 				32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
@@ -2474,6 +2484,7 @@
 				32B63CE82107455B00BDE139 /* SDPApplicationConfigurator.swift in Sources */,
 				3273FB57212EC02B00C56B2A /* Data+HexEncodedString.swift in Sources */,
 				32D53B00212D7119009F7373 /* CatArgon2Crypto+RawHash.swift in Sources */,
+				3242D035216389D800C4BDAC /* SDPBase64GeneratingActivity.swift in Sources */,
 				32D9F00821342C12006E7934 /* CarArgon2ConstantExternal.swift in Sources */,
 				324CD30C21104D4D00A978C1 /* SDPSDPHashesModuleInput.swift in Sources */,
 				3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */,
@@ -2517,12 +2528,13 @@
 				3292224021517D1D009F4A0D /* UIViewController+ChildViewController.swift in Sources */,
 				41289C717871BC9485531571 /* SDPSDPSaltModuleInteractor.swift in Sources */,
 				9005577B19E09893FD83A281 /* SDPSDPSaltModuleRouterInput.swift in Sources */,
+				3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */,
 				73540A7E73BEDDABA5BAA8DE /* SDPSDPSaltModuleRouter.swift in Sources */,
 				3B42C1AF7B962159686CD478 /* SDPSDPSaltModuleConfigurator.swift in Sources */,
 				0803AB954DD267D14F5C5038 /* SDPSDPSaltModuleInitializer.swift in Sources */,
 				E203CF92297A8CB0C4888BC6 /* SDPSDPRawKeyModuleViewInput.swift in Sources */,
 				6E4F769E958504DD058D79EF /* SDPSDPRawKeyModuleViewOutput.swift in Sources */,
-				3242D0042163441800C4BDAC /* SDPQRSharingPresentor.swift in Sources */,
+				3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */,
 				F68F8817C358CE7FBE094FF8 /* SDPSDPRawKeyModuleViewController.swift in Sources */,
 				C131EB453F19F9EB9EFEC37E /* SDPSDPRawKeyModuleModuleInput.swift in Sources */,
 				7F99AE72996CE695207C21EA /* SDPSDPRawKeyModulePresenter.swift in Sources */,
