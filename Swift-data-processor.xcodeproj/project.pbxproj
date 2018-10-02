@@ -53,6 +53,7 @@
 		322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */; };
 		322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */; };
 		3242D0042163441800C4BDAC /* SDPQRSharingPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */; };
+		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
 		324CD2C521102AE900A978C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26421102AE900A978C1 /* LICENSE */; };
 		324CD2CA21102AE900A978C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26D21102AE900A978C1 /* README.md */; };
 		324CD2E721102B2F00A978C1 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324CD2BC21102AE900A978C1 /* CatCrypto.framework */; };
@@ -373,6 +374,7 @@
 		322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactoryDelegate.swift; sourceTree = "<group>"; };
 		322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+SectionInfo.swift"; sourceTree = "<group>"; };
 		3242D0032163441800C4BDAC /* SDPQRSharingPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRSharingPresentor.swift; sourceTree = "<group>"; };
+		3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPickerSingleOptionInput.swift; sourceTree = "<group>"; };
 		324CD26421102AE900A978C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
 		324CD26D21102AE900A978C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -998,6 +1000,14 @@
 			path = Hashes;
 			sourceTree = "<group>";
 		};
+		3242D009216364B000C4BDAC /* UI components */ = {
+			isa = PBXGroup;
+			children = (
+				3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */,
+			);
+			path = "UI components";
+			sourceTree = "<group>";
+		};
 		324CD26221102AE900A978C1 /* Third-party */ = {
 			isa = PBXGroup;
 			children = (
@@ -1340,6 +1350,7 @@
 		32B63CFE210747E500BDE139 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3242D009216364B000C4BDAC /* UI components */,
 				327D7CCC21348E2F000EBC64 /* SDPQRGeneratingActivity.swift */,
 				32CF5296210600BF008FB025 /* UIViewController+Dismiss.swift */,
 				32CF52982106126D008FB025 /* UIView+BorderColor.swift */,
@@ -2429,6 +2440,7 @@
 				BD9BECE153365F35D460EB4E /* SDPSDPEncryptionPresenter.swift in Sources */,
 				750FAE821E187188A2F22C74 /* SDPSDPEncryptionInteractorInput.swift in Sources */,
 				2FDF0E04AE0D6CEC96C9FE90 /* SDPSDPEncryptionInteractorOutput.swift in Sources */,
+				3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */,
 				4F16139E2C6DD4075F3BFC25 /* SDPSDPEncryptionInteractor.swift in Sources */,
 				6735FF0EC5FC92C685172A09 /* SDPSDPEncryptionRouterInput.swift in Sources */,
 				BD28700CC456FF6ED7D36169 /* SDPSDPEncryptionRouter.swift in Sources */,

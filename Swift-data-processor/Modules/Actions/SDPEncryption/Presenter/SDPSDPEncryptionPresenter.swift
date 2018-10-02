@@ -163,13 +163,13 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
         interactor.requestClipboardData()
         
         let sizes = keySizeValue(forMethod: method)
-        view.set(keySizesPickerValues: sizes, defaultValue: SDPPickerValue(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
-        var values = [SDPPickerValue]()
+        view.set(keySizesPickerValues: sizes, defaultValue: SDPPickerSingleOptionInput.Value(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
+        var values = [SDPPickerSingleOptionInput.Value]()
         
         let types: [SDPCipherType] = [.aes, .blowfish]
         for method in types {
             
-            values.append(SDPPickerValue(valueDescription: "\(method.description())", value: method))
+            values.append(SDPPickerSingleOptionInput.Value(valueDescription: "\(method.description())", value: method))
         }
         
         view.set(methodPickerValues: values, defaultValue: values.first)
@@ -213,7 +213,7 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
     func set(method: SDPCipherType) {
         
         self.method = method
-        view.set(keySizesPickerValues: keySizeValue(forMethod: method), defaultValue: SDPPickerValue(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
+        view.set(keySizesPickerValues: keySizeValue(forMethod: method), defaultValue: SDPPickerSingleOptionInput.Value(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
     }
     
     func set(keySize: Int) {
@@ -222,13 +222,13 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
     }
     
     //MARK: Helper
-    func keySizeValue(forMethod method: SDPCipherType) -> [SDPPickerValue] {
+    func keySizeValue(forMethod method: SDPCipherType) -> [SDPPickerSingleOptionInput.Value] {
     
-        var values = [SDPPickerValue]()
+        var values = [SDPPickerSingleOptionInput.Value]()
         
         for size in method.keySizeList() {
             
-            values.append(SDPPickerValue(valueDescription: "\(size*16)bit", value: size))
+            values.append(SDPPickerSingleOptionInput.Value(valueDescription: "\(size*16)bit", value: size))
         }
         
         return values

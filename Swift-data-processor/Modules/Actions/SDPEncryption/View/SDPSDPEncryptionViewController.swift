@@ -8,100 +8,6 @@
 
 import UIKit
 
-struct SDPPickerValue {
-    
-    let valueDescription: String
-    let value: Any
-}
-
-class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    var pickerValues: [SDPPickerValue]? {
-        didSet{
-            currentValue = pickerValues?.last
-        }
-    }
-    var currentValue: SDPPickerValue? {
-        
-        didSet{
-            
-            if currentValue == nil {
-                currentValue = pickerValues?.last
-            }
-            
-            text = currentValue?.valueDescription
-        }
-    }
-    
-    var picker: UIPickerView? {
-        get{
-            
-            return inputView as? UIPickerView
-        }
-    }
-    
-    override init(frame: CGRect) {
-        
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup() {
-        
-        let picker = UIPickerView()
-        picker.dataSource = self
-        picker.delegate = self
-        inputView = picker
-        
-        addDoneButton()
-    }
-    
-    override func becomeFirstResponder() -> Bool {
-        
-        super.becomeFirstResponder()
-        if let currentValue = currentValue {
-            
-            if let index = pickerValues?.index(where: {$0.valueDescription == currentValue.valueDescription}) {
-                
-                if index != picker?.selectedRow(inComponent: 0) {
-                    
-                    picker?.selectRow(index, inComponent: 0, animated: true)
-                }
-            }
-        }
-        return true
-    }
-    
-    //MARK: UIPickerViewDelegate
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        currentValue = pickerValues?[row]
-        sendActions(for: .valueChanged)
-    }
-    
-    //MARK: UIPickerViewDataSource
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return pickerValues?[row].valueDescription
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-
-       return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        return pickerValues?.count ?? 0
-    }
-}
-
 class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
 
     enum SDEncryptionState {
@@ -202,13 +108,13 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
         indicatorView.isHidden = true
     }
     
-    func set(methodPickerValues values: [SDPPickerValue], defaultValue: SDPPickerValue?) {
+    func set(methodPickerValues values: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?) {
         
         methodTextField.pickerValues = values
         methodTextField.currentValue = defaultValue
     }
     
-    func set(keySizesPickerValues values: [SDPPickerValue], defaultValue: SDPPickerValue?) {
+    func set(keySizesPickerValues values: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?) {
         
         keySizeTextField.pickerValues = values
         keySizeTextField.currentValue = defaultValue
