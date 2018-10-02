@@ -12,5 +12,4 @@ protocol SDPRawKeyModuleRouterInput {
 
     func pop()
     func scanQR()
-    func share(text: String)
 }

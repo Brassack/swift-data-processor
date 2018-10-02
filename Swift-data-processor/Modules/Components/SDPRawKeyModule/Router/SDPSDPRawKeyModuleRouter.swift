@@ -36,17 +36,4 @@ class SDPRawKeyModuleRouter: SDPRawKeyModuleRouterInput, StoreSubscriber {
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func share(text: String){
-        
-        guard let nc = navigationController else {
-            return
-        }
-        
-        let qrActivity = SDPQRGeneratingActivity(text: text, navigationController: nc, storyboard: actionsStoryboard)
-        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: [qrActivity])
-        activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
-        
-        nc.present(activityViewController, animated: true, completion: nil)
-    }
 }

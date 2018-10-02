@@ -13,6 +13,5 @@ protocol SDPSaltModuleViewOutput: UITextFieldDelegate {
     func viewIsReady()
     
     func generateRandomSalt()
-    func shareSalt()
     func scanSaltFromQR()
 }

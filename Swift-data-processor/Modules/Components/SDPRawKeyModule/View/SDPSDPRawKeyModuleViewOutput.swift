@@ -8,16 +8,11 @@
 
 import UIKit
 
-protocol SDPRawKeyModuleViewOutput:UITextFieldDelegate {
-
-    /**
-        @author Dmytro Platov
-        Notify presenter that view is ready
-    */
+protocol SDPRawKeyModuleViewOutput {
 
     func viewIsReady()
     
     func generateRandomKey()
-    func share()
     func scanFromQR()
+    func set(key: String?)
 }

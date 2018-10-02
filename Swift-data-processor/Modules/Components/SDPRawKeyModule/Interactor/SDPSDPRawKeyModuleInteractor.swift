@@ -49,9 +49,10 @@ class SDPRawKeyModuleInteractor: SDPRawKeyModuleInteractorInput, StoreSubscriber
                 let action = SDPMapStateWriteAction(key: SDPRawKeyModuleInteractor.rawKeyKey, value: nil)
                 self?.stores.mapStore.dispatch(action)
                 
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters {
-                    
-                    parameters.password = text
+                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters,
+                    let key = text.hexDecodedData() {
+                
+                    parameters.rawKey = key
                     let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
                     self?.stores.mapStore.dispatch(action)
                 }

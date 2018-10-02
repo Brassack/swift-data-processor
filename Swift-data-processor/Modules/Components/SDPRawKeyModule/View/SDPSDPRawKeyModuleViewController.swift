@@ -8,17 +8,16 @@
 
 import UIKit
 
-class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput {
+class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput, UITextViewDelegate {
     
     var output: SDPRawKeyModuleViewOutput!
-    @IBOutlet weak var keyTextField: UITextField!
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var keyTextView: UITextView!
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        keyTextField.delegate = output
+        keyTextView.delegate = self
         output.viewIsReady()
     }
 
@@ -33,20 +32,20 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput 
         output.scanFromQR()
     }
     
-    @IBAction func share(_ sender: Any) {
-        
-        output.share()
-    }
-    
     // MARK: SDPRawKeyModuleViewInput
     func set(key: String?) {
         
-        keyTextField.text = key
-        shareButton.isEnabled = (key?.count ?? 0) > 0
+        keyTextView.text = key
     }
     
     func setupInitialState() {
         
-        keyTextField.addDoneButton()
+        keyTextView.addDoneButton()
+    }
+    
+    //MARK: UITextFieldDelegate
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        output.set(key: textView.text)
     }
 }

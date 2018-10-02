@@ -15,4 +15,8 @@ extension UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func dismissFromParentAnimated() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -15,7 +15,6 @@ class SDPPasswordBasedKeyViewController: UIViewController, SDPPasswordBasedKeyVi
     @IBOutlet weak var saltContainerView: UIView!
     @IBOutlet weak var rawValueDescription: UILabel!
     @IBOutlet weak var rawValueLabel: UILabel!
-    @IBOutlet weak var shareButton: UIButton!
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -28,9 +27,6 @@ class SDPPasswordBasedKeyViewController: UIViewController, SDPPasswordBasedKeyVi
     @IBAction func shareRawKey(_ sender: Any) {
         
         output.shareRawKey()
-    }
-
-    @IBAction func share(_ sender: Any) {
     }
 
     @IBAction func qr(_ sender: Any) {
@@ -47,7 +43,6 @@ class SDPPasswordBasedKeyViewController: UIViewController, SDPPasswordBasedKeyVi
     func set(password: String?) {
         
         passwordTextField.text = password
-        shareButton.isEnabled = (password?.count ?? 0) > 0
     }
     
     func set(rawKeyString: String?) {

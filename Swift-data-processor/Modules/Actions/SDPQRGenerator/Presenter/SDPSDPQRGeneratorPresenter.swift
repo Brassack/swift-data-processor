@@ -12,6 +12,7 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
     weak var view: SDPQRGeneratorViewInput!
     var interactor: SDPQRGeneratorInteractorInput!
     var router: SDPQRGeneratorRouterInput!
+    private var isDataRequested = false
     
     var qrImageSize: CGSize? {
         didSet{
@@ -53,13 +54,17 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
     }
     
     func viewIsReady() {
-        interactor.requestClipboardData()
         view.setupInitialState()
     }
     
     func viewWillBePresented(qrSize: CGSize) {
         qrImageSize = qrSize
         view.prepareFoorScreen()
+        
+        if !isDataRequested {
+            interactor.requestClipboardData()
+            isDataRequested = true
+        }
     }
     
     // MARK: Internal
@@ -77,7 +82,6 @@ class SDPQRGeneratorPresenter: SDPQRGeneratorModuleInput, SDPQRGeneratorViewOutp
     
     // MARK: SDPQRGeneratorInteractorOutput
     func set(text: String) {
-        
         
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {[weak self] in
             

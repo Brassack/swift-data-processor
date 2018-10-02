@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDPRawKeyModulePresenter:NSObject, SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewOutput, SDPRawKeyModuleInteractorOutput {
+class SDPRawKeyModulePresenter:SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewOutput, SDPRawKeyModuleInteractorOutput {
 
     weak var view: SDPRawKeyModuleViewInput!
     var interactor: SDPRawKeyModuleInteractorInput!
@@ -38,25 +38,15 @@ class SDPRawKeyModulePresenter:NSObject, SDPRawKeyModuleModuleInput, SDPRawKeyMo
         }
     }
     
-    func share() {
-        
-        guard let keyString = parameters?.rawKey?.hexEncodedString() else {
-            return
-        }
-        
-        router.share(text: keyString)
-    }
-    
     func scanFromQR() {
         
         router.scanQR()
         interactor.subscribeForQRClipboard()
     }
     
-    //MARK: UITextFieldDelegate
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func set(key: String?) {
         
-        let data = textField.text?.hexDecodedData()
+        let data = key?.hexDecodedData()
         interactor.set(key: data)
     }
     

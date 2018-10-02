@@ -10,14 +10,13 @@ import ReSwift
 
 class SDPQRGeneratingActivity: UIActivity {
     
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController?
     var storyboard: UIStoryboard
     var text: String
     var stores = SDPReduxStores.shared
     
-    init(text: String, navigationController: UINavigationController, storyboard: UIStoryboard) {
+    init(text: String, qrStoryboard storyboard: UIStoryboard) {
         
-        self.navigationController = navigationController
         self.storyboard = storyboard
         self.text = text
     }
@@ -71,7 +70,18 @@ class SDPQRGeneratingActivity: UIActivity {
     override func perform() {
         
         let vc = storyboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
-        navigationController.pushViewController(vc, animated: true)
+
+        if let navigationController = navigationController {
+            navigationController.pushViewController(vc, animated: true)
+        }else{
+            
+            let nc = UINavigationController.init(rootViewController: vc)
+            vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nc, action: #selector(UIViewController.dismissFromParentAnimated))
+
+            UIApplication.shared.keyWindow?.rootViewController?.present(nc, animated: true, completion: {
+            })
+        }
+        
         
         activityDidFinish(true)
     }

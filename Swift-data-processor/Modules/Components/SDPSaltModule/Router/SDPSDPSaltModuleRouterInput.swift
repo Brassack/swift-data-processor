@@ -11,6 +11,5 @@ import UIKit
 protocol SDPSaltModuleRouterInput {
 
     func pop()
-    func share(salt: String)
     func scanQR()
 }

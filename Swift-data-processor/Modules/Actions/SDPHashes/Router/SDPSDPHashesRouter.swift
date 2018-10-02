@@ -48,18 +48,18 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
         navigationController?.present(popup.viewController, animated: true, completion: nil)
     }
     
-    func shareSalt(_ salt: String){
+    
+
+    func share(hash: String){
         
         guard let nc = navigationController else {
             return
         }
         
-        let qrActivity = SDPQRGeneratingActivity(text: salt, navigationController: nc, storyboard: actionsStoryboard)
-        let activityViewController = UIActivityViewController(activityItems: [salt], applicationActivities: [qrActivity])
+        let qrActivity = SDPQRGeneratingActivity(text: hash, qrStoryboard: actionsStoryboard)
+        let activityViewController = UIActivityViewController(activityItems: [hash], applicationActivities: [qrActivity])
         activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
         
-//        activityViewController.use
-        // present the view controller
         nc.present(activityViewController, animated: true, completion: nil)
     }
 }

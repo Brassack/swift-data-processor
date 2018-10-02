@@ -52,7 +52,7 @@ class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber
             return
         }
         
-        let qrActivity = SDPQRGeneratingActivity(text: text, navigationController: nc, storyboard: actionsStoryboard)
+        let qrActivity = SDPQRGeneratingActivity(text: text, qrStoryboard: actionsStoryboard)
         let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: [qrActivity])
         activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
         

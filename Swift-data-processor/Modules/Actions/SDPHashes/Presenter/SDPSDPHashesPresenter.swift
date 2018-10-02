@@ -34,12 +34,32 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
         router.argon2Parameters()
     }
     
-    func copyHash(atIndexPath indexPath: IndexPath) {
-        guard let tableDataSource = tableDataSource else {
+    func shareHash(atIndexPath indexPath: IndexPath) {
+        
+        guard let data = tableDataSource?.data else {
             return
         }
         
-        interactor.copyHash(data: tableDataSource.data, atIndexPath: indexPath)
+        guard data.count > indexPath.section else {
+            return
+        }
+        
+        let section = data[indexPath.section]
+        
+        guard section.rows.count > indexPath.row else {
+            return
+        }
+        
+        guard !section.rows[indexPath.row].isFailed else {
+            return
+        }
+        
+        guard let hash = section.rows[indexPath.row].subtitle else{
+            return
+        }
+        
+        
+        router.share(hash: hash)
     }
     
     func set(iterations: Int) {
@@ -52,13 +72,6 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
         hashParameters.salt = salt
         interactor.requestData(hashParameters)
         view.set(salt: salt)
-    }
-    
-    func shareSalt() {
-        if let salt = hashParameters.salt {
-            
-            router.shareSalt(salt)
-        }
     }
     
     func scanSaltFromQR() {
@@ -94,10 +107,6 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
         hashParameters.salt = salt
         interactor.requestData(hashParameters)
         view.set(salt: salt)
-    }
-    
-    func hashCopied(at indexPath: IndexPath) {
-        view.hashCopied(at: indexPath)
     }
     
     func set(stubData: [SDPTableViewDataSourceSection]?) {

@@ -41,13 +41,6 @@ class SDPSaltModulePresenter:NSObject, SDPSaltModuleModuleInput, SDPSaltModuleVi
         interactor.set(salt: salt)
     }
     
-    func shareSalt() {
-        
-        if let salt = salt {
-            router.share(salt:salt)
-        }
-    }
-    
     func scanSaltFromQR() {
         
         interactor.subscribeForSaltClipboard()

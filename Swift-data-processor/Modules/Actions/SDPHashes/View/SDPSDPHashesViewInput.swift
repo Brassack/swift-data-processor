@@ -15,6 +15,4 @@ protocol SDPHashesViewInput: class {
     func prepareForScreen()
     func set(salt: String?)
     func refreshSaltActions()
-    
-    func hashCopied(at indexPath: IndexPath)
 }

@@ -37,19 +37,4 @@ class SDPSaltModuleRouter: SDPSaltModuleRouterInput, StoreSubscriber {
         
         navigationController?.pushViewController(vc, animated: true)
     }
-
-    func share(salt: String){
-        
-        guard let nc = navigationController else {
-            return
-        }
-        
-        let qrActivity = SDPQRGeneratingActivity(text: salt, navigationController: nc, storyboard: actionsStoryboard)
-        let activityViewController = UIActivityViewController(activityItems: [salt], applicationActivities: [qrActivity])
-        activityViewController.popoverPresentationController?.sourceView = nc.view // so that iPads won't crash
-        
-        //        activityViewController.use
-        // present the view controller
-        nc.present(activityViewController, animated: true, completion: nil)
-    }
 }

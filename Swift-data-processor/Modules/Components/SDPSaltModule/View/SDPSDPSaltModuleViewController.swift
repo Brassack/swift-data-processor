@@ -12,7 +12,6 @@ class SDPSaltModuleViewController: UIViewController, SDPSaltModuleViewInput {
 
     var output: SDPSaltModuleViewOutput!
     @IBOutlet weak var saltTextField: UITextField!
-    @IBOutlet weak var shareButton: UIButton!
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -30,15 +29,10 @@ class SDPSaltModuleViewController: UIViewController, SDPSaltModuleViewInput {
     @IBAction func qr(_ sender: Any) {
         output.scanSaltFromQR()
     }
-    
-    @IBAction func share(_ sender: Any) {
-        output.shareSalt()
-    }
-    
+
     // MARK: SDPSaltModuleViewInput
     func set(salt: String?) {
         
-        shareButton.isEnabled = salt?.count ?? 0 > 0
         saltTextField.text = salt
     }
 

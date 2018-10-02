@@ -15,5 +15,4 @@ protocol SDPHashesInteractorInput {
     func unsubscribeFromSaltClipboard()
     func subscribeForSaltClipboard()
     func requestData(_:(iterations: Int, salt: String?))
-    func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath)
 }

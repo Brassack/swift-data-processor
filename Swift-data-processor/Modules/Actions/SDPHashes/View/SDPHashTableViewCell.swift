@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SDPHashTableViewCell: UITableViewCell, SDPTableViewCellConfigurable, SDPHashTableViewCellInput {
+class SDPHashTableViewCell: UITableViewCell, SDPTableViewCellConfigurable {
     
     var externalConfigurator: SDPTableViewCellExternalConfigurator?
     
@@ -28,24 +28,6 @@ class SDPHashTableViewCell: UITableViewCell, SDPTableViewCellConfigurable, SDPHa
         // Configure the view for the selected state
     }
     
-    // MARK: SDPHashTableViewCellInput
-    func animateCopy() {
-        
-        let savedText = titleLabel.text
-        let text = "Copied"
-        
-        titleLabel.text = text
-        
-        weak var wlabel = titleLabel
-        
-        let deadlineTime = DispatchTime.now() + .seconds(1)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            
-            if wlabel?.text == text {
-                wlabel?.text = savedText
-            }
-        }
-    }
     
     // MARK: SDPTableViewCellConfigurable
     func configure(object: Any) {

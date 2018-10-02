@@ -11,5 +11,4 @@ import Foundation
 protocol SDPHashesInteractorOutput:SDPHashesTableViewDataFactoryDelegate {
 
     func setScanned(salt:String?)
-    func hashCopied(at indexPath: IndexPath)
 }

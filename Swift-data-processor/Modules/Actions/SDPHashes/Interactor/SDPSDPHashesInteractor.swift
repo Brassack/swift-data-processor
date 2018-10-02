@@ -102,32 +102,7 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
         })
         
     }
-    
-    func copyHash(data: [SDPTableViewDataSourceSection], atIndexPath indexPath: IndexPath) {
-        
-        guard data.count > indexPath.section else {
-            return
-        }
-        
-        let section = data[indexPath.section]
-        
-        guard section.rows.count > indexPath.row else {
-            return
-        }
-        
-        guard !section.rows[indexPath.row].isFailed else {
-            return
-        }
-        
-        guard let hash = section.rows[indexPath.row].subtitle else{
-            return
-        }
-        
-        UIPasteboard.general.string = hash
-        
-        output.hashCopied(at: indexPath)
-    }
-    
+
     func requestData(_ parameters:(iterations: Int, salt: String?)) {
         
         hashParameters = parameters

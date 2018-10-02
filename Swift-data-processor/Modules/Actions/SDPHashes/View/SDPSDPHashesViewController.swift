@@ -14,8 +14,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
     @IBOutlet weak var iterationsTextField: UITextField!
     @IBOutlet weak var argon2ParameterButton: UIBarButtonItem!
     
-    @IBOutlet weak var shareButton: UIButton!
-
     var output: (SDPHashesViewOutput & UITextFieldDelegate)!
     private var tableViewDataSource: UITableViewDataSource?
 
@@ -51,10 +49,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         output.scanSaltFromQR()
     }
     
-    @IBAction func share(_ sender: Any) {
-        output.shareSalt()
-    }
-    
     // MARK: SDPHashesViewInput
     func showError(forTextField textField: Any?, fallbackValue: String?) {
         guard let textField = textField as? UITextField else {
@@ -63,17 +57,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         
         textField.text = fallbackValue
         textField.shake()
-    }
-    
-    func hashCopied(at indexPath: IndexPath) {
-        
-        guard tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false else {
-            return
-        }
-        
-        if let cell = tableView.cellForRow(at: indexPath) as? SDPHashTableViewCellInput {
-            cell.animateCopy()
-        }
     }
     
     func setTableDataSource(_ dataSource: UITableViewDataSource) {
@@ -90,8 +73,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
     func refreshSaltActions() {
         
         let salt = saltTextField.text ?? ""
-        
-        shareButton.isEnabled = salt.count > 0
         argon2ParameterButton.isEnabled = salt.count > 7
     }
     
@@ -107,7 +88,7 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        output.copyHash(atIndexPath: indexPath)
+        output.shareHash(atIndexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
