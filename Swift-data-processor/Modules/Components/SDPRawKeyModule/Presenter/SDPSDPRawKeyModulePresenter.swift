@@ -40,8 +40,8 @@ class SDPRawKeyModulePresenter:SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewOu
     
     func scanFromQR() {
         
-        router.scanQR()
         interactor.subscribeForQRClipboard()
+        router.scanQR()
     }
     
     func set(key: String?) {
