@@ -17,7 +17,7 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
     
     var pickerValues: [SDPPickerSingleOptionInput.Value]? {
         didSet{
-            currentValue = pickerValues?.last
+            currentValue = pickerValues?.first
         }
     }
     var currentValue: SDPPickerSingleOptionInput.Value? {
@@ -25,7 +25,7 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
         didSet{
             
             if currentValue == nil {
-                currentValue = pickerValues?.last
+                currentValue = pickerValues?.first
             }
             
             text = currentValue?.valueDescription

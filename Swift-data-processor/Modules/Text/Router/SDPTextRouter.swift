@@ -45,18 +45,19 @@ class SDPTextRouter: SDPTextRouterInput {
         
         if action == "SDPQRGenerator" {
             
-            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPQRGeneratorViewController")
-            
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRGeneratorViewController.self))
             navigationController?.pushViewController(vc, animated: true)
         }else if action == "SDPHashes" {
-            //router
-            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPHashesViewController")
-
+            
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPHashesViewController.self))
             navigationController?.pushViewController(vc, animated: true)
         }else if action == "SDPEncryption" {
-            //router
-            let vc = actionsStoryboard.instantiateViewController(withIdentifier: "SDPEncryptionViewController")
+            //
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPEncryptionViewController.self))
+            navigationController?.pushViewController(vc, animated: true)
+        }else if action == "SDPEscaping" {
             
+            let vc = actionsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPEscapingModuleViewController.self))
             navigationController?.pushViewController(vc, animated: true)
         }
     }

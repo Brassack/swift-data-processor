@@ -89,7 +89,18 @@ class SDPTextInteractor: SDPTextInteractorInput {
             return true
         })
 
-        let actions = [qrAction, hashesAction, encryptionAction, decryptionAction]
+        //
+        
+        let escapingAction = SDPTextActionItem(idx: "SDPEscaping", title: "URL/HTML escaping", validate: nil, preparation: { [weak self] () in
+                
+                guard let text = self?.data.text else {
+                    return false
+                }
+                
+                self?.addToClipboard(parameters: text, forAction: "SDPEscaping")
+                return true
+        })
+        let actions = [qrAction, hashesAction, encryptionAction, decryptionAction, escapingAction]
         output.set(actions: actions)
     }
 

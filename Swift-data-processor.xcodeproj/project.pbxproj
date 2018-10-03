@@ -14,10 +14,15 @@
 		0852D0CC7C53C17A1E96E20D /* SDPSDPPasswordBasedKeyInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA325FCDAE089265F2737328 /* SDPSDPPasswordBasedKeyInitializer.swift */; };
 		0DB25B0C3837ACA38A55CE25 /* SDPSDPHashesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0990768A368593092471E2EE /* SDPSDPHashesViewTests.swift */; };
 		1157DB8290495E6527A70B67 /* SDPSDPPasswordBasedKeyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E24C72DAF69F7FBD943A5F /* SDPSDPPasswordBasedKeyPresenter.swift */; };
+		11CD701DDCC5F8C4D11F7804 /* SDPSDPEscapingModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C3BFD79273D14D4AD56B7 /* SDPSDPEscapingModuleRouter.swift */; };
+		1ECD1E956513292983C03D2B /* SDPSDPEscapingModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCEE32DF0A9A7B54BDA469 /* SDPSDPEscapingModulePresenter.swift */; };
 		203FFCD99FDD83E61F60B9BE /* SDPSDPSaltModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC289C8E129E80C4E14981 /* SDPSDPSaltModuleRouterTests.swift */; };
 		220DDCF2DB80756E4B75AA8A /* SDPSDPEncryptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E5DD952ADCB7F783A51F56 /* SDPSDPEncryptionViewController.swift */; };
+		23BD0D61F390C28950A21908 /* SDPSDPEscapingModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8E0E0040AB4CA826A2A82 /* SDPSDPEscapingModulePresenterTests.swift */; };
+		25C7A4DB55AD03A5CE8A585D /* SDPSDPEscapingModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442D0C3BAC83D0CE31448D /* SDPSDPEscapingModuleInteractorOutput.swift */; };
 		2BF52AE81FDC57911FFFD910 /* SDPSDPPasswordBasedKeyConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C276C8DDBD2C1B74AC1FEA /* SDPSDPPasswordBasedKeyConfiguratorTests.swift */; };
 		2DD544E39B0B662E1FBDE624 /* SDPSDPSaltViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AF673F857E0E0A29B3621 /* SDPSDPSaltViewPresenterTests.swift */; };
+		2E34AEEBC0BCE2E9A08CA5FB /* SDPSDPEscapingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781F09BCF720DB5EA0EA7F6 /* SDPSDPEscapingModuleConfigurator.swift */; };
 		2EE5A7B094B100189CC3A6E4 /* SDPSDPHashesConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22496F14B7D5ED58C8B768A4 /* SDPSDPHashesConfiguratorTests.swift */; };
 		2FDF0E04AE0D6CEC96C9FE90 /* SDPSDPEncryptionInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B6368B2B5121B7816A45AC /* SDPSDPEncryptionInteractorOutput.swift */; };
 		3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */; };
@@ -53,6 +58,10 @@
 		322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */; };
 		322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */; };
 		323518652164ED230045B5BD /* SDPTextActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */; };
+		32351871216523AF0045B5BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186D216523AF0045B5BD /* Constants.swift */; };
+		32351872216523AF0045B5BD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186E216523AF0045B5BD /* Utilities.swift */; };
+		32351873216523AF0045B5BD /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186F216523AF0045B5BD /* ParseError.swift */; };
+		32351874216523AF0045B5BD /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32351870216523AF0045B5BD /* String+HTMLEntities.swift */; };
 		3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */; };
 		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
 		3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
@@ -155,6 +164,7 @@
 		32D9FAB22106F86000CB0FE0 /* SDPViewExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9FAB12106F86000CB0FE0 /* SDPViewExternalConfigurator.swift */; };
 		32DFDF182146DBAF00A20F0F /* Components.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DFDF162146DBAF00A20F0F /* Components.storyboard */; };
 		32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */; };
+		3339E1A7B51953D6B59AD5DA /* SDPSDPEscapingModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A1EDB1A3985B2B0AC36C7 /* SDPSDPEscapingModuleInteractorTests.swift */; };
 		3579C99E1E2B44433193A247 /* SDPSDPEncryptionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB4FD967E40D870A07973B /* SDPSDPEncryptionPresenterTests.swift */; };
 		36FC454F66A6CA89C3A23842 /* SDPSDPHashesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */; };
 		37C14C13EDFF70C1D01477B3 /* SDPSDPRawKeyModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0E346B19FA67696C8B2C0 /* SDPSDPRawKeyModuleRouter.swift */; };
@@ -162,6 +172,7 @@
 		3A62C0CE9146B72DC87B60E3 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF593ACC1F4AFEB9A246FE9 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift */; };
 		3B42C1AF7B962159686CD478 /* SDPSDPSaltModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8419BD52D25038A8B470E /* SDPSDPSaltModuleConfigurator.swift */; };
 		3EE64A709FA9D3213163C23D /* SDPSDPSaltConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB51EEB043CC3AEFFD50D6E /* SDPSDPSaltConfiguratorTests.swift */; };
+		411F061FA6A876A2E7D8D76C /* SDPSDPEscapingModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318BD6192A51AF41727D8CC /* SDPSDPEscapingModuleViewOutput.swift */; };
 		41289C717871BC9485531571 /* SDPSDPSaltModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E562A2C0E325DCAFC7BEC84 /* SDPSDPSaltModuleInteractor.swift */; };
 		4566D9C117E28F41B48B55E7 /* SDPSDPEncryptionRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545A55347A4DD47C7CF3BE7 /* SDPSDPEncryptionRouterTests.swift */; };
 		48DF657C5CB5A849023577FE /* SDPSDPPasswordBasedKeyInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA46F9DA93B318ABF768BA /* SDPSDPPasswordBasedKeyInteractorOutput.swift */; };
@@ -190,8 +201,10 @@
 		73540A7E73BEDDABA5BAA8DE /* SDPSDPSaltModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902C9F6E7BC2601904996997 /* SDPSDPSaltModuleRouter.swift */; };
 		750FAE821E187188A2F22C74 /* SDPSDPEncryptionInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B041DD8C76FC7131408575 /* SDPSDPEncryptionInteractorInput.swift */; };
 		75976BA52F81507CB0398145 /* SDPSDPSaltModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675D711CF3E247BE4B8C9E54 /* SDPSDPSaltModuleInteractorTests.swift */; };
+		7B7F16835AD3F392F05F4559 /* SDPSDPEscapingModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CA84FE24D734EB4D37FAB /* SDPSDPEscapingModuleInitializer.swift */; };
 		7D768D38B4BC556151D0D95D /* SDPSDPSaltRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586880003F5CCD936A9D54E /* SDPSDPSaltRouterTests.swift */; };
 		7F99AE72996CE695207C21EA /* SDPSDPRawKeyModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1E1BD4195558F6964C683 /* SDPSDPRawKeyModulePresenter.swift */; };
+		80131557664F298C6D6A0B55 /* SDPSDPEscapingModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6D298D1B027EC44AF739 /* SDPSDPEscapingModuleViewTests.swift */; };
 		80B6AEFEE888E168280B78AB /* SDPSDPPasswordBasedKeyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252387FA3A88060E802079CA /* SDPSDPPasswordBasedKeyConfigurator.swift */; };
 		80F25C40FDADB65E76E3DD76 /* SDPSDPPasswordBasedKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78623440195A570266087403 /* SDPSDPPasswordBasedKeyViewController.swift */; };
 		8135D7C8F41C3A78D5FB6737 /* SDPSDPSaltModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B58477B9802A1C2CB941C /* SDPSDPSaltModulePresenterTests.swift */; };
@@ -200,26 +213,31 @@
 		82F99D4A47001C9C47B68969 /* SDPSDPRawKeyModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B963ECB6B3442747B7F32F /* SDPSDPRawKeyModuleViewTests.swift */; };
 		86F2E162D8CDBF9AF032CEF7 /* SDPSDPSaltModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92613054B2C661B4349CBF /* SDPSDPSaltModuleModuleInput.swift */; };
 		884ABE25BF3214C003448052 /* SDPSDPEncryptionViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C002D8ADA586522C434B2A /* SDPSDPEncryptionViewOutput.swift */; };
+		8BA362DEDD2A00068684C77B /* SDPSDPEscapingModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAEEA4EFC7931F3F931AF5 /* SDPSDPEscapingModuleInteractorInput.swift */; };
 		8BBF59156206A8CA5B39BF90 /* SDPSDPRawKeyModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773CD67D9530F95CD066C55 /* SDPSDPRawKeyModuleConfiguratorTests.swift */; };
 		8BFF54FC93E9D586729F1DD9 /* SDPSDPPasswordBasedKeyInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424D410292FAB513B32BFF7 /* SDPSDPPasswordBasedKeyInteractorTests.swift */; };
 		8E0EBC8F718D9BCA75AAC2D2 /* SDPSDPEncryptionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BCAB5A18D6E37E1F3C2B04 /* SDPSDPEncryptionViewTests.swift */; };
 		8FC12C5C1CF7860AC12785E7 /* Pods_SwiftDPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC03BC43888E1ECFAC4A25B0 /* Pods_SwiftDPUITests.framework */; };
 		9005577B19E09893FD83A281 /* SDPSDPSaltModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A431812F2DCBC2679F7C116 /* SDPSDPSaltModuleRouterInput.swift */; };
+		9272DBBDB59FC5A096D69F4E /* SDPSDPEscapingModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7C52F7F73B04C68F91266 /* SDPSDPEscapingModuleViewInput.swift */; };
 		935E3E6A2434A9DC555AD851 /* SDPSDPArgon2ParametersPopupInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */; };
 		9D6BFCF3F6986343AF51E73B /* SDPSDPRawKeyModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F610F818EDE5B41883FDF /* SDPSDPRawKeyModuleRouterTests.swift */; };
 		9D71EF723CB4294DBE5BBEA2 /* SDPSDPSaltModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8466D0E9B0EF72F1FCE2DEE0 /* SDPSDPSaltModuleInteractorInput.swift */; };
 		9F4B9A20D232EC2810535F12 /* SDPSDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356B7C1913F49D60CE5A5A6 /* SDPSDPQRGeneratorInteractorTests.swift */; };
 		A1A09B7043F3C94B2E534A75 /* SDPSDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806809E36C054785DC41809E /* SDPSDPQRGeneratorConfiguratorTests.swift */; };
 		A2E8B18F45575C56C21503B0 /* SDPSDPPasswordBasedKeyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764F1496C62A8A7C5A81D1E5 /* SDPSDPPasswordBasedKeyInteractor.swift */; };
+		A6D1E0A8C403B2A4FCBC303C /* SDPSDPEscapingModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F395BA6305BB210EA59D3A /* SDPSDPEscapingModuleInteractor.swift */; };
 		A9B17EFC4CB030FB8B6936CB /* SDPSDPEncryptionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DC5FC5A4839FFA9B9B84 /* SDPSDPEncryptionConfigurator.swift */; };
 		AC120004E859EB202E6E515A /* SDPSDPSaltModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4480C7CC91E0735EC937713 /* SDPSDPSaltModuleViewController.swift */; };
 		B114430802C7257273B91970 /* SDPQRGeneratorConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */; };
 		B500F251D8C300919963720D /* SDPSDPPasswordBasedKeyInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FE4F11860D39CBF4912426 /* SDPSDPPasswordBasedKeyInteractorInput.swift */; };
 		B83BE6A0259312D89FC67999 /* SDPSDPRawKeyModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62960268999F2FB26725BE8 /* SDPSDPRawKeyModuleConfigurator.swift */; };
 		B875F0564B8EEAC3113C5447 /* SDPSDPSaltModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D54892B5DDAC2C071399E /* SDPSDPSaltModuleConfiguratorTests.swift */; };
+		B8CDAA2F7A78C6C9D7721624 /* SDPSDPEscapingModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FD5A78FFDF734AC086BD0 /* SDPSDPEscapingModuleModuleInput.swift */; };
 		BD28700CC456FF6ED7D36169 /* SDPSDPEncryptionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F8FDFB656D931646F0C52 /* SDPSDPEncryptionRouter.swift */; };
 		BD9BECE153365F35D460EB4E /* SDPSDPEncryptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040758D83827B3889E7995A /* SDPSDPEncryptionPresenter.swift */; };
 		BE05BF60A90164B5381B4EA1 /* SDPQRGeneratorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF3AB199A0548E8B2DB5D88 /* SDPQRGeneratorRouterTests.swift */; };
+		BF76DB99C5D9AFF8D67C966B /* SDPSDPEscapingModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA27EFFE39B6B71BF3AE7 /* SDPSDPEscapingModuleRouterTests.swift */; };
 		C131EB453F19F9EB9EFEC37E /* SDPSDPRawKeyModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33924BA1091EFEAF4565CBD /* SDPSDPRawKeyModuleModuleInput.swift */; };
 		C1D03829CD566E846DBA8644 /* SDPSDPRawKeyModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B3C54829911471F5241D6 /* SDPSDPRawKeyModuleInteractor.swift */; };
 		C43957E613D3DE47C9CDE9C1 /* SDPSDPPasswordBasedKeyRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE05AADC5FE45066AFA451C /* SDPSDPPasswordBasedKeyRouterInput.swift */; };
@@ -228,6 +246,8 @@
 		D0907E7594502881A8B19BB2 /* SDPSDPPasswordBasedKeyRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287686E37EAD2D9D05FF36E /* SDPSDPPasswordBasedKeyRouterTests.swift */; };
 		D6CA59BA09366CA68EFDB280 /* Pods_Swift_data_processorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */; };
 		D70504251A17788E5B658556 /* Pods_ThunderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FEE66A21D53E03692AC32E /* Pods_ThunderTests.framework */; };
+		DEB25970670271A0C7E64702 /* SDPSDPEscapingModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4F98135FBE52991CAD08C /* SDPSDPEscapingModuleConfiguratorTests.swift */; };
+		DEE22C86E3DD1274F8D8AC0D /* SDPSDPEscapingModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362B01B5D97E2388A5CF0651 /* SDPSDPEscapingModuleViewController.swift */; };
 		E203CF92297A8CB0C4888BC6 /* SDPSDPRawKeyModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D95A228E763A53A9E56098 /* SDPSDPRawKeyModuleViewInput.swift */; };
 		E2E9A53FB8D9ABEF8964D71E /* SDPSDPSaltViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821488F7CE6D04033CC25852 /* SDPSDPSaltViewRouterTests.swift */; };
 		E2F57E53C8B334ABF91E6363 /* SDPSDPRawKeyModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74199CB2D3BB158BDBABF061 /* SDPSDPRawKeyModuleRouterInput.swift */; };
@@ -242,6 +262,7 @@
 		F52CF4B9DDD7386C6070A417 /* SDPSDPSaltModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E2FDA4264E9635D8A1866 /* SDPSDPSaltModuleViewTests.swift */; };
 		F68F8817C358CE7FBE094FF8 /* SDPSDPRawKeyModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255F2191FEC2D8233FE3053 /* SDPSDPRawKeyModuleViewController.swift */; };
 		F9FC024969F32897CBAE547D /* Pods_Swift_data_processorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AC68E0906D02D345976CE8 /* Pods_Swift_data_processorTests.framework */; };
+		FB0E4023AB15C85EEB95E70F /* SDPSDPEscapingModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB84DB564C5EE3B3FF59E7 /* SDPSDPEscapingModuleRouterInput.swift */; };
 		FB1748480C754D95F65CE48B /* SDPSDPSaltModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8DE1ACF83FA1084881489 /* SDPSDPSaltModulePresenter.swift */; };
 		FB7F73984F90D338E5B28D6F /* SDPSDPArgon2ParametersPopupRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C92F69A9BD276DEDD17F56 /* SDPSDPArgon2ParametersPopupRouterTests.swift */; };
 		FD220247FFE3390791694A2C /* SDPQRGeneratorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9EE88EF2230CD8962DA526 /* SDPQRGeneratorInteractorTests.swift */; };
@@ -323,6 +344,8 @@
 
 /* Begin PBXFileReference section */
 		0131D844FC5E3CB171DAA624 /* SDPSDPRawKeyModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		03C7C52F7F73B04C68F91266 /* SDPSDPEscapingModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleViewInput.swift; sourceTree = "<group>"; };
+		040F6D298D1B027EC44AF739 /* SDPSDPEscapingModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleViewTests.swift; sourceTree = "<group>"; };
 		0506776E06E9E3FB19B46AFE /* SDPSDPRawKeyModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModulePresenterTests.swift; sourceTree = "<group>"; };
 		05F7BC62ADD6C1E5262D5540 /* Pods-SwiftDP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDP/Pods-SwiftDP.debug.xcconfig"; sourceTree = "<group>"; };
 		06139395FD3663205E65BC66 /* Pods-Swift-data-processorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorUITests/Pods-Swift-data-processorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,8 +353,10 @@
 		07A9D20BDABDF01A3C56C456 /* SDPQRGeneratorConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorConfiguratorTests.swift; sourceTree = "<group>"; };
 		0990768A368593092471E2EE /* SDPSDPHashesViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesViewTests.swift; sourceTree = "<group>"; };
 		0B8FE1C8F7E07ABF8BE87A77 /* Pods_Swift_data_processorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF8E0E0040AB4CA826A2A82 /* SDPSDPEscapingModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModulePresenterTests.swift; sourceTree = "<group>"; };
 		0CB8419BD52D25038A8B470E /* SDPSDPSaltModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModuleConfigurator.swift; sourceTree = "<group>"; };
 		1A431812F2DCBC2679F7C116 /* SDPSDPSaltModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModuleRouterInput.swift; sourceTree = "<group>"; };
+		1FF4F98135FBE52991CAD08C /* SDPSDPEscapingModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		2023355AC86F5AA8F4E7FFAD /* Pods-Thunder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thunder/Pods-Thunder.release.xcconfig"; sourceTree = "<group>"; };
 		22496F14B7D5ED58C8B768A4 /* SDPSDPHashesConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesConfiguratorTests.swift; sourceTree = "<group>"; };
 		22A80AB8C7E9E39727D20C7A /* SDPSDPPasswordBasedKeyModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyModuleInput.swift; sourceTree = "<group>"; };
@@ -376,6 +401,10 @@
 		322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactoryDelegate.swift; sourceTree = "<group>"; };
 		322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+SectionInfo.swift"; sourceTree = "<group>"; };
 		323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionTableViewCell.swift; sourceTree = "<group>"; };
+		3235186D216523AF0045B5BD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3235186E216523AF0045B5BD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3235186F216523AF0045B5BD /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
+		32351870216523AF0045B5BD /* String+HTMLEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLEntities.swift"; sourceTree = "<group>"; };
 		3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPSharingPresenter.swift; sourceTree = "<group>"; };
 		3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPickerSingleOptionInput.swift; sourceTree = "<group>"; };
 		3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+AssociatedOptions.swift"; sourceTree = "<group>"; };
@@ -486,6 +515,7 @@
 		332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractorTests.swift; sourceTree = "<group>"; };
 		35476C7421FB01AE26ED2F0C /* SDPSDPSaltModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		35C002D8ADA586522C434B2A /* SDPSDPEncryptionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionViewOutput.swift; sourceTree = "<group>"; };
+		362B01B5D97E2388A5CF0651 /* SDPSDPEscapingModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleViewController.swift; sourceTree = "<group>"; };
 		37BCAB5A18D6E37E1F3C2B04 /* SDPSDPEncryptionViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionViewTests.swift; sourceTree = "<group>"; };
 		3E5B3C54829911471F5241D6 /* SDPSDPRawKeyModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleInteractor.swift; sourceTree = "<group>"; };
 		3EE873C9701A04187C819C0D /* SDPSDPPasswordBasedKeyViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyViewOutput.swift; sourceTree = "<group>"; };
@@ -501,6 +531,8 @@
 		5545A55347A4DD47C7CF3BE7 /* SDPSDPEncryptionRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionRouterTests.swift; sourceTree = "<group>"; };
 		5B2B58477B9802A1C2CB941C /* SDPSDPSaltModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModulePresenterTests.swift; sourceTree = "<group>"; };
 		5C605E94B88DD0EFBEBD0464 /* SDPSDPSaltPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltPresenterTests.swift; sourceTree = "<group>"; };
+		5E6A1EDB1A3985B2B0AC36C7 /* SDPSDPEscapingModuleInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleInteractorTests.swift; sourceTree = "<group>"; };
+		60CCEE32DF0A9A7B54BDA469 /* SDPSDPEscapingModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModulePresenter.swift; sourceTree = "<group>"; };
 		60D3BE16E7F78D81AB581412 /* Pods-Swift-data-processorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorTests/Pods-Swift-data-processorTests.release.xcconfig"; sourceTree = "<group>"; };
 		622D54892B5DDAC2C071399E /* SDPSDPSaltModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		636FAF39601117291F767B51 /* SDPSDPEncryptionInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionInteractorTests.swift; sourceTree = "<group>"; };
@@ -539,10 +571,13 @@
 		94373D5B925A251FAC56C9C2 /* Pods-ThunderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderTests/Pods-ThunderTests.release.xcconfig"; sourceTree = "<group>"; };
 		94D95A228E763A53A9E56098 /* SDPSDPRawKeyModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleViewInput.swift; sourceTree = "<group>"; };
 		9773CD67D9530F95CD066C55 /* SDPSDPRawKeyModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		9781F09BCF720DB5EA0EA7F6 /* SDPSDPEscapingModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleConfigurator.swift; sourceTree = "<group>"; };
 		9BE821C7B1C5C758E3C931C4 /* SDPSDPSaltViewViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltViewViewTests.swift; sourceTree = "<group>"; };
 		9CB4E04A3E2BD3C557F401EC /* SDPSDPArgon2ParametersPopupPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupPresenterTests.swift; sourceTree = "<group>"; };
 		9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_data_processor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F442D0C3BAC83D0CE31448D /* SDPSDPEscapingModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		9F5DCCDEB5B369EC49E8AF34 /* Pods-SwiftDPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPUITests/Pods-SwiftDPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A00FD5A78FFDF734AC086BD0 /* SDPSDPEscapingModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleModuleInput.swift; sourceTree = "<group>"; };
 		A255F2191FEC2D8233FE3053 /* SDPSDPRawKeyModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleViewController.swift; sourceTree = "<group>"; };
 		A2AC2396ED3DCA75F6CFD67C /* SDPSDPPasswordBasedKeyPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyPresenterTests.swift; sourceTree = "<group>"; };
 		A5C276C8DDBD2C1B74AC1FEA /* SDPSDPPasswordBasedKeyConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -556,6 +591,7 @@
 		AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
 		AE5C1E705EEF2D38A63C798D /* Pods-ThunderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderUITests/Pods-ThunderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE6FDDD8971A04388F0DA936 /* Pods-SwiftDPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFFBA27EFFE39B6B71BF3AE7 /* SDPSDPEscapingModuleRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleRouterTests.swift; sourceTree = "<group>"; };
 		B1B963ECB6B3442747B7F32F /* SDPSDPRawKeyModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleViewTests.swift; sourceTree = "<group>"; };
 		B2228AF299D14C0FA017BCD9 /* SDPSDPPasswordBasedKeyRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyRouter.swift; sourceTree = "<group>"; };
 		B33924BA1091EFEAF4565CBD /* SDPSDPRawKeyModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPRawKeyModuleModuleInput.swift; sourceTree = "<group>"; };
@@ -563,9 +599,14 @@
 		B4D52B20D0091C7D2AC29477 /* Pods-SwiftDPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8E24C72DAF69F7FBD943A5F /* SDPSDPPasswordBasedKeyPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyPresenter.swift; sourceTree = "<group>"; };
 		BBA7F0A35873B7AF853727A1 /* SDPSDPQRGeneratorRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorRouterTests.swift; sourceTree = "<group>"; };
+		BEBB84DB564C5EE3B3FF59E7 /* SDPSDPEscapingModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleRouterInput.swift; sourceTree = "<group>"; };
 		C15C42661BB0BC7AE8E091CF /* SDPSDPSaltViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltViewTests.swift; sourceTree = "<group>"; };
+		C318BD6192A51AF41727D8CC /* SDPSDPEscapingModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleViewOutput.swift; sourceTree = "<group>"; };
 		C8A4040C03E0E8F2B7BACDCE /* Pods_SwiftDPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8CA84FE24D734EB4D37FAB /* SDPSDPEscapingModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleInitializer.swift; sourceTree = "<group>"; };
+		CF5C3BFD79273D14D4AD56B7 /* SDPSDPEscapingModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleRouter.swift; sourceTree = "<group>"; };
 		CFBFCB248D96803E61EEA30A /* SDPQRGeneratorViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorViewTests.swift; sourceTree = "<group>"; };
+		D7F395BA6305BB210EA59D3A /* SDPSDPEscapingModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleInteractor.swift; sourceTree = "<group>"; };
 		D9B041DD8C76FC7131408575 /* SDPSDPEncryptionInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionInteractorInput.swift; sourceTree = "<group>"; };
 		D9E5DD952ADCB7F783A51F56 /* SDPSDPEncryptionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionViewController.swift; sourceTree = "<group>"; };
 		DA325FCDAE089265F2737328 /* SDPSDPPasswordBasedKeyInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyInitializer.swift; sourceTree = "<group>"; };
@@ -582,6 +623,7 @@
 		F2056C176ED55B483B725A23 /* SDPSDPEncryptionViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionViewInput.swift; sourceTree = "<group>"; };
 		F234B43810982EFDEE02794D /* SDPSDPEncryptionModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionModuleInput.swift; sourceTree = "<group>"; };
 		F3FE4F11860D39CBF4912426 /* SDPSDPPasswordBasedKeyInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPPasswordBasedKeyInteractorInput.swift; sourceTree = "<group>"; };
+		FAFAEEA4EFC7931F3F931AF5 /* SDPSDPEscapingModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEscapingModuleInteractorInput.swift; sourceTree = "<group>"; };
 		FAFF7FEAF857ADF97C77F6DF /* SDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
 		FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPHashesPresenterTests.swift; sourceTree = "<group>"; };
 		FD6D6796DEB715B53490E1DD /* SDPSDPEncryptionInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionInitializer.swift; sourceTree = "<group>"; };
@@ -660,6 +702,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		057020B2587D098DF7E28DB0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				1FF4F98135FBE52991CAD08C /* SDPSDPEscapingModuleConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		07977B82E2FD81C7B3922414 /* SDPPasswordBasedKey */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +766,15 @@
 				32C92F69A9BD276DEDD17F56 /* SDPSDPArgon2ParametersPopupRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		0F7A768770DD907D3BB19DA5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A00FD5A78FFDF734AC086BD0 /* SDPSDPEscapingModuleModuleInput.swift */,
+				60CCEE32DF0A9A7B54BDA469 /* SDPSDPEscapingModulePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		0FA2B795661F66F3DE0BE048 /* SDPPasswordBasedKey */ = {
@@ -907,6 +966,7 @@
 		321635D12108CEB900793E7D /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				BFA9EF960BA264A91FDECCA6 /* SDPEscapingModule */,
 				B5012F7E12E28ED879DBE68A /* SDPEncryption */,
 				324CD2F521104D4C00A978C1 /* SDPHashes */,
 				321635D22108CF4D00793E7D /* SDPQRGenerator */,
@@ -1006,6 +1066,17 @@
 			path = Hashes;
 			sourceTree = "<group>";
 		};
+		3235186C216523AF0045B5BD /* HTMLEntities */ = {
+			isa = PBXGroup;
+			children = (
+				3235186D216523AF0045B5BD /* Constants.swift */,
+				3235186E216523AF0045B5BD /* Utilities.swift */,
+				3235186F216523AF0045B5BD /* ParseError.swift */,
+				32351870216523AF0045B5BD /* String+HTMLEntities.swift */,
+			);
+			path = HTMLEntities;
+			sourceTree = "<group>";
+		};
 		3242D009216364B000C4BDAC /* UI components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1077,6 +1148,7 @@
 		324CD26221102AE900A978C1 /* Third-party */ = {
 			isa = PBXGroup;
 			children = (
+				3235186C216523AF0045B5BD /* HTMLEntities */,
 				324CD26321102AE900A978C1 /* CatCrypto */,
 			);
 			path = "Third-party";
@@ -1368,6 +1440,7 @@
 				01AA0AAC7B0E9B7770C9065C /* SDPSalt */,
 				18196E435C4FD12AB92640DA /* SDPSaltModule */,
 				B2A7FBE1A70AFA71379F871A /* SDPRawKeyModule */,
+				88B6D26A5593BB610B1A2896 /* SDPEscapingModule */,
 			);
 			path = "Swift-data-processorTests";
 			sourceTree = "<group>";
@@ -1537,6 +1610,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		45E545FDA0E2821668E4556A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5E6A1EDB1A3985B2B0AC36C7 /* SDPSDPEscapingModuleInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		48CC13243C9094892FEB01AB /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1684,6 +1765,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6A17D54D694E88D2A57A835E /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9781F09BCF720DB5EA0EA7F6 /* SDPSDPEscapingModuleConfigurator.swift */,
+				CE8CA84FE24D734EB4D37FAB /* SDPSDPEscapingModuleInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		6D264CB4C4525999C5A326DA /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1698,6 +1788,15 @@
 				AC55AB72B7E2EA669804F9A2 /* SDPSDPQRGeneratorPresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		76E05439E25644857E757B6C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BEBB84DB564C5EE3B3FF59E7 /* SDPSDPEscapingModuleRouterInput.swift */,
+				CF5C3BFD79273D14D4AD56B7 /* SDPSDPEscapingModuleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		7756C1C1809C20B45821A916 /* Configurator */ = {
@@ -1742,6 +1841,14 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		80C90AA1192E73F96A1F4F88 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBA27EFFE39B6B71BF3AE7 /* SDPSDPEscapingModuleRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		82D9FA2D4F321E385F698403 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1783,6 +1890,18 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		88B6D26A5593BB610B1A2896 /* SDPEscapingModule */ = {
+			isa = PBXGroup;
+			children = (
+				057020B2587D098DF7E28DB0 /* Configurator */,
+				E10D477ACACBEB8D54232676 /* View */,
+				45E545FDA0E2821668E4556A /* Interactor */,
+				9AA57147FCA568B1823128D7 /* Presenter */,
+				80C90AA1192E73F96A1F4F88 /* Router */,
+			);
+			path = SDPEscapingModule;
+			sourceTree = "<group>";
+		};
 		8CEFFEB96AF4A479F9C51838 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1817,6 +1936,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9347ADB517726E4F9F8D966F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAFAEEA4EFC7931F3F931AF5 /* SDPSDPEscapingModuleInteractorInput.swift */,
+				9F442D0C3BAC83D0CE31448D /* SDPSDPEscapingModuleInteractorOutput.swift */,
+				D7F395BA6305BB210EA59D3A /* SDPSDPEscapingModuleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		93E0F9752F7C5496FAE8EFCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03C7C52F7F73B04C68F91266 /* SDPSDPEscapingModuleViewInput.swift */,
+				C318BD6192A51AF41727D8CC /* SDPSDPEscapingModuleViewOutput.swift */,
+				362B01B5D97E2388A5CF0651 /* SDPSDPEscapingModuleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		95C5905FFB6A3D52BDE511B9 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1843,6 +1982,14 @@
 				9773CD67D9530F95CD066C55 /* SDPSDPRawKeyModuleConfiguratorTests.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9AA57147FCA568B1823128D7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0BF8E0E0040AB4CA826A2A82 /* SDPSDPEscapingModulePresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9CB5D1D77B09258AE37817E2 /* QRGenerator */ = {
@@ -1968,6 +2115,18 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		BFA9EF960BA264A91FDECCA6 /* SDPEscapingModule */ = {
+			isa = PBXGroup;
+			children = (
+				93E0F9752F7C5496FAE8EFCD /* View */,
+				0F7A768770DD907D3BB19DA5 /* Presenter */,
+				9347ADB517726E4F9F8D966F /* Interactor */,
+				76E05439E25644857E757B6C /* Router */,
+				6A17D54D694E88D2A57A835E /* Configurator */,
+			);
+			path = SDPEscapingModule;
+			sourceTree = "<group>";
+		};
 		C3E0BFB86EDC000A38792927 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -2062,6 +2221,14 @@
 				3E5B3C54829911471F5241D6 /* SDPSDPRawKeyModuleInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E10D477ACACBEB8D54232676 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				040F6D298D1B027EC44AF739 /* SDPSDPEscapingModuleViewTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E47BF721B16677C3B18FB4FB /* Configurator */ = {
@@ -2417,6 +2584,7 @@
 				32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */,
 				3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */,
 				3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */,
+				32351874216523AF0045B5BD /* String+HTMLEntities.swift in Sources */,
 				325A5A452100DFEA00DD7222 /* SDPQRScannerConfigurator.swift in Sources */,
 				321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */,
 				321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */,
@@ -2477,6 +2645,7 @@
 				32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */,
 				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
+				32351873216523AF0045B5BD /* ParseError.swift in Sources */,
 				3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */,
 				329C02CB215A78A600ECCD3B /* String+HexDecodedData.swift in Sources */,
 				32B63CE82107455B00BDE139 /* SDPApplicationConfigurator.swift in Sources */,
@@ -2523,6 +2692,7 @@
 				FB1748480C754D95F65CE48B /* SDPSDPSaltModulePresenter.swift in Sources */,
 				9D71EF723CB4294DBE5BBEA2 /* SDPSDPSaltModuleInteractorInput.swift in Sources */,
 				7257BD57222F438664D730AF /* SDPSDPSaltModuleInteractorOutput.swift in Sources */,
+				32351872216523AF0045B5BD /* Utilities.swift in Sources */,
 				3292224021517D1D009F4A0D /* UIViewController+ChildViewController.swift in Sources */,
 				41289C717871BC9485531571 /* SDPSDPSaltModuleInteractor.swift in Sources */,
 				9005577B19E09893FD83A281 /* SDPSDPSaltModuleRouterInput.swift in Sources */,
@@ -2537,12 +2707,25 @@
 				C131EB453F19F9EB9EFEC37E /* SDPSDPRawKeyModuleModuleInput.swift in Sources */,
 				7F99AE72996CE695207C21EA /* SDPSDPRawKeyModulePresenter.swift in Sources */,
 				536E9B7633ADBF61AD8B8E4A /* SDPSDPRawKeyModuleInteractorInput.swift in Sources */,
+				32351871216523AF0045B5BD /* Constants.swift in Sources */,
 				C605158419CF0470AE757D98 /* SDPSDPRawKeyModuleInteractorOutput.swift in Sources */,
 				C1D03829CD566E846DBA8644 /* SDPSDPRawKeyModuleInteractor.swift in Sources */,
 				E2F57E53C8B334ABF91E6363 /* SDPSDPRawKeyModuleRouterInput.swift in Sources */,
 				37C14C13EDFF70C1D01477B3 /* SDPSDPRawKeyModuleRouter.swift in Sources */,
 				B83BE6A0259312D89FC67999 /* SDPSDPRawKeyModuleConfigurator.swift in Sources */,
 				5EA381E6E0D4118CD7CA18ED /* SDPSDPRawKeyModuleInitializer.swift in Sources */,
+				9272DBBDB59FC5A096D69F4E /* SDPSDPEscapingModuleViewInput.swift in Sources */,
+				411F061FA6A876A2E7D8D76C /* SDPSDPEscapingModuleViewOutput.swift in Sources */,
+				DEE22C86E3DD1274F8D8AC0D /* SDPSDPEscapingModuleViewController.swift in Sources */,
+				B8CDAA2F7A78C6C9D7721624 /* SDPSDPEscapingModuleModuleInput.swift in Sources */,
+				1ECD1E956513292983C03D2B /* SDPSDPEscapingModulePresenter.swift in Sources */,
+				8BA362DEDD2A00068684C77B /* SDPSDPEscapingModuleInteractorInput.swift in Sources */,
+				25C7A4DB55AD03A5CE8A585D /* SDPSDPEscapingModuleInteractorOutput.swift in Sources */,
+				A6D1E0A8C403B2A4FCBC303C /* SDPSDPEscapingModuleInteractor.swift in Sources */,
+				FB0E4023AB15C85EEB95E70F /* SDPSDPEscapingModuleRouterInput.swift in Sources */,
+				11CD701DDCC5F8C4D11F7804 /* SDPSDPEscapingModuleRouter.swift in Sources */,
+				2E34AEEBC0BCE2E9A08CA5FB /* SDPSDPEscapingModuleConfigurator.swift in Sources */,
+				7B7F16835AD3F392F05F4559 /* SDPSDPEscapingModuleInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2601,6 +2784,11 @@
 				61A37BB9630394BFC81EE8E2 /* SDPSDPRawKeyModuleInteractorTests.swift in Sources */,
 				692E09DC7E188DC306003D61 /* SDPSDPRawKeyModulePresenterTests.swift in Sources */,
 				9D6BFCF3F6986343AF51E73B /* SDPSDPRawKeyModuleRouterTests.swift in Sources */,
+				DEB25970670271A0C7E64702 /* SDPSDPEscapingModuleConfiguratorTests.swift in Sources */,
+				80131557664F298C6D6A0B55 /* SDPSDPEscapingModuleViewTests.swift in Sources */,
+				3339E1A7B51953D6B59AD5DA /* SDPSDPEscapingModuleInteractorTests.swift in Sources */,
+				23BD0D61F390C28950A21908 /* SDPSDPEscapingModulePresenterTests.swift in Sources */,
+				BF76DB99C5D9AFF8D67C966B /* SDPSDPEscapingModuleRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
