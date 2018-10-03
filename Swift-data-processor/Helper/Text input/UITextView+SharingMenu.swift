@@ -14,7 +14,7 @@ extension UITextView {
         
         if isHexEncodedData {
             
-            if action == #selector(shareBase64) {
+            if action == #selector(shareBinary) {
                 return text.count > 0
             }
             
@@ -27,7 +27,7 @@ extension UITextView {
                 return text.count > 0
             }
             
-            if action == #selector(shareBase64) {
+            if action == #selector(shareBinary) {
                 return false
             }
         }
@@ -52,7 +52,7 @@ extension UITextView {
     }
     
     
-    @objc func shareBase64() {
+    @objc func shareBinary() {
         
         guard let text = text, text.count > 0 else {
             return
@@ -61,8 +61,7 @@ extension UITextView {
             return
         }
         
-        let string = data.base64EncodedString()
+        SDPSharingPresenter().share(data: data)
 
-        SDPSharingPresenter().share(string: string)
     }
 }

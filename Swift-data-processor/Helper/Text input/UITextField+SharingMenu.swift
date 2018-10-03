@@ -15,7 +15,7 @@ extension UITextField {
         
         if isHexEncodedData {
             
-            if action == #selector(shareBase64) {
+            if action == #selector(shareBinary) {
                 return (text?.count ?? 0) > 0
             }
             
@@ -28,7 +28,7 @@ extension UITextField {
                 return (text?.count ?? 0) > 0
             }
             
-            if action == #selector(shareBase64) {
+            if action == #selector(shareBinary) {
                 return false
             }
         }
@@ -51,7 +51,7 @@ extension UITextField {
         }
     }
     
-    @objc func shareBase64() {
+    @objc func shareBinary() {
         
         guard let text = text, text.count > 0 else {
             return
@@ -60,8 +60,6 @@ extension UITextField {
             return
         }
         
-        let string = data.base64EncodedString()
-        
-        SDPSharingPresenter().qrSharePrepareDataAndPresentInRootController(text: string)
+        SDPSharingPresenter().share(data: data)
     }
 }

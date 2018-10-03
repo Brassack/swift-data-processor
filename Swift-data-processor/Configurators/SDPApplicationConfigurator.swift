@@ -37,7 +37,7 @@ class SDPApplicationConfigurator: NSObject {
         }
         
         let qrItem = UIMenuItem(title: "to QR", action: #selector(UITextView.createQR))
-        let base64 = UIMenuItem(title: "Share base64", action: #selector(UITextView.shareBase64))
+        let base64 = UIMenuItem(title: "Share binary", action: #selector(UITextView.shareBinary))
         
         UIMenuController.shared.menuItems = [base64, qrItem]
     }
