@@ -16,7 +16,7 @@ extension UITextField {
         if isHexEncodedData {
             
             if action == #selector(shareBinary) {
-                return (text?.count ?? 0) > 0
+                return (text?.count ?? 0) > 0 && text?.isHexEncodedData == true
             }
             
             if action == #selector(createQR) {

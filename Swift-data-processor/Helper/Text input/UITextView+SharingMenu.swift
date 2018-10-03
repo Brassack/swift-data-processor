@@ -15,7 +15,7 @@ extension UITextView {
         if isHexEncodedData {
             
             if action == #selector(shareBinary) {
-                return text.count > 0
+                return text.count > 0 && text.isHexEncodedData
             }
             
             if action == #selector(createQR) {
