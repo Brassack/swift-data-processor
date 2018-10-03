@@ -9,11 +9,13 @@
 import ReSwift
 
 class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextInteractorOutput {
-
+    
     weak var view: SDPTextViewInput!
     weak var actionView: SDPTextActionsViewInput?
     var interactor: SDPTextInteractorInput!
     var router: SDPTextRouterInput!
+    
+    var actions: [SDPTextInteractor.SDPTextActionItem]?
     
     // MARK: DPTextViewOutput
     func viewIsReady() {
@@ -52,14 +54,40 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
         router.qr()
     }
     
-    func selectAction(_ action: String) {
+    func selectAction(index: Int) {
+        guard let action = actions?[index] else {
+            return
+        }
         
-        if action == "SDPQRGenerator" {
+        let perform = { [weak self] () in
             
-            interactor.requestValidationForQRGenerator()
+            guard self != nil else {
+                return
+            }
+            
+            guard action.preparation() else {
+                self?.router.show(errorMessage: "Something went wrong")
+                return
+            }
+            
+            self?.router.showScreen(forAction: action.idx)
+        }
+        
+        if let validation = action.validate?(){
+            if validation.isValid {
+            
+                perform()
+            }else{
+                
+                if let message = validation.invalidReason {
+                    router.show(errorMessage: message)
+                }else{
+                    router.show(errorMessage: "Something went wrong")
+                }
+            }
         }else{
-            interactor.addTextToclipboard(action: action)
-            router.showScreen(forAction: action)
+            
+            perform()
         }
     }
     
@@ -73,21 +101,25 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     }
     
     // MARK: DPTextInteractorOutput
-    
-    func textForQR(valid isValid: Bool) {
+    func set(actions: [SDPTextInteractor.SDPTextActionItem]) {
         
-        if isValid {
-            let action = "SDPQRGenerator"
-            interactor.addTextToclipboard(action: action)
-            router.showScreen(forAction: action)
-        }else{
-            
-            router.showTooLongTextFoQRError()
+        self.actions = actions
+        
+        guard let tableView = actionView?.tableView, let cellIdentifier = actionView?.cellIdentifier else {
+            return
         }
-    }
-    
-    func set(actions: [String], titles: [String: String]?){
-        let dataSource = SDPSingleSectionTableDataSourceObject<String, String>(elements: actions, values: titles)
+        
+        var rows = [SDPTableViewDataSourceRow]()
+        
+        for action in actions {
+            
+            let row = SDPTableViewDataSourceRow(identifier: action.idx, isFailed: false, title: action.title, subtitle: nil)
+            rows.append(row)
+        }
+        
+        let section: SDPTableViewDataSourceSection = SDPTableViewDataSourceSection(identifier:"Options", title: nil, rows: rows)
+        
+        let dataSource = SDPOrdinaryTableViewDataSource(tableView: tableView, data: [section], cellIdentifier: cellIdentifier, cellExternalConfigurator: actionView?.cellConfigurator)
         actionView?.set(tableViewDataSource: dataSource)
     }
     

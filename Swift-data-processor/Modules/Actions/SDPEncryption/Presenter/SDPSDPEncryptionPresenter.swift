@@ -148,6 +148,7 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
     
     func set(isEncoding: Bool) {
         self.isEncoding = isEncoding
+        view.set(title: isEncoding ? "Encryption" : "Decryption")
     }
     
     func set(parameters: SDPEncryptionParameters?) {

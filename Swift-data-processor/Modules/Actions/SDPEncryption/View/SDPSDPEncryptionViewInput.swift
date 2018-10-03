@@ -13,4 +13,5 @@ protocol SDPEncryptionViewInput: class {
     func set(state: SDPEncryptionViewController.SDEncryptionState)
     func set(methodPickerValues: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?)
     func set(keySizesPickerValues: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?)
+    func set(title: String?)
 }

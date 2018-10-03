@@ -10,7 +10,6 @@ import UIKit
 
 
 class SDPHashTableViewCell: UITableViewCell, SDPTableViewCellConfigurable {
-    
     var externalConfigurator: SDPTableViewCellExternalConfigurator?
     
     @IBOutlet weak var titleLabel: UILabel!

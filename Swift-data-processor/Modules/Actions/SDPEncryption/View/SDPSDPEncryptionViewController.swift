@@ -78,6 +78,10 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
     }
     
     // MARK: SDPEncryptionViewInput
+    func set(title: String?) {
+        self.title = title
+    }
+    
     func prepareForScreen(){
         navigationController?.setNavigationBarHidden(false, animated: false)
     }

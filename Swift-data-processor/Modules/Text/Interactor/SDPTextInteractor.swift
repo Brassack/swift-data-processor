@@ -7,7 +7,10 @@
 //
 import ReSwift
 
+
 class SDPTextInteractor: SDPTextInteractorInput {
+    
+    typealias SDPTextActionItem = (idx: String, title: String, validate: (() -> (isValid: Bool, invalidReason: String?))?, preparation: (() -> Bool))
 
     static let scannedText = "scannedText"
     
@@ -18,14 +21,82 @@ class SDPTextInteractor: SDPTextInteractorInput {
     
     
     func requestActions(){
-        let actions = ["SDPHashes", "SDPQRGenerator", "SDPEncryption", "escaping"]
-        let titles = ["SDPEncryption": "Encryption", "escaping":"XML/URL escaping", "SDPHashes":"Hashes", "SDPQRGenerator":"To QR"]
-        output.set(actions: actions, titles: titles)
-    }
-    
-    func requestValidationForQRGenerator(){
         
-        output.textForQR(valid: (data.text?.count ?? 0) <= 1024) 
+        let hashesAction = SDPTextActionItem(idx: "SDPHashes", title: "Hashes", validate: nil, preparation: { [weak self] () -> Bool in
+            guard let text = self?.data.text else {
+                return false
+            }
+            self?.addToClipboard(parameters: text, forAction: "SDPHashes")
+            return true
+        })
+        
+        let qrAction = SDPTextActionItem(idx: "SDPQRGenerator", title: "To QR", validate: { [weak self] () -> (isValid: Bool, invalidReason: String?) in
+            
+            guard let text = self?.data.text else {
+                return (false, "No text")
+            }
+            
+            if text.count > 1024 {
+                return (false, "Too long for QR (max 1024)")
+            }
+            
+            return (true, nil)
+        }, preparation: { [weak self] () in
+            
+            guard let text = self?.data.text else {
+                return false
+            }
+            
+            self?.addToClipboard(parameters: text, forAction: "SDPQRGenerator")
+            return true
+        })
+        
+        let encryptionAction = SDPTextActionItem(idx: "SDPEncryption", title: "Encryption", validate: nil, preparation: { [weak self] () in
+                
+            guard let text = self?.data.text else {
+                return false
+            }
+            
+            let parameters: SDPEncryptionInputParameters = (text: text, data: nil, isEncoding: true)
+            self?.addToClipboard(parameters:parameters , forAction: "SDPEncryption")
+            return true
+        })
+        
+        let decryptionAction = SDPTextActionItem(idx: "SDPEncryption", title: "Decryption", validate: { [weak self] () -> (isValid: Bool, invalidReason: String?) in
+            
+                guard let text = self?.data.text else {
+                    return (false, "No text")
+                }
+            
+                guard Data(base64Encoded: text) != nil else {
+                    return (false, "We support only base64 encoded data")
+                }
+            
+                return (true, nil)
+            }, preparation: { [weak self] () in
+            
+                guard let text = self?.data.text else {
+                    return false
+                }
+                
+                guard let data = Data(base64Encoded: text) else {
+                    return false
+                }
+            
+                let parameters: SDPEncryptionInputParameters = (text: nil, data: data, isEncoding: false)
+
+                self?.addToClipboard(parameters: parameters, forAction: "SDPEncryption")
+            return true
+        })
+
+        let actions = [qrAction, hashesAction, encryptionAction, decryptionAction]
+        output.set(actions: actions)
+    }
+
+    func addToClipboard(parameters: Any, forAction action:String) {
+        
+        let action = SDPMapStateWriteAction(key: action, value: parameters)//SDPSetTextAction(string:data.text)
+        stores.mapStore.dispatch(action)
     }
     
     func addTextToclipboard(action:String) {

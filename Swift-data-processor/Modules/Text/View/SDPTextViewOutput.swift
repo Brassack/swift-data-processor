@@ -16,5 +16,5 @@ protocol SDPTextViewOutput: UITextViewDelegate {
     func copy()
     func paste()
     func qr()
-    func selectAction(_ action:String)
+    func selectAction(index: Int)
 }

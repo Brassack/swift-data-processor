@@ -29,9 +29,16 @@ class SDPEncryptionInteractor: SDPEncryptionInteractorInput, StoreSubscriber {
     // MARK: StoreSubscriber
     func newState(state: SDPMapState) {
         
-        if let text = state.map["SDPEncryption"] as? String {
+        if let input = state.map["SDPEncryption"] as? SDPEncryptionInputParameters {
             
-            output.set(text: text)
+            if let text = input.text {
+                output.set(text: text)
+            }
+            if let data = input.data {
+                output.set(data: data)
+            }
+            
+            output.set(isEncoding: input.isEncoding)
             let action = SDPMapStateWriteAction(key: "SDPEncryption", value: nil)
             stores.mapStore.dispatch(action)
         }

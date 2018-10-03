@@ -8,6 +8,7 @@
 
 import Foundation
 typealias SDPEncryptionParameters = (password: String?, salt: String?, keySize:Int, computedRawKey: Data?, rawKey: Data?)
+typealias SDPEncryptionInputParameters = (text: String?, data: Data?, isEncoding: Bool)
 
 struct SDPEncryptionVariables {
     

@@ -52,6 +52,7 @@
 		322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2432114BB0900E96892 /* WeakContainer.swift */; };
 		322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */; };
 		322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */; };
+		323518652164ED230045B5BD /* SDPTextActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */; };
 		3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */; };
 		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
 		3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
@@ -102,7 +103,6 @@
 		3273FB9D212F14EB00C56B2A /* SDPNavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB9C212F14EB00C56B2A /* SDPNavigationStore.swift */; };
 		3273FB9F212F15A200C56B2A /* SDPNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB9E212F15A200C56B2A /* SDPNavigationState.swift */; };
 		3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */; };
-		3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */; };
 		3274556321084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */; };
 		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
 		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
@@ -375,6 +375,7 @@
 		322AB2432114BB0900E96892 /* WeakContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakContainer.swift; sourceTree = "<group>"; };
 		322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactoryDelegate.swift; sourceTree = "<group>"; };
 		322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+SectionInfo.swift"; sourceTree = "<group>"; };
+		323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionTableViewCell.swift; sourceTree = "<group>"; };
 		3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPSharingPresenter.swift; sourceTree = "<group>"; };
 		3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPickerSingleOptionInput.swift; sourceTree = "<group>"; };
 		3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+AssociatedOptions.swift"; sourceTree = "<group>"; };
@@ -424,7 +425,6 @@
 		3273FB9C212F14EB00C56B2A /* SDPNavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationStore.swift; sourceTree = "<group>"; };
 		3273FB9E212F15A200C56B2A /* SDPNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationState.swift; sourceTree = "<group>"; };
 		3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationStateWriteAction.swift; sourceTree = "<group>"; };
-		3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPTableDataSourceObject.swift; sourceTree = "<group>"; };
 		3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
 		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
@@ -863,6 +863,7 @@
 				3203E18E20FCBB630082F395 /* SDPTextViewOutput.swift */,
 				3203E18F20FCBB630082F395 /* SDPTextViewInput.swift */,
 				3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */,
+				323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1107,7 +1108,6 @@
 			isa = PBXGroup;
 			children = (
 				322AB2492114BBAB00E96892 /* Data factories */,
-				3274556021083BB40096AE75 /* TDPTableDataSourceObject.swift */,
 				324CD2ED21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift */,
 				324CD2F121103F4500A978C1 /* UITableViewCellConfigurable.swift */,
 			);
@@ -2389,7 +2389,6 @@
 				321635EB2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorOutput.swift in Sources */,
 				327D7CD921353842000EBC64 /* SDPHashCalculator.swift in Sources */,
 				3273FB9F212F15A200C56B2A /* SDPNavigationState.swift in Sources */,
-				3274556121083BB40096AE75 /* TDPTableDataSourceObject.swift in Sources */,
 				322AB235211491B100E96892 /* SDPCipher.swift in Sources */,
 				322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */,
 				325A5A402100DFEA00DD7222 /* SDPQRScannerPresenter.swift in Sources */,
@@ -2457,6 +2456,7 @@
 				324CD30D21104D4D00A978C1 /* SDPSDPHashesViewOutput.swift in Sources */,
 				324CD30E21104D4D00A978C1 /* SDPSDPHashesViewInput.swift in Sources */,
 				324CD31221104D4D00A978C1 /* SDPSDPHashesInteractorOutput.swift in Sources */,
+				323518652164ED230045B5BD /* SDPTextActionTableViewCell.swift in Sources */,
 				32AB4BB82142CBCD0008D83E /* SDPCipherType.swift in Sources */,
 				324CD3182110542700A978C1 /* SDPHashesTableViewDataFactory.swift in Sources */,
 				322AB23E2114947400E96892 /* SDPRandom.swift in Sources */,

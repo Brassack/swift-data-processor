@@ -23,9 +23,9 @@ class SDPTextRouter: SDPTextRouterInput {
         }
     }
     
-    func showTooLongTextFoQRError(){
+    func show(errorMessage: String){
         
-        let alert = UIAlertController(title: "Ooops", message: "Too long for QR (max 1024)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Ooops", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         navigationController?.present(alert, animated: true, completion: nil)

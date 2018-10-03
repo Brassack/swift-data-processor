@@ -10,9 +10,8 @@ import UIKit
 
 
 public typealias SDPTableViewDataSourceRow = (identifier: String, isFailed: Bool, title: String, subtitle: String?)
-public typealias SDPTableViewDataSourceSection = (identifier: String, title: String, rows: [SDPTableViewDataSourceRow])
+public typealias SDPTableViewDataSourceSection = (identifier: String, title: String?, rows: [SDPTableViewDataSourceRow])
 
-public typealias FPSOrdinaryTableViewCellExternalConfigurator = (UITableViewCell, SDPTableViewDataSourceRow) -> Void
 
 class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
     
@@ -61,9 +60,9 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
     
     let tableView: UITableView
     let cellIdentifier: String
-    let cellExternalConfigurator: FPSOrdinaryTableViewCellExternalConfigurator?
+    let cellExternalConfigurator: SDPTableViewCellExternalConfigurator?
     
-    init(tableView: UITableView, data:[SDPTableViewDataSourceSection], cellIdentifier: String, cellExternalConfigurator: FPSOrdinaryTableViewCellExternalConfigurator?) {
+    init(tableView: UITableView, data:[SDPTableViewDataSourceSection], cellIdentifier: String, cellExternalConfigurator: SDPTableViewCellExternalConfigurator?) {
         
         self.tableView = tableView
         self.cellIdentifier = cellIdentifier
@@ -90,7 +89,7 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         if var cell = cell as? SDPTableViewCellConfigurable {
-            cell.externalConfigurator = cellExternalConfigurator as? SDPTableViewCellExternalConfigurator
+            cell.externalConfigurator = cellExternalConfigurator
             cell.configure(object: data[indexPath.section].rows[indexPath.row])
         }
         

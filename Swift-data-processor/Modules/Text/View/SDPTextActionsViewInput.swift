@@ -6,11 +6,15 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SDPTextActionsViewInput: class {
     
-    func set(tableViewDataSource:SDPSingleSectionTableDataSourceObject<String, String>)
+    var tableView: UITableView! {get}
+    var cellIdentifier: String {get}
+    var cellConfigurator: SDPTableViewCellExternalConfigurator? {get}
+    
+    func set(tableViewDataSource:SDPOrdinaryTableViewDataSource)
     func enable()
     func disable()
 }

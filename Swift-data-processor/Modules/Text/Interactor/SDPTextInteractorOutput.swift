@@ -10,8 +10,7 @@ import Foundation
 
 protocol SDPTextInteractorOutput: class {
     
-    func textForQR(valid: Bool)
     func set(text:String?)
     func textAddedToClipboard()
-    func set(actions:[String], titles: [String: String]?)
+    func set(actions:[SDPTextInteractor.SDPTextActionItem])
 }
