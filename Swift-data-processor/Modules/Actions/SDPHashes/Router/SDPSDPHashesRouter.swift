@@ -10,7 +10,7 @@ import ReSwift
 class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
 
     weak var navigationController : UINavigationController?
-    var accesoryStoryboard: UIStoryboard!
+    var qrStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!
     var popupReference: Any?
     var stores = SDPReduxStores.shared
@@ -28,7 +28,7 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
     }
     
     func scanQR() {
-        let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
+        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerViewController.self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()

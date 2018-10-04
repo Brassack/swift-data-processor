@@ -12,7 +12,6 @@ import ReSwift
 class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber {
 
     var componentStoryboard: UIStoryboard!
-    var accesoryStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!
     
     var stores = SDPReduxStores.shared
@@ -37,7 +36,7 @@ class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber
     }
     
     func scanQR() {
-        let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
+        let vc = componentStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerViewController.self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()

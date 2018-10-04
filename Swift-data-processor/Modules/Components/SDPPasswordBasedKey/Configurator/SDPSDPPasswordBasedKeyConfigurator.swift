@@ -21,7 +21,6 @@ class SDPPasswordBasedKeyModuleConfigurator {
 
         let router = SDPPasswordBasedKeyRouter()
         router.componentStoryboard = UIStoryboard.components
-        router.accesoryStoryboard = UIStoryboard.accesory
         router.actionsStoryboard = UIStoryboard.actions
 
         let presenter = SDPPasswordBasedKeyPresenter()

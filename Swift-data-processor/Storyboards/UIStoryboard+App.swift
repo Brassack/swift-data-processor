@@ -9,9 +9,6 @@
 import UIKit
 
 extension UIStoryboard {
-    class var accesory: UIStoryboard {get{
-        return UIStoryboard(name: "Accessory", bundle: nil)
-    }}
     
     class var main: UIStoryboard {get{
         return UIStoryboard(name: "Main", bundle: nil)

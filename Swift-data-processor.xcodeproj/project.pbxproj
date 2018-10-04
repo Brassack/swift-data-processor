@@ -114,7 +114,6 @@
 		3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */; };
 		3274556321084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */; };
 		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
-		3274556E21084E490096AE75 /* Accessory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3274556C21084E490096AE75 /* Accessory.storyboard */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
 		327C33B221628FDD00F21888 /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */; };
 		327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */; };
@@ -456,7 +455,6 @@
 		3273FBA0212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPNavigationStateWriteAction.swift; sourceTree = "<group>"; };
 		3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
-		3274556D21084E490096AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Accessory.storyboard; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
 		327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SharingMenu.swift"; sourceTree = "<group>"; };
@@ -1418,6 +1416,7 @@
 		32ACC7C0214820200029592B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				325A5A2E2100DFEA00DD7222 /* SDPQRScanner */,
 				0C4C8529E665033DAFBB5FC1 /* SDPRawKeyModule */,
 				5645173F0A7E8EEEA730CA33 /* SDPSaltModule */,
 				0FA2B795661F66F3DE0BE048 /* SDPPasswordBasedKey */,
@@ -1459,7 +1458,6 @@
 			children = (
 				328FCD68202F441100EA8098 /* LaunchScreen.storyboard */,
 				328FCD63202F441100EA8098 /* Main.storyboard */,
-				3274556C21084E490096AE75 /* Accessory.storyboard */,
 				328D54DC210B90D700146D9A /* Actions.storyboard */,
 				32DFDF162146DBAF00A20F0F /* Components.storyboard */,
 				3274556F21084EB60096AE75 /* UIStoryboard+App.swift */,
@@ -1517,7 +1515,6 @@
 			children = (
 				32ACC7C0214820200029592B /* Components */,
 				321635D12108CEB900793E7D /* Actions */,
-				325A5A2E2100DFEA00DD7222 /* SDPQRScanner */,
 				3203E18820FCBB630082F395 /* SDPTextModule */,
 			);
 			path = Modules;
@@ -2437,7 +2434,6 @@
 				328FCD67202F441100EA8098 /* Assets.xcassets in Resources */,
 				32DFDF182146DBAF00A20F0F /* Components.storyboard in Resources */,
 				324CD2C521102AE900A978C1 /* LICENSE in Resources */,
-				3274556E21084E490096AE75 /* Accessory.storyboard in Resources */,
 				324CD2CA21102AE900A978C1 /* README.md in Resources */,
 				328D54DE210B90D700146D9A /* Actions.storyboard in Resources */,
 				328FCD65202F441100EA8098 /* Main.storyboard in Resources */,
@@ -2821,14 +2817,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3274556C21084E490096AE75 /* Accessory.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3274556D21084E490096AE75 /* Base */,
-			);
-			name = Accessory.storyboard;
-			sourceTree = "<group>";
-		};
 		328D54DC210B90D700146D9A /* Actions.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

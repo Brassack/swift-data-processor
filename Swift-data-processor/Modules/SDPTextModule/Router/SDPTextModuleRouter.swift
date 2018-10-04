@@ -12,7 +12,7 @@ class SDPTextModuleRouter: SDPTextModuleRouterInput {
     
     weak var navigationController : UINavigationController?
     var mainStoryboard: UIStoryboard!
-    var accesoryStoryboard: UIStoryboard!
+    var qrStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!
     
     // MARK: DPTextRouterInput
@@ -32,7 +32,7 @@ class SDPTextModuleRouter: SDPTextModuleRouterInput {
     }
     
     func qr() {
-        let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
+        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerViewController.self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()

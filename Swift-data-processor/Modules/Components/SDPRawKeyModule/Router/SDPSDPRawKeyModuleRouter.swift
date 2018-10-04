@@ -9,7 +9,7 @@ import ReSwift
 
 class SDPRawKeyModuleRouter: SDPRawKeyModuleRouterInput, StoreSubscriber {
 
-    var accesoryStoryboard: UIStoryboard!
+    var qrStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!
 
     var stores = SDPReduxStores.shared
@@ -28,7 +28,7 @@ class SDPRawKeyModuleRouter: SDPRawKeyModuleRouterInput, StoreSubscriber {
     }
     
     func scanQR() {
-        let vc = accesoryStoryboard.instantiateViewController(withIdentifier: "SDPQRScannerViewController")
+        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
             vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()

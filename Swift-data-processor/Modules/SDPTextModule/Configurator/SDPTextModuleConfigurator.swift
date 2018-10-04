@@ -18,7 +18,7 @@ class SDPTextModuleConfigurator {
             let router = SDPTextModuleRouter()
             router.navigationController = viewController.navigationController
             router.mainStoryboard = UIStoryboard.main
-            router.accesoryStoryboard = UIStoryboard.accesory
+            router.qrStoryboard = UIStoryboard.components
             router.actionsStoryboard = UIStoryboard.actions
             
             let presenter = SDPTextModulePresenter()
