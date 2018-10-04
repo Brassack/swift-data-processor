@@ -32,7 +32,7 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
     
     func subscribeForSaltClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPSaltModuleInteractor.saltKey)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPSaltModuleInteractor.saltKey)
         stores.mapStore.dispatch(action)
         
         saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPSaltModuleInteractor.saltKey, newStateBlock: { [weak self] (maybeText) in

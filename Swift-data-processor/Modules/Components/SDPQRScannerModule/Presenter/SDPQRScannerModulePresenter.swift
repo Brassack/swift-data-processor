@@ -8,11 +8,11 @@
 import AVFoundation
 import UIKit
 
-class SDPQRScannerPresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerViewOutput, SDPQRScannerInteractorOutput, AVCaptureMetadataOutputObjectsDelegate {
+class SDPQRScannerModulePresenter:NSObject, SDPQRScannerModuleInput, SDPQRScannerModuleViewOutput, SDPQRScannerModuleInteractorOutput, AVCaptureMetadataOutputObjectsDelegate {
     
-    weak var view: SDPQRScannerViewInput!
-    var interactor: SDPQRScannerInteractorInput!
-    var router: SDPQRScannerRouterInput!
+    weak var view: SDPQRScannerModuleViewInput!
+    var interactor: SDPQRScannerModuleInteractorInput!
+    var router: SDPQRScannerModuleRouterInput!
     
     var text: String? = nil
     var isForceSupportingUnicode = true {

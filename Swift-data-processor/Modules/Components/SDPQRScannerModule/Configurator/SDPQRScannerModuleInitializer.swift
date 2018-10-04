@@ -11,7 +11,7 @@ import UIKit
 class SDPQRScannerModuleInitializer: NSObject {
 
     //Connect with object on storyboard
-    @IBOutlet weak var qrscannerViewController: SDPQRScannerViewController!
+    @IBOutlet weak var qrscannerViewController: SDPQRScannerModuleViewController!
 
     override func awakeFromNib() {
 

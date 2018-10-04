@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDPQRScannerRouter: SDPQRScannerRouterInput {
+class SDPQRScannerModuleRouter: SDPQRScannerModuleRouterInput {
     var navigationController: UINavigationController?
     
     func show(alert:(title:String?, message:String?)){

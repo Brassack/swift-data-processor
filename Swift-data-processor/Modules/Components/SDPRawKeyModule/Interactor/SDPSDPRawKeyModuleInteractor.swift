@@ -33,7 +33,7 @@ class SDPRawKeyModuleInteractor: SDPRawKeyModuleInteractorInput, StoreSubscriber
     
     func subscribeForQRClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPRawKeyModuleInteractor.rawKeyKey)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPRawKeyModuleInteractor.rawKeyKey)
         stores.mapStore.dispatch(action)
         
         keySubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPRawKeyModuleInteractor.rawKeyKey, newStateBlock: { [weak self] (maybeText) in

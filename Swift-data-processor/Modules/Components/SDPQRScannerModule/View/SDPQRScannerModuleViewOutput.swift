@@ -6,7 +6,7 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 
-protocol SDPQRScannerViewOutput {
+protocol SDPQRScannerModuleViewOutput {
 
     func viewWIllBePresented()
     func viewIsReady()

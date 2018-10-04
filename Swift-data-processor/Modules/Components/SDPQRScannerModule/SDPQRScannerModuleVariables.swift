@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SDPQRScannerVariables {
+struct SDPQRScannerModuleVariables {
     
     static let qrScannerWriteKey = "SDPQRScannerWriteKey"
 }

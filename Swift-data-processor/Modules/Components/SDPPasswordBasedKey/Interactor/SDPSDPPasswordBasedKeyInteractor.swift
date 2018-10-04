@@ -19,7 +19,7 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
     // MARK: SDPPasswordBasedKeyInteractorInput
     func subscribeForSaltClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPPasswordBasedKeyInteractor.passwordKey)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPPasswordBasedKeyInteractor.passwordKey)
         stores.mapStore.dispatch(action)
         
         saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPPasswordBasedKeyInteractor.passwordKey, newStateBlock: { [weak self] (maybeText) in

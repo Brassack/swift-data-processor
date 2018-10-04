@@ -7,10 +7,10 @@
 //
 import ReSwift
 
-class SDPQRScannerInteractor: SDPQRScannerInteractorInput, StoreSubscriber {
+class SDPQRScannerModuleInteractor: SDPQRScannerModuleInteractorInput, StoreSubscriber {
     
 
-    weak var output: SDPQRScannerInteractorOutput!
+    weak var output: SDPQRScannerModuleInteractorOutput!
     var stores = SDPReduxStores.shared
     var qrWriteKey: Any?
     
@@ -20,7 +20,7 @@ class SDPQRScannerInteractor: SDPQRScannerInteractorInput, StoreSubscriber {
     
     func newState(state: SDPMapState) {
         
-        guard let key = state.map[SDPQRScannerVariables.qrScannerWriteKey]  else {
+        guard let key = state.map[SDPQRScannerModuleVariables.qrScannerWriteKey]  else {
             return
         }
         

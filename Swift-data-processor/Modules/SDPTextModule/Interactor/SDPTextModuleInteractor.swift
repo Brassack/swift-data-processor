@@ -125,7 +125,7 @@ class SDPTextModuleInteractor: SDPTextModuleInteractorInput {
 
     func subscribeToClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPTextModuleInteractor.scannedText)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPTextModuleInteractor.scannedText)
         stores.mapStore.dispatch(action)
         
         clipboardSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPTextModuleInteractor.scannedText, newStateBlock: { [weak self](maybeText) in

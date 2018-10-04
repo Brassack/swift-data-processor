@@ -12,21 +12,21 @@ class SDPQRScannerModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? SDPQRScannerViewController {
+        if let viewController = viewInput as? SDPQRScannerModuleViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: SDPQRScannerViewController) {
+    private func configure(viewController: SDPQRScannerModuleViewController) {
 
-        let router = SDPQRScannerRouter()
+        let router = SDPQRScannerModuleRouter()
         router.navigationController = viewController.navigationController
 
-        let presenter = SDPQRScannerPresenter()
+        let presenter = SDPQRScannerModulePresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = SDPQRScannerInteractor()
+        let interactor = SDPQRScannerModuleInteractor()
         interactor.output = presenter
 
         presenter.interactor = interactor

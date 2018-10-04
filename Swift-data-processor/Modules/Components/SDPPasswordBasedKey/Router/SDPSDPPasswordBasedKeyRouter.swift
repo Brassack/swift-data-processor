@@ -36,10 +36,10 @@ class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber
     }
     
     func scanQR() {
-        let vc = componentStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerViewController.self))
+        let vc = componentStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerModuleViewController.self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
-            vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()
+            vc.externalConfigurator = SDPQRScannerModuleViewBackButtonExternalConfigurator()
         }
         
         navigationController?.pushViewController(vc, animated: true)

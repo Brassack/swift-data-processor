@@ -271,7 +271,7 @@
         <!--Qrscanner View Controller-->
         <scene sceneID="3n8-bZ-U5H">
             <objects>
-                <viewController storyboardIdentifier="SDPQRScannerViewController" id="7Rs-7N-EkS" customClass="SDPQRScannerViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SDPQRScannerModuleViewController" id="7Rs-7N-EkS" customClass="SDPQRScannerModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mkO-nu-0Oh"/>
                         <viewControllerLayoutGuide type="bottom" id="mGb-CH-eaE"/>

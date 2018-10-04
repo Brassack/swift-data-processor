@@ -29,10 +29,10 @@ class SDPSaltModuleRouter: SDPSaltModuleRouterInput, StoreSubscriber {
     }
     
     func scanQR() {
-        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerViewController.self))
+        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerModuleViewController.self))
         
         if let vc = vc as? SDPViewExternalConfiguratorProtocol{
-            vc.externalConfigurator = SDPQRScannerViewBackButtonExternalConfigurator()
+            vc.externalConfigurator = SDPQRScannerModuleViewBackButtonExternalConfigurator()
         }
         
         navigationController?.pushViewController(vc, animated: true)

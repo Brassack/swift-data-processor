@@ -51,7 +51,7 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     
     func subscribeForSaltClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPHashesInteractor.saltKey)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPHashesInteractor.saltKey)
         stores.mapStore.dispatch(action)
         
         saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPHashesInteractor.saltKey, newStateBlock: { [weak self] (maybeText) in

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDPQRScannerViewBackButtonExternalConfigurator:SDPViewExternalConfigurator {
+class SDPQRScannerModuleViewBackButtonExternalConfigurator:SDPViewExternalConfigurator {
     
     override func configure(view: UIViewController){
         

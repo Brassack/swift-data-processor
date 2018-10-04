@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SDPQRScannerInteractorInput {
+protocol SDPQRScannerModuleInteractorInput {
 
     func textReady(_ text: String)
 }

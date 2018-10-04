@@ -7,7 +7,7 @@
 //
 import AVFoundation
 
-protocol SDPQRScannerViewInput: class {
+protocol SDPQRScannerModuleViewInput: class {
     
     func prepareForScreen()
     func setupInitialState(unicodeSupport:Bool)

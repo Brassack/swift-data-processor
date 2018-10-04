@@ -1,5 +1,5 @@
 //
-//  QRScannerDPQRScannerRouterInput.swift
+//  DPQRScannerDPQRScannerInteractorOutput.swift
 //  Swift-data-processor
 //
 //  Created by Dmytro Platov on 19/07/2018.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol SDPQRScannerRouterInput {
+protocol SDPQRScannerModuleInteractorOutput: class {
 
-    func show(alert:(title:String?, message:String?))
 }
