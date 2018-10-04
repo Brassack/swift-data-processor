@@ -13,19 +13,19 @@ class SDPTextModuleConfigurator {
 
     func configureModuleForViewInput(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? SDPTextViewController {
+        if let viewController = viewInput as? SDPTextModuleViewController {
             
-            let router = SDPTextRouter()
+            let router = SDPTextModuleRouter()
             router.navigationController = viewController.navigationController
             router.mainStoryboard = UIStoryboard.main
             router.accesoryStoryboard = UIStoryboard.accesory
             router.actionsStoryboard = UIStoryboard.actions
             
-            let presenter = SDPTextPresenter()
+            let presenter = SDPTextModulePresenter()
             presenter.view = viewController
             presenter.router = router
             
-            let interactor = SDPTextInteractor()
+            let interactor = SDPTextModuleInteractor()
             interactor.output = presenter
             
             presenter.interactor = interactor
@@ -33,9 +33,9 @@ class SDPTextModuleConfigurator {
         }
     }
 
-    func configureActions(actionsInput: UIViewController, withOutput output:SDPTextViewOutput) {
+    func configureActions(actionsInput: UIViewController, withOutput output:SDPTextModuleViewOutput) {
 
-        if let viewController = actionsInput as? SDPTextActionsTableViewController {
+        if let viewController = actionsInput as? SDPTextModuleActionsTableViewController {
             
             viewController.output = output
         }

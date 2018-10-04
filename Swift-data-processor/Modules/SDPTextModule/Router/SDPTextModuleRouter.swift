@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDPTextRouter: SDPTextRouterInput {
+class SDPTextModuleRouter: SDPTextModuleRouterInput {
     
     weak var navigationController : UINavigationController?
     var mainStoryboard: UIStoryboard!

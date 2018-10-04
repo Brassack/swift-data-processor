@@ -26,17 +26,17 @@
 		2EE5A7B094B100189CC3A6E4 /* SDPSDPHashesConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22496F14B7D5ED58C8B768A4 /* SDPSDPHashesConfiguratorTests.swift */; };
 		2FDF0E04AE0D6CEC96C9FE90 /* SDPSDPEncryptionInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B6368B2B5121B7816A45AC /* SDPSDPEncryptionInteractorOutput.swift */; };
 		3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */; };
-		3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18B20FCBB630082F395 /* SDPTextPresenter.swift */; };
-		3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18D20FCBB630082F395 /* SDPTextViewController.swift */; };
-		3203E19D20FCBB640082F395 /* SDPTextViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18E20FCBB630082F395 /* SDPTextViewOutput.swift */; };
-		3203E19E20FCBB640082F395 /* SDPTextViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18F20FCBB630082F395 /* SDPTextViewInput.swift */; };
+		3203E19B20FCBB640082F395 /* SDPTextModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18B20FCBB630082F395 /* SDPTextModulePresenter.swift */; };
+		3203E19C20FCBB640082F395 /* SDPTextModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18D20FCBB630082F395 /* SDPTextModuleViewController.swift */; };
+		3203E19D20FCBB640082F395 /* SDPTextModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18E20FCBB630082F395 /* SDPTextModuleViewOutput.swift */; };
+		3203E19E20FCBB640082F395 /* SDPTextModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E18F20FCBB630082F395 /* SDPTextModuleViewInput.swift */; };
 		3203E19F20FCBB640082F395 /* SDPTextModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19120FCBB630082F395 /* SDPTextModuleInitializer.swift */; };
-		3203E1A020FCBB640082F395 /* SDPTextConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19220FCBB630082F395 /* SDPTextConfigurator.swift */; };
-		3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19420FCBB630082F395 /* SDPTextInteractorInput.swift */; };
-		3203E1A220FCBB640082F395 /* SDPTextInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19520FCBB630082F395 /* SDPTextInteractorOutput.swift */; };
-		3203E1A320FCBB640082F395 /* SDPTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19620FCBB630082F395 /* SDPTextInteractor.swift */; };
-		3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19820FCBB630082F395 /* SDPTextRouterInput.swift */; };
-		3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19920FCBB630082F395 /* SDPTextRouter.swift */; };
+		3203E1A020FCBB640082F395 /* SDPTextModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19220FCBB630082F395 /* SDPTextModuleConfigurator.swift */; };
+		3203E1A120FCBB640082F395 /* SDPTextModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19420FCBB630082F395 /* SDPTextModuleInteractorInput.swift */; };
+		3203E1A220FCBB640082F395 /* SDPTextModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19520FCBB630082F395 /* SDPTextModuleInteractorOutput.swift */; };
+		3203E1A320FCBB640082F395 /* SDPTextModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19620FCBB630082F395 /* SDPTextModuleInteractor.swift */; };
+		3203E1A420FCBB640082F395 /* SDPTextModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19820FCBB630082F395 /* SDPTextModuleRouterInput.swift */; };
+		3203E1A520FCBB640082F395 /* SDPTextModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203E19920FCBB630082F395 /* SDPTextModuleRouter.swift */; };
 		32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32127F242106DE37000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift */; };
 		321635E42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift */; };
 		321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321635D52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift */; };
@@ -57,7 +57,7 @@
 		322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2432114BB0900E96892 /* WeakContainer.swift */; };
 		322AB2462114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */; };
 		322AB2482114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */; };
-		323518652164ED230045B5BD /* SDPTextActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */; };
+		323518652164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */; };
 		32351871216523AF0045B5BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186D216523AF0045B5BD /* Constants.swift */; };
 		32351872216523AF0045B5BD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186E216523AF0045B5BD /* Utilities.swift */; };
 		32351873216523AF0045B5BD /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235186F216523AF0045B5BD /* ParseError.swift */; };
@@ -99,7 +99,7 @@
 		325A5A492100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A3C2100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift */; };
 		325A5A4A2100DFEA00DD7222 /* SDPQRScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A3E2100DFEA00DD7222 /* SDPQRScannerRouter.swift */; };
 		325A5A4B2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5A3F2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift */; };
-		3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */; };
+		3261B8D820FE3BB50021F43D /* SDPTextModuleActionsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261B8D720FE3BB50021F43D /* SDPTextModuleActionsViewInput.swift */; };
 		3273FB57212EC02B00C56B2A /* Data+HexEncodedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */; };
 		3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */; };
 		3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */; };
@@ -163,7 +163,7 @@
 		32D9F00821342C12006E7934 /* CarArgon2ConstantExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9F00721342C12006E7934 /* CarArgon2ConstantExternal.swift */; };
 		32D9FAB22106F86000CB0FE0 /* SDPViewExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9FAB12106F86000CB0FE0 /* SDPViewExternalConfigurator.swift */; };
 		32DFDF182146DBAF00A20F0F /* Components.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DFDF162146DBAF00A20F0F /* Components.storyboard */; };
-		32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */; };
+		32F9CB53202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F9CB52202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift */; };
 		3339E1A7B51953D6B59AD5DA /* SDPSDPEscapingModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A1EDB1A3985B2B0AC36C7 /* SDPSDPEscapingModuleInteractorTests.swift */; };
 		3579C99E1E2B44433193A247 /* SDPSDPEncryptionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB4FD967E40D870A07973B /* SDPSDPEncryptionPresenterTests.swift */; };
 		36FC454F66A6CA89C3A23842 /* SDPSDPHashesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7D707BCED2C12A3CE28F /* SDPSDPHashesPresenterTests.swift */; };
@@ -368,17 +368,17 @@
 		2AF593ACC1F4AFEB9A246FE9 /* SDPSDPArgon2ParametersPopupConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupConfiguratorTests.swift; sourceTree = "<group>"; };
 		3188304E9995E31FD16962FF /* Pods-SwiftDPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPUITests/Pods-SwiftDPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInput.swift; sourceTree = "<group>"; };
-		3203E18B20FCBB630082F395 /* SDPTextPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextPresenter.swift; sourceTree = "<group>"; };
-		3203E18D20FCBB630082F395 /* SDPTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextViewController.swift; sourceTree = "<group>"; };
-		3203E18E20FCBB630082F395 /* SDPTextViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextViewOutput.swift; sourceTree = "<group>"; };
-		3203E18F20FCBB630082F395 /* SDPTextViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextViewInput.swift; sourceTree = "<group>"; };
+		3203E18B20FCBB630082F395 /* SDPTextModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModulePresenter.swift; sourceTree = "<group>"; };
+		3203E18D20FCBB630082F395 /* SDPTextModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleViewController.swift; sourceTree = "<group>"; };
+		3203E18E20FCBB630082F395 /* SDPTextModuleViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleViewOutput.swift; sourceTree = "<group>"; };
+		3203E18F20FCBB630082F395 /* SDPTextModuleViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleViewInput.swift; sourceTree = "<group>"; };
 		3203E19120FCBB630082F395 /* SDPTextModuleInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInitializer.swift; sourceTree = "<group>"; };
-		3203E19220FCBB630082F395 /* SDPTextConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextConfigurator.swift; sourceTree = "<group>"; };
-		3203E19420FCBB630082F395 /* SDPTextInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextInteractorInput.swift; sourceTree = "<group>"; };
-		3203E19520FCBB630082F395 /* SDPTextInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextInteractorOutput.swift; sourceTree = "<group>"; };
-		3203E19620FCBB630082F395 /* SDPTextInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextInteractor.swift; sourceTree = "<group>"; };
-		3203E19820FCBB630082F395 /* SDPTextRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextRouterInput.swift; sourceTree = "<group>"; };
-		3203E19920FCBB630082F395 /* SDPTextRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextRouter.swift; sourceTree = "<group>"; };
+		3203E19220FCBB630082F395 /* SDPTextModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleConfigurator.swift; sourceTree = "<group>"; };
+		3203E19420FCBB630082F395 /* SDPTextModuleInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInteractorInput.swift; sourceTree = "<group>"; };
+		3203E19520FCBB630082F395 /* SDPTextModuleInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		3203E19620FCBB630082F395 /* SDPTextModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleInteractor.swift; sourceTree = "<group>"; };
+		3203E19820FCBB630082F395 /* SDPTextModuleRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleRouterInput.swift; sourceTree = "<group>"; };
+		3203E19920FCBB630082F395 /* SDPTextModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPTextModuleRouter.swift; sourceTree = "<group>"; };
 		32127F242106DE37000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerViewBackButtonExternalConfigurator.swift; sourceTree = "<group>"; };
 		32127F262106E9D8000EE1C6 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		321635D42108CF4D00793E7D /* SDPSDPQRGeneratorModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPSDPQRGeneratorModuleInput.swift; sourceTree = "<group>"; };
@@ -400,7 +400,7 @@
 		322AB2432114BB0900E96892 /* WeakContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakContainer.swift; sourceTree = "<group>"; };
 		322AB2452114BB1D00E96892 /* SDPHashesTableViewDataFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPHashesTableViewDataFactoryDelegate.swift; sourceTree = "<group>"; };
 		322AB2472114BB5200E96892 /* SDPHashesTableViewDataFactory+SectionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDPHashesTableViewDataFactory+SectionInfo.swift"; sourceTree = "<group>"; };
-		323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionTableViewCell.swift; sourceTree = "<group>"; };
+		323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextModuleActionTableViewCell.swift; sourceTree = "<group>"; };
 		3235186D216523AF0045B5BD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3235186E216523AF0045B5BD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3235186F216523AF0045B5BD /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
@@ -441,7 +441,7 @@
 		325A5A3C2100DFEA00DD7222 /* SDPQRScannerInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerInteractorInput.swift; sourceTree = "<group>"; };
 		325A5A3E2100DFEA00DD7222 /* SDPQRScannerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerRouter.swift; sourceTree = "<group>"; };
 		325A5A3F2100DFEA00DD7222 /* SDPQRScannerRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDPQRScannerRouterInput.swift; sourceTree = "<group>"; };
-		3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionsViewInput.swift; sourceTree = "<group>"; };
+		3261B8D720FE3BB50021F43D /* SDPTextModuleActionsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextModuleActionsViewInput.swift; sourceTree = "<group>"; };
 		3273FB56212EC02B00C56B2A /* Data+HexEncodedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+HexEncodedString.swift"; sourceTree = "<group>"; };
 		3273FB5D212ED17100C56B2A /* CatCryptoExternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalError.swift; sourceTree = "<group>"; };
 		3273FB5F212ED19300C56B2A /* CatCryptoExternalResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoExternalResult.swift; sourceTree = "<group>"; };
@@ -511,7 +511,7 @@
 		32D9F00721342C12006E7934 /* CarArgon2ConstantExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarArgon2ConstantExternal.swift; sourceTree = "<group>"; };
 		32D9FAB12106F86000CB0FE0 /* SDPViewExternalConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPViewExternalConfigurator.swift; sourceTree = "<group>"; };
 		32DFDF172146DBAF00A20F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Components.storyboard; sourceTree = "<group>"; };
-		32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextActionsTableViewController.swift; sourceTree = "<group>"; };
+		32F9CB52202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextModuleActionsTableViewController.swift; sourceTree = "<group>"; };
 		332C9E19CBB433C0E93A85D6 /* SDPSDPArgon2ParametersPopupInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPArgon2ParametersPopupInteractorTests.swift; sourceTree = "<group>"; };
 		35476C7421FB01AE26ED2F0C /* SDPSDPSaltModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSaltModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		35C002D8ADA586522C434B2A /* SDPSDPEncryptionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionViewOutput.swift; sourceTree = "<group>"; };
@@ -893,7 +893,7 @@
 			path = SDPSaltView;
 			sourceTree = "<group>";
 		};
-		3203E18820FCBB630082F395 /* Text */ = {
+		3203E18820FCBB630082F395 /* SDPTextModule */ = {
 			isa = PBXGroup;
 			children = (
 				3203E18920FCBB630082F395 /* Presenter */,
@@ -902,14 +902,14 @@
 				3203E19320FCBB630082F395 /* Interactor */,
 				3203E19720FCBB630082F395 /* Router */,
 			);
-			path = Text;
+			path = SDPTextModule;
 			sourceTree = "<group>";
 		};
 		3203E18920FCBB630082F395 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				3203E18A20FCBB630082F395 /* SDPTextModuleInput.swift */,
-				3203E18B20FCBB630082F395 /* SDPTextPresenter.swift */,
+				3203E18B20FCBB630082F395 /* SDPTextModulePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -917,12 +917,12 @@
 		3203E18C20FCBB630082F395 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3203E18D20FCBB630082F395 /* SDPTextViewController.swift */,
-				32F9CB52202F8E420082D49D /* SDPTextActionsTableViewController.swift */,
-				3203E18E20FCBB630082F395 /* SDPTextViewOutput.swift */,
-				3203E18F20FCBB630082F395 /* SDPTextViewInput.swift */,
-				3261B8D720FE3BB50021F43D /* SDPTextActionsViewInput.swift */,
-				323518642164ED230045B5BD /* SDPTextActionTableViewCell.swift */,
+				3203E18D20FCBB630082F395 /* SDPTextModuleViewController.swift */,
+				32F9CB52202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift */,
+				3203E18E20FCBB630082F395 /* SDPTextModuleViewOutput.swift */,
+				3203E18F20FCBB630082F395 /* SDPTextModuleViewInput.swift */,
+				3261B8D720FE3BB50021F43D /* SDPTextModuleActionsViewInput.swift */,
+				323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -931,7 +931,7 @@
 			isa = PBXGroup;
 			children = (
 				3203E19120FCBB630082F395 /* SDPTextModuleInitializer.swift */,
-				3203E19220FCBB630082F395 /* SDPTextConfigurator.swift */,
+				3203E19220FCBB630082F395 /* SDPTextModuleConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -939,9 +939,9 @@
 		3203E19320FCBB630082F395 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				3203E19420FCBB630082F395 /* SDPTextInteractorInput.swift */,
-				3203E19520FCBB630082F395 /* SDPTextInteractorOutput.swift */,
-				3203E19620FCBB630082F395 /* SDPTextInteractor.swift */,
+				3203E19420FCBB630082F395 /* SDPTextModuleInteractorInput.swift */,
+				3203E19520FCBB630082F395 /* SDPTextModuleInteractorOutput.swift */,
+				3203E19620FCBB630082F395 /* SDPTextModuleInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -949,8 +949,8 @@
 		3203E19720FCBB630082F395 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				3203E19820FCBB630082F395 /* SDPTextRouterInput.swift */,
-				3203E19920FCBB630082F395 /* SDPTextRouter.swift */,
+				3203E19820FCBB630082F395 /* SDPTextModuleRouterInput.swift */,
+				3203E19920FCBB630082F395 /* SDPTextModuleRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1518,7 +1518,7 @@
 				32ACC7C0214820200029592B /* Components */,
 				321635D12108CEB900793E7D /* Actions */,
 				325A5A2E2100DFEA00DD7222 /* SDPQRScanner */,
-				3203E18820FCBB630082F395 /* Text */,
+				3203E18820FCBB630082F395 /* SDPTextModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2543,8 +2543,8 @@
 				324CD2F221103F4500A978C1 /* UITableViewCellConfigurable.swift in Sources */,
 				322AB24021149A6C00E96892 /* UIView+Shake.swift in Sources */,
 				32D9F00621341C0D006E7934 /* SDPArgon2Parameters.swift in Sources */,
-				3203E19B20FCBB640082F395 /* SDPTextPresenter.swift in Sources */,
-				3203E19E20FCBB640082F395 /* SDPTextViewInput.swift in Sources */,
+				3203E19B20FCBB640082F395 /* SDPTextModulePresenter.swift in Sources */,
+				3203E19E20FCBB640082F395 /* SDPTextModuleViewInput.swift in Sources */,
 				3273FB5E212ED17100C56B2A /* CatCryptoExternalError.swift in Sources */,
 				32D9EFFD2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractor.swift in Sources */,
 				3273FB98212F147F00C56B2A /* SDPMapState.swift in Sources */,
@@ -2571,7 +2571,7 @@
 				32D9EFFC2134040B006E7934 /* SDPSDPArgon2ParametersPopupInteractorOutput.swift in Sources */,
 				321635E82108CF4D00793E7D /* SDPSDPQRGeneratorViewInput.swift in Sources */,
 				325A5A442100DFEA00DD7222 /* SDPQRScannerViewInput.swift in Sources */,
-				3203E1A020FCBB640082F395 /* SDPTextConfigurator.swift in Sources */,
+				3203E1A020FCBB640082F395 /* SDPTextModuleConfigurator.swift in Sources */,
 				32D9EFFF2134040B006E7934 /* SDPSDPArgon2ParametersPopupRouterInput.swift in Sources */,
 				32D9F0002134040B006E7934 /* SDPSDPArgon2ParametersPopupRouter.swift in Sources */,
 				328FCD5E202F441100EA8098 /* AppDelegate.swift in Sources */,
@@ -2583,13 +2583,13 @@
 				32D9EFF72134040B006E7934 /* SDPSDPArgon2ParametersPopupViewInput.swift in Sources */,
 				32127F252106DE38000EE1C6 /* SDPQRScannerViewBackButtonExternalConfigurator.swift in Sources */,
 				3273FBA1212F15BE00C56B2A /* SDPNavigationStateWriteAction.swift in Sources */,
-				3203E1A120FCBB640082F395 /* SDPTextInteractorInput.swift in Sources */,
+				3203E1A120FCBB640082F395 /* SDPTextModuleInteractorInput.swift in Sources */,
 				32351874216523AF0045B5BD /* String+HTMLEntities.swift in Sources */,
 				325A5A452100DFEA00DD7222 /* SDPQRScannerConfigurator.swift in Sources */,
 				321635EA2108CF4D00793E7D /* SDPSDPQRGeneratorInitializer.swift in Sources */,
 				321635E62108CF4D00793E7D /* SDPSDPQRGeneratorViewController.swift in Sources */,
 				327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */,
-				3203E1A520FCBB640082F395 /* SDPTextRouter.swift in Sources */,
+				3203E1A520FCBB640082F395 /* SDPTextModuleRouter.swift in Sources */,
 				321635E52108CF4D00793E7D /* SDPSDPQRGeneratorPresenter.swift in Sources */,
 				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
 				32D9EFFA2134040B006E7934 /* SDPSDPArgon2ParametersPopupConfigurator.swift in Sources */,
@@ -2597,7 +2597,7 @@
 				3242D03321636FE100C4BDAC /* UITextField+AssociatedOptions.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */,
-				32F9CB53202F8E420082D49D /* SDPTextActionsTableViewController.swift in Sources */,
+				32F9CB53202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift in Sources */,
 				32D9EFF92134040B006E7934 /* SDPArgon2ParametersPopupView.swift in Sources */,
 				324CD30F21104D4D00A978C1 /* SDPSDPHashesViewController.swift in Sources */,
 				32D9F0042134064D006E7934 /* SDPArgon2ParametersPopupVariables.swift in Sources */,
@@ -2605,10 +2605,10 @@
 				32D9F00221340436006E7934 /* SDPArgon2ParametersPopupModuleBuilder.swift in Sources */,
 				321AB6422152AC6D00C59D12 /* UITextField+DoneButton.swift in Sources */,
 				32CF5297210600BF008FB025 /* UIViewController+Dismiss.swift in Sources */,
-				3203E1A320FCBB640082F395 /* SDPTextInteractor.swift in Sources */,
+				3203E1A320FCBB640082F395 /* SDPTextModuleInteractor.swift in Sources */,
 				324CD31A21108DEF00A978C1 /* SDPHashTableViewCell.swift in Sources */,
 				32B63CEA210745C600BDE139 /* UIColor+Hex.swift in Sources */,
-				3203E1A220FCBB640082F395 /* SDPTextInteractorOutput.swift in Sources */,
+				3203E1A220FCBB640082F395 /* SDPTextModuleInteractorOutput.swift in Sources */,
 				325A5A4A2100DFEA00DD7222 /* SDPQRScannerRouter.swift in Sources */,
 				325A5A412100DFEA00DD7222 /* SDPQRScannerModuleInput.swift in Sources */,
 				3203E19A20FCBB640082F395 /* SDPTextModuleInput.swift in Sources */,
@@ -2620,11 +2620,11 @@
 				3273FB62212ED34A00C56B2A /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,
 				321635EC2108CF4D00793E7D /* SDPSDPQRGeneratorInteractorInput.swift in Sources */,
 				329C02C4215A668900ECCD3B /* SDPApplicationTheme.swift in Sources */,
-				3203E19D20FCBB640082F395 /* SDPTextViewOutput.swift in Sources */,
+				3203E19D20FCBB640082F395 /* SDPTextModuleViewOutput.swift in Sources */,
 				324CD30D21104D4D00A978C1 /* SDPSDPHashesViewOutput.swift in Sources */,
 				324CD30E21104D4D00A978C1 /* SDPSDPHashesViewInput.swift in Sources */,
 				324CD31221104D4D00A978C1 /* SDPSDPHashesInteractorOutput.swift in Sources */,
-				323518652164ED230045B5BD /* SDPTextActionTableViewCell.swift in Sources */,
+				323518652164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift in Sources */,
 				32AB4BB82142CBCD0008D83E /* SDPCipherType.swift in Sources */,
 				324CD3182110542700A978C1 /* SDPHashesTableViewDataFactory.swift in Sources */,
 				322AB23E2114947400E96892 /* SDPRandom.swift in Sources */,
@@ -2639,11 +2639,11 @@
 				324CD31321104D4D00A978C1 /* SDPSDPHashesInteractorInput.swift in Sources */,
 				322AB2442114BB0900E96892 /* WeakContainer.swift in Sources */,
 				32D9EFF82134040B006E7934 /* SDPSDPArgon2ParametersPopupViewOutput.swift in Sources */,
-				3261B8D820FE3BB50021F43D /* SDPTextActionsViewInput.swift in Sources */,
+				3261B8D820FE3BB50021F43D /* SDPTextModuleActionsViewInput.swift in Sources */,
 				328FBF242109E59C00D728A5 /* String+QRImage.swift in Sources */,
 				327C33B92162A1EC00F21888 /* UITextField+SharingMenu.swift in Sources */,
 				32D9EFF52134040B006E7934 /* SDPSDPArgon2ParametersPopupPresenter.swift in Sources */,
-				3203E19C20FCBB640082F395 /* SDPTextViewController.swift in Sources */,
+				3203E19C20FCBB640082F395 /* SDPTextModuleViewController.swift in Sources */,
 				321635EF2108CF4D00793E7D /* SDPSDPQRGeneratorRouter.swift in Sources */,
 				32351873216523AF0045B5BD /* ParseError.swift in Sources */,
 				3273FB60212ED19300C56B2A /* CatCryptoExternalResult.swift in Sources */,
@@ -2654,7 +2654,7 @@
 				3242D035216389D800C4BDAC /* SDPBase64GeneratingActivity.swift in Sources */,
 				32D9F00821342C12006E7934 /* CarArgon2ConstantExternal.swift in Sources */,
 				324CD30C21104D4D00A978C1 /* SDPSDPHashesModuleInput.swift in Sources */,
-				3203E1A420FCBB640082F395 /* SDPTextRouterInput.swift in Sources */,
+				3203E1A420FCBB640082F395 /* SDPTextModuleRouterInput.swift in Sources */,
 				32BFAD66213551EF00AFC5CC /* SDPEncryptionKeyGenerator.swift in Sources */,
 				324CD30B21104D4D00A978C1 /* SDPSDPHashesPresenter.swift in Sources */,
 				324CD31521104D4D00A978C1 /* SDPSDPHashesRouter.swift in Sources */,

@@ -8,13 +8,13 @@
 import ReSwift
 
 
-class SDPTextInteractor: SDPTextInteractorInput {
+class SDPTextModuleInteractor: SDPTextModuleInteractorInput {
     
     typealias SDPTextActionItem = (idx: String, title: String, validate: (() -> (isValid: Bool, invalidReason: String?))?, preparation: (() -> Bool))
 
     static let scannedText = "scannedText"
     
-    weak var output: SDPTextInteractorOutput!
+    weak var output: SDPTextModuleInteractorOutput!
     var data = (text:String?, range:NSRange?)(nil, nil)
     var stores = SDPReduxStores.shared
     var clipboardSubscriber:SDPMapStoreSubscriberObject?
@@ -125,10 +125,10 @@ class SDPTextInteractor: SDPTextInteractorInput {
 
     func subscribeToClipboard() {
         
-        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPTextInteractor.scannedText)
+        let action = SDPMapStateWriteAction(key: SDPQRScannerVariables.qrScannerWriteKey, value: SDPTextModuleInteractor.scannedText)
         stores.mapStore.dispatch(action)
         
-        clipboardSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPTextInteractor.scannedText, newStateBlock: { [weak self](maybeText) in
+        clipboardSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPTextModuleInteractor.scannedText, newStateBlock: { [weak self](maybeText) in
             
             guard let text = maybeText as? String else {
                 return

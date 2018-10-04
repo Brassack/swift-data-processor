@@ -13,7 +13,7 @@
         <!--Text View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="SDPTextViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="SDPTextModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,16 +131,16 @@
             </objects>
             <point key="canvasLocation" x="780" y="-1063"/>
         </scene>
-        <!--Text Actions Table View Controller-->
+        <!--Text Module Actions Table View Controller-->
         <scene sceneID="bEb-eE-cxa">
             <objects>
-                <tableViewController id="iyw-Nm-8YS" customClass="SDPTextActionsTableViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="iyw-Nm-8YS" customClass="SDPTextModuleActionsTableViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KWs-ho-4PH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="XcV-Jt-CL7" style="IBUITableViewCellStyleDefault" id="2up-QC-rL6" customClass="SDPTextActionTableViewCell" customModule="Swift_data_processor" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="XcV-Jt-CL7" style="IBUITableViewCellStyleDefault" id="2up-QC-rL6" customClass="SDPTextModuleActionTableViewCell" customModule="Swift_data_processor" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2up-QC-rL6" id="8Ym-km-afY">

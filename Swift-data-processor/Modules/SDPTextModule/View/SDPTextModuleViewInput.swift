@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SDPTextViewInput: class {
+protocol SDPTextModuleViewInput: class {
 
     func setupInitialState()
     func prepareForScreen()

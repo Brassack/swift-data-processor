@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SDPTextRouterInput {
+protocol SDPTextModuleRouterInput {
 
     func show(errorMessage: String)
     func registerNavigationController(forView:Any?)

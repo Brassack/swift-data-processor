@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SDPTextActionsViewInput: class {
+protocol SDPTextModuleActionsViewInput: class {
     
     var tableView: UITableView! {get}
     var cellIdentifier: String {get}

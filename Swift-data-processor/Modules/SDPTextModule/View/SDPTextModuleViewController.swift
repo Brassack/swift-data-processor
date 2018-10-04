@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SDPTextViewController: UIViewController, SDPTextViewInput {
+class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
     
-    var output: SDPTextViewOutput!
+    var output: SDPTextModuleViewOutput!
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var copyButton: UIButton!

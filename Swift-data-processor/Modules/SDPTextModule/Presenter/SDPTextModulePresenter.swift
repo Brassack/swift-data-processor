@@ -8,14 +8,14 @@
 
 import ReSwift
 
-class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextInteractorOutput {
+class SDPTextModulePresenter:NSObject, SDPTextModuleInput, SDPTextModuleViewOutput, SDPTextModuleInteractorOutput {
     
-    weak var view: SDPTextViewInput!
-    weak var actionView: SDPTextActionsViewInput?
-    var interactor: SDPTextInteractorInput!
-    var router: SDPTextRouterInput!
+    weak var view: SDPTextModuleViewInput!
+    weak var actionView: SDPTextModuleActionsViewInput?
+    var interactor: SDPTextModuleInteractorInput!
+    var router: SDPTextModuleRouterInput!
     
-    var actions: [SDPTextInteractor.SDPTextActionItem]?
+    var actions: [SDPTextModuleInteractor.SDPTextActionItem]?
     
     // MARK: DPTextViewOutput
     func viewIsReady() {
@@ -34,7 +34,7 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
             let configurator = SDPTextModuleConfigurator()
             configurator.configureActions(actionsInput: vc, withOutput: self)
             
-            actionView = vc as? SDPTextActionsViewInput
+            actionView = vc as? SDPTextModuleActionsViewInput
             interactor.requestActions()
         }
     }
@@ -101,7 +101,7 @@ class SDPTextPresenter:NSObject, SDPTextModuleInput, SDPTextViewOutput, SDPTextI
     }
     
     // MARK: DPTextInteractorOutput
-    func set(actions: [SDPTextInteractor.SDPTextActionItem]) {
+    func set(actions: [SDPTextModuleInteractor.SDPTextActionItem]) {
         
         self.actions = actions
         

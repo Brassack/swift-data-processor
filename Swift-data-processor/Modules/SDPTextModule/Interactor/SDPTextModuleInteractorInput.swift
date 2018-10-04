@@ -9,7 +9,7 @@
 
 import Foundation
 
-protocol SDPTextInteractorInput {
+protocol SDPTextModuleInteractorInput {
 
     func requestActions()
     

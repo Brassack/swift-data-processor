@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDPTextActionTableViewCell: UITableViewCell, SDPTableViewCellConfigurable {
+class SDPTextModuleActionTableViewCell: UITableViewCell, SDPTableViewCellConfigurable {
     
     var externalConfigurator: SDPTableViewCellExternalConfigurator?
     

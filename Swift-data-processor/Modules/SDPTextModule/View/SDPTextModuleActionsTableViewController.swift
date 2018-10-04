@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SDPTextActionsTableViewController: UITableViewController, SDPTextActionsViewInput {
+class SDPTextModuleActionsTableViewController: UITableViewController, SDPTextModuleActionsViewInput {
     
-    var output: SDPTextViewOutput!
+    var output: SDPTextModuleViewOutput!
     var cellIdentifier: String {
         get{
             return "Cell"

@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol SDPTextInteractorOutput: class {
+protocol SDPTextModuleInteractorOutput: class {
     
     func set(text:String?)
     func textAddedToClipboard()
-    func set(actions:[SDPTextInteractor.SDPTextActionItem])
+    func set(actions:[SDPTextModuleInteractor.SDPTextActionItem])
 }

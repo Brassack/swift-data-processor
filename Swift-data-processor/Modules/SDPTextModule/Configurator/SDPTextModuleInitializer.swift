@@ -10,7 +10,7 @@ import Foundation
 
 class SDPTextModuleInitializer: NSObject {
 
-    @IBOutlet weak var textViewController: SDPTextViewController!
+    @IBOutlet weak var textViewController: SDPTextModuleViewController!
 
     override func awakeFromNib() {
 

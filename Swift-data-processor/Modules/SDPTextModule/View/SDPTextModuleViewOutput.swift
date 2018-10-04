@@ -8,7 +8,7 @@
 import UIKit
 
 //TODO: research for purpose removing UIKit
-protocol SDPTextViewOutput: UITextViewDelegate {
+protocol SDPTextModuleViewOutput: UITextViewDelegate {
     
     func viewIsReady()
     func viewWillBePresented()
