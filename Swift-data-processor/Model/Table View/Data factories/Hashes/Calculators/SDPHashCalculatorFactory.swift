@@ -10,7 +10,7 @@ import CatCrypto
 
 class SDPHashCalculatorFactory {
     
-    class func calculator(forSection sectionID: String, info:SDPHashesRowInfo, withWeakOwnerContainer weakOwnerContainer: Weak<SDPHashesTableViewDataFactory>) -> SDPHashCalculator {
+    class func calculator(forSection sectionID: String, info: SDPHashesRowInfo, withWeakOwnerContainer weakOwnerContainer: Weak<SDPHashesTableViewDataFactory>) -> SDPHashCalculator {
         
         if sectionID == "argon2" {
             

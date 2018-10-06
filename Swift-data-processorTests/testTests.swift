@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Swift-data-processor
+@testable import Swift_data_processor
 
 class testTests: XCTestCase {
     

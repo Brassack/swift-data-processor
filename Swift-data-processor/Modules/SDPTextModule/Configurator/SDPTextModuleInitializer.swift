@@ -1,5 +1,5 @@
 //
-//  DPTexSDPTextInitializer.swift
+// SDPTextInitializer.swift
 //  Swift-data-processor
 //
 //  Created by Dmytro Platov on 15/07/2018.

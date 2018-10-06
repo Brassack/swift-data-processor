@@ -33,7 +33,7 @@ class SDPTextModuleConfigurator {
         }
     }
 
-    func configureActions(actionsInput: UIViewController, withOutput output:SDPTextModuleViewOutput) {
+    func configureActions(actionsInput: UIViewController, withOutput output: SDPTextModuleViewOutput) {
 
         if let viewController = actionsInput as? SDPTextModuleActionsTableViewController {
             

@@ -1,5 +1,5 @@
 //
-//  SDPArgon2ParametersPopupSDPSDPArgon2ParametersPopupViewController.swift
+//  SDPArgon2ParametersPopupSDPArgon2ParametersPopupViewController.swift
 //  Swift-data-processor
 //
 //  Created by Dmytro Platov on 27/08/2018.

@@ -16,21 +16,23 @@
 
 /// This String extension provides utility functions to convert strings to their
 /// HTML escaped equivalents and vice versa.
+/// Global HTML escape options
+public struct HTMLEscapeOptions {
+    /// Specifies if all ASCII characters should be skipped when escaping text
+    public static var allowUnsafeSymbols = false
+    
+    /// Specifies if decimal escapes should be used instead of hexadecimal escapes
+    public static var decimal = false
+    
+    /// Specifies if all characters should be escaped, even if some are safe characters
+    public static var encodeEverything = false
+    
+    /// Specifies if named character references should be used whenever possible
+    public static var useNamedReferences = false
+}
+
+
 public extension String {
-    /// Global HTML escape options
-    public struct HTMLEscapeOptions {
-        /// Specifies if all ASCII characters should be skipped when escaping text
-        public static var allowUnsafeSymbols = false
-
-        /// Specifies if decimal escapes should be used instead of hexadecimal escapes
-        public static var decimal = false
-
-        /// Specifies if all characters should be escaped, even if some are safe characters
-        public static var encodeEverything = false
-
-        /// Specifies if named character references should be used whenever possible
-        public static var useNamedReferences = false
-    }
 
     // Private enum used by the parser state machine
     private enum EntityParseState {

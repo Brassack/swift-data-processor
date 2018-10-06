@@ -17,7 +17,7 @@ class SDPTextModuleInteractor: SDPTextModuleInteractorInput {
     weak var output: SDPTextModuleInteractorOutput!
     var data = (text:String?, range:NSRange?)(nil, nil)
     var stores = SDPReduxStores.shared
-    var clipboardSubscriber:SDPMapStoreSubscriberObject?
+    var clipboardSubscriber: SDPMapStoreSubscriberObject?
     
     
     func requestActions(){

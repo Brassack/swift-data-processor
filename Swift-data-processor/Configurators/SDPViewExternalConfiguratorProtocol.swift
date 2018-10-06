@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol SDPViewExternalConfiguratorProtocol: class{
-    var externalConfigurator:SDPViewExternalConfigurator? {get set}
+    var externalConfigurator: SDPViewExternalConfigurator? {get set}
 }
