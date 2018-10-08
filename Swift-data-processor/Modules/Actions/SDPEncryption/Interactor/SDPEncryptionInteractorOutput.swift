@@ -12,6 +12,5 @@ protocol SDPEncryptionInteractorOutput: class {
 
     func set(text: String)
     func set(data: Data)
-    func set(isEncoding: Bool)
     func set(parameters: SDPEncryptionParameters?)
 }

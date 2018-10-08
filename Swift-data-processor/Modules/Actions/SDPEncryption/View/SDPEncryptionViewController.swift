@@ -18,68 +18,45 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
     }
     
     var output: SDPEncryptionViewOutput!
-    @IBOutlet weak var keySizeTextField: SDPPickerSingleOptionInput!
-    @IBOutlet weak var methodTextField: SDPPickerSingleOptionInput!
+  
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var parametersContainerView: UIView!
+    @IBOutlet weak var convertToTextContainerVioew: UIView!
+    @IBOutlet weak var convertOptionSwith: UISwitch!
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        output.viewIsReady(parametersContainer: parametersContainerView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         output.viewWillBePresented()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "KeyPagesViewController", let destination = segue.destination as? UIPageViewController {
-            output.pageViewIsready(destination)
-        }
-    }
-    
+
     //MARK: user actions
-    @IBAction func keySizeChaged(_ sender: SDPPickerSingleOptionInput) {
-        guard let size = sender.currentValue?.value as? Int else {
-            return
-        }
-        
-        output.set(keySize: size)
-    }
-    
-    @IBAction func mechodChanged(_ sender: SDPPickerSingleOptionInput) {
-        
-        guard let method = sender.currentValue?.value as? SDPCipherType else {
-            return
-        }
-        
-        output.set(method: method)
-    }
-    
-    @IBAction func keySegmentChanged(_ sender: Any) {
-        
-        guard let sender = sender as? UISegmentedControl else {
-            return
-        }
-        
-        if sender.selectedSegmentIndex == 0 {
-            output.didSelectPasswordBased()
-        }else{
-            output.didSelectRawBased()
-        }
-    }
-    
     @IBAction func share(_ sender: Any) {
         
         output.shareResult()
     }
     
+    @IBAction func convertToTextStateChanged(_ sender: UISwitch) {
+        
+        output.set(isConvertToText: sender.isOn)
+    }
+    
     // MARK: SDPEncryptionViewInput
     func set(title: String?) {
         self.title = title
+    }
+    
+    func setConvertOption(visible: Bool, isConvert: Bool){
+        
+        convertToTextContainerVioew.isHidden = !visible
+        convertOptionSwith.isOn = isConvert
     }
     
     func prepareForScreen(){
@@ -112,17 +89,5 @@ class SDPEncryptionViewController: UIViewController, SDPEncryptionViewInput {
         set(state: .message("Please enter the key"))
         shareButton.isHidden = true
         indicatorView.isHidden = true
-    }
-    
-    func set(methodPickerValues values: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?) {
-        
-        methodTextField.pickerValues = values
-        methodTextField.currentValue = defaultValue
-    }
-    
-    func set(keySizesPickerValues values: [SDPPickerSingleOptionInput.Value], defaultValue: SDPPickerSingleOptionInput.Value?) {
-        
-        keySizeTextField.pickerValues = values
-        keySizeTextField.currentValue = defaultValue
     }
 }

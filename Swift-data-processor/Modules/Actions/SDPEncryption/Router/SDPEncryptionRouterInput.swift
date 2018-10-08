@@ -6,10 +6,12 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol SDPEncryptionRouterInput {
 
-    func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewController.NavigationDirection)
+    func addParametersView(toView view: Any, controller: Any)
     func share(data:Data)
+    func share(text: String)
+    func show(errorMessage: String, in view: Any)
 }

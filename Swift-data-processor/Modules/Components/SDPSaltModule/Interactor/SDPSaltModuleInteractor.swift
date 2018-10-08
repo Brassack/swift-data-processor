@@ -22,7 +22,7 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
     // MARK: StoreSubscriber
     func newState(state: SDPMapState) {
         
-        guard let parameters = state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
+        guard let parameters = state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
             return
         }
         
@@ -51,10 +51,10 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
                 let action = SDPMapStateWriteAction(key: SDPSaltModuleInteractor.saltKey, value: nil)
                 self?.stores.mapStore.dispatch(action)
                 
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters {
+                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
                     
                     parameters.salt = text
-                    let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+                    let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
                     self?.stores.mapStore.dispatch(action)
                 }
             }
@@ -63,13 +63,13 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
     
     func set(salt: String?) {
         
-        guard var parameters = stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
+        guard var parameters = stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
             return
         }
         
         parameters.salt = salt
         
-        let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+        let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
         stores.mapStore.dispatch(action)
     }
 }

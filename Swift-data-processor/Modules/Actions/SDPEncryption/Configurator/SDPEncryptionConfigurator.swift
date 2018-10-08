@@ -22,17 +22,7 @@ class SDPEncryptionModuleConfigurator {
         let router = SDPEncryptionRouter()
 
         let presenter = SDPEncryptionPresenter()
-        let sb = UIStoryboard.components
-        presenter.passwordBasedKeyViewFactory = {
-            let vc = sb.instantiateViewController(withIdentifier: String(describing: SDPPasswordBasedKeyViewController.self))
-            return vc
-        }
-        
-        presenter.rawKeyViewFactory = {
-            let vc = sb.instantiateViewController(withIdentifier: String(describing: SDPRawKeyModuleViewController.self))
-            return vc
-        }
-        
+
         presenter.view = viewController
         presenter.router = router
 
@@ -41,8 +31,5 @@ class SDPEncryptionModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
-        
- 
     }
-
 }

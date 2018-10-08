@@ -14,19 +14,27 @@ class SDPEncryptionInteractor: SDPEncryptionInteractorInput, StoreSubscriber {
     var stores = SDPReduxStores.shared
     
     // MARK: SDPQRGeneratorInteractorInput
-    func requestClipboardData() {
+    func requestData() {
         stores.mapStore.subscribe(self)
     }
     
-    func setupParameters(withKeySize keySize: Int) {
-
-        let parameters: SDPEncryptionParameters = (password: nil, salt: nil, keySize:keySize, computedRawKey: nil, rawKey: nil)
+    func setupParameters(isEncoding: Bool) {
         
-        let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+        let parameters = SDPEncryptionParameters(password: nil,
+                                                salt: nil,
+                                                keySize: SDPCipherType.aes.defaultKeySize(),
+                                                isEncoding: isEncoding,
+                                                keyType: SDPEncryptionParametersModulePresenter.SDPEncryptionKeyType.passwordBased,
+                                                method: SDPCipherType.aes,
+                                                computedRawKey: nil,
+                                                rawKey: nil)
+        //: SDPEncryptionParameters = (password: nil, salt: nil, keySize:keySize, computedRawKey: nil, rawKey: nil)
+        
+        let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
         stores.mapStore.dispatch(action)
     }
     
-    // MARK: StoreSubscriber
+    //MARK: StoreSubscriber
     func newState(state: SDPMapState) {
         
         if let input = state.map["SDPEncryption"] as? SDPEncryptionInputParameters {
@@ -38,14 +46,22 @@ class SDPEncryptionInteractor: SDPEncryptionInteractorInput, StoreSubscriber {
                 output.set(data: data)
             }
             
-            output.set(isEncoding: input.isEncoding)
             let action = SDPMapStateWriteAction(key: "SDPEncryption", value: nil)
             stores.mapStore.dispatch(action)
+
+            setupParameters(isEncoding: input.isEncoding)
         }
             
-        if let parameters = state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters {
+        if let parameters = state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
             
             output.set(parameters: parameters)
         }
+    }
+    
+    deinit {
+        
+        stores.mapStore.unsubscribe(self)
+        let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: nil)
+        stores.mapStore.dispatch(action)
     }
 }

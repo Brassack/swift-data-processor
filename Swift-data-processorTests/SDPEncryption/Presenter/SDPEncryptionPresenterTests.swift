@@ -21,17 +21,27 @@ class SDPEncryptionPresenterTest: XCTestCase {
     }
 
     class MockInteractor: SDPEncryptionInteractorInput {
-        
-        func requestClipboardData() {
-            //TODO: add requestClipboardData
+        func requestData() {
+            //TODO: add requestData
         }
-        
         func setupParameters(withKeySize: Int) {
             //TODO: add setupParameters(withKeySize:)
         }
     }
 
     class MockRouter: SDPEncryptionRouterInput {
+        func addParametersView(toView view: Any, controller: Any) {
+            //TODO: add addParametersView(toView:controller)
+        }
+        
+        func share(text: String) {
+            //TODO: add share(text)
+        }
+        
+        func show(errorMessage: String, in view: Any) {
+            //TODO: show(errorMessage:in:)
+        }
+        
         func set(page: UIViewController, forPageController: UIPageViewController, direction: UIPageViewController.NavigationDirection) {
             //TODO: add set(page:forPageController:direction:)
         }
@@ -42,6 +52,9 @@ class SDPEncryptionPresenterTest: XCTestCase {
     }
 
     class MockViewController: SDPEncryptionViewInput {
+        func setConvertOption(visible: Bool, isConvert: Bool) {
+            //TODO: setConvertOption(visible:isConvert:)
+        }
         
         func prepareForScreen() {
             //TODO: add prepareForScreen

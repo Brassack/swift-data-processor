@@ -35,10 +35,10 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
                 let action = SDPMapStateWriteAction(key: SDPPasswordBasedKeyInteractor.passwordKey, value: nil)
                 self?.stores.mapStore.dispatch(action)
                 
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters {
+                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
                     
                     parameters.password = text
-                    let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+                    let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
                     self?.stores.mapStore.dispatch(action)
                 }
             }
@@ -51,13 +51,13 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
     
     func set(parameters: SDPEncryptionParameters?) {
         
-        let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+        let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
         stores.mapStore.dispatch(action)
     }
     
     // MARK: StoreSubscriber
     func newState(state: SDPMapState) {
-        guard var parameters = state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
+        guard var parameters = state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
             return
         }
         
@@ -68,7 +68,7 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
             if parameters.computedRawKey != nil {
                 
                 parameters.computedRawKey = nil
-                let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+                let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
                 stores.mapStore.dispatch(action)
             }
             return
@@ -85,7 +85,7 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
             if key != parameters.computedRawKey {
                 
                 parameters.computedRawKey = key
-                let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+                let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
                 stores.mapStore.dispatch(action)
             }
             

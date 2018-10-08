@@ -338,6 +338,107 @@
             </objects>
             <point key="canvasLocation" x="-10" y="1057"/>
         </scene>
+        <!--Sdpencryptionparametersmodule View Controller-->
+        <scene sceneID="F8b-Ex-k5A">
+            <objects>
+                <viewController storyboardIdentifier="SDPEncryptionParametersModuleViewController" title="ENCRYPTION" id="FKv-aR-GlX" customClass="SDPEncryptionParametersModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="coI-az-8Od">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVg-oj-20S">
+                                <rect key="frame" x="16" y="20" width="343" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="xOt-1f-yTq"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="DZJ-ei-oUf" kind="embed" identifier="KeyPagesViewController" id="m3t-Gq-jdX"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="METHOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiD-UO-vi0">
+                                <rect key="frame" x="46" y="258" width="49" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEY SIZE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-gu-SIs">
+                                <rect key="frame" x="280" y="258" width="49" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AES" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-Wx-fcu" customClass="SDPPickerSingleOptionInput" customModule="Swift_data_processor" customModuleProvider="target">
+                                <rect key="frame" x="46.5" y="275" width="48" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="mechodChanged:" destination="FKv-aR-GlX" eventType="valueChanged" id="PKp-Qn-4u7"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="256 bit" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-0R-sZ5" customClass="SDPPickerSingleOptionInput" customModule="Swift_data_processor" customModuleProvider="target">
+                                <rect key="frame" x="270.5" y="275" width="68" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="keySizeChaged:" destination="FKv-aR-GlX" eventType="valueChanged" id="qoc-rw-XHo"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J43-tP-Our">
+                                <rect key="frame" x="16" y="214" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Password based key"/>
+                                    <segment title="Raw key"/>
+                                </segments>
+                                <color key="tintColor" red="0.090196078430000007" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="keySegmentChanged:" destination="FKv-aR-GlX" eventType="valueChanged" id="mFw-Bx-f9j"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J43-tP-Our" firstAttribute="leading" secondItem="CCB-lf-kT6" secondAttribute="leading" constant="16" id="53V-4P-MdJ"/>
+                            <constraint firstItem="cfS-gu-SIs" firstAttribute="trailing" secondItem="J43-tP-Our" secondAttribute="trailing" constant="-30" id="8sp-ae-u69"/>
+                            <constraint firstItem="DVg-oj-20S" firstAttribute="leading" secondItem="CCB-lf-kT6" secondAttribute="leading" constant="16" id="9oL-Db-MtH"/>
+                            <constraint firstItem="OFr-0R-sZ5" firstAttribute="centerX" secondItem="cfS-gu-SIs" secondAttribute="centerX" id="CZb-eT-e8f"/>
+                            <constraint firstItem="jOa-Wx-fcu" firstAttribute="top" secondItem="DiD-UO-vi0" secondAttribute="bottom" constant="3" id="DWQ-Tc-CjZ"/>
+                            <constraint firstItem="jOa-Wx-fcu" firstAttribute="centerX" secondItem="DiD-UO-vi0" secondAttribute="centerX" id="H2e-7I-gk7"/>
+                            <constraint firstItem="CCB-lf-kT6" firstAttribute="trailing" secondItem="DVg-oj-20S" secondAttribute="trailing" constant="16" id="Ic6-t5-mCE"/>
+                            <constraint firstItem="CCB-lf-kT6" firstAttribute="trailing" secondItem="J43-tP-Our" secondAttribute="trailing" constant="16" id="X3M-xz-xE4"/>
+                            <constraint firstItem="OFr-0R-sZ5" firstAttribute="top" secondItem="cfS-gu-SIs" secondAttribute="bottom" constant="3" id="cKt-B4-NIX"/>
+                            <constraint firstItem="cfS-gu-SIs" firstAttribute="top" secondItem="J43-tP-Our" secondAttribute="bottom" constant="16" id="iR1-lv-RiR"/>
+                            <constraint firstItem="J43-tP-Our" firstAttribute="top" secondItem="DVg-oj-20S" secondAttribute="bottom" constant="14" id="oke-1d-mnq"/>
+                            <constraint firstItem="DiD-UO-vi0" firstAttribute="top" secondItem="J43-tP-Our" secondAttribute="bottom" constant="16" id="pJY-zZ-qP5"/>
+                            <constraint firstItem="DiD-UO-vi0" firstAttribute="leading" secondItem="J43-tP-Our" secondAttribute="leading" constant="30" id="sC2-of-oT7"/>
+                            <constraint firstItem="DVg-oj-20S" firstAttribute="top" secondItem="CCB-lf-kT6" secondAttribute="top" id="sw5-05-Zem"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CCB-lf-kT6"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="keySizeTextField" destination="OFr-0R-sZ5" id="lgN-FV-gfA"/>
+                        <outlet property="methodTextField" destination="jOa-Wx-fcu" id="wue-eJ-zCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzX-qD-mCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="TEj-aJ-HuZ" customClass="SDPEncryptionParametersModuleModuleInitializer" customModule="Swift_data_processor" customModuleProvider="target">
+                    <connections>
+                        <outlet property="sdpencryptionparametersmoduleViewController" destination="FKv-aR-GlX" id="jbW-6c-kAF"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="974" y="1057"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="AGw-D1-fpw">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DZJ-ei-oUf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWv-p1-BeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="1057"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dice-icon" width="640" height="640"/>

@@ -5,18 +5,11 @@
 //  Created by Dmytro Platov on 10/09/2018.
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
-
-import UIKit
+import Foundation
 import CommonCrypto
-
 
 class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput, SDPEncryptionInteractorOutput  {
 
-    enum SDPEncryptionKeyType {
-        case passwordBased
-        case raw
-    }
-    
     enum SDPEncryptionState: Equatable {
         case notProcessing
         case processing(Data)
@@ -27,44 +20,26 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
     var interactor: SDPEncryptionInteractorInput!
     var router: SDPEncryptionRouterInput!
     
-    var pageViewController: UIPageViewController?
-    
-    var passwordBasedKeyViewFactory: (() -> UIViewController?)?
-    var rawKeyViewFactory: (() -> UIViewController?)?
-    
     var text: String?
     var data: Data?
-    var isEncoding: Bool = true
-    
-    var keyType = SDPEncryptionKeyType.passwordBased {
-        didSet{
-            calculateIfPossible()
-        }
-    }
-    
-    var method: SDPCipherType = .aes {
-        didSet{
-            calculateIfPossible()
-        }
-    }
-    
-    var keySize = Int(kCCKeySizeAES128){
-        didSet{
-            calculateIfPossible()
-        }
-    }
     
     var key: Data? {
         get {
-            switch keyType {
+            guard let parameters = parameters else {
+                return nil
+            }
+            
+            switch parameters.keyType {
             case .passwordBased:
-                return parameters?.computedRawKey
+                return parameters.computedRawKey
             case .raw:
-                return parameters?.rawKey
+                return parameters.rawKey
             }
         }
     }
+    
     var state: SDPEncryptionState = .notProcessing
+    var isConvertToText = false
     var result: Data?{
         didSet{
             if result != nil {
@@ -73,7 +48,11 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
         }
     }
     
-    var parameters: SDPEncryptionParameters?
+    var parameters: SDPEncryptionParameters? {
+        didSet{
+            calculateIfPossible()
+        }
+    }
 
     func calculateIfPossible() {
         //TODO: Handle files
@@ -83,7 +62,14 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
             return
         }
         
-        let method = self.method
+        guard let parameters = parameters else {
+            
+            view.set(state: .message("Somethig went wrong"))
+            return
+        }
+        
+        let method = parameters.method
+        
         guard let data = self.text?.data(using: .utf8) ?? self.data else {
             //TODO: Handle error
             return
@@ -101,7 +87,7 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
             return
         }
         
-        let isEncoding = self.isEncoding
+        let isEncoding = parameters.isEncoding
 
         state = .processing(key)
         view.set(state: .processing)
@@ -136,7 +122,7 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
         }
 
     }
-    
+
     //MARK: SDPEncryptionInteractorOutput
     func set(text: String) {
         self.text = text
@@ -146,35 +132,24 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
         self.data = data
     }
     
-    func set(isEncoding: Bool) {
-        self.isEncoding = isEncoding
-        view.set(title: isEncoding ? "Encryption" : "Decryption")
-    }
-    
     func set(parameters: SDPEncryptionParameters?) {
+        
+        view.set(title: (parameters?.isEncoding ?? false) ? "Encryption" : "Decryption")
+        view.setConvertOption(visible: !(parameters?.isEncoding ?? false), isConvert: isConvertToText)
         self.parameters = parameters
-        calculateIfPossible()
     }
     
     //MARK: SDPEncryptionViewOutput
-    func viewIsReady() {
+    func set(isConvertToText: Bool) {
         
+        self.isConvertToText = isConvertToText
+    }
+    
+    func viewIsReady(parametersContainer: Any) {
+        
+        interactor.requestData()
         view.setupInitialState()
-        interactor.setupParameters(withKeySize: keySize)
-        interactor.requestClipboardData()
-        
-        let sizes = keySizeValue(forMethod: method)
-        view.set(keySizesPickerValues: sizes, defaultValue: SDPPickerSingleOptionInput.Value(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
-        var values = [SDPPickerSingleOptionInput.Value]()
-        
-        let types: [SDPCipherType] = [.aes, .blowfish]
-        for method in types {
-            
-            values.append(SDPPickerSingleOptionInput.Value(valueDescription: "\(method.description())", value: method))
-        }
-        
-        view.set(methodPickerValues: values, defaultValue: values.first)
-
+        router.addParametersView(toView: parametersContainer, controller: view)
     }
     
     func shareResult() {
@@ -183,64 +158,20 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
             return
         }
         
-        router.share(data: result)
+        if isConvertToText {
+            
+            if let text = String(data: result, encoding: .utf8) {
+                router.share(text: text)
+            }else{
+                router.show(errorMessage: "It is not valid unicode string!", in: view)
+            }
+        }else{
+            
+            router.share(data: result)
+        }
     }
     
     func viewWillBePresented() {
         view.prepareForScreen()
-    }
-    
-    func pageViewIsready(_ pageViewController: UIPageViewController) {
-        
-        self.pageViewController = pageViewController
-        guard let page = passwordBasedKeyViewFactory?() else {
-            return
-        }
-        
-        router.set(page: page, forPageController: pageViewController, direction: .forward)
-    }
-    
-    func didSelectPasswordBased() {
-        
-        guard let page = passwordBasedKeyViewFactory?(), let pageViewController = pageViewController else {
-            return
-        }
-        
-        keyType = SDPEncryptionKeyType.passwordBased
-        router.set(page: page, forPageController: pageViewController, direction: .reverse)
-
-    }
-    
-    func didSelectRawBased() {
-        
-        guard let page = rawKeyViewFactory?(), let pageViewController = pageViewController else {
-            return
-        }
-        keyType = SDPEncryptionKeyType.raw
-        router.set(page: page, forPageController: pageViewController, direction: .forward)
-    }
-    
-    func set(method: SDPCipherType) {
-        
-        self.method = method
-        view.set(keySizesPickerValues: keySizeValue(forMethod: method), defaultValue: SDPPickerSingleOptionInput.Value(valueDescription: "\(method.defaultKeySize()*16)bit", value: method.defaultKeySize()))
-    }
-    
-    func set(keySize: Int) {
-        
-        self.keySize = keySize
-    }
-    
-    //MARK: Helper
-    func keySizeValue(forMethod method: SDPCipherType) -> [SDPPickerSingleOptionInput.Value] {
-    
-        var values = [SDPPickerSingleOptionInput.Value]()
-        
-        for size in method.keySizeList() {
-            
-            values.append(SDPPickerSingleOptionInput.Value(valueDescription: "\(size*16)bit", value: size))
-        }
-        
-        return values
     }
 }

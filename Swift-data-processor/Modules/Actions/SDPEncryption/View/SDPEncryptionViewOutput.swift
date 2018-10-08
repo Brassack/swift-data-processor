@@ -10,12 +10,8 @@ import UIKit
 
 protocol SDPEncryptionViewOutput {
     
-    func viewIsReady()
+    func viewIsReady(parametersContainer: Any)
     func viewWillBePresented()
     func shareResult()
-    func set(method: SDPCipherType)
-    func set(keySize: Int)
-    func pageViewIsready(_ pageViewController: UIPageViewController)
-    func didSelectPasswordBased()
-    func didSelectRawBased()
+    func set(isConvertToText: Bool)
 }

@@ -23,10 +23,10 @@ class SDPRawKeyModuleInteractor: SDPRawKeyModuleInteractorInput, StoreSubscriber
     
     func set(key: Data?) {
         
-        if var parameters = stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters {
+        if var parameters = stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
             
             parameters.rawKey = key
-            let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+            let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
             stores.mapStore.dispatch(action)
         }
     }
@@ -49,11 +49,11 @@ class SDPRawKeyModuleInteractor: SDPRawKeyModuleInteractorInput, StoreSubscriber
                 let action = SDPMapStateWriteAction(key: SDPRawKeyModuleInteractor.rawKeyKey, value: nil)
                 self?.stores.mapStore.dispatch(action)
                 
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters,
+                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters,
                     let key = Data(base64Encoded: text) {
                 
                     parameters.rawKey = key
-                    let action = SDPMapStateWriteAction(key: SDPEncryptionVariables.encryptionParametersKey, value: parameters)
+                    let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
                     self?.stores.mapStore.dispatch(action)
                 }
             }
@@ -62,7 +62,7 @@ class SDPRawKeyModuleInteractor: SDPRawKeyModuleInteractorInput, StoreSubscriber
 
     // MARK: StoreSubscriber
     func newState(state: SDPMapState) {
-        guard let parameters = state.map[SDPEncryptionVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
+        guard let parameters = state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters else {
             return
         }
         

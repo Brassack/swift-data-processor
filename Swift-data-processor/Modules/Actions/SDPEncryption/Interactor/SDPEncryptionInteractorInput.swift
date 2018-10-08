@@ -10,6 +10,5 @@ import Foundation
 
 protocol SDPEncryptionInteractorInput {
 
-    func requestClipboardData()
-    func setupParameters(withKeySize: Int);
+    func requestData()
 }
