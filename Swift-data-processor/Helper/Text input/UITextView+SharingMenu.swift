@@ -111,15 +111,27 @@ extension UITextView {
         let nc = UINavigationController.init(rootViewController: vc)
         
         weak var weakNC = nc        
-        qrScannerSubscriber = SDPMapStoreSubscriberObject(mapStore: store, key: uuid, newStateBlock: { [weak self](text) in
-            
-            guard let text = text as? String else{
-                return
-            }
+        qrScannerSubscriber = SDPMapStoreSubscriberObject(mapStore: store, key: uuid, newStateBlock: { [weak self](replacementText) in
             
             weakNC?.dismissFromParentAnimated()
-            self?.text = text
+            self?.qrScannerSubscriber?.invalidate()
             self?.qrScannerSubscriber = nil
+            
+            guard let replacementText = replacementText as? String,
+                let sself = self,
+                let text = sself.text
+            else{
+                return
+            }
+
+            if self?.delegate?.textView?(sself, shouldChangeTextIn: NSRange(location: 0, length: text.count), replacementText: replacementText) ?? true {
+                
+                self?.delegate?.textViewDidBeginEditing?(sself)
+                self?.text = replacementText
+                self?.delegate?.textViewDidChange?(sself)
+                self?.delegate?.textViewDidEndEditing?(sself)
+            }
+
         })
         
         rootVC.present(nc, animated: true, completion: nil)

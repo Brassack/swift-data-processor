@@ -22,7 +22,15 @@ class SDPMapStoreSubscriberObject: StoreSubscriber {
     }
     
     deinit {
+        invalidate()
+    }
+    
+    func invalidate() {
         mapStore.unsubscribe(self)
+    }
+    
+    func subscribe() {
+        mapStore.subscribe(self)
     }
     
     func newState(state: SDPMapState) {

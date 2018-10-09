@@ -110,15 +110,26 @@ extension UITextField {
         let nc = UINavigationController.init(rootViewController: vc)
         
         weak var weakNC = nc
-        qrScannerSubscriber = SDPMapStoreSubscriberObject(mapStore: store, key: uuid, newStateBlock: { [weak self](text) in
-            
-            guard let text = text as? String else{
-                return
-            }
+        qrScannerSubscriber = SDPMapStoreSubscriberObject(mapStore: store, key: uuid, newStateBlock: { [weak self] (replacementText) in
             
             weakNC?.dismissFromParentAnimated()
-            self?.text = text
+            
+            self?.qrScannerSubscriber?.invalidate()
             self?.qrScannerSubscriber = nil
+            
+            guard let replacementText = replacementText as? String,
+                let sself = self,
+                let text = sself.text
+                else{
+                    return
+            }
+            
+            if self?.delegate?.textField?(sself, shouldChangeCharactersIn:  NSRange(location: 0, length: text.count), replacementString: replacementText) ?? true {
+                
+                self?.delegate?.textFieldDidBeginEditing?(sself)
+                self?.text = replacementText
+                self?.delegate?.textFieldDidEndEditing?(sself)
+            }
         })
         
         rootVC.present(nc, animated: true, completion: nil)

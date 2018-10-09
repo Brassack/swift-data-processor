@@ -36,7 +36,7 @@ class SDPSaltModulePresenter:NSObject, SDPSaltModuleModuleInput, SDPSaltModuleVi
         interactor.set(salt: salt)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
         interactor.set(salt: textField.text)
     }
