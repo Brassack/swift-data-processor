@@ -36,9 +36,10 @@ class SDPApplicationConfigurator: NSObject {
             method_exchangeImplementations(originalMethod, swizzledMethod)
         }
         
-        let qrItem = UIMenuItem(title: "to QR", action: #selector(UITextView.createQR))
         let base64 = UIMenuItem(title: "Share binary", action: #selector(UITextView.shareBinary))
-        
-        UIMenuController.shared.menuItems = [base64, qrItem]
+        let qrScan = UIMenuItem(title: "Scan QR", action: #selector(UITextView.qrScan))        
+        let share = UIMenuItem(title: "Share", action: #selector(UITextView.share))
+
+        UIMenuController.shared.menuItems = [base64, share, qrScan]
     }
 }

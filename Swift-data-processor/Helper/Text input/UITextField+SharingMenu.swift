@@ -16,15 +16,31 @@ extension UITextField {
         if isHexEncodedData {
             
             if action == #selector(shareBinary) {
-                return (text?.count ?? 0) > 0 && text?.isHexEncodedData == true
+                
+                guard let text = text else {
+                    return false
+                }
+                if !(text.count > 0) {
+                    return false
+                }
+                if let range = selectedTextRange, range.start != range.end {
+                    
+                    guard let string = self.text(in:range) else {
+                        return false
+                    }
+                    return string.isHexEncodedData
+                }else{
+                    
+                    return text.isHexEncodedData
+                }
             }
             
-            if action == #selector(createQR) {
+            if action == #selector(share) {
                 return false
             }
         }else{
             
-            if action == #selector(createQR) {
+            if action == #selector(share) {
                 return (text?.count ?? 0) > 0
             }
             
@@ -35,31 +51,92 @@ extension UITextField {
         
         return _canPerformAction(action,  withSender:sender)
     }
+
+    @objc func shareBinary() {
+        
+        guard let text = text, text.count > 0 else {
+            return
+        }
+        
+        if let range = selectedTextRange, range.start != range.end {
+            
+            guard let string = self.text(in:range) else {
+                return
+            }
+            guard string.isHexEncodedData else {
+                return
+            }
+            guard let data = string.hexDecodedData() else {
+                return
+            }
+            
+            SDPSharingPresenter().share(data: data)
+        }else{
+            
+            guard text.isHexEncodedData else {
+                return
+            }
+            guard let data = text.hexDecodedData() else {
+                return
+            }
+            
+            SDPSharingPresenter().share(data: data)
+        }
+    }
     
-    @objc func createQR() {
+    @objc func qrScan() {
+        
+        let uuid = UUID().uuidString
+        
+        let store = SDPReduxStores.shared.mapStore
+        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: uuid)
+        
+        store.dispatch(action)
+        
+        guard var rootVC = UIApplication.shared.keyWindow?.rootViewController else {
+            return
+        }
+        
+        while let presented = rootVC.presentedViewController {
+            rootVC = presented
+        }
+        
+        let vc = UIStoryboard.components.instantiateViewController(withIdentifier: String(describing: SDPQRScannerModuleViewController.self))
+        
+        if let vc = vc as? SDPViewExternalConfiguratorProtocol{
+            vc.externalConfigurator = SDPQRScannerModuleViewDismissButtonExternalConfigurator()
+        }
+        
+        let nc = UINavigationController.init(rootViewController: vc)
+        
+        weak var weakNC = nc
+        qrScannerSubscriber = SDPMapStoreSubscriberObject(mapStore: store, key: uuid, newStateBlock: { [weak self](text) in
+            
+            guard let text = text as? String else{
+                return
+            }
+            
+            weakNC?.dismissFromParentAnimated()
+            self?.text = text
+            self?.qrScannerSubscriber = nil
+        })
+        
+        rootVC.present(nc, animated: true, completion: nil)
+    }
     
+    @objc func _share(_:Any){}
+    
+    @objc func share() {
         if let range = selectedTextRange, range.start != range.end {
             
             guard let string = self.text(in:range) else {
                 return
             }
             
-            SDPSharingPresenter().qrSharePrepareDataAndPresentInRootController(text: string)
+            SDPSharingPresenter().share(string: string)
         }else if let string = text {
             
-            SDPSharingPresenter().qrSharePrepareDataAndPresentInRootController(text: string)
+            SDPSharingPresenter().share(string: string)
         }
-    }
-    
-    @objc func shareBinary() {
-        
-        guard let text = text, text.count > 0 else {
-            return
-        }
-        guard let data = text.hexDecodedData() else {
-            return
-        }
-        
-        SDPSharingPresenter().share(data: data)
     }
 }

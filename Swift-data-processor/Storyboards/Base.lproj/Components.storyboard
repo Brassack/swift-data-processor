@@ -52,8 +52,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgO-MW-4kx">
-                                <rect key="frame" x="187.5" y="180.5" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgO-MW-4kx">
+                                <rect key="frame" x="8" y="180.5" width="359" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.090196078430000007" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,6 +70,7 @@
                             <constraint firstItem="54O-CR-caB" firstAttribute="centerX" secondItem="Elo-NT-x5h" secondAttribute="centerX" id="7Di-4g-va7"/>
                             <constraint firstItem="PJn-Tu-jpt" firstAttribute="bottom" secondItem="pgO-MW-4kx" secondAttribute="bottom" id="86M-27-Xia"/>
                             <constraint firstItem="glJ-YQ-AQd" firstAttribute="centerX" secondItem="m2w-On-g3Q" secondAttribute="centerX" id="86t-tx-Y7U"/>
+                            <constraint firstItem="pgO-MW-4kx" firstAttribute="leading" secondItem="Elo-NT-x5h" secondAttribute="leading" constant="8" id="9Kw-o1-tSp"/>
                             <constraint firstItem="kbu-Fq-ow8" firstAttribute="trailing" secondItem="m2w-On-g3Q" secondAttribute="trailing" id="Cgi-CF-pR2"/>
                             <constraint firstItem="PJn-Tu-jpt" firstAttribute="trailing" secondItem="m2w-On-g3Q" secondAttribute="trailing" id="DHn-ci-CUw"/>
                             <constraint firstItem="H9Y-Q5-xmd" firstAttribute="top" secondItem="54O-CR-caB" secondAttribute="bottom" constant="10" id="Dk9-YR-J5L"/>
@@ -81,6 +82,7 @@
                             <constraint firstItem="pgO-MW-4kx" firstAttribute="top" secondItem="glJ-YQ-AQd" secondAttribute="bottom" constant="8" id="gaC-Bo-qgn"/>
                             <constraint firstItem="2Vz-84-fom" firstAttribute="centerY" secondItem="H9Y-Q5-xmd" secondAttribute="centerY" id="idI-bC-O1B"/>
                             <constraint firstItem="H9Y-Q5-xmd" firstAttribute="leading" secondItem="kbu-Fq-ow8" secondAttribute="leading" constant="8" id="kZT-pY-EHy"/>
+                            <constraint firstAttribute="trailing" secondItem="pgO-MW-4kx" secondAttribute="trailing" constant="8" id="lbA-EJ-ka9"/>
                             <constraint firstItem="2Vz-84-fom" firstAttribute="leading" secondItem="H9Y-Q5-xmd" secondAttribute="trailing" constant="8" id="of3-rF-cVH"/>
                             <constraint firstItem="pgO-MW-4kx" firstAttribute="centerX" secondItem="glJ-YQ-AQd" secondAttribute="centerX" id="oi9-cl-bA2"/>
                             <constraint firstItem="m2w-On-g3Q" firstAttribute="leading" secondItem="kbu-Fq-ow8" secondAttribute="leading" id="qFC-Hi-abf"/>

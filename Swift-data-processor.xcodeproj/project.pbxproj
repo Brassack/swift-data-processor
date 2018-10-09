@@ -84,10 +84,10 @@
 		32188A87216681A60033599F /* UITextView+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */; };
 		32188A88216681A90033599F /* UITextField+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */; };
 		32188A89216681AA0033599F /* UITextField+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */; };
-		32188A8A216681AC0033599F /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
-		32188A8B216681AD0033599F /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
-		32188A8C216681B00033599F /* UITextField+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */; };
-		32188A8D216681B00033599F /* UITextField+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */; };
+		32188A8A216681AC0033599F /* UITextView+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */; };
+		32188A8B216681AD0033599F /* UITextView+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */; };
+		32188A8C216681B00033599F /* UITextField+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedObjects.swift */; };
+		32188A8D216681B00033599F /* UITextField+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedObjects.swift */; };
 		32188A8E216681B40033599F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CE9210745C600BDE139 /* UIColor+Hex.swift */; };
 		32188A8F216681B50033599F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B63CE9210745C600BDE139 /* UIColor+Hex.swift */; };
 		32188A90216681B90033599F /* String+HexDecodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C02CA215A78A600ECCD3B /* String+HexDecodedData.swift */; };
@@ -172,11 +172,14 @@
 		3233A5D12169329D004C834A /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233A5C72169329C004C834A /* String+HTMLEntities.swift */; };
 		3233A5D22169329D004C834A /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233A5C72169329C004C834A /* String+HTMLEntities.swift */; };
 		3233A5D32169329D004C834A /* String+HTMLEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233A5C72169329C004C834A /* String+HTMLEntities.swift */; };
+		3233B27A216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */; };
+		3233B27F216CA57C005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */; };
+		3233B280216CA57D005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */; };
 		323518652164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */; };
 		3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */; };
 		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
-		3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */; };
-		3242D03321636FE100C4BDAC /* UITextField+AssociatedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */; };
+		3242D03121636EB000C4BDAC /* UITextView+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */; };
+		3242D03321636FE100C4BDAC /* UITextField+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03221636FE100C4BDAC /* UITextField+AssociatedObjects.swift */; };
 		3242D035216389D800C4BDAC /* SDPBase64GeneratingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D034216389D800C4BDAC /* SDPBase64GeneratingActivity.swift */; };
 		324CD2C521102AE900A978C1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26421102AE900A978C1 /* LICENSE */; };
 		324CD2CA21102AE900A978C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 324CD26D21102AE900A978C1 /* README.md */; };
@@ -815,11 +818,12 @@
 		3233A5C52169329C004C834A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3233A5C62169329C004C834A /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
 		3233A5C72169329C004C834A /* String+HTMLEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLEntities.swift"; sourceTree = "<group>"; };
+		3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift; sourceTree = "<group>"; };
 		323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPTextModuleActionTableViewCell.swift; sourceTree = "<group>"; };
 		3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPSharingPresenter.swift; sourceTree = "<group>"; };
 		3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPickerSingleOptionInput.swift; sourceTree = "<group>"; };
-		3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+AssociatedOptions.swift"; sourceTree = "<group>"; };
-		3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+AssociatedOptions.swift"; sourceTree = "<group>"; };
+		3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+AssociatedObjects.swift"; sourceTree = "<group>"; };
+		3242D03221636FE100C4BDAC /* UITextField+AssociatedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+AssociatedObjects.swift"; sourceTree = "<group>"; };
 		3242D034216389D800C4BDAC /* SDPBase64GeneratingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPBase64GeneratingActivity.swift; sourceTree = "<group>"; };
 		324CD26421102AE900A978C1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		324CD26521102AE900A978C1 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
@@ -1375,6 +1379,7 @@
 			isa = PBXGroup;
 			children = (
 				32127F242106DE37000EE1C6 /* SDPQRScannerModuleViewBackButtonExternalConfigurator.swift */,
+				3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */,
 			);
 			path = "External configurator";
 			sourceTree = "<group>";
@@ -1526,8 +1531,8 @@
 				327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */,
 				327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */,
 				327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */,
-				3242D03021636EB000C4BDAC /* UITextView+AssociatedOptions.swift */,
-				3242D03221636FE100C4BDAC /* UITextField+AssociatedOptions.swift */,
+				3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */,
+				3242D03221636FE100C4BDAC /* UITextField+AssociatedObjects.swift */,
 			);
 			path = "Text input";
 			sourceTree = "<group>";
@@ -3097,7 +3102,7 @@
 				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
 				32D9EFFA2134040B006E7934 /* SDPArgon2ParametersPopupConfigurator.swift in Sources */,
 				328FBF28210A0BF900D728A5 /* UIImage+Scale.swift in Sources */,
-				3242D03321636FE100C4BDAC /* UITextField+AssociatedOptions.swift in Sources */,
+				3242D03321636FE100C4BDAC /* UITextField+AssociatedObjects.swift in Sources */,
 				324CD2EE21102FCD00A978C1 /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				327D7CDB21353863000EBC64 /* SDPHashCalculatorFactory.swift in Sources */,
 				32F9CB53202F8E420082D49D /* SDPTextModuleActionsTableViewController.swift in Sources */,
@@ -3200,7 +3205,7 @@
 				3292224021517D1D009F4A0D /* UIViewController+ChildViewController.swift in Sources */,
 				41289C717871BC9485531571 /* SDPSaltModuleInteractor.swift in Sources */,
 				9005577B19E09893FD83A281 /* SDPSaltModuleRouterInput.swift in Sources */,
-				3242D03121636EB000C4BDAC /* UITextView+AssociatedOptions.swift in Sources */,
+				3242D03121636EB000C4BDAC /* UITextView+AssociatedObjects.swift in Sources */,
 				73540A7E73BEDDABA5BAA8DE /* SDPSaltModuleRouter.swift in Sources */,
 				3B42C1AF7B962159686CD478 /* SDPSaltModuleConfigurator.swift in Sources */,
 				0803AB954DD267D14F5C5038 /* SDPSaltModuleInitializer.swift in Sources */,
@@ -3208,6 +3213,7 @@
 				6E4F769E958504DD058D79EF /* SDPRawKeyModuleViewOutput.swift in Sources */,
 				3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */,
 				F68F8817C358CE7FBE094FF8 /* SDPRawKeyModuleViewController.swift in Sources */,
+				3233B27A216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */,
 				C131EB453F19F9EB9EFEC37E /* SDPRawKeyModuleModuleInput.swift in Sources */,
 				7F99AE72996CE695207C21EA /* SDPRawKeyModulePresenter.swift in Sources */,
 				536E9B7633ADBF61AD8B8E4A /* SDPRawKeyModuleInteractorInput.swift in Sources */,
@@ -3357,7 +3363,7 @@
 				3250D39A21667771003EEF66 /* SDPArgon2ParametersPopupConfigurator.swift in Sources */,
 				3579C99E1E2B44433193A247 /* SDPEncryptionPresenterTests.swift in Sources */,
 				3250D35D21667613003EEF66 /* SDPPasswordBasedKeyInitializer.swift in Sources */,
-				32188A8A216681AC0033599F /* UITextView+AssociatedOptions.swift in Sources */,
+				32188A8A216681AC0033599F /* UITextView+AssociatedObjects.swift in Sources */,
 				32188A82216681A50033599F /* UITextView+SharingMenu.swift in Sources */,
 				3250D30B216674B0003EEF66 /* SDPQRScannerModuleInteractorInput.swift in Sources */,
 				4566D9C117E28F41B48B55E7 /* SDPEncryptionRouterTests.swift in Sources */,
@@ -3372,6 +3378,7 @@
 				3250D32B216675A9003EEF66 /* SDPRawKeyModuleInteractorInput.swift in Sources */,
 				32188AA0216681E00033599F /* SDPMapStore.swift in Sources */,
 				3250D3972166776D003EEF66 /* SDPArgon2ParametersPopupView.swift in Sources */,
+				3233B27F216CA57C005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */,
 				3250D3AB2166778F003EEF66 /* SDPHashesPresenter.swift in Sources */,
 				3250D3002166746B003EEF66 /* SDPQRScannerModuleViewOutput.swift in Sources */,
 				3250D3572166760A003EEF66 /* SDPPasswordBasedKeyRouterInput.swift in Sources */,
@@ -3414,7 +3421,7 @@
 				3250D3FE216679D8003EEF66 /* SDPViewExternalConfigurator.swift in Sources */,
 				3250D35F2166761A003EEF66 /* SDPEscapingModuleViewInput.swift in Sources */,
 				3250D3212166758A003EEF66 /* SDPRawKeyModuleViewInput.swift in Sources */,
-				32188A8C216681B00033599F /* UITextField+AssociatedOptions.swift in Sources */,
+				32188A8C216681B00033599F /* UITextField+AssociatedObjects.swift in Sources */,
 				3250D340216675D9003EEF66 /* SDPSaltModulePresenter.swift in Sources */,
 				3250D3F82166794F003EEF66 /* SDPTextModuleRouter.swift in Sources */,
 				3250D40C216679FB003EEF66 /* String+UnicodeEncoding.swift in Sources */,
@@ -3656,7 +3663,7 @@
 				320A148B216B9219008F0735 /* SDPEncryptionParametersVariables.swift in Sources */,
 				3250D33E216675D5003EEF66 /* SDPSaltModuleModuleInput.swift in Sources */,
 				3250D35521667607003EEF66 /* SDPPasswordBasedKeyInteractor.swift in Sources */,
-				32188A8B216681AD0033599F /* UITextView+AssociatedOptions.swift in Sources */,
+				32188A8B216681AD0033599F /* UITextView+AssociatedObjects.swift in Sources */,
 				3250D37A2166772B003EEF66 /* SDPEncryptionViewOutput.swift in Sources */,
 				3250D35A2166760E003EEF66 /* SDPPasswordBasedKeyRouter.swift in Sources */,
 				3250D330216675B0003EEF66 /* SDPRawKeyModuleInteractorOutput.swift in Sources */,
@@ -3682,6 +3689,7 @@
 				3250D41721667A10003EEF66 /* UITextView+DoneButton.swift in Sources */,
 				3250D36421667621003EEF66 /* SDPEscapingModuleViewController.swift in Sources */,
 				3250D40E216679FF003EEF66 /* String+QRImage.swift in Sources */,
+				3233B280216CA57D005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */,
 				3250D36621667625003EEF66 /* SDPEscapingModuleModuleInput.swift in Sources */,
 				3250D32C216675AA003EEF66 /* SDPRawKeyModuleInteractorInput.swift in Sources */,
 				32188AD6216683930033599F /* UIStoryboard+App.swift in Sources */,
@@ -3706,7 +3714,7 @@
 				3250D33C216675D2003EEF66 /* SDPSaltModuleViewController.swift in Sources */,
 				3250D31A2166756B003EEF66 /* SDPQRScannerModuleConfigurator.swift in Sources */,
 				3250D37E21667736003EEF66 /* SDPEncryptionModuleInput.swift in Sources */,
-				32188A8D216681B00033599F /* UITextField+AssociatedOptions.swift in Sources */,
+				32188A8D216681B00033599F /* UITextField+AssociatedObjects.swift in Sources */,
 				32188A87216681A60033599F /* UITextView+SharingMenu.swift in Sources */,
 				3250D401216679DD003EEF66 /* SDPViewExternalConfiguratorProtocol.swift in Sources */,
 				32188A95216681C20033599F /* SDPPickerSingleOptionInput.swift in Sources */,
