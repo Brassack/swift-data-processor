@@ -38,12 +38,6 @@ class SDPRawKeyModulePresenter: SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewO
         }
     }
     
-    func scanFromQR() {
-        
-        interactor.subscribeForQRClipboard()
-        router.scanQR()
-    }
-    
     func set(key: String?) {
         
         if let key = key, key.count > 0 {
@@ -78,9 +72,5 @@ class SDPRawKeyModulePresenter: SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewO
         let keyString = parameters.rawKey?.hexEncodedString()
         view.set(key: keyString)
         view.set(status:"\(keyString?.count ?? 0) of \(parameters.keySize * 2)")
-    }
-    
-    func setQRFinished() {
-        router.pop()
     }
 }

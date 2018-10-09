@@ -11,6 +11,5 @@ import Foundation
 protocol SDPSaltModuleInteractorInput {
 
     func requestData()
-    func subscribeForSaltClipboard()
     func set(salt:String?)
 }

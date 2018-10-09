@@ -11,7 +11,5 @@ import UIKit
 protocol SDPSaltModuleViewOutput: UITextFieldDelegate {
     
     func viewIsReady()
-    
     func generateRandomSalt()
-    func scanSaltFromQR()
 }

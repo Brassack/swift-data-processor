@@ -22,7 +22,6 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     
     var stores = SDPReduxStores.shared
     
-    private var saltSubscriber: SDPMapStoreSubscriberObject?
     private var argon2ParametersSubscriber: SDPMapStoreSubscriberObject?
     
     
@@ -41,33 +40,9 @@ class SDPHashesInteractor: SDPHashesInteractorInput, StoreSubscriber {
     }
     
     // MARK: SDPHashesInteractorInput
-    func unsubscribeFromSaltClipboard() {
-        saltSubscriber = nil
-    }
     
     func unsubscribeFromArgon2Clipboard() {
         argon2ParametersSubscriber = nil
-    }
-    
-    func subscribeForSaltClipboard() {
-        
-        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPHashesInteractor.saltKey)
-        stores.mapStore.dispatch(action)
-        
-        saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPHashesInteractor.saltKey, newStateBlock: { [weak self] (maybeText) in
-            
-            guard let text = maybeText as? String else {
-                return
-            }
-            
-            self?.output.setScanned(salt: text)
-            self?.saltSubscriber = nil
-            
-            DispatchQueue.main.async {
-                let action = SDPMapStateWriteAction(key: SDPHashesInteractor.saltKey, value: nil)
-                self?.stores.mapStore.dispatch(action)
-            }
-        })
     }
     
     func setupAndSubscripeToArgon2Parameters() {

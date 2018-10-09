@@ -10,8 +10,6 @@ import UIKit
 
 protocol SDPPasswordBasedKeyRouterInput {
 
-    func pop()
-    func scanQR()
     func showSaltView(intoView: UIView, forParent: UIViewController)
     func share(data: Data)
 }

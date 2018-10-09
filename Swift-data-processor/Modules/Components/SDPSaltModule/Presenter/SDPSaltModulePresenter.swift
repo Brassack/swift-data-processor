@@ -20,11 +20,6 @@ class SDPSaltModulePresenter:NSObject, SDPSaltModuleModuleInput, SDPSaltModuleVi
         interactor.requestData()
     }
     
-    func setQRFinished() {
-        
-        router.pop()
-    }
-    
     func set(salt: String?) {
         guard self.salt != salt else {
             return
@@ -39,12 +34,6 @@ class SDPSaltModulePresenter:NSObject, SDPSaltModuleModuleInput, SDPSaltModuleVi
         
         let salt = SDPRandom.randomSalt()
         interactor.set(salt: salt)
-    }
-    
-    func scanSaltFromQR() {
-        
-        interactor.subscribeForSaltClipboard()
-        router.scanQR()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {

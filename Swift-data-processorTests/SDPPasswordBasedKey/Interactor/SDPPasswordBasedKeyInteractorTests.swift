@@ -24,9 +24,5 @@ class SDPPasswordBasedKeyInteractorTests: XCTestCase {
         func set(parameters: SDPEncryptionParameters) {
             //TODO: set(parameters:)
         }
-        
-        func setQRFinished() {
-            //TODO: setQRFinished
-        }
     }
 }

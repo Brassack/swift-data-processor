@@ -15,7 +15,6 @@ protocol SDPHashesViewOutput {
     func set(iterationsTextFieldTag: Int, saltTextFielTag: Int)
     
     func generateRandomSalt()
-    func scanSaltFromQR()
     func setupArgon2Parameters()
     
     func shareHash(atIndexPath indexPath: IndexPath)

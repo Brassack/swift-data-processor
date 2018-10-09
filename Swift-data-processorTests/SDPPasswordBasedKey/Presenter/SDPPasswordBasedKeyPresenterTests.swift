@@ -24,33 +24,19 @@ class SDPPasswordBasedKeyPresenterTest: XCTestCase {
         func requestData() {
             //TODO: requestData
         }
-        
-        func subscribeForSaltClipboard() {
-            //TODO: subscribeForSaltClipboard
-        }
-        
+
         func set(parameters: SDPEncryptionParameters?) {
             //TODO: set(parameters:)
         }
-        
-
     }
 
     class MockRouter: SDPPasswordBasedKeyRouterInput {
-        func pop() {
-            //TODO: pop
-        }
-        
-        func scanQR() {
-            //TODO: scanQR
+        func share(data: Data) {
+            //TODO: share(data:)
         }
         
         func showSaltView(intoView: UIView, forParent: UIViewController) {
             //TODO: showSaltView(intoView: forParent:)
-        }
-        
-        func share(text: String) {
-            //TODO: share(text:)
         }
     }
 

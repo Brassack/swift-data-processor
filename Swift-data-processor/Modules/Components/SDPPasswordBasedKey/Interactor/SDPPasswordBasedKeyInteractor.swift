@@ -12,39 +12,9 @@ class SDPPasswordBasedKeyInteractor: SDPPasswordBasedKeyInteractorInput, StoreSu
     static let passwordKey = "SDPPasswordBasedKeyInteractorPassword"
     
     weak var output: SDPPasswordBasedKeyInteractorOutput!
-    var stores = SDPReduxStores.shared
-    
-    var saltSubscriber: SDPMapStoreSubscriberObject?
+    var stores = SDPReduxStores.shared    
 
     // MARK: SDPPasswordBasedKeyInteractorInput
-    func subscribeForSaltClipboard() {
-        
-        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPPasswordBasedKeyInteractor.passwordKey)
-        stores.mapStore.dispatch(action)
-        
-        saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPPasswordBasedKeyInteractor.passwordKey, newStateBlock: { [weak self] (maybeText) in
-            
-            guard let text = maybeText as? String else {
-                return
-            }
-            
-            self?.output.setQRFinished()
-            self?.saltSubscriber = nil
-            
-            DispatchQueue.main.async {
-                let action = SDPMapStateWriteAction(key: SDPPasswordBasedKeyInteractor.passwordKey, value: nil)
-                self?.stores.mapStore.dispatch(action)
-                
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
-                    
-                    parameters.password = text
-                    let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
-                    self?.stores.mapStore.dispatch(action)
-                }
-            }
-        })
-    }
-    
     func requestData() {
         stores.mapStore.subscribe(self)
     }

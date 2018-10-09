@@ -29,11 +29,6 @@ class SDPPasswordBasedKeyViewController: UIViewController, SDPPasswordBasedKeyVi
         output.shareRawKey()
     }
 
-    @IBAction func qr(_ sender: Any) {
-        
-        output.scanSaltFromQR()
-    }
-    
     // MARK: SDPPasswordBasedKeyViewInput
     func setupInitialState() {
         

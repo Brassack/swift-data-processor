@@ -23,12 +23,6 @@ class SDPRawKeyModuleInteractorTests: XCTestCase {
     class MockPresenter: SDPRawKeyModuleInteractorOutput {
         func set(parameters: SDPEncryptionParameters) {
             //TODO: set(parameterd:)
-        }
-        
-        func setQRFinished() {
-            //TODO: setQRFinished
-        }
-        
-
+        }    
     }
 }

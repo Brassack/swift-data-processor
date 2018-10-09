@@ -12,7 +12,6 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
     static let saltKey = "SDPSaltModuleInteractorSaltKey"
     weak var output: SDPSaltModuleInteractorOutput!
     var stores = SDPReduxStores.shared
-    var saltSubscriber: SDPMapStoreSubscriberObject?
     
     // MARK: SDPSaltModuleInteractorInput
     func requestData() {
@@ -27,38 +26,6 @@ class SDPSaltModuleInteractor: SDPSaltModuleInteractorInput, StoreSubscriber {
         }
         
         output.set(salt: parameters.salt)
-    }
-    
-    
-    func subscribeForSaltClipboard() {
-        
-        let action = SDPMapStateWriteAction(key: SDPQRScannerModuleVariables.qrScannerWriteKey, value: SDPSaltModuleInteractor.saltKey)
-        stores.mapStore.dispatch(action)
-        
-        saltSubscriber = SDPMapStoreSubscriberObject(mapStore: stores.mapStore, key: SDPSaltModuleInteractor.saltKey, newStateBlock: { [weak self] (maybeText) in
-            
-            guard let text = maybeText as? String else {
-                return
-            }
-
-            self?.output.setQRFinished()
-            self?.saltSubscriber = nil
-            
-
-
-            
-            DispatchQueue.main.async {
-                let action = SDPMapStateWriteAction(key: SDPSaltModuleInteractor.saltKey, value: nil)
-                self?.stores.mapStore.dispatch(action)
-                
-                if var parameters = self?.stores.mapStore.state.map[SDPEncryptionParametersVariables.encryptionParametersKey] as? SDPEncryptionParameters {
-                    
-                    parameters.salt = text
-                    let action = SDPMapStateWriteAction(key: SDPEncryptionParametersVariables.encryptionParametersKey, value: parameters)
-                    self?.stores.mapStore.dispatch(action)
-                }
-            }
-        })
     }
     
     func set(salt: String?) {

@@ -20,8 +20,6 @@ class SDPSaltModuleConfigurator {
     private func configure(viewController: SDPSaltModuleViewController) {
 
         let router = SDPSaltModuleRouter()
-        router.qrStoryboard = UIStoryboard.components
-        router.actionsStoryboard = UIStoryboard.actions
 
         let presenter = SDPSaltModulePresenter()
         presenter.view = viewController

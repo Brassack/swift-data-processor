@@ -22,10 +22,6 @@ class SDPHashesInteractorTests: XCTestCase {
 
     class MockPresenter: SDPHashesInteractorOutput {
         
-        func setScanned(salt: String?) {
-            //TODO: setScanned(salt:)
-        }
-        
         func set(stubData: [SDPTableViewDataSourceSection]?) {
             //TODO: set(stubData:)
         }

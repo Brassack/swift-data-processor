@@ -11,5 +11,4 @@ import Foundation
 protocol SDPRawKeyModuleInteractorOutput: class {
 
     func set(parameters:SDPEncryptionParameters)
-    func setQRFinished()
 }

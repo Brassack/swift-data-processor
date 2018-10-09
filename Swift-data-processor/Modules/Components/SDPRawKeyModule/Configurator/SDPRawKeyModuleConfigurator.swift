@@ -20,8 +20,7 @@ class SDPRawKeyModuleModuleConfigurator {
     private func configure(viewController: SDPRawKeyModuleViewController) {
 
         let router = SDPRawKeyModuleRouter()
-        router.qrStoryboard = UIStoryboard.components
-        router.actionsStoryboard = UIStoryboard.actions
+
 
         let presenter = SDPRawKeyModulePresenter()
         presenter.view = viewController

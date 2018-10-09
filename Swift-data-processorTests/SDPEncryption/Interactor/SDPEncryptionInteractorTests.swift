@@ -29,10 +29,6 @@ class SDPEncryptionInteractorTests: XCTestCase {
             //TODO: add set(data:)
         }
         
-        func set(isEncoding: Bool) {
-            //TODO: add set(isEncoding:)
-        }
-        
         func set(parameters: SDPEncryptionParameters?) {
             //TODO: add set(parameters:)
         }

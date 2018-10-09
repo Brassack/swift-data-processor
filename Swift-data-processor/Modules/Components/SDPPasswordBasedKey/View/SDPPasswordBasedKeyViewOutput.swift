@@ -11,6 +11,5 @@ import UIKit
 protocol SDPPasswordBasedKeyViewOutput: UITextFieldDelegate {
 
     func viewIsReady(saltContainerView: UIView)
-    func scanSaltFromQR()
     func shareRawKey()
 }

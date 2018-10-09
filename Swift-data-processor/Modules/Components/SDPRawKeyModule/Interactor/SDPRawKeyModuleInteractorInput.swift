@@ -11,6 +11,5 @@ import Foundation
 protocol SDPRawKeyModuleInteractorInput {
 
     func requestData()
-    func subscribeForQRClipboard()
     func set(key: Data?)
 }

@@ -25,23 +25,13 @@ class SDPSaltViewPresenterTest: XCTestCase {
             //TODO: setQRFinished
         }
         
-        func subscribeForSaltClipboard() {
-            //TODO: subscribeForSaltClipboard
-        }
-        
         func set(salt: String?) {
             //TODO: set(salt:)
         }
     }
 
     class MockRouter: SDPSaltModuleRouterInput {
-        func pop() {
-            //TODO: pop
-        }
-        
-        func scanQR() {
-            //TODO: scanQR
-        }
+
     }
 
     class MockViewController: SDPSaltModuleViewInput {

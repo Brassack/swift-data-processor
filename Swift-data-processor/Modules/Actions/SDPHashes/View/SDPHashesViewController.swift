@@ -45,10 +45,6 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         output.setupArgon2Parameters()
     }
     
-    @IBAction func qr(_ sender: Any) {
-        output.scanSaltFromQR()
-    }
-    
     // MARK: SDPHashesViewInput
     func showError(forTextField textField: Any?, fallbackValue: String?) {
         guard let textField = textField as? UITextField else {

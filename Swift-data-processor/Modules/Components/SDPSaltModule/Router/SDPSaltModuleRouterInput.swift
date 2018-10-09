@@ -10,6 +10,4 @@ import UIKit
 
 protocol SDPSaltModuleRouterInput {
 
-    func pop()
-    func scanQR()
 }

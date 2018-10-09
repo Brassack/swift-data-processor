@@ -11,5 +11,4 @@ import Foundation
 protocol SDPSaltModuleInteractorOutput: class {
 
     func set(salt: String?)
-    func setQRFinished()
 }

@@ -74,11 +74,6 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
         view.set(salt: salt)
     }
     
-    func scanSaltFromQR() {
-        interactor.subscribeForSaltClipboard()
-        router.scanQR()
-    }
-    
     func set(salt: String?) {
         hashParameters.salt = salt
         interactor.requestData(hashParameters)
@@ -92,23 +87,10 @@ class SDPHashesPresenter:NSObject, SDPHashesModuleInput, SDPHashesViewOutput, SD
     
     func viewWillBePresented() {
         view.prepareForScreen()
-        interactor.unsubscribeFromSaltClipboard()
         interactor.setupAndSubscripeToArgon2Parameters()
     }
     
     // MARK: SDPHashesInteractorOutput
-    
-    func setScanned(salt: String?) {
-        
-        if let vc = view as? UIViewController {
-            router.returnTo(view: vc)
-        }
-        
-        hashParameters.salt = salt
-        interactor.requestData(hashParameters)
-        view.set(salt: salt)
-    }
-    
     func set(stubData: [SDPTableViewDataSourceSection]?) {
         guard let stubData = stubData else {
             return

@@ -36,11 +36,6 @@ class SDPPasswordBasedKeyPresenter:NSObject, SDPPasswordBasedKeyModuleInput, SDP
     }
     
     //MARK:SDPPasswordBasedKeyInteractorOutput
-    func setQRFinished() {
-        
-        router.pop()
-    }
-    
     func set(parameters: SDPEncryptionParameters) {
         
         self.parameters = parameters
@@ -54,11 +49,4 @@ class SDPPasswordBasedKeyPresenter:NSObject, SDPPasswordBasedKeyModuleInput, SDP
         parameters?.password = textField.text
         interactor.set(parameters: parameters)
     }
-    
-    func scanSaltFromQR() {
-        
-        interactor.subscribeForSaltClipboard()
-        router.scanQR()
-    }
-
 }

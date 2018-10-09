@@ -26,10 +26,6 @@ class SDPSaltModuleViewController: UIViewController, SDPSaltModuleViewInput {
         output.generateRandomSalt()
     }
     
-    @IBAction func qr(_ sender: Any) {
-        output.scanSaltFromQR()
-    }
-
     // MARK: SDPSaltModuleViewInput
     func set(salt: String?) {
         

@@ -23,20 +23,6 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
         navigationController = state.navigationController
     }
 
-    func returnTo(view: UIViewController) {
-        navigationController?.popToViewController(view, animated: true)
-    }
-    
-    func scanQR() {
-        let vc = qrStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerModuleViewController.self))
-        
-        if let vc = vc as? SDPViewExternalConfiguratorProtocol{
-            vc.externalConfigurator = SDPQRScannerModuleViewBackButtonExternalConfigurator()
-        }
-
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
     func argon2Parameters() {
         
         let popup = SDPArgon2ParametersPopupModuleBuilder.buildArgon2ParametersPopup {[weak self] in
@@ -47,8 +33,6 @@ class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
         
         navigationController?.present(popup.viewController, animated: true, completion: nil)
     }
-    
-    
 
     func share(hash: String){
         

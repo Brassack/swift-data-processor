@@ -31,20 +31,6 @@ class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber
         parent.configureChildViewController(childController: vc, onView: intoView)
     }
     
-    func pop() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    func scanQR() {
-        let vc = componentStoryboard.instantiateViewController(withIdentifier: String(describing: SDPQRScannerModuleViewController.self))
-        
-        if let vc = vc as? SDPViewExternalConfiguratorProtocol{
-            vc.externalConfigurator = SDPQRScannerModuleViewBackButtonExternalConfigurator()
-        }
-        
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
     func share(data: Data){
         
         SDPSharingPresenter().share(data: data)

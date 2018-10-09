@@ -8,5 +8,4 @@
 
 protocol SDPHashesModuleInput: class {
 
-    var router: SDPHashesRouterInput! {get set}
 }

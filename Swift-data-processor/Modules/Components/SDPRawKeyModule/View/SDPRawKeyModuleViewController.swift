@@ -28,11 +28,6 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput,
         output.generateRandomKey()
     }
     
-    @IBAction func qr(_ sender: Any) {
-        
-        output.scanFromQR()
-    }
-    
     // MARK: SDPRawKeyModuleViewInput
     func set(key: String?) {
         

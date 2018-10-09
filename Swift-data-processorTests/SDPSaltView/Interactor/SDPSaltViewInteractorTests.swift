@@ -24,9 +24,5 @@ class SDPSaltViewInteractorTests: XCTestCase {
         func set(salt: String?) {
             //TODO: set(salt:)
         }
-        
-        func setQRFinished() {
-            //TODO: setQRFinished
-        }
     }
 }

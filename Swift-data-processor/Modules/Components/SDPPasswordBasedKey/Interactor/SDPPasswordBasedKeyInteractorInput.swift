@@ -11,6 +11,5 @@ import Foundation
 protocol SDPPasswordBasedKeyInteractorInput {
 
     func requestData()
-    func subscribeForSaltClipboard()
     func set(parameters: SDPEncryptionParameters?)
 }

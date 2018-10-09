@@ -24,11 +24,7 @@ class SDPRawKeyModulePresenterTest: XCTestCase {
         func requestData() {
             //TODO: requestData
         }
-        
-        func subscribeForQRClipboard() {
-            //TODO: subscribeForQRClipboard
-        }
-        
+    
         func set(key: Data?) {
             //TODO: set(key:)
         }
@@ -37,13 +33,7 @@ class SDPRawKeyModulePresenterTest: XCTestCase {
     }
 
     class MockRouter: SDPRawKeyModuleRouterInput {
-        func pop() {
-            //TODO: pop
-        }
-        
-        func scanQR() {
-            //TODO: scanQR
-        }
+
     }
 
     class MockViewController: SDPRawKeyModuleViewInput {

@@ -11,5 +11,4 @@ import Foundation
 protocol SDPPasswordBasedKeyInteractorOutput: class {
 
     func set(parameters:SDPEncryptionParameters)
-    func setQRFinished()
 }

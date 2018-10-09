@@ -12,7 +12,5 @@ protocol SDPHashesInteractorInput {
     
     func setupAndSubscripeToArgon2Parameters()
     func unsubscribeFromArgon2Clipboard()
-    func unsubscribeFromSaltClipboard()
-    func subscribeForSaltClipboard()
     func requestData(_:(iterations: Int, salt: String?))
 }
