@@ -10,8 +10,6 @@ import ReSwift
 class SDPHashesRouter: SDPHashesRouterInput, StoreSubscriber {
 
     weak var navigationController : UINavigationController?
-    var qrStoryboard: UIStoryboard!
-    var actionsStoryboard: UIStoryboard!
     var popupReference: Any?
     var stores = SDPReduxStores.shared
     

@@ -20,8 +20,6 @@ class SDPHashesModuleConfigurator {
     private func configure(viewController: SDPHashesViewController) {
 
         let router = SDPHashesRouter()
-        router.qrStoryboard = UIStoryboard.components
-        router.actionsStoryboard = UIStoryboard.actions
 
         let presenter = SDPHashesPresenter()
         presenter.view = viewController
