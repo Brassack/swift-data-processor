@@ -30,8 +30,8 @@ class SDPPasswordBasedKeyPresenter:NSObject, SDPPasswordBasedKeyModuleInput, SDP
     
     func shareRawKey(){
         
-        if let key = parameters?.computedRawKey?.hexEncodedString() {
-            router.share(text: key)
+        if let key = parameters?.computedRawKey {
+            router.share(data: key)
         }
     }
     

@@ -13,5 +13,5 @@ protocol SDPPasswordBasedKeyRouterInput {
     func pop()
     func scanQR()
     func showSaltView(intoView: UIView, forParent: UIViewController)
-    func share(text: String)
+    func share(data: Data)
 }

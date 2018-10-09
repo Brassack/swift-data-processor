@@ -45,8 +45,8 @@ class SDPPasswordBasedKeyRouter: SDPPasswordBasedKeyRouterInput, StoreSubscriber
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func share(text: String){
+    func share(data: Data){
         
-        SDPSharingPresenter().share(string: text)
+        SDPSharingPresenter().share(data: data)
     }
 }
