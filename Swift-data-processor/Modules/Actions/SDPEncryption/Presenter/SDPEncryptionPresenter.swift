@@ -61,10 +61,14 @@ class SDPEncryptionPresenter: SDPEncryptionModuleInput, SDPEncryptionViewOutput,
             view.set(state: .message("Please enter the key"))
             return
         }
-        
         guard let parameters = parameters else {
             
             view.set(state: .message("Somethig went wrong"))
+            return
+        }
+        guard key.count == parameters.keySize else {
+            
+            view.set(state: .message("Invalid key size"))
             return
         }
         
