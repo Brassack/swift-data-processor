@@ -16,7 +16,7 @@ class SDPEncryptionKeyGenerator {
         var keyData = Data(count: size)
 
         let result = keyData.withUnsafeMutableBytes {
-            SecRandomCopyBytes(kSecRandomDefault, 32, $0)
+            SecRandomCopyBytes(kSecRandomDefault, size, $0)
         }
         
         if result == errSecSuccess {
