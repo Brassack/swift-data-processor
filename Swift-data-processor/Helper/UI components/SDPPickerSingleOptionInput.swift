@@ -77,6 +77,10 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
         return true
     }
     
+    override func caretRect(for position: UITextPosition) -> CGRect {
+        return CGRect.zero
+    }
+    
     //MARK: UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
