@@ -11,6 +11,8 @@ import UIKit
 public typealias SDPTableViewCellExternalConfigurator = (UITableViewCell, Any) -> Void
 
 protocol SDPTableViewCellConfigurable {
+    
+    var indexPath: IndexPath? {get set}//In some cases tableView index method fail
     var externalConfigurator: SDPTableViewCellExternalConfigurator? {get set}
     func configure(object: Any)
 }

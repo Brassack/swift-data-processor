@@ -22,4 +22,7 @@ extension UIStoryboard {
         return UIStoryboard(name: "Components", bundle: nil)
     }}
     
+    class var randomComponents: UIStoryboard {get{
+        return UIStoryboard(name: "RandomComponents", bundle: nil)
+    }}
 }

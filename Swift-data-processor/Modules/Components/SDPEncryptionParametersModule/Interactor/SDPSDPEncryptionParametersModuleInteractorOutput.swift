@@ -1,5 +1,5 @@
 //
-//  SDPSDPEncryptionParametersModuleSDPSDPEncryptionParametersModuleInteractorOutput.swift
+//  SDPPEncryptionParametersModuleSDPPEncryptionParametersModuleInteractorOutput.swift
 //  Swift-data-processor
 //
 //  Created by Dmytro Platov on 08/10/2018.

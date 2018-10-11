@@ -22,4 +22,9 @@ class SDPReduxStores {
         reducer: SDPMapStore.mapReducer,
         state: nil
     )
+    
+    var randomStore = SDPRandomParametersStore(
+        reducer: SDPRandomParametersStore.stateReducer,
+        state: nil
+    )
 }

@@ -264,44 +264,53 @@
             </objects>
             <point key="canvasLocation" x="-318" y="-340"/>
         </scene>
-        <!--RANDOM-->
+        <!--Sdprandommodule View Controller-->
         <scene sceneID="c5f-5t-5VC">
             <objects>
-                <viewController title="RANDOM" id="CKa-Ta-Unj" sceneMemberID="viewController">
+                <viewController title="RANDOM" id="CKa-Ta-Unj" customClass="SDPRandomModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MsZ-aE-k78">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-QK-jzO">
-                                <rect key="frame" x="0.0" y="28" width="320" height="284"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="227"/>
                                 <connections>
-                                    <segue destination="cgZ-0I-6z7" kind="embed" id="BTE-35-PgF"/>
+                                    <segue destination="cgZ-0I-6z7" kind="embed" identifier="SDPRandomTypePageControllersContainer" id="BTE-35-PgF"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EYI-mj-4gK">
-                                <rect key="frame" x="64.5" y="319" width="191" height="29"/>
+                                <rect key="frame" x="64.5" y="271" width="191" height="29"/>
                                 <segments>
                                     <segment title="Number"/>
                                     <segment title="String"/>
                                     <segment title="Binary"/>
                                 </segments>
+                                <connections>
+                                    <action selector="typeChanged:" destination="CKa-Ta-Unj" eventType="valueChanged" id="A6y-4Q-zr6"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="iXW-ro-FmL">
                                 <rect key="frame" x="93.5" y="453" width="133" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zif-dq-nIl">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Zif-dq-nIl" secondAttribute="height" id="jfF-EX-Vok"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="dice-icon"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-mm-JlH">
-                                        <rect key="frame" x="83" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xqq-mm-JlH" secondAttribute="height" id="HDY-CT-5Um"/>
                                         </constraints>
                                         <state key="normal" image="share-icon"/>
+                                        <connections>
+                                            <action selector="share:" destination="CKa-Ta-Unj" eventType="touchUpInside" id="PIm-hc-g6a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zif-dq-nIl">
+                                        <rect key="frame" x="83" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Zif-dq-nIl" secondAttribute="height" id="jfF-EX-Vok"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="dice-icon"/>
+                                        <connections>
+                                            <action selector="random:" destination="CKa-Ta-Unj" eventType="touchUpInside" id="KpG-K5-ViO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -316,24 +325,31 @@
                             <constraint firstItem="iXW-ro-FmL" firstAttribute="bottom" secondItem="Kni-HD-6sr" secondAttribute="bottom" constant="-16" id="JEM-FH-d3L"/>
                             <constraint firstItem="H3m-QK-jzO" firstAttribute="trailing" secondItem="Kni-HD-6sr" secondAttribute="trailing" id="X7Q-nv-M5x"/>
                             <constraint firstItem="H3m-QK-jzO" firstAttribute="top" secondItem="Kni-HD-6sr" secondAttribute="top" constant="8" id="XBU-Mj-XFQ"/>
-                            <constraint firstItem="H3m-QK-jzO" firstAttribute="height" secondItem="MsZ-aE-k78" secondAttribute="height" multiplier="50:100" id="hdt-cc-Hwo"/>
+                            <constraint firstItem="H3m-QK-jzO" firstAttribute="height" secondItem="MsZ-aE-k78" secondAttribute="height" multiplier="40:100" id="hdt-cc-Hwo"/>
                             <constraint firstItem="H3m-QK-jzO" firstAttribute="leading" secondItem="Kni-HD-6sr" secondAttribute="leading" id="q02-Fb-zOJ"/>
-                            <constraint firstItem="EYI-mj-4gK" firstAttribute="top" secondItem="H3m-QK-jzO" secondAttribute="bottom" constant="7" id="yPT-yF-DH2"/>
+                            <constraint firstItem="EYI-mj-4gK" firstAttribute="top" secondItem="H3m-QK-jzO" secondAttribute="bottom" constant="16" id="yPT-yF-DH2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kni-HD-6sr"/>
                     </view>
                     <navigationItem key="navigationItem" title="TEXT" id="WV8-Sy-BbO"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="randomTypeSegmentView" destination="EYI-mj-4gK" id="1j1-ko-zsN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3v-ei-Mzk" sceneMemberID="firstResponder"/>
-                <customObject id="k2e-5e-0tN"/>
+                <customObject id="k2e-5e-0tN" customClass="SDPRandomModuleModuleInitializer" customModule="Swift_data_processor" customModuleProvider="target">
+                    <connections>
+                        <outlet property="sdprandommoduleViewController" destination="CKa-Ta-Unj" id="gTl-dT-F6K"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1584.375" y="-341.19718309859155"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="cVd-3f-JPg">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="cgZ-0I-6z7" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cgZ-0I-6z7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZL-rU-cHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2413" y="-341"/>

@@ -89,6 +89,8 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         if var cell = cell as? SDPTableViewCellConfigurable {
+            
+            cell.indexPath = indexPath
             cell.externalConfigurator = cellExternalConfigurator
             cell.configure(object: data[indexPath.section].rows[indexPath.row])
         }

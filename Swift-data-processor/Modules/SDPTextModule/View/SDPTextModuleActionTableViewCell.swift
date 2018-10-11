@@ -10,6 +10,7 @@ import UIKit
 
 class SDPTextModuleActionTableViewCell: UITableViewCell, SDPTableViewCellConfigurable {
     
+    var indexPath: IndexPath?
     var externalConfigurator: SDPTableViewCellExternalConfigurator?
     
     func configure(object: Any) {
