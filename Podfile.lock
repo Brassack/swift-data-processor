@@ -1,16 +1,20 @@
 PODS:
+  - NKOColorPickerView (0.5)
   - ReSwift (4.0.1)
 
 DEPENDENCIES:
+  - NKOColorPickerView
   - ReSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - NKOColorPickerView
     - ReSwift
 
 SPEC CHECKSUMS:
+  NKOColorPickerView: 895ca86fe5bd16f27c311ce8f5888907efee29ad
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
 
-PODFILE CHECKSUM: 53970b08dddf388721c9fab6148ed31ed0f1e7ec
+PODFILE CHECKSUM: f3219598ae492b31b0e73b79547d64de0de7dab3
 
 COCOAPODS: 1.5.3

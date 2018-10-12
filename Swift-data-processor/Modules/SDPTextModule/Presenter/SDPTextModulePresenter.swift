@@ -15,12 +15,25 @@ class SDPTextModulePresenter:NSObject, SDPTextModuleInput, SDPTextModuleViewOutp
     var interactor: SDPTextModuleInteractorInput!
     var router: SDPTextModuleRouterInput!
     
+    var themeObserver: Any?
+    
     var actions: [SDPTextModuleInteractor.SDPTextActionItem]?
+    
+    //MARK: lifecycle
+    deinit {
+        if let themeObserver = themeObserver {
+            NotificationCenter.default.removeObserver(themeObserver)
+        }
+    }
     
     // MARK: DPTextViewOutput
     func viewIsReady() {
         view.setupInitialState()
         router.registerNavigationController(forView: view)
+        
+        themeObserver = NotificationCenter.default.addObserver(forName: SDPThemeUpdatedNotification, object: nil, queue: nil) { [weak self] (notification) in
+            self?.view.updateTheme(theme: notification.object as? SDPApplicationTheme)
+        }
     }
     
     func viewWillBePresented(){

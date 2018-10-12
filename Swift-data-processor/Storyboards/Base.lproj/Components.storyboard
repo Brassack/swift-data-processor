@@ -226,6 +226,61 @@
             </objects>
             <point key="canvasLocation" x="1328.8" y="144.3778110944528"/>
         </scene>
+        <!--Credits Table View Controller-->
+        <scene sceneID="3bi-U0-1yT">
+            <objects>
+                <tableViewController storyboardIdentifier="SDPCreditsTableViewController" id="s0S-zm-cTv" customClass="SDPCreditsTableViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qwD-PJ-tZp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="uX4-0V-htK" customClass="SDPCreditsTableViewCell" customModule="Swift_data_processor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uX4-0V-htK" id="fJU-rZ-rGV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8C-Zf-sa2">
+                                            <rect key="frame" x="165.5" y="8" width="44.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-0N-9Ei">
+                                            <rect key="frame" x="8" y="44.5" width="359" height="59"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="W2z-0N-9Ei" firstAttribute="leading" secondItem="fJU-rZ-rGV" secondAttribute="leading" constant="8" id="8Go-wM-ufL"/>
+                                        <constraint firstAttribute="trailing" secondItem="W2z-0N-9Ei" secondAttribute="trailing" constant="8" id="Ik8-2q-b4z"/>
+                                        <constraint firstAttribute="bottom" secondItem="W2z-0N-9Ei" secondAttribute="bottom" constant="16" id="OYg-Zm-0l8"/>
+                                        <constraint firstItem="o8C-Zf-sa2" firstAttribute="centerX" secondItem="fJU-rZ-rGV" secondAttribute="centerX" id="cG5-0W-73P"/>
+                                        <constraint firstItem="o8C-Zf-sa2" firstAttribute="top" secondItem="fJU-rZ-rGV" secondAttribute="top" constant="8" id="iYM-wz-148"/>
+                                        <constraint firstItem="W2z-0N-9Ei" firstAttribute="top" secondItem="o8C-Zf-sa2" secondAttribute="bottom" constant="16" id="zqC-az-5Yg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="licenceLabel" destination="W2z-0N-9Ei" id="J5t-4U-z4D"/>
+                                    <outlet property="nameLabel" destination="o8C-Zf-sa2" id="Os3-IS-rXt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="s0S-zm-cTv" id="DFA-sO-Eev"/>
+                            <outlet property="delegate" destination="s0S-zm-cTv" id="pri-gI-8Id"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rD1-YA-jaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096.8000000000002" y="144.3778110944528"/>
+        </scene>
         <!--Qrscanner View Controller-->
         <scene sceneID="3n8-bZ-U5H">
             <objects>

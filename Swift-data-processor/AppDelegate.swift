@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        configurator.configureTheme(actionColor: UIColor(hex:0x177F01))
+        let colorNumber = UserDefaults.standard.object(forKey: SDPThemeDefaultsKey)
+        let colorHex = (colorNumber as? NSNumber)?.intValue ?? 0x177F01
+        configurator.configureTheme(actionColor: UIColor(hex:colorHex))
         configurator.configureMenu()
         
         return true

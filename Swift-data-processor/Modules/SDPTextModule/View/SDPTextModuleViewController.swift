@@ -33,6 +33,11 @@ class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
     }
     
     // MARK: TextViewInput
+    func updateTheme(theme: SDPApplicationTheme?){
+        
+        textView.borderColor = theme?.actionColor ?? UIColor(hex:0x177F01)
+    }
+    
     func setupInitialState() {
         
         let button = UIButton(type: .system)

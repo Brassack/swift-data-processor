@@ -14,4 +14,5 @@ protocol SDPTextModuleViewInput: class {
     func prepareForScreen()
     func set(text:String?)
     func refreshInputActionsState()
+    func updateTheme(theme: SDPApplicationTheme?)
 }

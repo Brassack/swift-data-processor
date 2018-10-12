@@ -8,6 +8,9 @@
 
 import UIKit
 
+let SDPThemeUpdatedNotification = Notification.Name("SDPThemeUpdatedNotification")
+let SDPThemeDefaultsKey = "SDPThemeDefaultsKey"
+
 class SDPApplicationConfigurator: NSObject {
     var theme: SDPApplicationTheme = SDPApplicationTheme()
     
@@ -22,6 +25,24 @@ class SDPApplicationConfigurator: NSObject {
         UITextField.appearance().tintColor = actionColor
         UITabBar.appearance().tintColor = actionColor
         UISwitch.appearance().onTintColor = actionColor
+        
+        if let view = UIApplication.shared.keyWindow?.rootViewController?.view, let superview = view.superview {
+            
+            view.removeFromSuperview()
+            superview.addSubview(view)
+        }
+        
+        UIApplication.shared.keyWindow?.makeKeyAndVisible()
+//        for window in UIApplication.shared.windows {
+//            let subviews = window.subviews as [UIView]
+//            for v in subviews {
+//
+//                v.removeFromSuperview()
+//                window.addSubview(v)
+//            }
+//        }
+        
+        NotificationCenter.default.post(name: SDPThemeUpdatedNotification, object: theme)
     }
     
     func configureMenu(){

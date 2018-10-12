@@ -8,53 +8,14 @@
 
 import UIKit
 
-
 public typealias SDPTableViewDataSourceRow = (identifier: String, isFailed: Bool, title: String, subtitle: String?)
 public typealias SDPTableViewDataSourceSection = (identifier: String, title: String?, rows: [SDPTableViewDataSourceRow])
 
-
 class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
     
-//    private var oldData: [SDPTableViewDataSourceSection]?
     var data: [SDPTableViewDataSourceSection] {
-//        willSet{
-//            oldData = data
-//        }
         didSet{
             tableView.reloadData()
-
-//            if let oldData = oldData {
-//
-//                tableView.beginUpdates()
-//
-//                for i in 0..<oldData.count {
-//                    let indexSet = IndexSet(integer: i)
-//                    let section = oldData[i]
-//
-//                    if data.count <= i {
-//                        tableView.deleteSections(indexSet, with: .fade)
-//                        break
-//                    }
-//
-//                    let oldSection = data[i]
-//
-//                    if oldSection.identifier == section.identifier {
-//                        tableView.reloadSections(indexSet, with: .fade)
-//                        break
-//                    }
-//
-//                    tableView.deleteSections(indexSet, with: .fade)
-//                    tableView.insertSections(indexSet, with: .fade)
-//                }
-//
-//                tableView.endUpdates()
-//
-//
-//            }else{
-//                tableView.reloadData()
-//            }
-//
-//            oldData = nil
         }
     }
     
@@ -62,6 +23,8 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
     let cellIdentifier: String
     let cellExternalConfigurator: SDPTableViewCellExternalConfigurator?
     
+    var themeObserver: Any?
+
     init(tableView: UITableView, data:[SDPTableViewDataSourceSection], cellIdentifier: String, cellExternalConfigurator: SDPTableViewCellExternalConfigurator?) {
         
         self.tableView = tableView
@@ -69,12 +32,23 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
         self.cellExternalConfigurator = cellExternalConfigurator
         
         self.data = data
+        
+        super.init()
+        
+        themeObserver = NotificationCenter.default.addObserver(forName: SDPThemeUpdatedNotification, object: nil, queue: nil) { [weak self] (notification) in
+            self?.tableView.reloadData()
+        }
     }
     
+    
+    deinit {
+        if let themeObserver = themeObserver {
+            NotificationCenter.default.removeObserver(themeObserver)
+        }
+    }
     // MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
-
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -97,5 +71,4 @@ class SDPOrdinaryTableViewDataSource: NSObject, UITableViewDataSource {
         
         return cell
     }
-    
 }

@@ -5,19 +5,16 @@ use_frameworks!
 target 'Swift-data-processor' do
 
   pod 'ReSwift'
+  pod 'NKOColorPickerView'
 
   target 'Swift-data-processorTests' do
   
     inherit! :search_paths
-    use_frameworks!
-    pod 'ReSwift'
   end
 
   target 'Swift-data-processorUITests' do
 
     inherit! :search_paths
-    use_frameworks!
-    pod 'ReSwift'
   end
 
 end

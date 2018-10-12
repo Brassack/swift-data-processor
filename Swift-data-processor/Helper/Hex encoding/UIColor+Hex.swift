@@ -26,4 +26,18 @@ extension UIColor {
             alpha: 255
         )
     }
+    
+    var hexValue:Int {
+        get{
+            var r: CGFloat = 0
+            var g: CGFloat = 0
+            var b: CGFloat = 0
+            var a: CGFloat = 0
+            getRed(&r, green: &g, blue: &b, alpha: &a)
+            
+            return (Int)(r*255)<<16 |
+                (Int)(g*255)<<8 |
+                (Int)(b*255)<<0
+        }
+    }
 }
