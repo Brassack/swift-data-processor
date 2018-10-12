@@ -213,6 +213,12 @@
 		3233B27F216CA57C005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */; };
 		3233B280216CA57D005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233B279216CA568005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift */; };
 		323518652164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323518642164ED230045B5BD /* SDPTextModuleActionTableViewCell.swift */; };
+		323B6BD921711FA900A66D98 /* SDPSettingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49708A505EDD031529985 /* SDPSettingModuleConfigurator.swift */; };
+		323B6BDA21711FA900A66D98 /* SDPSettingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49708A505EDD031529985 /* SDPSettingModuleConfigurator.swift */; };
+		323B6BDB21711FB000A66D98 /* SDPSettingModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF320124AC27C55793B65F /* SDPSettingModuleInitializer.swift */; };
+		323B6BDC21711FB100A66D98 /* SDPSettingModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF320124AC27C55793B65F /* SDPSettingModuleInitializer.swift */; };
+		323B6BDD2171201F00A66D98 /* SDPSettingModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548F4D99E3FAC6B52162B8 /* SDPSettingModuleRouter.swift */; };
+		323B6BDE2171201F00A66D98 /* SDPSettingModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E548F4D99E3FAC6B52162B8 /* SDPSettingModuleRouter.swift */; };
 		3242D0042163441800C4BDAC /* SDPSharingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D0032163441800C4BDAC /* SDPSharingPresenter.swift */; };
 		3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D00A216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift */; };
 		3242D03121636EB000C4BDAC /* UITextView+AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3242D03021636EB000C4BDAC /* UITextView+AssociatedObjects.swift */; };
@@ -4192,6 +4198,7 @@
 			files = (
 				32188A90216681B90033599F /* String+HexDecodedData.swift in Sources */,
 				3250D3792166772B003EEF66 /* SDPEncryptionViewOutput.swift in Sources */,
+				323B6BD921711FA900A66D98 /* SDPSettingModuleConfigurator.swift in Sources */,
 				320A1490216B9BC1008F0735 /* SDPSDPEncryptionParametersModuleInteractorOutput.swift in Sources */,
 				32188ABE2166822B0033599F /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */,
 				325C85EB216E767C0032CB98 /* SDPRandomNumberParameterModuleViewOutput.swift in Sources */,
@@ -4202,6 +4209,7 @@
 				3250D3832166773E003EEF66 /* SDPEncryptionInteractorOutput.swift in Sources */,
 				3250D3E021667807003EEF66 /* SDPTextModuleViewController.swift in Sources */,
 				325C8600216E76A10032CB98 /* SDPSDRandomNumberParameterModuleInitializer.swift in Sources */,
+				323B6BDD2171201F00A66D98 /* SDPSettingModuleRouter.swift in Sources */,
 				3250D3042166748F003EEF66 /* SDPQRScannerModuleInput.swift in Sources */,
 				32188A8E216681B40033599F /* UIColor+Hex.swift in Sources */,
 				3250D3FC216679D5003EEF66 /* SDPApplicationConfigurator.swift in Sources */,
@@ -4358,6 +4366,7 @@
 				3250D349216675F5003EEF66 /* SDPPasswordBasedKeyViewOutput.swift in Sources */,
 				321AB17B216CDE290061489B /* SDPSDRandomModuleInteractorInput.swift in Sources */,
 				3250D39D21667776003EEF66 /* SDPArgon2ParametersPopupInteractorOutput.swift in Sources */,
+				323B6BDB21711FB000A66D98 /* SDPSettingModuleInitializer.swift in Sources */,
 				3245E61A216F70A900FDF7FA /* SDPSDRandomBinaryParametersModuleViewOutput.swift in Sources */,
 				3245E63F217068AD00FDF7FA /* SDPSettingModuleInteractorInput.swift in Sources */,
 				32434F80217103A300A58D85 /* SDPCreditsTableViewController.swift in Sources */,
@@ -4656,6 +4665,7 @@
 				3250D38821667745003EEF66 /* SDPEncryptionRouterInput.swift in Sources */,
 				32188AD32166834C0033599F /* SDPArgon2Parameters.swift in Sources */,
 				32188AA9216681F70033599F /* CatCryptoExternalError.swift in Sources */,
+				323B6BDC21711FB100A66D98 /* SDPSettingModuleInitializer.swift in Sources */,
 				3250D3582166760B003EEF66 /* SDPPasswordBasedKeyRouterInput.swift in Sources */,
 				3250D335216675BA003EEF66 /* SDPRawKeyModuleConfigurator.swift in Sources */,
 				3245E61D216F70AE00FDF7FA /* SDPSDRandomBinaryParametersModuleModuleInput.swift in Sources */,
@@ -4770,6 +4780,7 @@
 				3250D40B216679F9003EEF66 /* SDPBase64GeneratingActivity.swift in Sources */,
 				32188AC7216682390033599F /* SDPOrdinaryTableViewDataSource.swift in Sources */,
 				3250D30E216674B7003EEF66 /* SDPQRScannerModuleRouterInput.swift in Sources */,
+				323B6BDE2171201F00A66D98 /* SDPSettingModuleRouter.swift in Sources */,
 				3250D347216675F2003EEF66 /* SDPPasswordBasedKeyViewInput.swift in Sources */,
 				3250D41721667A10003EEF66 /* UITextView+DoneButton.swift in Sources */,
 				3250D36421667621003EEF66 /* SDPEscapingModuleViewController.swift in Sources */,
@@ -4788,6 +4799,7 @@
 				3250D39421667767003EEF66 /* SDPArgon2ParametersPopupViewInput.swift in Sources */,
 				3250D35E21667614003EEF66 /* SDPPasswordBasedKeyInitializer.swift in Sources */,
 				325C85EA216E76790032CB98 /* SDPRandomNumberParameterModuleViewInput.swift in Sources */,
+				323B6BDA21711FA900A66D98 /* SDPSettingModuleConfigurator.swift in Sources */,
 				3250D3E621667822003EEF66 /* SDPTextModuleViewInput.swift in Sources */,
 				3245E61F216F70B100FDF7FA /* SDPSDRandomBinaryParametersModulePresenter.swift in Sources */,
 				3250D3A22166777D003EEF66 /* SDPArgon2ParametersPopupInteractorInput.swift in Sources */,
@@ -5034,7 +5046,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 228S3RU4UB;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Swift-data-processorTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5053,7 +5065,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 228S3RU4UB;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Swift-data-processorTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -5072,7 +5084,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 228S3RU4UB;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Swift-data-processorUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.testUITests;
@@ -5091,7 +5103,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 228S3RU4UB;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Swift-data-processorUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.testUITests;

@@ -25,13 +25,22 @@ class SDPSettingModulePresenterTest: XCTestCase {
     }
 
     class MockRouter: SDPSettingModuleRouterInput {
-
+        func showColorPicker(color: Any, completion: @escaping (Any) -> Void) {
+            //TODO: add showColorPicker(color:completion:)
+        }
+        
+        func showCredits() {
+            //TODO: add showCredits
+        }
     }
 
     class MockViewController: SDPSettingModuleViewInput {
+        func set(dataSource: SDPMulticlassTableViewDataSource?) {
+            //TODO: add set(dataSource:)
+        }
 
         func setupInitialState() {
-
+            //TODO: add setupInitialState
         }
     }
 }
