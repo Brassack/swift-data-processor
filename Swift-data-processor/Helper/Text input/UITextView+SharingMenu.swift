@@ -16,6 +16,17 @@ extension UITextView {
             return false
         }
 
+        var rootVC = UIApplication.shared.keyWindow?.rootViewController
+        while let presented = rootVC?.presentedViewController {
+            rootVC = presented
+        }
+        
+        let isAlertPresented = rootVC is UIAlertController
+        
+        if isAlertPresented, action == #selector(qrScan) {
+            return false
+        }
+        
         if isHexEncodedData {
             
             if action == #selector(shareBinary) {

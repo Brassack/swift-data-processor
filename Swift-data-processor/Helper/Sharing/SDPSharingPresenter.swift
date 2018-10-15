@@ -35,7 +35,9 @@ class SDPSharingPresenter {
             return
         }
         
-        let qrActivity = SDPQRGeneratingActivity(text: string, qrStoryboard: stroryboard)
+        let qrActivity = rootVC is UIAlertController ? nil
+                                                    : SDPQRGeneratingActivity(text: string, qrStoryboard: stroryboard)
+
         let activities = qrActivity == nil ? [] : [qrActivity!]
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: activities)
         activityViewController.popoverPresentationController?.sourceView = rootVC.view // so that iPads won't crash
@@ -49,7 +51,9 @@ class SDPSharingPresenter {
             return
         }
 
-        let base64Activity = SDPBase64GeneratingActivity(data: data)
+        let base64Activity = rootVC is UIAlertController ? nil
+                                                        : SDPBase64GeneratingActivity(data: data)
+
         let activities = base64Activity == nil ? [] : [base64Activity!]
         let activityViewController = UIActivityViewController(activityItems: [data], applicationActivities: activities)
         activityViewController.popoverPresentationController?.sourceView = rootVC.view // so that iPads won't crash

@@ -13,6 +13,21 @@ extension UITextField {
     
     @objc func _canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         
+        if action == #selector(_share) {
+            return false
+        }
+
+        var rootVC = UIApplication.shared.keyWindow?.rootViewController
+        while let presented = rootVC?.presentedViewController {
+            rootVC = presented
+        }
+        
+        let isAlertPresented = rootVC is UIAlertController
+
+        if isAlertPresented, action == #selector(qrScan) {
+            return false
+        }
+        
         if isHexEncodedData {
             
             if action == #selector(shareBinary) {
