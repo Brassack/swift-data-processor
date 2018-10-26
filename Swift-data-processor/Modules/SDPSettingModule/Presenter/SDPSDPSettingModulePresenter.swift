@@ -52,14 +52,10 @@ class SDPSettingModulePresenter:NSObject, SDPSettingModuleModuleInput, SDPSettin
             }
         case "github":
   
-            if let url = URL(string: "https://github.com/Brassack/swift-data-processor"),
-                UIApplication.shared.canOpenURL(url) {
-                
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
+            router.showSourceCode()
         case "appstore":
-            //TODO: add appstore when it will be ready
-            break
+            
+            router.showReview()
         case "credits":
             
             router.showCredits()

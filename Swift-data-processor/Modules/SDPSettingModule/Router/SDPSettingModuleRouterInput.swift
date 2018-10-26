@@ -12,4 +12,6 @@ protocol SDPSettingModuleRouterInput {
 
     func showColorPicker(color: Any, completion: @escaping (Any) -> Void)
     func showCredits()
+    func showReview()
+    func showSourceCode()
 }

@@ -6,9 +6,10 @@
 //  Copyright © 2018 Dmytro Platov. All rights reserved.
 //
 import UIKit
+//import StoreKit
 
 class SDPSettingModuleRouter: SDPSettingModuleRouterInput {
-
+    
     lazy var controllerForPresentation = UIApplication.shared.keyWindow?.rootViewController
     var completion: ((UIColor) -> Void)?
     var componentsStoryboard = UIStoryboard.components
@@ -42,6 +43,26 @@ class SDPSettingModuleRouter: SDPSettingModuleRouterInput {
         
         controllerForPresentation?.present(nc, animated: true, completion: nil)
     }
+    
+    func showSourceCode() {
+        
+        if let url = URL(string: "https://github.com/Brassack/swift-data-processor"),
+            UIApplication.shared.canOpenURL(url) {
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    func showReview() {
+        
+        guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id1440320812?action=write-review") else {
+            return
+        }
+        
+        UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
+//        SKStoreReviewController.requestReview()
+    }
+    
     //MARK: Color view controller helper
     @objc func colorSelected(){
         
@@ -61,4 +82,6 @@ class SDPSettingModuleRouter: SDPSettingModuleRouterInput {
             self?.completion = nil
         })
     }
+    
+    
 }
