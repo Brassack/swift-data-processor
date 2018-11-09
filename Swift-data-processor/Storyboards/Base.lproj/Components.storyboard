@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -280,6 +280,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD1-YA-jaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2096.8000000000002" y="144.3778110944528"/>
+        </scene>
+        <!--Sdpwalkthroughmodule View Controller-->
+        <scene sceneID="Ilb-8W-Qf9">
+            <objects>
+                <viewController storyboardIdentifier="SDPWalkthroughModuleViewController" id="UpU-rM-hqC" customClass="SDPWalkthroughModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5HY-Qr-Pnz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tj-dZ-7Rn">
+                                <rect key="frame" x="144.5" y="599" width="86" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Got it!"/>
+                                <connections>
+                                    <action selector="gotIt:" destination="UpU-rM-hqC" eventType="touchUpInside" id="K9D-Ea-f9g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Little things that make life more comfortable :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgY-uU-V6U">
+                                <rect key="frame" x="16" y="36" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACp-13-JW1">
+                                <rect key="frame" x="50" y="129" width="275" height="343"/>
+                                <connections>
+                                    <segue destination="eH2-AM-DNP" kind="embed" id="9rU-9z-Mdm"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-7B-A2Q">
+                                <rect key="frame" x="20" y="519" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9o3-lo-nck"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uw4-Lo-Afo">
+                                <rect key="frame" x="168" y="477" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ACp-13-JW1" firstAttribute="top" secondItem="VgY-uU-V6U" secondAttribute="bottom" constant="50" id="49K-mL-HmW"/>
+                            <constraint firstItem="Vif-7B-A2Q" firstAttribute="top" secondItem="uw4-Lo-Afo" secondAttribute="bottom" constant="5" id="4Ey-95-IlA"/>
+                            <constraint firstItem="coJ-bc-AYx" firstAttribute="trailing" secondItem="VgY-uU-V6U" secondAttribute="trailing" constant="16" id="DnY-fr-acS"/>
+                            <constraint firstItem="VgY-uU-V6U" firstAttribute="leading" secondItem="coJ-bc-AYx" secondAttribute="leading" constant="16" id="TOg-et-c8J"/>
+                            <constraint firstItem="8tj-dZ-7Rn" firstAttribute="centerX" secondItem="5HY-Qr-Pnz" secondAttribute="centerX" id="WFa-vg-SQl"/>
+                            <constraint firstItem="Vif-7B-A2Q" firstAttribute="leading" secondItem="coJ-bc-AYx" secondAttribute="leading" constant="20" id="XU2-m8-2de"/>
+                            <constraint firstItem="ACp-13-JW1" firstAttribute="leading" secondItem="coJ-bc-AYx" secondAttribute="leading" constant="50" id="btv-ZY-qBn"/>
+                            <constraint firstItem="8tj-dZ-7Rn" firstAttribute="top" secondItem="Vif-7B-A2Q" secondAttribute="bottom" constant="30" id="d0K-VD-VMN"/>
+                            <constraint firstItem="coJ-bc-AYx" firstAttribute="trailing" secondItem="Vif-7B-A2Q" secondAttribute="trailing" constant="20" id="j0b-Cq-xfz"/>
+                            <constraint firstItem="coJ-bc-AYx" firstAttribute="bottom" secondItem="8tj-dZ-7Rn" secondAttribute="bottom" constant="20" id="sVd-lK-hqe"/>
+                            <constraint firstItem="uw4-Lo-Afo" firstAttribute="centerX" secondItem="coJ-bc-AYx" secondAttribute="centerX" id="wG0-UE-qMU"/>
+                            <constraint firstItem="uw4-Lo-Afo" firstAttribute="top" secondItem="ACp-13-JW1" secondAttribute="bottom" constant="5" id="xnI-c0-WBI"/>
+                            <constraint firstItem="VgY-uU-V6U" firstAttribute="top" secondItem="coJ-bc-AYx" secondAttribute="top" constant="16" id="ydw-Cp-DcZ"/>
+                            <constraint firstItem="coJ-bc-AYx" firstAttribute="trailing" secondItem="ACp-13-JW1" secondAttribute="trailing" constant="50" id="z2Y-ya-9cO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="coJ-bc-AYx"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Vif-7B-A2Q" id="qiz-Br-9oQ"/>
+                        <outlet property="pagesController" destination="uw4-Lo-Afo" id="rgz-ZA-AxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQa-Fs-2pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XHU-xq-mI9" customClass="SDPWalkthroughModuleModuleInitializer" customModule="Swift_data_processor" customModuleProvider="target">
+                    <connections>
+                        <outlet property="sdpwalkthroughmoduleViewController" destination="UpU-rM-hqC" id="zR7-AK-qXe"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="3202.4000000000001" y="164.16791604197903"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="hvJ-bP-IUK">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eH2-AM-DNP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoN-eC-DhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3202" y="759"/>
         </scene>
         <!--Qrscanner View Controller-->
         <scene sceneID="3n8-bZ-U5H">

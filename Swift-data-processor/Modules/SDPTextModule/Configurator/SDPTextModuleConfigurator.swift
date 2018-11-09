@@ -20,6 +20,7 @@ class SDPTextModuleConfigurator {
             router.mainStoryboard = UIStoryboard.main
             router.qrStoryboard = UIStoryboard.components
             router.actionsStoryboard = UIStoryboard.actions
+            router.componentsStoryboard = UIStoryboard.components
             
             let presenter = SDPTextModulePresenter()
             presenter.view = viewController

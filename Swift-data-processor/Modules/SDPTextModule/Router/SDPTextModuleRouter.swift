@@ -14,6 +14,7 @@ class SDPTextModuleRouter: SDPTextModuleRouterInput {
     var mainStoryboard: UIStoryboard!
     var qrStoryboard: UIStoryboard!
     var actionsStoryboard: UIStoryboard!
+    var componentsStoryboard: UIStoryboard!
     
     // MARK: DPTextRouterInput
     func registerNavigationController(forView view: Any?) {
@@ -64,5 +65,12 @@ class SDPTextModuleRouter: SDPTextModuleRouterInput {
     
     func returnToRootController() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func showWalkthroughIfNeeded() {
+        if !UserDefaults.standard.bool(forKey: SDPWalkthroughAccepted) {
+            let vc = componentsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPWalkthroughModuleViewController.self))
+            navigationController?.present(vc, animated: false, completion: nil)
+        }
     }
 }

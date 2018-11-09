@@ -10,6 +10,7 @@
 		006533292FB7CC313F2F354D /* SDPSaltViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2246518353ED332F8F3268 /* SDPSaltViewInteractorTests.swift */; };
 		00ACEDFD4F7DF11EA1F5088E /* SDPSDRandomBinaryParametersModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFC0815BE956C884516BD2 /* SDPSDRandomBinaryParametersModuleViewOutput.swift */; };
 		00F20734E65E7CC0CDBC3E77 /* SDPRandomNumberParameterModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7B2B1F89F60FCABF88B2AA /* SDPRandomNumberParameterModulePresenter.swift */; };
+		027F10516F68D95E4F99A08B /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5717DA9FE9292CAB8CBBC3 /* SDPSDPWalkthroughModuleInteractorOutput.swift */; };
 		0390EB1A7B5C816C43C3B04B /* SDPSDRandomBinaryParametersModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76C974407536B9F6AE2806 /* SDPSDRandomBinaryParametersModuleRouterInput.swift */; };
 		03B3ABB1CC30C48A4BA0B689 /* SDPSDRandomModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63566468EE582A659E1AAF34 /* SDPSDRandomModuleInteractorOutput.swift */; };
 		047E815C982DCA4EB2E1B3DB /* SDPSettingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49708A505EDD031529985 /* SDPSettingModuleConfigurator.swift */; };
@@ -26,6 +27,7 @@
 		0DFE74F46F96AEC11F45A6EB /* SDPSDPEncryptionParametersModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CB6170A0BED0DE83498DA /* SDPSDPEncryptionParametersModuleInteractorOutput.swift */; };
 		1157DB8290495E6527A70B67 /* SDPPasswordBasedKeyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E24C72DAF69F7FBD943A5F /* SDPPasswordBasedKeyPresenter.swift */; };
 		11CD701DDCC5F8C4D11F7804 /* SDPEscapingModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C3BFD79273D14D4AD56B7 /* SDPEscapingModuleRouter.swift */; };
+		18C7D5B2F1D497A28BA97D34 /* SDPSDPWalkthroughModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8832FE5397598E1B326A013 /* SDPSDPWalkthroughModulePresenter.swift */; };
 		1AA90CC34923A34F3D2C22EB /* SDPSDRandomStringParameterModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7094FF87C846A53790EB049 /* SDPSDRandomStringParameterModulePresenterTests.swift */; };
 		1ECD1E956513292983C03D2B /* SDPEscapingModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CCEE32DF0A9A7B54BDA469 /* SDPEscapingModulePresenter.swift */; };
 		203FFCD99FDD83E61F60B9BE /* SDPSaltModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC289C8E129E80C4E14981 /* SDPSaltModuleRouterTests.swift */; };
@@ -34,6 +36,8 @@
 		2436985D7F6673BC69DD018D /* SDPSDPEncryptionParametersModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326439CA1641B3C0DEBCF38 /* SDPSDPEncryptionParametersModuleInteractorTests.swift */; };
 		25C7A4DB55AD03A5CE8A585D /* SDPEscapingModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F442D0C3BAC83D0CE31448D /* SDPEscapingModuleInteractorOutput.swift */; };
 		2772A858189F89D83872B310 /* SDPSDRandomBinaryParametersModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BDBD84DB09091FE635A873 /* SDPSDRandomBinaryParametersModuleModuleInput.swift */; };
+		27F98E65A5CA8551FA00FE4A /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716AAA201B1F66C76880DA6 /* SDPSDPWalkthroughModuleConfigurator.swift */; };
+		291E7571FFA0DE6F02F9DD0A /* SDPSDPWalkthroughModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4BD8F31D5A0E1323100C6 /* SDPSDPWalkthroughModuleInteractorTests.swift */; };
 		2BF52AE81FDC57911FFFD910 /* SDPPasswordBasedKeyConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C276C8DDBD2C1B74AC1FEA /* SDPPasswordBasedKeyConfiguratorTests.swift */; };
 		2DD544E39B0B662E1FBDE624 /* SDPSaltViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AF673F857E0E0A29B3621 /* SDPSaltViewPresenterTests.swift */; };
 		2E34AEEBC0BCE2E9A08CA5FB /* SDPEscapingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781F09BCF720DB5EA0EA7F6 /* SDPEscapingModuleConfigurator.swift */; };
@@ -695,6 +699,33 @@
 		3274556321084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */; };
 		3274556721084C400096AE75 /* SDPReduxStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556621084C400096AE75 /* SDPReduxStores.swift */; };
 		3274557021084EB60096AE75 /* UIStoryboard+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274556F21084EB60096AE75 /* UIStoryboard+App.swift */; };
+		327AD74D2190C473007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327AD74C2190C473007326B6 /* SDPWalkthroughModuleVariables.swift */; };
+		327AD74E2190C576007326B6 /* SDPSDPWalkthroughModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D03746F1C169203699F73 /* SDPSDPWalkthroughModuleViewInput.swift */; };
+		327AD74F2190C577007326B6 /* SDPSDPWalkthroughModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D03746F1C169203699F73 /* SDPSDPWalkthroughModuleViewInput.swift */; };
+		327AD7502190C579007326B6 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDCAB992E00AB88E083D47 /* SDPSDPWalkthroughModuleViewOutput.swift */; };
+		327AD7512190C57A007326B6 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDCAB992E00AB88E083D47 /* SDPSDPWalkthroughModuleViewOutput.swift */; };
+		327AD7522190C57C007326B6 /* SDPSDPWalkthroughModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817899263C44F08C65F849AC /* SDPSDPWalkthroughModuleViewController.swift */; };
+		327AD7532190C57D007326B6 /* SDPSDPWalkthroughModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817899263C44F08C65F849AC /* SDPSDPWalkthroughModuleViewController.swift */; };
+		327AD7542190C580007326B6 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFE0FDD74B13ED25B9E65D /* SDPSDPWalkthroughModuleModuleInput.swift */; };
+		327AD7552190C581007326B6 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFE0FDD74B13ED25B9E65D /* SDPSDPWalkthroughModuleModuleInput.swift */; };
+		327AD7562190C583007326B6 /* SDPSDPWalkthroughModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8832FE5397598E1B326A013 /* SDPSDPWalkthroughModulePresenter.swift */; };
+		327AD7572190C584007326B6 /* SDPSDPWalkthroughModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8832FE5397598E1B326A013 /* SDPSDPWalkthroughModulePresenter.swift */; };
+		327AD7582190C587007326B6 /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459E45C530F0CE25C77E554 /* SDPSDPWalkthroughModuleInteractorInput.swift */; };
+		327AD7592190C587007326B6 /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459E45C530F0CE25C77E554 /* SDPSDPWalkthroughModuleInteractorInput.swift */; };
+		327AD75A2190C58A007326B6 /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5717DA9FE9292CAB8CBBC3 /* SDPSDPWalkthroughModuleInteractorOutput.swift */; };
+		327AD75B2190C58A007326B6 /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5717DA9FE9292CAB8CBBC3 /* SDPSDPWalkthroughModuleInteractorOutput.swift */; };
+		327AD75C2190C58C007326B6 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9113F5D3089A88BE9A8BCE6 /* SDPSDPWalkthroughModuleInteractor.swift */; };
+		327AD75D2190C58D007326B6 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9113F5D3089A88BE9A8BCE6 /* SDPSDPWalkthroughModuleInteractor.swift */; };
+		327AD75E2190C590007326B6 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C31739BDDAE5451581ACEF /* SDPSDPWalkthroughModuleRouterInput.swift */; };
+		327AD75F2190C591007326B6 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C31739BDDAE5451581ACEF /* SDPSDPWalkthroughModuleRouterInput.swift */; };
+		327AD7602190C594007326B6 /* SDPSDPWalkthroughModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374CF06748B92F83B96B045 /* SDPSDPWalkthroughModuleRouter.swift */; };
+		327AD7612190C595007326B6 /* SDPSDPWalkthroughModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374CF06748B92F83B96B045 /* SDPSDPWalkthroughModuleRouter.swift */; };
+		327AD7622190C5A0007326B6 /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716AAA201B1F66C76880DA6 /* SDPSDPWalkthroughModuleConfigurator.swift */; };
+		327AD7632190C5A1007326B6 /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716AAA201B1F66C76880DA6 /* SDPSDPWalkthroughModuleConfigurator.swift */; };
+		327AD7642190C5A3007326B6 /* SDPSDPWalkthroughModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849BB32EDA968895F488F64 /* SDPSDPWalkthroughModuleInitializer.swift */; };
+		327AD7652190C5A4007326B6 /* SDPSDPWalkthroughModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849BB32EDA968895F488F64 /* SDPSDPWalkthroughModuleInitializer.swift */; };
+		327AD7662190C5A6007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327AD74C2190C473007326B6 /* SDPWalkthroughModuleVariables.swift */; };
+		327AD7672190C5A6007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327AD74C2190C473007326B6 /* SDPWalkthroughModuleVariables.swift */; };
 		327C33B221628FDD00F21888 /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */; };
 		327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */; };
 		327C33B92162A1EC00F21888 /* UITextField+SharingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */; };
@@ -716,6 +747,12 @@
 		3292224021517D1D009F4A0D /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292223F21517D1D009F4A0D /* UIViewController+ChildViewController.swift */; };
 		329C02C4215A668900ECCD3B /* SDPApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C02C3215A668900ECCD3B /* SDPApplicationTheme.swift */; };
 		329C02CB215A78A600ECCD3B /* String+HexDecodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C02CA215A78A600ECCD3B /* String+HexDecodedData.swift */; };
+		32A589E021920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589DF21920F1600FCD73A /* SDPPagesControllerDataSource.swift */; };
+		32A589E121920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589DF21920F1600FCD73A /* SDPPagesControllerDataSource.swift */; };
+		32A589E221920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589DF21920F1600FCD73A /* SDPPagesControllerDataSource.swift */; };
+		32A589E82192123B00FCD73A /* SDPImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589E72192123B00FCD73A /* SDPImageViewController.swift */; };
+		32A589E92192123B00FCD73A /* SDPImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589E72192123B00FCD73A /* SDPImageViewController.swift */; };
+		32A589EA2192123B00FCD73A /* SDPImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A589E72192123B00FCD73A /* SDPImageViewController.swift */; };
 		32A6F7F4A5DE2F2478D3F68C /* SDPSaltModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B784536F600779C10992E9 /* SDPSaltModuleViewOutput.swift */; };
 		32AB4BB82142CBCD0008D83E /* SDPCipherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB4BB72142CBCD0008D83E /* SDPCipherType.swift */; };
 		32AB4BBE2142CC010008D83E /* SDPCipherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB4BBD2142CC010008D83E /* SDPCipherFactory.swift */; };
@@ -751,10 +788,13 @@
 		3339E1A7B51953D6B59AD5DA /* SDPEscapingModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A1EDB1A3985B2B0AC36C7 /* SDPEscapingModuleInteractorTests.swift */; };
 		3579C99E1E2B44433193A247 /* SDPEncryptionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB4FD967E40D870A07973B /* SDPEncryptionPresenterTests.swift */; };
 		36FC454F66A6CA89C3A23842 /* SDPHashesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C7D707BCED2C12A3CE28F /* SDPHashesPresenterTests.swift */; };
+		376434AF87E8D6AD857A162E /* SDPSDPWalkthroughModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6E464483349B618210E0E /* SDPSDPWalkthroughModuleViewTests.swift */; };
 		37C14C13EDFF70C1D01477B3 /* SDPRawKeyModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0E346B19FA67696C8B2C0 /* SDPRawKeyModuleRouter.swift */; };
 		38264D15796D4CCA1B4B6E0B /* SDPHashesRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E82B0C36736D31531E7C9 /* SDPHashesRouterTests.swift */; };
+		392248E630B18E264C340335 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEDCAB992E00AB88E083D47 /* SDPSDPWalkthroughModuleViewOutput.swift */; };
 		3A62C0CE9146B72DC87B60E3 /* SDPArgon2ParametersPopupConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF593ACC1F4AFEB9A246FE9 /* SDPArgon2ParametersPopupConfiguratorTests.swift */; };
 		3B42C1AF7B962159686CD478 /* SDPSaltModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8419BD52D25038A8B470E /* SDPSaltModuleConfigurator.swift */; };
+		4030EAEACC3FE92C5CE38A5A /* SDPSDPWalkthroughModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849BB32EDA968895F488F64 /* SDPSDPWalkthroughModuleInitializer.swift */; };
 		411F061FA6A876A2E7D8D76C /* SDPEscapingModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318BD6192A51AF41727D8CC /* SDPEscapingModuleViewOutput.swift */; };
 		41289C717871BC9485531571 /* SDPSaltModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E562A2C0E325DCAFC7BEC84 /* SDPSaltModuleInteractor.swift */; };
 		427E55443023771D5AB741E3 /* SDPSDRandomStringParameterModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84802AE3FB24DBC95DD0456D /* SDPSDRandomStringParameterModuleInteractorInput.swift */; };
@@ -764,6 +804,7 @@
 		48DF657C5CB5A849023577FE /* SDPPasswordBasedKeyInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA46F9DA93B318ABF768BA /* SDPPasswordBasedKeyInteractorOutput.swift */; };
 		4C2B416E0446144B5C14943E /* SDPSettingModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251873B49D4D2D0BC698D0AB /* SDPSettingModuleRouterInput.swift */; };
 		4C40608CD1EA54F3178FF472 /* SDPSDRandomStringParameterModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82F546D7BA81BF11A83C3A /* SDPSDRandomStringParameterModuleConfiguratorTests.swift */; };
+		4E3D29F1299D22EE8FBEFDBB /* SDPSDPWalkthroughModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA716271C375408A61B73E4 /* SDPSDPWalkthroughModulePresenterTests.swift */; };
 		4E48BBD8B48BDDF88CC9FB9F /* SDPSDRandomModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716971AC89F6595962E5A81C /* SDPSDRandomModuleInitializer.swift */; };
 		4F16139E2C6DD4075F3BFC25 /* SDPEncryptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28566D1C788437E04C81A4A5 /* SDPEncryptionInteractor.swift */; };
 		50794C409F16E694E9957E61 /* SDPPasswordBasedKeyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535EE98C4682DF719DB50E /* SDPPasswordBasedKeyViewTests.swift */; };
@@ -775,6 +816,7 @@
 		596249CDC486915D0589EF1B /* SDPSaltViewViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE821C7B1C5C758E3C931C4 /* SDPSaltViewViewTests.swift */; };
 		5A01C9472949DBD6DECEF8A4 /* SDPSettingModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAD401393506D87007522E /* SDPSettingModuleModuleInput.swift */; };
 		5A562B966F2AE739120D00A7 /* SDPRandomStringParameterModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62B6A55E361BCD315AC4B93 /* SDPRandomStringParameterModuleInitializer.swift */; };
+		5A608A806EF2EB68905F8CAC /* SDPSDPWalkthroughModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817899263C44F08C65F849AC /* SDPSDPWalkthroughModuleViewController.swift */; };
 		5C58D3AE1AD9D49EB640B545 /* SDPSDRandomBinaryParametersModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563BD6E5C2B87297BB32D9AA /* SDPSDRandomBinaryParametersModuleInteractor.swift */; };
 		5D1EEE8B50F964235A32E0A8 /* SDPPasswordBasedKeyViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE873C9701A04187C819C0D /* SDPPasswordBasedKeyViewOutput.swift */; };
 		5EA381E6E0D4118CD7CA18ED /* SDPRawKeyModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E2D89B85F54ECF8265864 /* SDPRawKeyModuleInitializer.swift */; };
@@ -786,6 +828,8 @@
 		62AEA1C6F36D72B68CA426B5 /* SDPHashesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C405EEDAB3F71FC81650D05 /* SDPHashesInteractorTests.swift */; };
 		637C672826997623AA105BE4 /* SDPSDPEncryptionParametersModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A472C61235D82DD3A6D124 /* SDPSDPEncryptionParametersModuleViewOutput.swift */; };
 		64096C1F7AE376FC8A189693 /* SDPQRGeneratorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55AB72B7E2EA669804F9A2 /* SDPQRGeneratorPresenterTests.swift */; };
+		654B67FDAC01227AB887FDDB /* SDPSDPWalkthroughModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D03746F1C169203699F73 /* SDPSDPWalkthroughModuleViewInput.swift */; };
+		664088FDDC812D361BC0672B /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459E45C530F0CE25C77E554 /* SDPSDPWalkthroughModuleInteractorInput.swift */; };
 		6735FF0EC5FC92C685172A09 /* SDPEncryptionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B01E001825350A779C6350 /* SDPEncryptionRouterInput.swift */; };
 		67438643638C95CBC8033E30 /* SDPQRGeneratorRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7F0A35873B7AF853727A1 /* SDPQRGeneratorRouterTests.swift */; };
 		692E09DC7E188DC306003D61 /* SDPRawKeyModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506776E06E9E3FB19B46AFE /* SDPRawKeyModulePresenterTests.swift */; };
@@ -799,6 +843,7 @@
 		73540A7E73BEDDABA5BAA8DE /* SDPSaltModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902C9F6E7BC2601904996997 /* SDPSaltModuleRouter.swift */; };
 		74309945BBE22CD80F849F51 /* SDPSDPEncryptionParametersModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEA475EF4532BC0AD0D42F /* SDPSDPEncryptionParametersModulePresenter.swift */; };
 		7469AA9111E4EE8F35899470 /* SDPSDPSettingModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C150C1C7DF557FAF57A63236 /* SDPSDPSettingModuleRouterTests.swift */; };
+		74B47DA166667B094064DF4C /* SDPSDPWalkthroughModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB6C3E0954C716D6C28DE6E /* SDPSDPWalkthroughModuleConfiguratorTests.swift */; };
 		750FAE821E187188A2F22C74 /* SDPEncryptionInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B041DD8C76FC7131408575 /* SDPEncryptionInteractorInput.swift */; };
 		758FF2CE8A208FAB4D99EB31 /* SDPRandomNumberParameterModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BDC2E8AE948F7833687074 /* SDPRandomNumberParameterModuleInteractor.swift */; };
 		7822724626AB2CF4DD79EFC1 /* SDPSDPSettingModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D1F7D7DF357E84FD9977B /* SDPSDPSettingModuleInteractorTests.swift */; };
@@ -835,6 +880,7 @@
 		935E3E6A2434A9DC555AD851 /* SDPArgon2ParametersPopupInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C9E19CBB433C0E93A85D6 /* SDPArgon2ParametersPopupInteractorTests.swift */; };
 		94DB4D213F960892E770FF9D /* SDPRandomStringParameterModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82D7218B1F2C5ECE514BDC /* SDPRandomStringParameterModuleViewOutput.swift */; };
 		96DC0E4F839AF1438CFCA6D2 /* SDPSDPEncryptionParametersModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA6BC13C1A2D318991DD5F /* SDPSDPEncryptionParametersModuleRouter.swift */; };
+		971B7F7801B37719A46C1795 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C31739BDDAE5451581ACEF /* SDPSDPWalkthroughModuleRouterInput.swift */; };
 		9B99F00DC8AAD6AD294F84F8 /* SDPSDRandomModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F33A03C9276483284F2A65 /* SDPSDRandomModuleRouter.swift */; };
 		9D6BFCF3F6986343AF51E73B /* SDPRawKeyModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F610F818EDE5B41883FDF /* SDPRawKeyModuleRouterTests.swift */; };
 		9D71EF723CB4294DBE5BBEA2 /* SDPSaltModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8466D0E9B0EF72F1FCE2DEE0 /* SDPSaltModuleInteractorInput.swift */; };
@@ -862,10 +908,12 @@
 		BBA393D251AE5C512D54E74F /* SDPSDRandomModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C31066DF70EDCBD3879F4C /* SDPSDRandomModulePresenter.swift */; };
 		BD28700CC456FF6ED7D36169 /* SDPEncryptionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F8FDFB656D931646F0C52 /* SDPEncryptionRouter.swift */; };
 		BD9BECE153365F35D460EB4E /* SDPEncryptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040758D83827B3889E7995A /* SDPEncryptionPresenter.swift */; };
+		BE13379B2A241F4F86424F9C /* SDPSDPWalkthroughModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360B2B89C97A5D9C9060839C /* SDPSDPWalkthroughModuleRouterTests.swift */; };
 		BF76DB99C5D9AFF8D67C966B /* SDPEscapingModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA27EFFE39B6B71BF3AE7 /* SDPEscapingModuleRouterTests.swift */; };
 		C131EB453F19F9EB9EFEC37E /* SDPRawKeyModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33924BA1091EFEAF4565CBD /* SDPRawKeyModuleModuleInput.swift */; };
 		C1D03829CD566E846DBA8644 /* SDPRawKeyModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B3C54829911471F5241D6 /* SDPRawKeyModuleInteractor.swift */; };
 		C3C5368D78892FDBA85BA592 /* SDPSDPEncryptionParametersModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25ED11880D0E6FE007BC9A /* SDPSDPEncryptionParametersModuleModuleInput.swift */; };
+		C41508E90B4EFCF26C241B7C /* SDPSDPWalkthroughModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374CF06748B92F83B96B045 /* SDPSDPWalkthroughModuleRouter.swift */; };
 		C43957E613D3DE47C9CDE9C1 /* SDPPasswordBasedKeyRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE05AADC5FE45066AFA451C /* SDPPasswordBasedKeyRouterInput.swift */; };
 		C48F43A2DC8465DB8F28A9E7 /* SDPSDRandomBinaryParametersModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D37020B180AB4821FF767C /* SDPSDRandomBinaryParametersModuleViewInput.swift */; };
 		C526EA0710738F3522E579FF /* SDPSDRandomBinaryParametersModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04AC48011A02B031367AD4 /* SDPSDRandomBinaryParametersModuleRouter.swift */; };
@@ -894,6 +942,7 @@
 		E3409C0C1A8B8552302708F6 /* SDPEncryptionConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C35198EE030BAA4703297 /* SDPEncryptionConfiguratorTests.swift */; };
 		E590917E924F9DF5BA14BFA0 /* SDPSDRandomBinaryParametersModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2152F5DCC539E0E53A0522C /* SDPSDRandomBinaryParametersModuleInteractorOutput.swift */; };
 		EABA216763FD78D69CAFCE7C /* SDPRandomNumberParameterModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD83AB937B7E02253E7F110 /* SDPRandomNumberParameterModuleConfigurator.swift */; };
+		EC60D549C2B592808E109548 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9113F5D3089A88BE9A8BCE6 /* SDPSDPWalkthroughModuleInteractor.swift */; };
 		ECCEF13BC53B474C8E609F75 /* SDPSDPEncryptionParametersModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FC156F13D2AE569BBDC2E0 /* SDPSDPEncryptionParametersModuleInitializer.swift */; };
 		ECE34D79723FD8846A16CB69 /* SDPEncryptionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2056C176ED55B483B725A23 /* SDPEncryptionViewInput.swift */; };
 		EF92367083985B0776B457AF /* Pods_Swift_data_processor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A606FD77A6D9E8598BBD /* Pods_Swift_data_processor.framework */; };
@@ -910,6 +959,7 @@
 		F51BD9E5C2956F27DE02A8B9 /* SDPRandomNumberParameterModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369BFFE7D14FD37B5641EF23 /* SDPRandomNumberParameterModuleRouterInput.swift */; };
 		F52CF4B9DDD7386C6070A417 /* SDPSaltModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E2FDA4264E9635D8A1866 /* SDPSaltModuleViewTests.swift */; };
 		F68F8817C358CE7FBE094FF8 /* SDPRawKeyModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A255F2191FEC2D8233FE3053 /* SDPRawKeyModuleViewController.swift */; };
+		F8FF2424001452CF02FD39D1 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AFE0FDD74B13ED25B9E65D /* SDPSDPWalkthroughModuleModuleInput.swift */; };
 		F9CC5368CF72560A5F168151 /* SDPSDRandomBinaryParametersModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F116D96A5E112584C1FCC1 /* SDPSDRandomBinaryParametersModuleInteractorInput.swift */; };
 		F9FC024969F32897CBAE547D /* Pods_Swift_data_processorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AC68E0906D02D345976CE8 /* Pods_Swift_data_processorTests.framework */; };
 		FAFE3BB5027A4F8952E2F620 /* SDPSDRandomBinaryParametersModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A44031E96F89043EF3C53 /* SDPSDRandomBinaryParametersModuleConfigurator.swift */; };
@@ -999,6 +1049,7 @@
 		0131D844FC5E3CB171DAA624 /* SDPRawKeyModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRawKeyModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		01BEA475EF4532BC0AD0D42F /* SDPSDPEncryptionParametersModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModulePresenter.swift; sourceTree = "<group>"; };
 		026CB6170A0BED0DE83498DA /* SDPSDPEncryptionParametersModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		0374CF06748B92F83B96B045 /* SDPSDPWalkthroughModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleRouter.swift; sourceTree = "<group>"; };
 		03BDBD84DB09091FE635A873 /* SDPSDRandomBinaryParametersModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomBinaryParametersModuleModuleInput.swift; sourceTree = "<group>"; };
 		03C7C52F7F73B04C68F91266 /* SDPEscapingModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleViewInput.swift; sourceTree = "<group>"; };
 		040F6D298D1B027EC44AF739 /* SDPEscapingModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleViewTests.swift; sourceTree = "<group>"; };
@@ -1139,6 +1190,7 @@
 		3274556221084B910096AE75 /* SDPViewExternalConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPViewExternalConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		3274556621084C400096AE75 /* SDPReduxStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPReduxStores.swift; sourceTree = "<group>"; };
 		3274556F21084EB60096AE75 /* UIStoryboard+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+App.swift"; sourceTree = "<group>"; };
+		327AD74C2190C473007326B6 /* SDPWalkthroughModuleVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPWalkthroughModuleVariables.swift; sourceTree = "<group>"; };
 		327C33B121628FDD00F21888 /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		327C33B62162A1CD00F21888 /* UITextView+SharingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+SharingMenu.swift"; sourceTree = "<group>"; };
 		327C33B82162A1EC00F21888 /* UITextField+SharingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SharingMenu.swift"; sourceTree = "<group>"; };
@@ -1164,6 +1216,8 @@
 		3292223F21517D1D009F4A0D /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
 		329C02C3215A668900ECCD3B /* SDPApplicationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPApplicationTheme.swift; sourceTree = "<group>"; };
 		329C02CA215A78A600ECCD3B /* String+HexDecodedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HexDecodedData.swift"; sourceTree = "<group>"; };
+		32A589DF21920F1600FCD73A /* SDPPagesControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPPagesControllerDataSource.swift; sourceTree = "<group>"; };
+		32A589E72192123B00FCD73A /* SDPImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPImageViewController.swift; sourceTree = "<group>"; };
 		32AB4BB72142CBCD0008D83E /* SDPCipherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPCipherType.swift; sourceTree = "<group>"; };
 		32AB4BBD2142CC010008D83E /* SDPCipherFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPCipherFactory.swift; sourceTree = "<group>"; };
 		32B63CE72107455B00BDE139 /* SDPApplicationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDPApplicationConfigurator.swift; sourceTree = "<group>"; };
@@ -1199,6 +1253,7 @@
 		348D1F7D7DF357E84FD9977B /* SDPSDPSettingModuleInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSettingModuleInteractorTests.swift; sourceTree = "<group>"; };
 		35476C7421FB01AE26ED2F0C /* SDPSaltModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		35C002D8ADA586522C434B2A /* SDPEncryptionViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEncryptionViewOutput.swift; sourceTree = "<group>"; };
+		360B2B89C97A5D9C9060839C /* SDPSDPWalkthroughModuleRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleRouterTests.swift; sourceTree = "<group>"; };
 		362B01B5D97E2388A5CF0651 /* SDPEscapingModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleViewController.swift; sourceTree = "<group>"; };
 		369BFFE7D14FD37B5641EF23 /* SDPRandomNumberParameterModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomNumberParameterModuleRouterInput.swift; sourceTree = "<group>"; };
 		372CAAE714EB381EB1C3BB02 /* SDPRandomStringParameterModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleViewController.swift; sourceTree = "<group>"; };
@@ -1215,6 +1270,7 @@
 		43F1996DC57051A338563FC7 /* SDPSDRandomBinaryParametersModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomBinaryParametersModuleViewController.swift; sourceTree = "<group>"; };
 		46CFC0815BE956C884516BD2 /* SDPSDRandomBinaryParametersModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomBinaryParametersModuleViewOutput.swift; sourceTree = "<group>"; };
 		46D1C22C9F92B6A51224F7AC /* SDPSDRandomModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomModuleModuleInput.swift; sourceTree = "<group>"; };
+		4716AAA201B1F66C76880DA6 /* SDPSDPWalkthroughModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleConfigurator.swift; sourceTree = "<group>"; };
 		4A14343C32FF9842F25752CD /* SDPSDPEncryptionParametersModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModulePresenterTests.swift; sourceTree = "<group>"; };
 		4B7B2B1F89F60FCABF88B2AA /* SDPRandomNumberParameterModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomNumberParameterModulePresenter.swift; sourceTree = "<group>"; };
 		4BE2FD5C3E4E3B9DBF0E9C03 /* SDPRandomStringParameterModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleRouterInput.swift; sourceTree = "<group>"; };
@@ -1272,9 +1328,11 @@
 		7F6E2D89B85F54ECF8265864 /* SDPRawKeyModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRawKeyModuleInitializer.swift; sourceTree = "<group>"; };
 		80535EE98C4682DF719DB50E /* SDPPasswordBasedKeyViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPPasswordBasedKeyViewTests.swift; sourceTree = "<group>"; };
 		806809E36C054785DC41809E /* SDPQRGeneratorConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorConfiguratorTests.swift; sourceTree = "<group>"; };
+		817899263C44F08C65F849AC /* SDPSDPWalkthroughModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleViewController.swift; sourceTree = "<group>"; };
 		821488F7CE6D04033CC25852 /* SDPSaltViewRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltViewRouterTests.swift; sourceTree = "<group>"; };
 		8287686E37EAD2D9D05FF36E /* SDPPasswordBasedKeyRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPPasswordBasedKeyRouterTests.swift; sourceTree = "<group>"; };
 		8440DE85A2F5D5E4A74D6186 /* SDPSettingModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSettingModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		844D03746F1C169203699F73 /* SDPSDPWalkthroughModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleViewInput.swift; sourceTree = "<group>"; };
 		8466D0E9B0EF72F1FCE2DEE0 /* SDPSaltModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltModuleInteractorInput.swift; sourceTree = "<group>"; };
 		84802AE3FB24DBC95DD0456D /* SDPSDRandomStringParameterModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomStringParameterModuleInteractorInput.swift; sourceTree = "<group>"; };
 		86A472C61235D82DD3A6D124 /* SDPSDPEncryptionParametersModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModuleViewOutput.swift; sourceTree = "<group>"; };
@@ -1282,6 +1340,7 @@
 		87F33A03C9276483284F2A65 /* SDPSDRandomModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomModuleRouter.swift; sourceTree = "<group>"; };
 		88CA2BBDCEEEA427BF01F532 /* SDPSDRandomStringParameterModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomStringParameterModuleInteractor.swift; sourceTree = "<group>"; };
 		88CA804B7B91B884ADE66D8B /* SDPRandomStringParameterModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleViewInput.swift; sourceTree = "<group>"; };
+		88F6E464483349B618210E0E /* SDPSDPWalkthroughModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleViewTests.swift; sourceTree = "<group>"; };
 		8A4C35198EE030BAA4703297 /* SDPEncryptionConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEncryptionConfiguratorTests.swift; sourceTree = "<group>"; };
 		8A74F7AEAFA5EB437A16B71F /* Pods-Swift-data-processorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-data-processorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-data-processorUITests/Pods-Swift-data-processorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E1AF673F857E0E0A29B3621 /* SDPSaltViewPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltViewPresenterTests.swift; sourceTree = "<group>"; };
@@ -1299,6 +1358,7 @@
 		9773CD67D9530F95CD066C55 /* SDPRawKeyModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRawKeyModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		9781F09BCF720DB5EA0EA7F6 /* SDPEscapingModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleConfigurator.swift; sourceTree = "<group>"; };
 		9923727EBF54CD0E2A6020A7 /* SDPSDPSettingModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSettingModuleViewTests.swift; sourceTree = "<group>"; };
+		9BB6C3E0954C716D6C28DE6E /* SDPSDPWalkthroughModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		9BE821C7B1C5C758E3C931C4 /* SDPSaltViewViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltViewViewTests.swift; sourceTree = "<group>"; };
 		9C59BDF702CF437AE4EE5E68 /* SDPRandomStringParameterModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleRouter.swift; sourceTree = "<group>"; };
 		9CB4E04A3E2BD3C557F401EC /* SDPArgon2ParametersPopupPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPArgon2ParametersPopupPresenterTests.swift; sourceTree = "<group>"; };
@@ -1318,18 +1378,22 @@
 		AC2246518353ED332F8F3268 /* SDPSaltViewInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltViewInteractorTests.swift; sourceTree = "<group>"; };
 		AC41D50346075BECE73BF459 /* SDPSDRandomModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomModuleInteractorInput.swift; sourceTree = "<group>"; };
 		AC55AB72B7E2EA669804F9A2 /* SDPQRGeneratorPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorPresenterTests.swift; sourceTree = "<group>"; };
+		AD5717DA9FE9292CAB8CBBC3 /* SDPSDPWalkthroughModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleInteractorOutput.swift; sourceTree = "<group>"; };
 		AE6FDDD8971A04388F0DA936 /* Pods-SwiftDPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7DB9B0BE91EFA5D60293E2 /* SDPRandomNumberParameterModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomNumberParameterModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		AEA716271C375408A61B73E4 /* SDPSDPWalkthroughModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModulePresenterTests.swift; sourceTree = "<group>"; };
 		AFFBA27EFFE39B6B71BF3AE7 /* SDPEscapingModuleRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleRouterTests.swift; sourceTree = "<group>"; };
 		B1B963ECB6B3442747B7F32F /* SDPRawKeyModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRawKeyModuleViewTests.swift; sourceTree = "<group>"; };
 		B2228AF299D14C0FA017BCD9 /* SDPPasswordBasedKeyRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPPasswordBasedKeyRouter.swift; sourceTree = "<group>"; };
 		B33924BA1091EFEAF4565CBD /* SDPRawKeyModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRawKeyModuleModuleInput.swift; sourceTree = "<group>"; };
 		B4480C7CC91E0735EC937713 /* SDPSaltModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSaltModuleViewController.swift; sourceTree = "<group>"; };
 		B4D52B20D0091C7D2AC29477 /* Pods-SwiftDPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDPTests/Pods-SwiftDPTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5C4BD8F31D5A0E1323100C6 /* SDPSDPWalkthroughModuleInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleInteractorTests.swift; sourceTree = "<group>"; };
 		B5DACB493A5A7D4AE2CB1BA4 /* SDPRandomModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomModuleViewInput.swift; sourceTree = "<group>"; };
 		B8E24C72DAF69F7FBD943A5F /* SDPPasswordBasedKeyPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPPasswordBasedKeyPresenter.swift; sourceTree = "<group>"; };
 		BB25ED11880D0E6FE007BC9A /* SDPSDPEncryptionParametersModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModuleModuleInput.swift; sourceTree = "<group>"; };
 		BBA7F0A35873B7AF853727A1 /* SDPQRGeneratorRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPQRGeneratorRouterTests.swift; sourceTree = "<group>"; };
+		BBEDCAB992E00AB88E083D47 /* SDPSDPWalkthroughModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleViewOutput.swift; sourceTree = "<group>"; };
 		BEBB84DB564C5EE3B3FF59E7 /* SDPEscapingModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleRouterInput.swift; sourceTree = "<group>"; };
 		BFBC986450C3145CF234406F /* SDPRandomStringParameterModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleInput.swift; sourceTree = "<group>"; };
 		C150C1C7DF557FAF57A63236 /* SDPSDPSettingModuleRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPSettingModuleRouterTests.swift; sourceTree = "<group>"; };
@@ -1342,6 +1406,8 @@
 		CE8CA84FE24D734EB4D37FAB /* SDPEscapingModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleInitializer.swift; sourceTree = "<group>"; };
 		CF5C3BFD79273D14D4AD56B7 /* SDPEscapingModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleRouter.swift; sourceTree = "<group>"; };
 		D0932CA3B136053D41E67A5F /* SDPSDRandomStringParameterModuleInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomStringParameterModuleInteractorTests.swift; sourceTree = "<group>"; };
+		D2AFE0FDD74B13ED25B9E65D /* SDPSDPWalkthroughModuleModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleModuleInput.swift; sourceTree = "<group>"; };
+		D459E45C530F0CE25C77E554 /* SDPSDPWalkthroughModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleInteractorInput.swift; sourceTree = "<group>"; };
 		D6C204E90CF928F032B1C064 /* SDPRandomNumberParameterModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomNumberParameterModuleViewController.swift; sourceTree = "<group>"; };
 		D7F395BA6305BB210EA59D3A /* SDPEscapingModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleInteractor.swift; sourceTree = "<group>"; };
 		D9B041DD8C76FC7131408575 /* SDPEncryptionInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEncryptionInteractorInput.swift; sourceTree = "<group>"; };
@@ -1357,6 +1423,8 @@
 		E3FB33A5AC99095F038F74C9 /* SDPSDRandomModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomModuleConfigurator.swift; sourceTree = "<group>"; };
 		E424D410292FAB513B32BFF7 /* SDPPasswordBasedKeyInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPPasswordBasedKeyInteractorTests.swift; sourceTree = "<group>"; };
 		E62B6A55E361BCD315AC4B93 /* SDPRandomStringParameterModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModuleInitializer.swift; sourceTree = "<group>"; };
+		E6C31739BDDAE5451581ACEF /* SDPSDPWalkthroughModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleRouterInput.swift; sourceTree = "<group>"; };
+		E849BB32EDA968895F488F64 /* SDPSDPWalkthroughModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleInitializer.swift; sourceTree = "<group>"; };
 		E98B5CEA1CB7F03455690F10 /* SDPSDRandomModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomModuleViewOutput.swift; sourceTree = "<group>"; };
 		EE2FBC471B943F7D3D64E71A /* SDPArgon2ParametersPopupViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPArgon2ParametersPopupViewTests.swift; sourceTree = "<group>"; };
 		EFA7C4A60F750CF261CE8EE1 /* SDPSDRandomBinaryParametersModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomBinaryParametersModuleConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -1372,6 +1440,8 @@
 		F5C2A7409BD080F49A03B015 /* SDPRandomStringParameterModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomStringParameterModulePresenter.swift; sourceTree = "<group>"; };
 		F7094FF87C846A53790EB049 /* SDPSDRandomStringParameterModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomStringParameterModulePresenterTests.swift; sourceTree = "<group>"; };
 		F81F9FFEE4698239E59EAF8E /* SDPSDRandomStringParameterModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDRandomStringParameterModuleViewTests.swift; sourceTree = "<group>"; };
+		F8832FE5397598E1B326A013 /* SDPSDPWalkthroughModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModulePresenter.swift; sourceTree = "<group>"; };
+		F9113F5D3089A88BE9A8BCE6 /* SDPSDPWalkthroughModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPWalkthroughModuleInteractor.swift; sourceTree = "<group>"; };
 		FAFAEEA4EFC7931F3F931AF5 /* SDPEscapingModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPEscapingModuleInteractorInput.swift; sourceTree = "<group>"; };
 		FC4C28F1587D708388384315 /* SDPRandomNumberParameterModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPRandomNumberParameterModuleRouter.swift; sourceTree = "<group>"; };
 		FD1CA4C88F1D71AEA230DDEA /* SDPSDPEncryptionParametersModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SDPSDPEncryptionParametersModuleViewTests.swift; sourceTree = "<group>"; };
@@ -1435,6 +1505,14 @@
 				AC2246518353ED332F8F3268 /* SDPSaltViewInteractorTests.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		04EF1BD7B52C4D5C09E30734 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AEA716271C375408A61B73E4 /* SDPSDPWalkthroughModulePresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		051B626DD5805D332EA0CD0D /* Configurator */ = {
@@ -2037,6 +2115,7 @@
 				32434F82217109BA00A58D85 /* Licence */,
 				3242D009216364B000C4BDAC /* UI components */,
 				32434F712170B88A00A58D85 /* SDPColorPickerViewController.swift */,
+				32A589E72192123B00FCD73A /* SDPImageViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -2336,6 +2415,19 @@
 			path = "Swift-data-processorUITests";
 			sourceTree = "<group>";
 		};
+		3291807C4B5F23136CCAB9E9 /* SDPWalkthroughModule */ = {
+			isa = PBXGroup;
+			children = (
+				84EC04AEC7C385D4902632E9 /* View */,
+				D27F7B99480C9AE821C60086 /* Presenter */,
+				4C56E406C9A27B5FDBA06937 /* Interactor */,
+				4C8F45CC149BD8F1AE2F9F07 /* Router */,
+				4E23C7EC53EFBEA4F3E1DC0A /* Configurator */,
+				327AD74C2190C473007326B6 /* SDPWalkthroughModuleVariables.swift */,
+			);
+			path = SDPWalkthroughModule;
+			sourceTree = "<group>";
+		};
 		329C02C2215A667700ECCD3B /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -2347,6 +2439,7 @@
 		32ACC7C0214820200029592B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3291807C4B5F23136CCAB9E9 /* SDPWalkthroughModule */,
 				32D28EB0216E3FE500B47A8D /* Random */,
 				BD331D26116B5ADED4A3DDBC /* SDPEncryptionParametersModule */,
 				325A5A2E2100DFEA00DD7222 /* SDPQRScannerModule */,
@@ -2378,6 +2471,7 @@
 				E059E30BCFE50043877D8352 /* SDRandomStringParameterModule */,
 				ACB72B43A90924A666E9AFF8 /* SDPRandomBinaryParametersModule */,
 				27742EC0B09C8766542B1AE6 /* SDPSettingModule */,
+				89CD6A3F248DF71053A808B2 /* SDPWalkthroughModule */,
 			);
 			path = "Swift-data-processorTests";
 			sourceTree = "<group>";
@@ -2419,6 +2513,7 @@
 				3273FB89212EE99400C56B2A /* Redux */,
 				322AB23A211491C000E96892 /* Cryptography */,
 				324CD2F021103F2600A978C1 /* Table View */,
+				32A589DF21920F1600FCD73A /* SDPPagesControllerDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2602,12 +2697,40 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		4C56E406C9A27B5FDBA06937 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D459E45C530F0CE25C77E554 /* SDPSDPWalkthroughModuleInteractorInput.swift */,
+				AD5717DA9FE9292CAB8CBBC3 /* SDPSDPWalkthroughModuleInteractorOutput.swift */,
+				F9113F5D3089A88BE9A8BCE6 /* SDPSDPWalkthroughModuleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4C8F45CC149BD8F1AE2F9F07 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E6C31739BDDAE5451581ACEF /* SDPSDPWalkthroughModuleRouterInput.swift */,
+				0374CF06748B92F83B96B045 /* SDPSDPWalkthroughModuleRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		4CF6D7F7E02108EC37B63EF7 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				7C405EEDAB3F71FC81650D05 /* SDPHashesInteractorTests.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4E23C7EC53EFBEA4F3E1DC0A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				4716AAA201B1F66C76880DA6 /* SDPSDPWalkthroughModuleConfigurator.swift */,
+				E849BB32EDA968895F488F64 /* SDPSDPWalkthroughModuleInitializer.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		4E487AED488DC5105B39EFD2 /* Interactor */ = {
@@ -2716,6 +2839,14 @@
 			isa = PBXGroup;
 			children = (
 				9923727EBF54CD0E2A6020A7 /* SDPSDPSettingModuleViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62CF0E7C37A0385E39CA0492 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88F6E464483349B618210E0E /* SDPSDPWalkthroughModuleViewTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2937,6 +3068,16 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		84EC04AEC7C385D4902632E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				844D03746F1C169203699F73 /* SDPSDPWalkthroughModuleViewInput.swift */,
+				BBEDCAB992E00AB88E083D47 /* SDPSDPWalkthroughModuleViewOutput.swift */,
+				817899263C44F08C65F849AC /* SDPSDPWalkthroughModuleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		85BBC07B6F99860CC6BEC5BB /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -2992,6 +3133,18 @@
 				80C90AA1192E73F96A1F4F88 /* Router */,
 			);
 			path = SDPEscapingModule;
+			sourceTree = "<group>";
+		};
+		89CD6A3F248DF71053A808B2 /* SDPWalkthroughModule */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F62528D4B7AED53F236F6 /* Configurator */,
+				62CF0E7C37A0385E39CA0492 /* View */,
+				F886DC7C10D315396D1F1ED7 /* Interactor */,
+				04EF1BD7B52C4D5C09E30734 /* Presenter */,
+				B43A8FC1DF7CE3E1EDF6F7C1 /* Router */,
+			);
+			path = SDPWalkthroughModule;
 			sourceTree = "<group>";
 		};
 		8AFA0F662546E85D953E6874 /* Router */ = {
@@ -3270,6 +3423,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		B43A8FC1DF7CE3E1EDF6F7C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				360B2B89C97A5D9C9060839C /* SDPSDPWalkthroughModuleRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B488B08D3EA77902CC9974D6 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -3431,6 +3592,15 @@
 				902C9F6E7BC2601904996997 /* SDPSaltModuleRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		D27F7B99480C9AE821C60086 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D2AFE0FDD74B13ED25B9E65D /* SDPSDPWalkthroughModuleModuleInput.swift */,
+				F8832FE5397598E1B326A013 /* SDPSDPWalkthroughModulePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D3086FD15E03A6F3D4320183 /* SDRandomNumberParameterModule */ = {
@@ -3628,6 +3798,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		F886DC7C10D315396D1F1ED7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4BD8F31D5A0E1323100C6 /* SDPSDPWalkthroughModuleInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		F8CA99ADD27EE0230AB9866B /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -3644,6 +3822,14 @@
 				DBE89065442A0DFB218E89FF /* SDPSDPEncryptionParametersModuleViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FF5F62528D4B7AED53F236F6 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9BB6C3E0954C716D6C28DE6E /* SDPSDPWalkthroughModuleConfiguratorTests.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3968,6 +4154,7 @@
 				321635E62108CF4D00793E7D /* SDPQRGeneratorViewController.swift in Sources */,
 				327C33B72162A1CD00F21888 /* UITextView+SharingMenu.swift in Sources */,
 				3203E1A520FCBB640082F395 /* SDPTextModuleRouter.swift in Sources */,
+				327AD74D2190C473007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */,
 				321635E52108CF4D00793E7D /* SDPQRGeneratorPresenter.swift in Sources */,
 				3273FB96212F03FA00C56B2A /* SDPMapStoreSubscriberObject.swift in Sources */,
 				32D9EFFA2134040B006E7934 /* SDPArgon2ParametersPopupConfigurator.swift in Sources */,
@@ -4047,6 +4234,7 @@
 				220DDCF2DB80756E4B75AA8A /* SDPEncryptionViewController.swift in Sources */,
 				55C021F7BF2BBAD8AD6C1000 /* SDPEncryptionModuleInput.swift in Sources */,
 				BD9BECE153365F35D460EB4E /* SDPEncryptionPresenter.swift in Sources */,
+				32A589E021920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */,
 				750FAE821E187188A2F22C74 /* SDPEncryptionInteractorInput.swift in Sources */,
 				2FDF0E04AE0D6CEC96C9FE90 /* SDPEncryptionInteractorOutput.swift in Sources */,
 				3242D00B216364CD00C4BDAC /* SDPPickerSingleOptionInput.swift in Sources */,
@@ -4168,6 +4356,7 @@
 				925E8129A84A8CCF04D3FE03 /* SDPSDRandomBinaryParametersModuleViewController.swift in Sources */,
 				2772A858189F89D83872B310 /* SDPSDRandomBinaryParametersModuleModuleInput.swift in Sources */,
 				B889483133DD2035E000B4BE /* SDPSDRandomBinaryParametersModulePresenter.swift in Sources */,
+				32A589E82192123B00FCD73A /* SDPImageViewController.swift in Sources */,
 				3245E6572170910200FDF7FA /* SDPMulticlassTableViewDataSource.swift in Sources */,
 				F9CC5368CF72560A5F168151 /* SDPSDRandomBinaryParametersModuleInteractorInput.swift in Sources */,
 				E590917E924F9DF5BA14BFA0 /* SDPSDRandomBinaryParametersModuleInteractorOutput.swift in Sources */,
@@ -4189,6 +4378,18 @@
 				047E815C982DCA4EB2E1B3DB /* SDPSettingModuleConfigurator.swift in Sources */,
 				0CCF586B207D6FBCBD043F80 /* SDPSettingModuleInitializer.swift in Sources */,
 				32434F7F217103A300A58D85 /* SDPCreditsTableViewController.swift in Sources */,
+				654B67FDAC01227AB887FDDB /* SDPSDPWalkthroughModuleViewInput.swift in Sources */,
+				392248E630B18E264C340335 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */,
+				5A608A806EF2EB68905F8CAC /* SDPSDPWalkthroughModuleViewController.swift in Sources */,
+				F8FF2424001452CF02FD39D1 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */,
+				18C7D5B2F1D497A28BA97D34 /* SDPSDPWalkthroughModulePresenter.swift in Sources */,
+				664088FDDC812D361BC0672B /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */,
+				027F10516F68D95E4F99A08B /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */,
+				EC60D549C2B592808E109548 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */,
+				971B7F7801B37719A46C1795 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */,
+				C41508E90B4EFCF26C241B7C /* SDPSDPWalkthroughModuleRouter.swift in Sources */,
+				27F98E65A5CA8551FA00FE4A /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */,
+				4030EAEACC3FE92C5CE38A5A /* SDPSDPWalkthroughModuleInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4203,6 +4404,7 @@
 				32188ABE2166822B0033599F /* SDPHashesTableViewDataFactoryDelegate.swift in Sources */,
 				325C85EB216E767C0032CB98 /* SDPRandomNumberParameterModuleViewOutput.swift in Sources */,
 				3250D38921667747003EEF66 /* SDPEncryptionRouter.swift in Sources */,
+				327AD75C2190C58C007326B6 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */,
 				3250D31F21667583003EEF66 /* SDPQRScannerModuleRouter.swift in Sources */,
 				32B63CF8210746AF00BDE139 /* testTests.swift in Sources */,
 				32188AC4216682350033599F /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,
@@ -4218,6 +4420,7 @@
 				32188AA8216681F70033599F /* CatCryptoExternalError.swift in Sources */,
 				3250D3232166758D003EEF66 /* SDPRawKeyModuleViewOutput.swift in Sources */,
 				320A1488216B83F8008F0735 /* SDPEncryptionInputParameters.swift in Sources */,
+				327AD7582190C587007326B6 /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */,
 				325C85FD216E769D0032CB98 /* SDPRandomNumberParameterModuleConfigurator.swift in Sources */,
 				3250D35621667608003EEF66 /* SDPPasswordBasedKeyInteractor.swift in Sources */,
 				3250D2D32166715F003EEF66 /* SDPSaltModuleInteractorTests.swift in Sources */,
@@ -4237,6 +4440,7 @@
 				32188AA2216681E30033599F /* SDPMapState.swift in Sources */,
 				3233A5D22169329D004C834A /* String+HTMLEntities.swift in Sources */,
 				A1A09B7043F3C94B2E534A75 /* SDPQRGeneratorConfiguratorTests.swift in Sources */,
+				327AD74E2190C576007326B6 /* SDPSDPWalkthroughModuleViewInput.swift in Sources */,
 				F1DD666298379E7AAA15F9E1 /* SDPQRGeneratorViewTests.swift in Sources */,
 				9F4B9A20D232EC2810535F12 /* SDPQRGeneratorInteractorTests.swift in Sources */,
 				32188A88216681A90033599F /* UITextField+SharingMenu.swift in Sources */,
@@ -4288,6 +4492,7 @@
 				3250D3712166763C003EEF66 /* SDPEscapingModuleRouter.swift in Sources */,
 				3250D2DA216671A2003EEF66 /* SDPSaltModuleRouterInput.swift in Sources */,
 				3250D3AC21667791003EEF66 /* SDPHashesModuleInput.swift in Sources */,
+				32A589E121920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */,
 				3A62C0CE9146B72DC87B60E3 /* SDPArgon2ParametersPopupConfiguratorTests.swift in Sources */,
 				3250D39C21667773003EEF66 /* SDPArgon2ParametersPopupModuleBuilder.swift in Sources */,
 				32188AAA216681FB0033599F /* CatCryptoExternalResult.swift in Sources */,
@@ -4310,6 +4515,7 @@
 				325C85F9216E76960032CB98 /* SDPRandomNumberParameterModuleRouterInput.swift in Sources */,
 				FB7F73984F90D338E5B28D6F /* SDPArgon2ParametersPopupRouterTests.swift in Sources */,
 				3245E616216F709C00FDF7FA /* SDPSDRandomBinaryParametersModuleViewController.swift in Sources */,
+				327AD7562190C583007326B6 /* SDPSDPWalkthroughModulePresenter.swift in Sources */,
 				3250D38721667744003EEF66 /* SDPEncryptionRouterInput.swift in Sources */,
 				3250D3A521667783003EEF66 /* SDPArgon2ParametersPopupRouter.swift in Sources */,
 				3250D338216675BE003EEF66 /* SDPRawKeyModuleInitializer.swift in Sources */,
@@ -4329,6 +4535,7 @@
 				3250D35D21667613003EEF66 /* SDPPasswordBasedKeyInitializer.swift in Sources */,
 				32188A8A216681AC0033599F /* UITextView+AssociatedObjects.swift in Sources */,
 				325C85D5216E76490032CB98 /* SDPRandomStringParameterModuleViewOutput.swift in Sources */,
+				327AD7502190C579007326B6 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */,
 				32683EA0216D148B00BF7008 /* SDPRandomParametersState.swift in Sources */,
 				32188A82216681A50033599F /* UITextView+SharingMenu.swift in Sources */,
 				3250D30B216674B0003EEF66 /* SDPQRScannerModuleInteractorInput.swift in Sources */,
@@ -4366,8 +4573,10 @@
 				3250D349216675F5003EEF66 /* SDPPasswordBasedKeyViewOutput.swift in Sources */,
 				321AB17B216CDE290061489B /* SDPSDRandomModuleInteractorInput.swift in Sources */,
 				3250D39D21667776003EEF66 /* SDPArgon2ParametersPopupInteractorOutput.swift in Sources */,
+				327AD7532190C57D007326B6 /* SDPSDPWalkthroughModuleViewController.swift in Sources */,
 				323B6BDB21711FB000A66D98 /* SDPSettingModuleInitializer.swift in Sources */,
 				3245E61A216F70A900FDF7FA /* SDPSDRandomBinaryParametersModuleViewOutput.swift in Sources */,
+				327AD7542190C580007326B6 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */,
 				3245E63F217068AD00FDF7FA /* SDPSettingModuleInteractorInput.swift in Sources */,
 				32434F80217103A300A58D85 /* SDPCreditsTableViewController.swift in Sources */,
 				3250D36521667625003EEF66 /* SDPEscapingModuleModuleInput.swift in Sources */,
@@ -4379,6 +4588,7 @@
 				3250D37521667645003EEF66 /* SDPEscapingModuleInitializer.swift in Sources */,
 				3250D40F216679FF003EEF66 /* String+QRImage.swift in Sources */,
 				3250D41221667A06003EEF66 /* UIView+BorderColor.swift in Sources */,
+				327AD75E2190C590007326B6 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */,
 				006533292FB7CC313F2F354D /* SDPSaltViewInteractorTests.swift in Sources */,
 				3250D2E8216673EC003EEF66 /* SDPSaltModuleViewInput.swift in Sources */,
 				3250D2EE2166743D003EEF66 /* SDPMapStoreSubscriberObject.swift in Sources */,
@@ -4399,6 +4609,7 @@
 				3250D35F2166761A003EEF66 /* SDPEscapingModuleViewInput.swift in Sources */,
 				3250D3212166758A003EEF66 /* SDPRawKeyModuleViewInput.swift in Sources */,
 				32188A8C216681B00033599F /* UITextField+AssociatedObjects.swift in Sources */,
+				32A589E92192123B00FCD73A /* SDPImageViewController.swift in Sources */,
 				3250D340216675D9003EEF66 /* SDPSaltModulePresenter.swift in Sources */,
 				3250D3F82166794F003EEF66 /* SDPTextModuleRouter.swift in Sources */,
 				3245E624216F70BA00FDF7FA /* SDPSDRandomBinaryParametersModuleInteractor.swift in Sources */,
@@ -4435,6 +4646,7 @@
 				8135D7C8F41C3A78D5FB6737 /* SDPSaltModulePresenterTests.swift in Sources */,
 				3250D3B8216677AF003EEF66 /* SDPHashesConfigurator.swift in Sources */,
 				203FFCD99FDD83E61F60B9BE /* SDPSaltModuleRouterTests.swift in Sources */,
+				327AD7602190C594007326B6 /* SDPSDPWalkthroughModuleRouter.swift in Sources */,
 				320A14A2216B9D3E008F0735 /* SDPSDPEncryptionParametersModuleViewController.swift in Sources */,
 				82F99D4A47001C9C47B68969 /* SDPRawKeyModuleViewTests.swift in Sources */,
 				321AB17D216CDE2C0061489B /* SDPSDRandomModuleInteractorOutput.swift in Sources */,
@@ -4444,6 +4656,7 @@
 				32188A98216681C80033599F /* WeakContainer.swift in Sources */,
 				3250D3172166755E003EEF66 /* SDPQRScannerModuleViewBackButtonExternalConfigurator.swift in Sources */,
 				325C85EF216E76840032CB98 /* SDPRandomNumberParameterModuleModuleInput.swift in Sources */,
+				327AD7632190C5A1007326B6 /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */,
 				325C85E9216E76790032CB98 /* SDPRandomNumberParameterModuleViewInput.swift in Sources */,
 				3250D32521667592003EEF66 /* SDPRawKeyModuleViewController.swift in Sources */,
 				3245E641217068C500FDF7FA /* SDPSettingModuleInteractor.swift in Sources */,
@@ -4502,6 +4715,7 @@
 				3250D39321667766003EEF66 /* SDPArgon2ParametersPopupViewInput.swift in Sources */,
 				32CFE5D11D90305A259893E1 /* SDPSDPEncryptionParametersModuleConfiguratorTests.swift in Sources */,
 				C84FC8D80ABD435047CA5BC3 /* SDPSDPEncryptionParametersModuleViewTests.swift in Sources */,
+				327AD7662190C5A6007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */,
 				325C85E7216E76700032CB98 /* SDPRandomStringParameterModuleInitializer.swift in Sources */,
 				2436985D7F6673BC69DD018D /* SDPSDPEncryptionParametersModuleInteractorTests.swift in Sources */,
 				9EC3903AB201625B291FF828 /* SDPSDPEncryptionParametersModulePresenterTests.swift in Sources */,
@@ -4534,6 +4748,7 @@
 				85EB075AA26020899CF9A31B /* SDPSDRandomStringParameterModuleRouterTests.swift in Sources */,
 				325C85DB216E765A0032CB98 /* SDPSDRandomStringParameterModuleInteractorInput.swift in Sources */,
 				540EA80AEBCEDB280075EFAA /* SDPSDRandomBinaryParametersModuleConfiguratorTests.swift in Sources */,
+				327AD75A2190C58A007326B6 /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */,
 				6234D3A9548516A83B988B12 /* SDPSDRandomBinaryParametersModuleViewTests.swift in Sources */,
 				7D952BEAC15E1C2EA7AE9EBE /* SDPSDRandomBinaryParametersModuleInteractorTests.swift in Sources */,
 				BA4A5820525F7DEFA33DCDD3 /* SDPSDRandomBinaryParametersModulePresenterTests.swift in Sources */,
@@ -4545,6 +4760,12 @@
 				3245E63B2170689600FDF7FA /* SDPSDPSettingModulePresenter.swift in Sources */,
 				7CC7BC1867E9A560A3AEEADD /* SDPSDPSettingModulePresenterTests.swift in Sources */,
 				7469AA9111E4EE8F35899470 /* SDPSDPSettingModuleRouterTests.swift in Sources */,
+				74B47DA166667B094064DF4C /* SDPSDPWalkthroughModuleConfiguratorTests.swift in Sources */,
+				376434AF87E8D6AD857A162E /* SDPSDPWalkthroughModuleViewTests.swift in Sources */,
+				291E7571FFA0DE6F02F9DD0A /* SDPSDPWalkthroughModuleInteractorTests.swift in Sources */,
+				327AD7642190C5A3007326B6 /* SDPSDPWalkthroughModuleInitializer.swift in Sources */,
+				4E3D29F1299D22EE8FBEFDBB /* SDPSDPWalkthroughModulePresenterTests.swift in Sources */,
+				BE13379B2A241F4F86424F9C /* SDPSDPWalkthroughModuleRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4581,8 +4802,10 @@
 				3245E6342170686C00FDF7FA /* SDPSettingModuleViewInput.swift in Sources */,
 				3250D3A021667779003EEF66 /* SDPArgon2ParametersPopupInteractor.swift in Sources */,
 				3250D3E521667820003EEF66 /* SDPTextModuleViewOutput.swift in Sources */,
+				327AD7552190C581007326B6 /* SDPSDPWalkthroughModuleModuleInput.swift in Sources */,
 				3245E627216F70C000FDF7FA /* SDPSDRandomBinaryParametersModuleRouterInput.swift in Sources */,
 				3245E6632170986600FDF7FA /* AppDelegate.swift in Sources */,
+				32A589EA2192123B00FCD73A /* SDPImageViewController.swift in Sources */,
 				32188AC5216682350033599F /* SDPHashesTableViewDataFactory+Calculation.swift in Sources */,
 				3250D309216674AD003EEF66 /* SDPQRScannerModuleInteractorOutput.swift in Sources */,
 				3245E6382170688100FDF7FA /* SDPSettingModuleViewController.swift in Sources */,
@@ -4603,6 +4826,7 @@
 				3250D34E216675FB003EEF66 /* SDPPasswordBasedKeyModuleInput.swift in Sources */,
 				3250D37C2166772E003EEF66 /* SDPEncryptionViewController.swift in Sources */,
 				3245E61B216F70AA00FDF7FA /* SDPSDRandomBinaryParametersModuleViewOutput.swift in Sources */,
+				327AD7672190C5A6007326B6 /* SDPWalkthroughModuleVariables.swift in Sources */,
 				3250D38621667742003EEF66 /* SDPEncryptionInteractor.swift in Sources */,
 				32683EA1216D148B00BF7008 /* SDPRandomParametersState.swift in Sources */,
 				32188AAD216682000033599F /* CarArgon2ConstantExternal.swift in Sources */,
@@ -4650,6 +4874,7 @@
 				3250D3962166776A003EEF66 /* SDPArgon2ParametersPopupViewOutput.swift in Sources */,
 				32188AA7216681F40033599F /* CatArgon2Crypto+RawHash.swift in Sources */,
 				32188A9F216681DA0033599F /* SDPNavigationStateWriteAction.swift in Sources */,
+				327AD7652190C5A4007326B6 /* SDPSDPWalkthroughModuleInitializer.swift in Sources */,
 				3250D3842166773F003EEF66 /* SDPEncryptionInteractorOutput.swift in Sources */,
 				32188ABD216682270033599F /* SDPArgon2HashCalculator.swift in Sources */,
 				3250D3722166763E003EEF66 /* SDPEscapingModuleRouter.swift in Sources */,
@@ -4672,6 +4897,7 @@
 				3250D30C216674B1003EEF66 /* SDPQRScannerModuleInteractorInput.swift in Sources */,
 				32188AA5216681E80033599F /* SDPMapStateActions.swift in Sources */,
 				325C85E0216E76610032CB98 /* SDPSDRandomStringParameterModuleInteractor.swift in Sources */,
+				327AD7592190C587007326B6 /* SDPSDPWalkthroughModuleInteractorInput.swift in Sources */,
 				3250D344216675E6003EEF66 /* SDPSaltModuleConfigurator.swift in Sources */,
 				3250D35421667605003EEF66 /* SDPPasswordBasedKeyInteractorOutput.swift in Sources */,
 				3250D3AA2166778E003EEF66 /* SDPHashesPresenter.swift in Sources */,
@@ -4686,6 +4912,7 @@
 				3250D3F72166794C003EEF66 /* SDPTextModuleRouterInput.swift in Sources */,
 				3250D3FD216679D6003EEF66 /* SDPApplicationConfigurator.swift in Sources */,
 				3250D2E9216673EC003EEF66 /* SDPSaltModuleViewInput.swift in Sources */,
+				32A589E221920F1600FCD73A /* SDPPagesControllerDataSource.swift in Sources */,
 				3250D2E121667216003EEF66 /* SDPSaltModuleInteractor.swift in Sources */,
 				321AB184216CDE360061489B /* SDPSDRandomModuleRouter.swift in Sources */,
 				3245E640217068AD00FDF7FA /* SDPSettingModuleInteractorInput.swift in Sources */,
@@ -4706,14 +4933,18 @@
 				3250D3AD21667792003EEF66 /* SDPHashesModuleInput.swift in Sources */,
 				3250D337216675BD003EEF66 /* SDPRawKeyModuleInitializer.swift in Sources */,
 				3245E644217068CA00FDF7FA /* SDPSettingModuleRouterInput.swift in Sources */,
+				327AD74F2190C577007326B6 /* SDPSDPWalkthroughModuleViewInput.swift in Sources */,
 				3233A5D32169329D004C834A /* String+HTMLEntities.swift in Sources */,
 				3250D407216679F1003EEF66 /* SDPQRGeneratingActivity.swift in Sources */,
+				327AD7522190C57C007326B6 /* SDPSDPWalkthroughModuleViewController.swift in Sources */,
 				3250D3EF2166782F003EEF66 /* SDPTextModuleConfigurator.swift in Sources */,
 				3250D3152166754D003EEF66 /* SDPQRScannerModuleViewController.swift in Sources */,
 				321AB174216CDE1A0061489B /* SDPRandomModuleViewInput.swift in Sources */,
 				3250D3A421667780003EEF66 /* SDPArgon2ParametersPopupRouterInput.swift in Sources */,
 				3245E6362170687900FDF7FA /* SDPSettingModuleViewOutput.swift in Sources */,
 				3250D332216675B4003EEF66 /* SDPRawKeyModuleRouterInput.swift in Sources */,
+				327AD7612190C595007326B6 /* SDPSDPWalkthroughModuleRouter.swift in Sources */,
+				327AD75F2190C591007326B6 /* SDPSDPWalkthroughModuleRouterInput.swift in Sources */,
 				3250D3902166775B003EEF66 /* SDPArgon2ParametersPopupPresenter.swift in Sources */,
 				3250D3EB21667829003EEF66 /* SDPTextModuleActionTableViewCell.swift in Sources */,
 				3250D31E2166757F003EEF66 /* SDPQRScannerModuleInteractor.swift in Sources */,
@@ -4723,11 +4954,13 @@
 				3245E6602170985D00FDF7FA /* SDPSettingThemeTableViewCell.swift in Sources */,
 				3250D2EC21667431003EEF66 /* SDPReduxStores.swift in Sources */,
 				320A149D216B9BEB008F0735 /* SDPSDPEncryptionParametersModuleRouter.swift in Sources */,
+				327AD75D2190C58D007326B6 /* SDPSDPWalkthroughModuleInteractor.swift in Sources */,
 				3250D405216679ED003EEF66 /* UIViewController+ChildViewController.swift in Sources */,
 				32188AA3216681E40033599F /* SDPMapState.swift in Sources */,
 				3250D342216675E2003EEF66 /* SDPSaltModuleRouter.swift in Sources */,
 				320A148D216B92D2008F0735 /* SDPSDPEncryptionParametersModulePresenter.swift in Sources */,
 				3250D3C1216677BD003EEF66 /* SDPHashesRouter.swift in Sources */,
+				327AD7622190C5A0007326B6 /* SDPSDPWalkthroughModuleConfigurator.swift in Sources */,
 				3250D36E21667634003EEF66 /* SDPEscapingModuleInteractor.swift in Sources */,
 				3250D346216675E8003EEF66 /* SDPSaltModuleInitializer.swift in Sources */,
 				32188A99216681C90033599F /* WeakContainer.swift in Sources */,
@@ -4760,9 +4993,11 @@
 				3250D330216675B0003EEF66 /* SDPRawKeyModuleInteractorOutput.swift in Sources */,
 				3245E63E217068AA00FDF7FA /* SDPSettingModuleInteractorOutput.swift in Sources */,
 				3250D38D2166774E003EEF66 /* SDPEncryptionInitializer.swift in Sources */,
+				327AD7572190C584007326B6 /* SDPSDPWalkthroughModulePresenter.swift in Sources */,
 				3250D36A2166762E003EEF66 /* SDPEscapingModuleInteractorInput.swift in Sources */,
 				3250D3B5216677AA003EEF66 /* SDPHashTableViewCell.swift in Sources */,
 				3250D3DB216677F3003EEF66 /* SDPQRGeneratorRouter.swift in Sources */,
+				327AD75B2190C58A007326B6 /* SDPSDPWalkthroughModuleInteractorOutput.swift in Sources */,
 				3250D39B21667773003EEF66 /* SDPArgon2ParametersPopupModuleBuilder.swift in Sources */,
 				3250D41521667A0D003EEF66 /* UITextField+DoneButton.swift in Sources */,
 				3250D3FB216679D3003EEF66 /* SDPApplicationTheme.swift in Sources */,
@@ -4788,6 +5023,7 @@
 				3250D40E216679FF003EEF66 /* String+QRImage.swift in Sources */,
 				3233B280216CA57D005951D3 /* SDPQRScannerModuleViewDismissButtonExternalConfigurator.swift in Sources */,
 				3250D36621667625003EEF66 /* SDPEscapingModuleModuleInput.swift in Sources */,
+				327AD7512190C57A007326B6 /* SDPSDPWalkthroughModuleViewOutput.swift in Sources */,
 				3250D32C216675AA003EEF66 /* SDPRawKeyModuleInteractorInput.swift in Sources */,
 				32188AD6216683930033599F /* UIStoryboard+App.swift in Sources */,
 				3245E63C2170689700FDF7FA /* SDPSDPSettingModulePresenter.swift in Sources */,

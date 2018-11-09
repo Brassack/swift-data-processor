@@ -15,4 +15,5 @@ protocol SDPTextModuleRouterInput {
     func showScreen(forAction action:String)
     func qr()
     func returnToRootController()
+    func showWalkthroughIfNeeded()
 }

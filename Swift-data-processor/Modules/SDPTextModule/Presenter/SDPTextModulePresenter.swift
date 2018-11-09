@@ -34,6 +34,8 @@ class SDPTextModulePresenter:NSObject, SDPTextModuleInput, SDPTextModuleViewOutp
         themeObserver = NotificationCenter.default.addObserver(forName: SDPThemeUpdatedNotification, object: nil, queue: nil) { [weak self] (notification) in
             self?.view.updateTheme(theme: notification.object as? SDPApplicationTheme)
         }
+        
+        router.showWalkthroughIfNeeded()
     }
     
     func viewWillBePresented(){
