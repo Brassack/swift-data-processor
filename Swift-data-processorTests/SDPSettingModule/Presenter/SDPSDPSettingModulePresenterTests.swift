@@ -25,6 +25,14 @@ class SDPSettingModulePresenterTest: XCTestCase {
     }
 
     class MockRouter: SDPSettingModuleRouterInput {
+        func showReview() {
+            //TODO: add showReview
+        }
+        
+        func showSourceCode() {
+            //TODO: add showSourceCode
+        }
+        
         func showColorPicker(color: Any, completion: @escaping (Any) -> Void) {
             //TODO: add showColorPicker(color:completion:)
         }
