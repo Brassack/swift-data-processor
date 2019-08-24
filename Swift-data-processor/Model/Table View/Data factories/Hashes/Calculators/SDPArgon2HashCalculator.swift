@@ -21,6 +21,11 @@ class SDPArgon2HashCalculator: SDPHashCalculator {
         guard let function = info.function as? CatArgon2Crypto else{
             return nil
         }
+        guard let salt = weakOwnerContainer.object?.salt else{
+            return nil
+        }
+        
+        function.context.salt = salt
         
         var optionalResult:CatCryptoExternalResult? = nil
         
