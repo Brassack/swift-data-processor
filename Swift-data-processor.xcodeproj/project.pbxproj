@@ -3907,7 +3907,7 @@
 				TargetAttributes = {
 					328FCD59202F441100EA8098 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					328FCD6F202F441200EA8098 = {
@@ -4046,7 +4046,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NKOColorPickerView/NKOColorPickerView.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
@@ -4057,7 +4057,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift-data-processor/Pods-Swift-data-processor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A2B82B6B7BD422AA8C157530 /* [CP] Check Pods Manifest.lock */ = {
@@ -5254,7 +5254,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-data-processor/Supporting files/Swift-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -5275,7 +5275,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-data-processor/Supporting files/Swift-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -25,11 +25,20 @@ class SDPWalkthroughModulePresenterTest: XCTestCase {
     }
 
     class MockRouter: SDPWalkthroughModuleRouterInput {
-
+        func dismiss() {
+            
+        }
     }
 
     class MockViewController: SDPWalkthroughModuleViewInput {
-
+        func set(pagesDataSource dataSource: SDPPagesControllerDataSource) {
+            
+        }
+        
+        func set(description: String) {
+            
+        }
+    
         func setupInitialState() {
 
         }

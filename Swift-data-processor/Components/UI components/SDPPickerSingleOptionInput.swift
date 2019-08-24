@@ -66,7 +66,7 @@ class SDPPickerSingleOptionInput: UITextField, UIPickerViewDelegate, UIPickerVie
         super.becomeFirstResponder()
         if let currentValue = currentValue {
             
-            if let index = pickerValues?.index(where: {$0.valueDescription == currentValue.valueDescription}) {
+            if let index = pickerValues?.firstIndex(where: {$0.valueDescription == currentValue.valueDescription}) {
                 
                 if index != picker?.selectedRow(inComponent: 0) {
                     

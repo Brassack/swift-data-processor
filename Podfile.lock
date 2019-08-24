@@ -1,6 +1,6 @@
 PODS:
   - NKOColorPickerView (0.5)
-  - ReSwift (4.0.1)
+  - ReSwift (5.0.0)
 
 DEPENDENCIES:
   - NKOColorPickerView
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   NKOColorPickerView: 895ca86fe5bd16f27c311ce8f5888907efee29ad
-  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
 
 PODFILE CHECKSUM: f3219598ae492b31b0e73b79547d64de0de7dab3
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
