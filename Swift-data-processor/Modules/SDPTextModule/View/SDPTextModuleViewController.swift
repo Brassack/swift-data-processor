@@ -50,7 +50,7 @@ class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
         textView.text = nil
         textView.delegate = output
         copyButton.isEnabled = false
-        pasteButton.isEnabled = UIPasteboard.general.string != nil
+        pasteButton.isEnabled = UIPasteboard.general.hasStrings
     }
     
     func prepareForScreen() {
@@ -65,7 +65,7 @@ class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
     
     func refreshInputActionsState(){
         copyButton.isEnabled = textView.text.count > 0
-        pasteButton.isEnabled = UIPasteboard.general.string != nil
+        pasteButton.isEnabled = UIPasteboard.general.hasStrings
     }
     
     func setClipboard(isEmpty:Bool){
