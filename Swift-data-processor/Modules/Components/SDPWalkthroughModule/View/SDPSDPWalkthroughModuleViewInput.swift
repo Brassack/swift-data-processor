@@ -7,8 +7,9 @@
 //
 
 protocol SDPWalkthroughModuleViewInput: class {
-    
     func setupInitialState()
     func set(pagesDataSource dataSource: SDPPagesControllerDataSource)
     func set(description: String)
+    func set(page: Int)
+    func set(numberOfPages: Int)
 }

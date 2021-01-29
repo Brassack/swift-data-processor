@@ -35,8 +35,15 @@ class SDPWalkthroughModuleViewController: UIViewController, SDPWalkthroughModule
         }
     }
     
+    func set(page: Int) {
+        pagesController.currentPage = page
+    }
+    
+    func set(numberOfPages: Int) {
+        pagesController.numberOfPages = numberOfPages
+    }
+    
     func set(description: String) {
-        
         descriptionLabel.text = description
     }
     

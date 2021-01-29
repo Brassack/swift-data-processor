@@ -37,6 +37,7 @@ class SDPWalkthroughModulePresenter: SDPWalkthroughModuleModuleInput, SDPWalkthr
         
         let description = slides[pageIndex].text
         view.set(description: description)
+        view.set(page: pageIndex)
     }
     
     
@@ -46,6 +47,8 @@ class SDPWalkthroughModulePresenter: SDPWalkthroughModuleModuleInput, SDPWalkthr
         if let pagesDataSource = pagesDataSource , let firstSlide = slides.first {
             view.set(pagesDataSource: pagesDataSource)
             view.set(description: firstSlide.text)
+            view.set(page: 0)
+            view.set(numberOfPages: slides.count)
         }
     }
     

@@ -68,9 +68,9 @@ class SDPTextModuleRouter: SDPTextModuleRouterInput {
     }
     
     func showWalkthroughIfNeeded() {
-        if !UserDefaults.standard.bool(forKey: SDPWalkthroughAccepted) {
+//        if !UserDefaults.standard.bool(forKey: SDPWalkthroughAccepted) {
             let vc = componentsStoryboard.instantiateViewController(withIdentifier: String(describing: SDPWalkthroughModuleViewController.self))
             navigationController?.present(vc, animated: false, completion: nil)
-        }
+//        }
     }
 }
