@@ -17,6 +17,7 @@ class SDPApplicationConfigurator: NSObject {
     func configureTheme(actionColor: UIColor){
         
         theme.actionColor = actionColor
+        
         UISegmentedControl.appearance().tintColor = actionColor
         UIButton.appearance().tintColor = actionColor
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = actionColor
@@ -25,6 +26,8 @@ class SDPApplicationConfigurator: NSObject {
         UITextField.appearance().tintColor = actionColor
         UITabBar.appearance().tintColor = actionColor
         UISwitch.appearance().onTintColor = actionColor
+        UINavigationBar.appearance().tintColor = actionColor
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : actionColor]
         
         if let view = UIApplication.shared.keyWindow?.rootViewController?.view, let superview = view.superview {
             

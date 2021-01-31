@@ -94,9 +94,9 @@ class SDPHashesViewController: UITableViewController, SDPHashesViewInput {
         }
         
         let label = UILabel()
-        label.backgroundColor = UIColor.white
+        label.backgroundColor = UIColor.systemBackground
         label.text = title
-        label.textColor = UIColor.darkGray
+        label.textColor = UIColor.label
         label.textAlignment = .center
         label.sizeToFit()
         

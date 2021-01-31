@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sdrandomnumberparametermodule View Controller-->
+        <!--Random Number Parameter Module View Controller-->
         <scene sceneID="tOL-wo-y7C">
             <objects>
                 <viewController storyboardIdentifier="SDPRandomNumberParameterModuleViewController" id="fmq-wa-EGS" customClass="SDPRandomNumberParameterModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,8 +27,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-cT-g7C">
-                                        <rect key="frame" x="86" y="2.5" width="85.5" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="86" y="0.5" width="85.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
@@ -43,8 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daf-PY-99F">
-                                        <rect key="frame" x="257.5" y="2.5" width="85.5" height="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="257.5" y="0.5" width="85.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
@@ -63,7 +60,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="evO-Ud-FaL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="evO-Ud-FaL" firstAttribute="trailing" secondItem="vsg-NA-TqA" secondAttribute="trailing" constant="16" id="54m-rL-gnV"/>
                             <constraint firstItem="IBr-Cq-VnF" firstAttribute="width" secondItem="evO-Ud-FaL" secondAttribute="width" multiplier="9:10" id="8kE-g7-AWQ"/>
@@ -72,7 +70,6 @@
                             <constraint firstItem="vsg-NA-TqA" firstAttribute="top" secondItem="IBr-Cq-VnF" secondAttribute="bottom" constant="24" id="SBS-P1-jaO"/>
                             <constraint firstItem="vsg-NA-TqA" firstAttribute="leading" secondItem="evO-Ud-FaL" secondAttribute="leading" constant="16" id="sWU-M4-RJm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="evO-Ud-FaL"/>
                     </view>
                     <connections>
                         <outlet property="maxTextField" destination="daf-PY-99F" id="drb-xM-s7i"/>
@@ -89,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="231" y="-261"/>
         </scene>
-        <!--Sdrandomstringparametermodule View Controller-->
+        <!--Random Text Parameter Module View Controller-->
         <scene sceneID="CNk-Gr-5ep">
             <objects>
                 <viewController storyboardIdentifier="SDPRandomTextParameterModuleViewController" id="F3c-St-o3i" customClass="SDPRandomTextParameterModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,25 +95,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-b8-68V">
-                                <rect key="frame" x="0.0" y="20" width="375" height="584"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="Cell" textLabel="346-E3-Des" detailTextLabel="ELa-Ho-58q" rowHeight="82" style="IBUITableViewCellStyleSubtitle" id="cWn-ou-BhU" customClass="SDPRandonStringParameterTableViewCell" customModule="Swift_data_processor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWn-ou-BhU" id="KrA-qg-uxB">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="81.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="UUID" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="346-E3-Des">
-                                                    <rect key="frame" x="15" y="21" width="40.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="21" width="40.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ELa-Ho-58q">
-                                                    <rect key="frame" x="15" y="44.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="16" y="44.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -137,8 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-iL-a2C">
-                                <rect key="frame" x="8" y="612" width="269" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="8" y="610" width="269" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
@@ -152,7 +148,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ldg-GX-bw9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CRq-hs-AKb" firstAttribute="top" secondItem="nl6-IX-4Xb" secondAttribute="bottom" constant="8" id="4aU-21-nY5"/>
                             <constraint firstItem="jnQ-iL-a2C" firstAttribute="leading" secondItem="ldg-GX-bw9" secondAttribute="leading" constant="8" id="CBC-qj-Wrh"/>
@@ -166,7 +163,6 @@
                             <constraint firstItem="jnQ-iL-a2C" firstAttribute="centerY" secondItem="nl6-IX-4Xb" secondAttribute="centerY" id="o9s-ae-Lxb"/>
                             <constraint firstItem="ldg-GX-bw9" firstAttribute="trailing" secondItem="nl6-IX-4Xb" secondAttribute="trailing" constant="8" id="xm0-05-luZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ldg-GX-bw9"/>
                     </view>
                     <connections>
                         <outlet property="countDescriptionLabel" destination="nl6-IX-4Xb" id="X3y-GK-E7a"/>
@@ -184,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="1176.8" y="-261.31934032983509"/>
         </scene>
-        <!--Sdprandombinaryparametersmodule View Controller-->
+        <!--Random Binary Parameters Module View Controller-->
         <scene sceneID="YoZ-JP-AbU">
             <objects>
                 <viewController storyboardIdentifier="SDPRandomBinaryParametersModuleViewController" id="ZnZ-g8-TuA" customClass="SDPRandomBinaryParametersModuleViewController" customModule="Swift_data_processor" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,16 +189,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-YH-8Ed">
-                                <rect key="frame" x="16" y="338" width="284" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="338" width="285" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="ZnZ-g8-TuA" id="NCI-bj-Xpe"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;1kb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MX-Oo-Cmh">
-                                <rect key="frame" x="145" y="376" width="26" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;=1kb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MX-Oo-Cmh">
+                                <rect key="frame" x="142" y="380" width="33" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -214,13 +209,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bytes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-WM-NPI">
-                                <rect key="frame" x="316" y="342.5" width="43" height="21"/>
+                                <rect key="frame" x="317" y="344.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fHg-0y-vw4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hB2-WM-NPI" firstAttribute="centerY" secondItem="QqE-YH-8Ed" secondAttribute="centerY" id="3jr-OD-TqD"/>
                             <constraint firstItem="QqE-YH-8Ed" firstAttribute="leading" secondItem="fHg-0y-vw4" secondAttribute="leading" constant="16" id="CiO-Kc-jV4"/>
@@ -233,7 +229,6 @@
                             <constraint firstItem="0MX-Oo-Cmh" firstAttribute="top" secondItem="QqE-YH-8Ed" secondAttribute="bottom" constant="8" id="hve-fH-viS"/>
                             <constraint firstItem="QqE-YH-8Ed" firstAttribute="top" secondItem="Dlj-Aq-ypO" secondAttribute="bottom" constant="16" id="lfQ-sn-dTp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fHg-0y-vw4"/>
                     </view>
                     <connections>
                         <outlet property="countTextField" destination="QqE-YH-8Ed" id="cWO-4c-uEb"/>
@@ -250,4 +245,9 @@
             <point key="canvasLocation" x="1996" y="-261"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

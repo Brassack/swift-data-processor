@@ -9,9 +9,6 @@
 import UIKit
 import NKOColorPickerView
 
-//@property (nonatomic, strong) NKOColorPickerDidChangeColorBlock didChangeColorBlock;
-//@property (nonatomic, strong) UIColor *color;
-
 class SDPColorPickerViewController: UIViewController {
 
     fileprivate var _color: UIColor?
@@ -50,7 +47,7 @@ class SDPColorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .systemBackground
         colorView = NKOColorPickerView()
         
         guard let colorView = colorView else {
