@@ -34,19 +34,12 @@ class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
     
     // MARK: TextViewInput
     func updateTheme(theme: SDPApplicationTheme?){
-        
+        textView.textColor = theme?.actionColor ?? UIColor(hex:0x177F01)
         textView.borderColor = theme?.actionColor ?? UIColor(hex:0x177F01)
     }
     
     func setupInitialState() {
-        
-        let button = UIButton(type: .system)
-        button.setTitle("DONE", for: .normal)
-        button.backgroundColor = UIColor.white
-        button.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 45)
-        button.addTarget(textView, action: #selector(textView.resignFirstResponder), for: .touchUpInside)
-        textView.inputAccessoryView = button
-        
+        textView.addDoneButton()
         textView.text = nil
         textView.delegate = output
         copyButton.isEnabled = false
