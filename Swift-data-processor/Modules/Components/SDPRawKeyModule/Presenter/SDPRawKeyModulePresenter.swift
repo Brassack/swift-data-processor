@@ -15,11 +15,16 @@ class SDPRawKeyModulePresenter: SDPRawKeyModuleModuleInput, SDPRawKeyModuleViewO
     var router: SDPRawKeyModuleRouterInput!
     
     var parameters: SDPEncryptionParameters?
+    var themeObserver: Any?
 
     //MARK: SDPRawKeyModuleViewOutput
     func viewIsReady() {
         interactor.requestData()
         view.setupInitialState()
+        themeObserver = NotificationCenter.default.addObserver(forName: SDPThemeUpdatedNotification, object: nil, queue: nil) { [weak self] (notification) in
+            self?.view.updateTheme(theme: notification.object as? SDPApplicationTheme)
+        }
+        view.updateTheme(theme: (UIApplication.shared.delegate as? AppDelegate)?.configurator.theme)
     }
 
     func generateRandomKey() {

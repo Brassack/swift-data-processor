@@ -17,7 +17,6 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput,
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         keyTextView.delegate = self
         output.viewIsReady()
     }
@@ -58,5 +57,9 @@ class SDPRawKeyModuleViewController: UIViewController, SDPRawKeyModuleViewInput,
     func textViewDidEndEditing(_ textView: UITextView) {
         
         output.set(key: textView.text)
+    }
+    
+    func updateTheme(theme: SDPApplicationTheme?) {
+        keyTextView.borderColor = theme?.actionColor ?? UIColor(hex:0x177F01)
     }
 }
