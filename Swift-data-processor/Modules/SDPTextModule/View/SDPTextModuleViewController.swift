@@ -34,7 +34,6 @@ class SDPTextModuleViewController: UIViewController, SDPTextModuleViewInput {
     
     // MARK: TextViewInput
     func updateTheme(theme: SDPApplicationTheme?){
-        textView.textColor = theme?.actionColor ?? UIColor(hex:0x177F01)
         textView.borderColor = theme?.actionColor ?? UIColor(hex:0x177F01)
     }
     
